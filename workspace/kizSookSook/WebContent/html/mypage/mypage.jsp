@@ -41,6 +41,14 @@ pageEncoding="UTF-8"%>
         />
         <link
             rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/stage-list/unregitser.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/stage-list/my-review.css"
+        />
+        <link
+            rel="stylesheet"
             href="${pageContext.request.contextPath}/font/mypage-font.css"
         />
     </head>
@@ -118,14 +126,14 @@ pageEncoding="UTF-8"%>
             'stage-list/trip-history.html',
             'stage-list/cash-history.html',
             'stage-list/my-info.html',
-            'stage-list/my-info.html',
-            'stage-list/my-info.html',
+            'stage-list/my-review.html',
+            'stage-list/my-qna.html',
             'stage-list/unregister.html'
         );
 
         const $stage = $('.stage');
 
-        $.get(stageArr[2], function (data) {
+        $.get(stageArr[0], function (data) {
             $stage.append($(data).fadeIn());
         });
 

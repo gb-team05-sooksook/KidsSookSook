@@ -1,0 +1,37 @@
+h5 {
+	margin: 0;
+	padding: 0;	
+}
+
+div.my-review-info-conainer {
+    border: 1px solid #e6e6e6;
+    background-color: #f3f4f8;
+}
+
+div.my-review-info-conainer .panel-body {
+    padding: 20px;
+}
+
+div.my-review-info-conainer .panel-body .panel-warning {
+    padding-bottom: 5px;
+}
+
+.panel-warning i {
+    display: inline-block;
+}
+
+.panel-warning b {
+    font-weight: 700;
+}
+
+.panel-body ul {
+    font-size: 12px;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #666;
+}
+
+.panel-body ul li {
+    list-style: disc;
+}
