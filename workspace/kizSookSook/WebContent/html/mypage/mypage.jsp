@@ -1,22 +1,48 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>¸¶ÀÌÆäÀÌÁö</title>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage/mypage-default.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage/mypage.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage/mypage-profile-wrapper.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage/mypage-aside-menu.css" />
+        <title>ë§ˆì´íŽ˜ì´ì§€</title>
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/mypage-default.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/mypage.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/mypage-profile-wrapper.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/mypage-aside-menu.css"
+        />
         <link
             rel="stylesheet"
             href="${pageContext.request.contextPath}/css/mypage/stage-list/stage-default.css"
         />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mypage/stage-list/trip-history.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css" />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/stage-list/trip-history.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/stage-list/cash-history.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/stage-list/my-info.css"
+        />
+        <link
+            rel="stylesheet"
+            href="${pageContext.request.contextPath}/font/mypage-font.css"
+        />
     </head>
     <body>
         <header></header>
@@ -29,10 +55,10 @@
                                 <img
                                     src="https://kmong.com/img/tools/main_user_gray.png"
                                 />
-                                <div class="member-type">ÀÇ·ÚÀÎ</div>
+                                <div class="member-type">ì˜ë¢°ì¸</div>
                             </div>
                             <div class="member-identification">
-                                ½ÅÁßÇÑ¿©¿ì6531
+                                ì‹ ì¤‘í•œì—¬ìš°6531
                             </div>
                             <a href="" class="profile-a">
                                 <span class="svg-switch-wrapper"
@@ -55,26 +81,29 @@
                                                 d="M16.2489909,4.5 L15.0473762,5.76039933 L16.7469726,7.54314238 L4.35181644,7.54314238 L4.35181644,9.32588543 L16.7469726,9.32588543 L15.0473762,11.1086285 L16.2489909,12.3690278 L20,8.43540528 L16.2489909,4.5 Z M4,15.5654861 L7.75100914,19.5 L8.95262375,18.2396007 L7.25302741,16.457749 L19.6481836,16.457749 L19.6481836,14.6741146 L7.25302741,14.6741146 L8.95262375,12.8913715 L7.75100914,11.6300808 L4,15.5654861 Z"
                                             ></path></svg></span
                                 ></span>
-                                <span>Àü¹®°¡·Î ÀüÈ¯</span>
+                                <span>ì „ë¬¸ê°€ë¡œ ì „í™˜</span>
                             </a>
                         </div>
                         <div class="aside-menu-wrapper">
-                            <div class="menu-mypage-title">¸¶ÀÌÅ©¸ù</div>
+                            <div class="menu-mypage-title">ë§ˆì´í¬ëª½</div>
                             <hr class="menu-hr" />
                             <a href="" class="menu-item">
-                                <div class="item-name">±¸¸Å °ü¸®</div>
+                                <div class="item-name">ì²´í—˜í•™ìŠµ ë‚´ì—­</div>
                             </a>
                             <a href="" class="menu-item">
-                                <div class="item-name">Å©¸ù Ä³½Ã</div>
+                                <div class="item-name">í¬ëª½ ìºì‹œ</div>
                             </a>
                             <a href="" class="menu-item">
-                                <div class="item-name">Ä³½Ã ÃæÀü</div>
+                                <div class="item-name">ë‚˜ì˜ ì •ë³´</div>
                             </a>
                             <a href="" class="menu-item">
-                                <div class="item-name">ÄíÆù</div>
+                                <div class="item-name">ë‚´ í›„ê¸°</div>
                             </a>
                             <a href="" class="menu-item">
-                                <div class="item-name">°áÁ¦ ³»¿ª</div>
+                                <div class="item-name">ë‚´ ë¬¸ì˜ì‚¬í•­</div>
+                            </a>
+                            <a href="" class="menu-item">
+                                <div class="item-name">íšŒì› íƒˆí‡´</div>
                             </a>
                         </div>
                     </section>
@@ -85,8 +114,31 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script>
-        $.get("stage-list/trip-history.html", function (data) {
-            $(".stage").append($(data).fadeIn());
+        let stageArr = new Array(
+            'stage-list/trip-history.html',
+            'stage-list/cash-history.html',
+            'stage-list/my-info.html',
+            'stage-list/my-info.html',
+            'stage-list/my-info.html',
+            'stage-list/unregister.html'
+        );
+
+        const $stage = $('.stage');
+
+        $.get(stageArr[2], function (data) {
+            $stage.append($(data).fadeIn());
+        });
+
+        console.log($('.item-name'));
+
+        $('.item-name').each((i, e) => {
+            var index = i;
+
+            $(e).on('click', function (e) {
+                e.preventDefault();
+
+                $stage.load(stageArr[index]);
+            });
         });
     </script>
 </html>
