@@ -53,11 +53,55 @@ div.status-item-count a {
     pointer-events: none;
 }
 
+div.problem-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.problem-icon-wrapper .problem-icon {
+    margin: 0;
+    padding: 0;
+}
+
+div.problem-icon-wrapper .problem-icon div {
+    background-color: rgb(255, 237, 235);
+    border-radius: 12px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+div.problem-icon-wrapper .problem-icon div div {
+    background-color: rgb(255, 114, 98);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.problem-icon-wrapper .problem-icon div div span {
+    display: inline-block;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizelegibility;
+    color: rgb(255, 255, 255);
+}
+
 section.trip-history-container {
     margin-top: 40px;
 }
 
-form[name="fieldTripForm"] {
+form[name='fieldTripForm'] {
     display: flex;
     column-gap: 8px;
 }
@@ -178,7 +222,7 @@ div.form-text-input {
     min-width: 64px;
 }
 
-div.form-text-input input[name="fieldTripName"] {
+div.form-text-input input[name='fieldTripName'] {
     outline: none;
     flex: 1;
     width: 100%;

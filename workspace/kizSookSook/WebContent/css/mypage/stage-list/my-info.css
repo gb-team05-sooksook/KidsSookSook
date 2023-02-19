@@ -1,0 +1,171 @@
+section.my-info-container {
+    margin-top: 20px;
+    padding: 40px;
+    border: 1px solid #e4e5ed;
+    display: flex;
+}
+
+section.my-info-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.my-info-profile .profile-img {
+    width: 120px;
+    height: 120px;
+    background-color: #e4e5ed;
+    position: relative;
+    outline: none;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 5%);
+    border-radius: 50%;
+}
+
+section.my-info-profile .profile-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease 0s;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+section.my-info-profile .change-profile {
+    margin-top: 8px;
+}
+
+div.change-profile .change-profile-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 0.15s linear;
+    border-radius: 4px;
+    border: none;
+    overflow: auto;
+    padding: 4px;
+}
+
+div.change-profile-btn-wrapper .change-profile-btn {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1;
+    font-weight: 500;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+    max-width: 100%;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 16px;
+    min-width: 64px;
+    background-color: transparent;
+    border-color: #303441;
+    color: #303441;
+}
+
+div.change-profile-btn-wrapper .change-profile-btn span {
+    line-height: 1;
+    font-weight: 500;
+    color: #303441;
+    font-size: 14px;
+}
+
+button.change-profile-btn span #file-input {
+    display: none;
+    font-size: 100%;
+    margin: 0;
+}
+
+section.my-info-form-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    flex: 1;
+}
+
+div.my-info-form-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.my-info-form-btn-wrapper button {
+    border: 0;
+    border-radius: 6px;
+    width: 269px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #303441;
+    font-weight: bold;
+    background: #ffd400;
+    cursor: pointer;
+}
+
+div.my-info-form {
+    margin-bottom: 20px;
+}
+
+div.my-info-form .form-title {
+    display: flex;
+    margin-bottom: 8px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.my-info-form .form-title span {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(85, 89, 105);
+}
+div.my-info-form .form-input {
+    width: 100%;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 4px;
+    transition: background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+    display: inline-flex;
+    flex-direction: row;
+    overflow: hidden;
+    cursor: text;
+    height: 42px;
+    font-size: 15px;
+    padding: 0px 14px;
+    min-width: 64px;
+}
+
+div.my-info-form .form-input input {
+    outline: none;
+    flex: 1;
+    width: 100%;
+    background-image: none;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: none;
+    font-weight: inherit;
+    background-color: transparent;
+    text-align: left;
+    color: inherit;
+}
+
+.identification-conditions-list {
+    margin: 6px 0px 0px;
+    padding: 0px;
+    color: rgb(154, 155, 167);
+    font-size: 12px;
+}
