@@ -1,0 +1,95 @@
+div.profile-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    position: relative;
+    flex-direction: column;
+}
+
+div.profile-img {
+    position: relative;
+}
+
+div.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+div.profile-img .member-type {
+    background: rgb(255, 212, 0);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+div.member-identification {
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(77, 77, 77);
+}
+
+a.profile-a {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    line-height: 1;
+    font-weight: 500;
+    transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+    max-width: 100%;
+    padding: 0px 22px;
+    min-width: 64px;
+    border-radius: 21px;
+    margin-top: 20px;
+    width: 240px;
+    font-size: 13px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background: rgb(39, 49, 76);
+    border-color: rgb(39, 49, 76);
+}
+
+span.svg-switch-wrapper {
+    margin-left: -5px;
+    margin-right: 6px;
+}
+
+span.svg-switch-span {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+svg.svg-switch {
+    width: 20px;
+    height: 20px;
+}
+
+span.profile-a-text {
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}

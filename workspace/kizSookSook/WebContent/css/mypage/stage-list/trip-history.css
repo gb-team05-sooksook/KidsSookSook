@@ -1,0 +1,279 @@
+section.trip-status {
+    position: relative;
+}
+
+ul.status-list {
+    margin: 0;
+    background-color: #fafafc;
+    border-radius: 12px;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+}
+
+li.status-list-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 14px rgb(48 52 65 / 8%);
+    flex: 1;
+    background-color: #ffffff;
+    color: #303441;
+}
+
+div.status-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.status-item-name {
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+div.status-item-count {
+    width: 155px;
+    margin-top: 4px;
+    text-align: right;
+    color: #303441;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: default;
+}
+
+div.status-item-count a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    pointer-events: none;
+}
+
+section.trip-history-container {
+    margin-top: 40px;
+}
+
+form[name="fieldTripForm"] {
+    display: flex;
+    column-gap: 8px;
+}
+
+div#theme-selecter {
+    width: 111px;
+}
+
+div#status-selecter {
+    width: 150px;
+}
+
+div#date-selecter {
+    width: 120px;
+}
+
+div#id-selecter {
+    width: 115px;
+}
+
+div.selecter {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    outline: 0 !important;
+    position: relative;
+    transition: all 100ms;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e4e5ed;
+    box-shadow: none;
+    min-height: 30px;
+}
+
+div.theme-names {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 34px;
+    align-content: center;
+}
+
+div.theme-name {
+    color: rgb(48, 52, 65);
+    margin-left: 2px;
+    margin-right: 2px;
+    max-width: calc(100% - 8px);
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+div.selecter-arrow-wrapper {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+div.selecter-arrow {
+    color: hsl(0, 0%, 80%);
+    display: flex;
+    padding: 0 12px;
+    transition: color 150ms;
+    box-sizing: border-box;
+}
+
+div.selecter-arrow svg {
+    fill: #c8cad2;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    line-height: 1;
+    stroke: currentColor;
+    stroke-width: 0;
+}
+
+#date-selecter .selecter .selecter-arrow-wrapper .selecter-arrow svg {
+    fill: #303441;
+}
+
+div.date-selecter-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+div.form-text-input {
+    width: 110px;
+    border: 1px solid #e4e5ed;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    flex-direction: row;
+    overflow: hidden;
+    cursor: text;
+    background-color: #ffffff;
+    color: #303441;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 12px;
+    min-width: 64px;
+}
+
+div.form-text-input input[name="fieldTripName"] {
+    outline: none;
+    flex: 1;
+    width: 100%;
+    background-image: none;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: none;
+    font-weight: inherit;
+    background-color: transparent;
+    text-align: left;
+    color: inherit;
+}
+
+div.form-btn {
+    flex: none;
+}
+
+#submitBtn {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1;
+    font-weight: 500;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    max-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 16px;
+    min-width: 64px;
+    background-color: #ffd400;
+    border-color: #ffd400;
+    color: #303441;
+}
+
+#submitBtn span {
+    line-height: 1;
+    font-weight: 500;
+}
+
+section.history-result {
+    margin-top: 12px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(154, 155, 167);
+}
+
+#noResult {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(48, 52, 65);
+    font-weight: 500;
+}
+
+section.history-warnings {
+    margin-top: 40px;
+    padding: 32px;
+    background-color: #f2f3f7;
+    border-radius: 4px;
+}
+
+section.history-warnings h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #303441;
+}
+section.history-warnings ul {
+    padding: 0 0 0 10px;
+    margin: 16px 0 0 0;
+    font-size: 14px;
+    color: #555969;
+    text-indent: -10px;
+}
+
+section.history-warnings ul li {
+    padding: 0;
+    margin: 0;
+}

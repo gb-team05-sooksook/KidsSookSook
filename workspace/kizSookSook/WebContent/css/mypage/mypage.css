@@ -1,0 +1,23 @@
+div.main-container {
+    width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0px 16px;
+}
+
+div.main {
+    display: flex;
+}
+
+section.aside {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+section.main {
+    margin-left: 24px;
+}
+
+section.stage {
+    margin-left: 24px;
+}
