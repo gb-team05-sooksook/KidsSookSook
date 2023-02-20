@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Noto+Sans+KR:wght@300;500&display=swap');
+
+html {
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.adminPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #eeeeee;
+  margin-left: 202px;
+}
+
+.logoImg {
+  vertical-align: middle;
+}
+
+.logoText {
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.sidebar {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 3px;
+}
+
+.sidebar a:first-child {
+  margin-bottom: 60px;
+  border-bottom: solid;
+  border-bottom-color: white;
+}
+
+.sidebar a {
+  margin-bottom: 20px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+/* 사이드바 마우스 올렸을때 */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  s .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* 현재경로이름 */
+.sidebarNameLayout {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  height: 5%;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  padding-bottom: 20px;
+}
+
+.sidebarNameText {
+  position: relative;
+  height: 100%;
+}
+
+.sidebarNameText span {
+  color: black;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.main-content-container {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stageLayout {
+	margin-left: 40px;
+	margin-top: 40px;
+}
+
+/* 데이터 테이블 */
+.filterButtonLayout {
+  float: left;
+  text-align: left;
+  width: 60%;
+  letter-spacing: 20px;
+}
+
+.filterButton {
+  background-color: white;
+  border: 1px solid #111;
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: #111;
+}
+
+.inputBox {
+  position: relative;
+  text-align: end;
+}
+
+.dataTableLayout {
+  background-color: white;
+  display: inline-block;
+}
+
+.dataTable {
+	margin-left:40px;
+	margin-top:40px;
+	display: flex;
+	flex-direction: column;
+}
+
+#myInput {
+  background-color: #eeeeee;
+  background-image: url('/kizSookSook/resources/img/search.png');
+  background-size: 20px;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+  text-align: center;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.trHeader,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Pagination */
+
+.pagination {
+  margin-top: 30px;
+  text-align: -webkit-center;
+  width: 100%;
+}
+
+.pagination a {
+  color: black;
+  float: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* 현재 페이지는 파란색으로 */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* 마우스 올렸을 때 */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
