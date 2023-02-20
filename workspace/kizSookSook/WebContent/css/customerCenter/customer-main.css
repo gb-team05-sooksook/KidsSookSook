@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /** font **/
 @font-face {
     font-family: 'Metro Sans';
@@ -477,7 +478,7 @@ img {
 
 /* 2. main 시작 */
 .hero {
-    background-image: url(//theme.zdassets.com/theme_assets/9204604/01927ef….jpg);
+    background-image: url("https://theme.zdassets.com/theme_assets/9204604/01927ef0d4e06d8459e2cefe21d5b3b64dac3781.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-color: #FAE57C;
