@@ -101,12 +101,12 @@ section.trip-history-container {
     margin-top: 40px;
 }
 
-form[name='fieldTripForm'] {
+form[name="fieldTripForm"] {
     display: flex;
     column-gap: 8px;
 }
 
-div#theme-selecter {
+div.form-selecter{
     width: 120px;
     position: relative;
 }
@@ -139,21 +139,23 @@ div.selecter {
     border-style: solid;
     border-color: #e4e5ed;
     box-shadow: none;
-        height: 37px;
+    height: 37px;
 }
 
 div.selecter-options {
-	margin-top: 5px;
+    margin-top: 5px;
     position: absolute;
-  	width: 100%;
-  	border: 1px solid #e4e5ed;
-  	border-radius: 4px;
-  	background: white;
-  	box-shadow: rgb(48 52 65 / 8%) 0px 4px 14px;  
-  	padding: 6px 0;
+    width: 100%;
+    border: 1px solid #e4e5ed;
+    border-radius: 4px;
+    background: white;
+    box-shadow: rgb(48 52 65 / 8%) 0px 4px 14px;
+    padding: 6px 0;
+    top: 45px;
+    opacity: 0;
 }
 
-input[name='date'] {
+input[name="date"] {
     background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
@@ -177,7 +179,22 @@ input[name='date'] {
 div.theme-names {
     align-items: center;
     display: flex;
-    padding: 3px 12px;
+    padding: 3px 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#themeName {
+    align-items: center;
+    display: flex;
+    padding: 3px 0;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
@@ -190,7 +207,7 @@ div.theme-names {
 }
 
 div.selecter-options div.theme-names div.theme-name {
-	background-color: white;
+    background-color: white;
     color: rgb(48, 52, 65);
     width: 120px;
     height: 30px;
@@ -258,7 +275,7 @@ div.form-text-input {
     flex: 1;
 }
 
-div.form-text-input input[name='fieldTripName'] {
+div.form-text-input input[name="fieldTripName"] {
     outline: none;
     flex: 1;
     width: 100%;
@@ -358,7 +375,7 @@ section.history-warnings ul li {
     margin: 0;
 }
 
-input[type='date']::-webkit-datetime-edit-text {
+input[type="date"]::-webkit-datetime-edit-text {
     -webkit-appearance: none;
     display: none;
 }

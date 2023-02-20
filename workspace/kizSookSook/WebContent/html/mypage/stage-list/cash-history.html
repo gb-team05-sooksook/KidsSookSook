@@ -24,7 +24,7 @@
                     data-v-8a97d7d8=""
                     class="amount-wrapper"
                     style="margin-right: 4px"
-                >   
+                >
                     <span data-v-8a97d7d8="" class="tahoma">0</span>원
                 </div>
                 <div data-v-8a97d7d8="" class="cash-refund-button-wrapper">
@@ -41,39 +41,45 @@
     </div>
 </div>
 <div class="filters-wrapper">
-    <div class="input-container">
-        <select class="form-control">
-            <option value="ALL">전체</option>
-            <option value="CHARGED">적립</option>
-            <option value="PAID">사용</option>
-            <option value="CANCELED">취소</option>
-            <option value="EXPIRED">만료</option>
-        </select>
-    </div>
-    <div class="input-container">
-        <div class="">
-            <input
-                type="text"
-                placeholder="날짜 선택"
-                readonly="readonly"
-                autocomplete="off"
-                class="form-control search-form"
-            />
-        </div>
-    </div>
-    <div class="input-container">~</div>
-    <div class="input-container">
-        <div class="datepicker">
-            <div class="">
-                <input
-                    type="text"
-                    placeholder="날짜 선택"
-                    readonly="readonly"
-                    autocomplete="off"
-                    class="form-control search-form"
-                />
+    <div class="form-selecter">
+            <div class="selecter" id="theme-selecter">
+                <div class="theme-names">
+                    <div id="themeName">전체 카테고리</div>
+                </div>
+                <div class="selecter-arrow-wrapper">
+                    <div class="selecter-arrow">
+                        <svg
+                            height="20"
+                            width="20"
+                            viewBox="0 0 20 20"
+                            aria-hidden="true"
+                            focusable="false"
+                            class="css-8mmkcg"
+                        >
+                            <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="selecter-options">
+                <div class="theme-names">
+                    <div class="theme-name">전체 카테고리</div>
+                    <div class="theme-name">카테고리2</div>
+                    <div class="theme-name">카테고리3</div>
+                    <div class="theme-name">카테고리4</div>
+                    <div class="theme-name">카테고리5</div>
+                    <div class="theme-name">카테고리6</div>
+                </div>
+                <!-- 카테고리 검색 인풋 -->
+                <input type="text" name="theme" style="display: none" />
             </div>
         </div>
+    <div class="date-selecter-wrapper">
+        <input type="date" name="date" />
+        ~
+        <input type="date" name="date" />
     </div>
     <div class="input-container">
         <button type="button" class="datepicker-btn">조회</button>
