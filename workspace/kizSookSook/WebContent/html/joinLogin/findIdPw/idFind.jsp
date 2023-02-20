@@ -79,7 +79,7 @@
     const $btnModal = $('.main-id-find-btn');
 
     $('.main-pw-page').click(() => {
-        location.href = 'passwordFind.html';
+        location.href = '${pageContext.request.contextPath}/html/joinLogin/findIdPw/passwordFind.jsp';
     });
 
     $(".main-id-find-input").on("blur", function(){
