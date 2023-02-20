@@ -1,0 +1,494 @@
+@charset "UTF-8";
+.css-ozn38e {
+    background-color: rgb(7, 30, 54);
+    height: 480px;
+}
+/* 배너 이미지 */
+.css-1qplh3w {
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0px 80px
+    
+   /*  -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url(${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/kiz.png);
+    background-size: 705px 450px;
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    padding: 0px 75px */
+}
+
+/* 실제 기업이 참여하고 현실에 바탕을 둔 생생한 직업체험 */
+.css-iolij3 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin: 0px 0px 12px;
+    font-weight: 400;
+}
+/* 키즈쑥쑥에 맡기세요! */
+.css-gr6f72 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0px 0px 32px;
+}
+/* 체험학습 참여하기 버튼 */
+.css-10m08m3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 238px;
+}
+.css-1rr4qq7 {
+    flex: 1 1 0%;
+}
+.css-118oiiw {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1;
+    font-weight: 500;
+    transition: background-color 0.3s,border-color 0.3s;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    font-size: 16px;
+    padding: 0 24px;
+    min-width: 80px;
+    background-color: #ffd400;
+    border-color: #ffd400;
+    color: #303441;
+}
+/* 카테고리 */
+.categorymold{
+    padding-top: 50px;
+}
+.categoryList{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 1200px;
+    padding: 0px 16px;
+    margin: 0px auto;
+}
+.categoryListAll{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.category{
+    display: flex;
+    column-gap: 79px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.ByCategory{
+    list-style: none;
+}
+.ByCategoryList{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    row-gap: 8px;
+}
+.categoryImg{
+    width: 72px;
+    height: 72px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(250, 250, 252);
+    border: 1px solid rgb(242, 243, 247);
+    border-radius: 30px;
+}
+.categoryName{
+    color: rgb(48, 52, 65);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    white-space: pre-line;
+}
+/* BEST 모음전 */
+.bestmold{
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    padding-top: 50px;
+}
+.bestVowel{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+.bestVowels{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bestVowelVowel{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.bestVowelVowels{
+    font-size: 20px;
+    font-weight: 500;
+    color: #303441;
+    margin: 0;
+}
+.bestVowelChild{
+    font-weight: 400;
+    font-size: 16px;
+    color: #727585;
+    margin: 0;
+}
+/* BEST 모음전 슬라이드 베너 */
+.bestBanner{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bestBannerA{
+    width: 100%;
+}
+.bestBannerB{
+    cursor: pointer;
+}
+.bestBannerC{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.bestBannerD{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    border: 0;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    color: #303441;
+    transition: color 0.3s,background-color 0.3s,opacity 0.3s,transform 0.3s;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent, 0px 2px 4px rgb(0 0 0 / 18%);
+    z-index: 1;
+    opacity: 1;
+    background-color: rgba(255,255,255,0.76);
+    left: -44px;
+}
+.bestBannerE{
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.bestBannerF{
+    display: inline-block;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.bestBannerG{
+    width: 374px;
+}
+.bestBannerH{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+}
+.bestBannerI{
+    background-color: #f2f3f7;
+    position: relative;
+    width: calc(100% - 2px);
+    height: 212px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.bestBannerJ{
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    object-fit: cover;
+    aspect-ratio: 0.563 / 1;
+    opacity: 1;
+}
+.bestBannerK{
+    color: #303441;
+    flex: 1;
+}
+.bestBannerL{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.bestBannerM{
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+    background: #f2f3f7;
+    color: #555969;
+    display: flex;
+    line-height: normal;
+    cursor: default;
+}
+/* 주간 TOP10 */
+.topTitle{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.topTitles{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.topTitleA{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.topTitleB{
+    font-size: 20px;
+    font-weight: 500;
+    color: #303441;
+    margin: 0;
+}
+.topTitleC{
+    font-weight: 400;
+    font-size: 16px;
+    color: #727585;
+    margin: 0;
+}
+.topTitleD{
+    font-weight: 500;
+    font-size: 14px;
+    color: #303441;
+    text-decoration: none;
+}
+.topList{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.topListA{
+    width: 100%;
+}
+.topListB{
+    cursor: pointer;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.topListC{
+    display: flex;
+    width: 214px;
+    max-height: 303px;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none; 
+}
+.topListD{
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.topListE{
+    position: relative;
+    background-color: rgb(242, 243, 247);
+}
+.topListF{
+    display: flex;
+    height: 160px;
+}
+.topListG{
+    position: absolute;
+    inset: 0px;
+    display: block;
+}
+.topListH{
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    opacity: 1;
+}
+.topListI{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.topListJ{
+    transition: background-color 0.3s ease 0s;
+    padding: 1px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.css-1qcqzrg {
+    display: inline-block;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(255, 255, 255);
+}
+.css-7kp13n {
+    display: inline-block;
+}
+.topListK{
+    padding-top: 16px;
+    color: rgb(48, 52, 65);
+}
+.topListL{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.topListM{
+    color: rgb(154, 155, 167);
+    font-size: 11px;
+}
+.topListN{
+    word-break: break-all;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-weight: normal;
+    margin: 8px 0px 16px;
+    font-size: 14px;
+    line-height: 21px;
+    height: 42px;
+}
+.topListO{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.topListP{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.topListR{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(48, 52, 65);
+    height: 23px;
+}
+.topListQ{
+    margin-top: 4px;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(154, 155, 167);
+    font-size: 11px;
+}
+.topListR{
+    display: inline-block;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    margin: -2px 2px 0px 0px;
+    color: rgb(251, 132, 45);
+}
+.topListS{
+    display: inline-block;
+    margin: 0px 4px;
+    width: 1px;
+    border-left: 1px solid rgb(228, 229, 237);
+    height: 10px;
+}
