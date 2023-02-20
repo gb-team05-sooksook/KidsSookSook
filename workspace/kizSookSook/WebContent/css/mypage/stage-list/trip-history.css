@@ -107,14 +107,15 @@ form[name='fieldTripForm'] {
 }
 
 div#theme-selecter {
-    width: 111px;
+    width: 120px;
+    position: relative;
 }
 
 div#status-selecter {
-    width: 150px;
+    width: 120px;
 }
 
-div#date-selecter {
+div.date-selecter {
     width: 120px;
 }
 
@@ -138,35 +139,69 @@ div.selecter {
     border-style: solid;
     border-color: #e4e5ed;
     box-shadow: none;
-    min-height: 30px;
+        height: 37px;
+}
+
+div.selecter-options {
+	margin-top: 5px;
+    position: absolute;
+  	width: 100%;
+  	border: 1px solid #e4e5ed;
+  	border-radius: 4px;
+  	background: white;
+  	box-shadow: rgb(48 52 65 / 8%) 0px 4px 14px;  
+  	padding: 6px 0;
+}
+
+input[name='date'] {
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 0 !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e4e5ed;
+    height: 37px;
+}
+
+::-webkit-datetime-edit {
+    text-align: center;
+}
+
+::-webkit-calendar-picker-indicator {
+    padding-right: 8px;
 }
 
 div.theme-names {
     align-items: center;
     display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    padding: 0 12px;
+    padding: 3px 12px;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
     font-size: 14px;
-    height: 34px;
+    height: 100%;
     align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-div.theme-name {
+div.selecter-options div.theme-names div.theme-name {
+	background-color: white;
     color: rgb(48, 52, 65);
-    margin-left: 2px;
-    margin-right: 2px;
-    max-width: calc(100% - 8px);
-    overflow: hidden;
-    position: absolute;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 div.selecter-arrow-wrapper {
@@ -220,6 +255,7 @@ div.form-text-input {
     font-size: 14px;
     padding: 0 12px;
     min-width: 64px;
+    flex: 1;
 }
 
 div.form-text-input input[name='fieldTripName'] {
@@ -320,4 +356,9 @@ section.history-warnings ul {
 section.history-warnings ul li {
     padding: 0;
     margin: 0;
+}
+
+input[type='date']::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
 }
