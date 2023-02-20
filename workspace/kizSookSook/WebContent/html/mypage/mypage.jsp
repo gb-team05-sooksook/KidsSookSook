@@ -121,32 +121,8 @@ pageEncoding="UTF-8"%>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script>
-        let stageArr = new Array(
-            'stage-list/trip-history.html',
-            'stage-list/cash-history.html',
-            'stage-list/my-info.html',
-            'stage-list/my-review.html',
-            'stage-list/my-qna.html',
-            'stage-list/unregister.html'
-        );
-
-        const $stage = $('.stage');
-
-        $.get(stageArr[0], function (data) {
-            $stage.append($(data).fadeIn());
-        });
-
-        console.log($('.item-name'));
-
-        $('.item-name').each((i, e) => {
-            var index = i;
-
-            $(e).on('click', function (e) {
-                e.preventDefault();
-
-                $stage.load(stageArr[index]);
-            });
-        });
-    </script>
+    <script
+        type="text/javascript"
+        src="${pageContext.request.contextPath}/js/mypage/mypage.js"
+    ></script>
 </html>

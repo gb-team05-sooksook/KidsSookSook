@@ -9,30 +9,10 @@
             <option value="EXPIRED">만료</option>
         </select>
     </div>
-    <div class="input-container">
-        <div class="">
-            <input
-                type="text"
-                placeholder="날짜 선택"
-                readonly="readonly"
-                autocomplete="off"
-                class="form-control search-form"
-            />
-        </div>
-    </div>
-    <div class="input-container">~</div>
-    <div class="input-container">
-        <div class="datepicker">
-            <div class="">
-                <input
-                    type="text"
-                    placeholder="날짜 선택"
-                    readonly="readonly"
-                    autocomplete="off"
-                    class="form-control search-form"
-                />
-            </div>
-        </div>
+    <div class="date-selecter-wrapper">
+        <input type="date" name="date" />
+        ~
+        <input type="date" name="date" />
     </div>
     <div class="input-container">
         <button type="button" class="datepicker-btn">조회</button>
@@ -56,9 +36,7 @@
         </div>
     </div>
 </div>
-<div
-    class="my-review-info-conainer"
->
+<div class="my-review-info-conainer">
     <div class="panel-body">
         <h5 class="panel-warning">
             <i aria-hidden="true"></i>
