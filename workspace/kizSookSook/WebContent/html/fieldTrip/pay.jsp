@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키즈쑥쑥 | 아이들에게 다양한 경험을 시켜주세요</title>
-    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/pay.css">
 </head>
 <body>
     <div id="orderDiv" style="">
@@ -28,7 +28,7 @@
     
             <div class="OrderGigInfo__gig-summary">
                 <div class="OrderGigInfo__thumnail-wrapper">
-                                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="/kizSookSook/img/science/과학 1-1.jpg">
+                                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="${pageContext.request.contextPath}/resources/img/fieldTrip/pay/Science1-1.jpg">
                                 </div>
     
                 <div class="OrderGigInfo__description-wrapper">
