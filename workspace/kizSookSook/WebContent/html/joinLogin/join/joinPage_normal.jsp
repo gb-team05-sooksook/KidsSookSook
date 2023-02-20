@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전문가가 필요한 순간 샬라샬라</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/join/joinPage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/join/joinPage_normal.css">
 </head>
 <body>
     <div id="__next">
@@ -21,13 +21,13 @@
                 <form novalidate="" class="join-form">
                     <h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
                     <div class="join-item-div">
-                        <div class="join-item-title">이메일</div>
+                        <div class="join-item-title">아이디</div>
                         <div class="join-item-input-div">
-                            <input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
+                            <input type="text" required="" placeholder="아이디를 입력해 주세요." name="memberIdentification" autocomplete="email" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">이메일을 입력해 주세요.</p>
+                                <p class="error-text">아이디를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -48,6 +48,42 @@
                                 <div class="error-div">
                                     <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
+                        <div class="join-item-title">이메일</div>
+                        <div class="join-item-input-div">
+                            <input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text">이메일을 입력해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
+                        <div class="join-item-title">주소</div>
+                        <div class="join-item-input-div-address">
+                            <input type="email" required="" placeholder="주소를 찾아주세요." name="memberAddress" autocomplete="address" class="join-item-input" value="" readonly>
+                        </div>
+                        <div class="join-item-find-address">
+                            <button class="join-item-find-address-btn">주소찾기</button>
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text">주소를 입력해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
+                        <div class="join-item-title">전화번호</div>
+                        <div class="join-item-input-div">
+                            <input type="phoneNumber" required="" placeholder="전화번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text">전화번호를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -77,63 +113,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="join-item-div">
-                        <div class="join-item-title">비즈니스 분야</div>
-                        <div class="join-item-select-container">
-                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="join-item-select-span"></span>
-                            <div class="join-item-select-control">
-                                <div class="join-item-select-div-inner">
-                                    <div class="join-item-select-placeholder">비즈니스 분야를 선택해 주세요.</div>
-                                    <input id="react-select-3-input" readonly="" tabindex="0" aria-autocomplete="list" class="join-item-select-dummyinput" value="">
-                                </div>
-                                <div class="join-item-select-dropdown-div">
-                                    <span class="join-item-select-dropdown-span"></span>
-                                    <div class="join-item-select-dropdown-img" aria-hidden="true">
-                                        <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
-                                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <input name="jobSector" type="hidden" value="">
-                        </div>
-                        <div data-testid="job-sector-error">
-                            <div class="error-div">
-                                <p class="error-text">최소 한가지를 선택해 주세요</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="join-item-div">
-                        <div class="join-item-title">관심사 선택 (중복 선택 가능)</div>
-                        <div class="join-item-select-container">
-                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="join-item-select-span"></span>
-                            <div class="join-item-select-control">
-                                <div class="join-item-select-div-inner">
-                                    <div class="join-item-select-placeholder">관심사를 선택해 주세요.</div>
-                                    <input id="react-select-4-input" readonly="" tabindex="0" aria-autocomplete="list" class="join-item-select-dummyinput" value="">
-                                </div>
-                                <div class="join-item-select-dropdown-div">
-                                    <span class="join-item-select-dropdown-span"></span>
-                                    <div class="join-item-select-dropdown-img" aria-hidden="true">
-                                        <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
-                                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <input name="interestCategories" type="hidden">
-                            </div>
-                        </div>
-                        <div data-testid="interest-categories-error">
-                            <div class="error-div">
-                                <p class="error-text">최소 한가지를 선택해 주세요</p>
-                            </div>
-                        </div>
-                    </div>
                     <div name="agreements" class="join-item-agreements-div">
                         <div class="join-item-agreements-all-div">
-                            <div class="join-item-agreements-check-img">
+                            <div class="join-item-agreements-check-all-img">
+                                <input type="checkbox" style="display: none;" id="allCheck">
                                 <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                         <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -146,6 +129,7 @@
                         <div class="join-item-agreements-one-div">
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
+                                    <input type="checkbox" style="display: none;" id="firstCheck">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -158,6 +142,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
+                                    <input type="checkbox" style="display: none;" id="secondCheck">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -171,6 +156,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
+                                    <input type="checkbox" style="display: none;" id="thirdCheck">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -184,6 +170,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
+                                    <input type="checkbox" style="display: none;" id="forthCheck">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -197,6 +184,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
+                                    <input type="checkbox" style="display: none;" id="fifthCheck">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -208,6 +196,7 @@
                         </div>
                         <div class="join-item-agreements-one">
                             <div class="join-item-agreements-check-img">
+                                <input type="checkbox" style="display: none;" id="sixthCheck">
                                 <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                         <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -232,4 +221,6 @@
         </main>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage.js"></script>
 </html>

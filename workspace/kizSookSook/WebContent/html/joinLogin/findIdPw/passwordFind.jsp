@@ -75,7 +75,7 @@
     const $btnModal = $('.main-pw-find-btn');
 
     $('.main-id-page').click(() => {
-        location.href = 'idFind.html';
+        location.href = '${pageContext.request.contextPath}/html/joinLogin/findIdPw/idFind.jsp';
     });
 
     $(".main-pw-find-input").on("blur", function(){
