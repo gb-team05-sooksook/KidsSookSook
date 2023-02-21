@@ -38,7 +38,7 @@
 						<div class="inputBox">
 							<div class="filterButtonLayout">
 								<div class="memberIdSearchText">
-									<input class="filterButton" type="button" value="기관회원보기" />
+									<input class="filterButton" type="button" value="개인회원보기" />
 									<input class="filterButton" type="button" value="회원수정" />
 									<input class="filterButton" type="button" value="회원삭제" />
 								</div>
@@ -57,8 +57,8 @@
 								<th style="width: 12.5%">가입일자</th>
 								<th style="width: 12.5%">이메일</th>
 								<th style="width: 18%">주소</th>
-								<th style="width: 12.5%">핸드폰번호</th>
-								<th style="width: 6%">성별</th>
+								<th style="width: 12.5%">사업자등록번호</th>
+								<th style="width: 6%">기관명</th>
 								
 							</tr>
 							<tr>
@@ -72,8 +72,8 @@
 								<td>2023/02/09</td>
 								<td>이메일</td>
 								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>613-81-65278</td>
+								<td>크몽</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -86,8 +86,8 @@
 								<td>2023/02/09</td>
 								<td>이메일</td>
 								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>613-81-65278</td>
+								<td>크몽</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -100,8 +100,8 @@
 								<td>2023/02/09</td>
 								<td>이메일</td>
 								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>613-81-65278</td>
+								<td>크몽</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -114,8 +114,8 @@
 								<td>2023/02/09</td>
 								<td>이메일</td>
 								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>613-81-65278</td>
+								<td>크몽</td>
 							</tr>
 						</table>
 						<div class="paginationLayout">
