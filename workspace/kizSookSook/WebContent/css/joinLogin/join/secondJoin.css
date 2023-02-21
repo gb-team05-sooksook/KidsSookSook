@@ -197,3 +197,12 @@ button, [type='button'], [type='reset'], [type='submit'] {
 .choice-second {
     margin-top: 48px;
 }
+
+.choice-btn:hover {
+    background-color: rgb(255, 250, 209);
+    border-color: rgb(255, 212, 0);
+}
+
+.choice-btn:hover span:first-of-type {
+    color: rgb(255, 212, 0);
+}

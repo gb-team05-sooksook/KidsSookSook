@@ -326,8 +326,46 @@ hr {
     transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s, background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
 }
 
+.modal-checkbox-inner-check {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s, background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    border-color: rgb(255, 212, 0);
+    background-color: rgb(255, 212, 0);
+}
+
 .modal-checkbox-inner::after {
     opacity: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    display: table;
+    width: 4px;
+    height: 8px;
+    border-width: 0px 2px 2px 0px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-top-style: initial;
+    border-top-color: initial;
+    border-left-style: initial;
+    border-left-color: initial;
+    content: " ";
+    transition: opacity 0.3s ease 0s;
+}
+
+.modal-checkbox-inner-check::after {
+    opacity: 1;
     transform: rotate(45deg);
     position: absolute;
     top: 1px;
@@ -444,6 +482,14 @@ hr {
     background-color: transparent;
     border-color: rgb(17, 106, 212);
     color: rgb(17, 106, 212);
+}
+
+.modal-join:focus {
+    box-shadow: rgb(17 106 212 / 20%) 0px 0px 1px 2px;
+}
+
+.modal-join:hover {
+    background-color: rgb(17 106 212 / 12%);
 }
 
 .login-modal {
