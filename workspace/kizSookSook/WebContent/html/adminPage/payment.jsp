@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>관리자페이지</title>
+        <title>관리자페이지_결제</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@
 								<th style="width: 13%">체험학습이름</th>
 								<th style="width: 13%">결제금액</th>
 								<th style="width: 13%">결제일</th>
-								<th style="width: 13%">결제상태</th>
+								<!-- <th style="width: 13%">결제상태</th> -->
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -68,7 +68,7 @@
 								<td>체험학습이름</td>
 								<td>16,900</td>
 								<td>2023/02/21</td>
-								<td>결제완료</td>
+								<!-- <td>결제완료</td> -->
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -81,7 +81,7 @@
 								<td>체험학습이름</td>
 								<td>16,900</td>
 								<td>2023/02/21</td>
-								<td>결제완료</td>
+								<!-- <td>결제완료</td> -->
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -94,7 +94,7 @@
 								<td>체험학습이름</td>
 								<td>16,900</td>
 								<td>2023/02/21</td>
-								<td>환불완료</td>
+								<!-- <td>환불완료</td> -->
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -107,7 +107,7 @@
 								<td>체험학습이름</td>
 								<td>16,900</td>
 								<td>2023/02/21</td>
-								<td>결제완료</td>
+								<!-- <td>결제완료</td> -->
 							</tr>
 						</table>
 						<div class="paginationLayout">
