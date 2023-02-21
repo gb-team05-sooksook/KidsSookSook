@@ -416,3 +416,18 @@ button, [type='button'], [type='reset'], [type='submit'] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#drop-content p{
+    display:block;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 2px 0px 0px 0px;
+    cursor: pointer;
+}
+
+#drop-content p:hover {
+    background-color: #e4e5ed8f;
+}

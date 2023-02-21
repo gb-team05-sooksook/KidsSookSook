@@ -23,7 +23,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
                         <div class="join-item-input-div">
-                            <input type="text" required="" placeholder="아이디를 입력해 주세요." name="memberIdentification" autocomplete="email" class="join-item-input" value="">
+                            <input type="text" required placeholder="아이디를 입력해 주세요." name="memberIdentification" autocomplete="email" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
@@ -34,7 +34,7 @@
                     <div class="join-item">
                         <div class="join-item-title">비밀번호</div>
                         <div class="join-item-input-div">
-                            <input type="password" required="" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="password" autocomplete="current-password" class="join-item-input" value=""></div>
+                            <input type="password" required placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="password" autocomplete="current-password" class="join-item-input" value=""></div>
                             <div data-testid="password-error">
                                 <div class="error-div">
                                     <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
@@ -42,7 +42,7 @@
                             </div>
                         <div class="join-item-div">
                             <div class="join-item-input-div">
-                                <input type="password" required="" placeholder="비밀번호를 한번 더 입력해 주세요." name="passwordConfirm" autocomplete="current-password" class="join-item-input" value="">
+                                <input type="password" required placeholder="비밀번호를 한번 더 입력해 주세요." name="passwordConfirm" autocomplete="current-password" class="join-item-input" value="">
                             </div>
                             <div data-testid="password-confirm-error">
                                 <div class="error-div">
@@ -54,7 +54,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">이메일</div>
                         <div class="join-item-input-div">
-                            <input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
+                            <input type="email" required placeholder="이메일을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
@@ -63,23 +63,20 @@
                         </div>
                     </div>
                     <div class="join-item-div">
-                        <div class="join-item-title">주소</div>
-                        <div class="join-item-input-div-address">
-                            <input type="email" required="" placeholder="주소를 찾아주세요." name="memberAddress" autocomplete="address" class="join-item-input" value="" readonly>
-                        </div>
-                        <div class="join-item-find-address">
-                            <button class="join-item-find-address-btn">주소찾기</button>
+                        <div class="join-item-title">사업자등록번호</div>
+                        <div class="join-item-input-div">
+                            <input type="phoneNumber" required placeholder="사업자등록번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">주소를 입력해 주세요.</p>
+                                <p class="error-text">사업자등록번호를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
                     <div class="join-item-div">
                         <div class="join-item-title">전화번호</div>
                         <div class="join-item-input-div">
-                            <input type="phoneNumber" required="" placeholder="전화번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="phoneNumber" required placeholder="전화번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
@@ -88,13 +85,19 @@
                         </div>
                     </div>
                     <div class="join-item-div">
-                        <div class="join-item-title">사업자등록번호</div>
+                        <div class="join-item-title">주소</div>
+                        <div class="join-item-input-div-address">
+                            <input type="email" required placeholder="주소를 찾아주세요." name="memberAddress" id="memberAddress" autocomplete="address" class="join-item-input" value="" readonly>
+                        </div>
+                        <div class="join-item-find-address">
+                            <button type="button" class="join-item-find-address-btn" onclick="sample6_execDaumPostcode()">주소찾기</button>
+                        </div>
                         <div class="join-item-input-div">
-                            <input type="phoneNumber" required="" placeholder="사업자등록번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="email" required placeholder="상세주소를 입력해주세요." name="memberAddressDetail" id="memberAddressDetail" autocomplete="address" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">사업자등록번호를 입력해 주세요.</p>
+                                <p class="error-text">주소를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -207,5 +210,6 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage.js"></script>
 </html>
