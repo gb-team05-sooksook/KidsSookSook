@@ -29,7 +29,7 @@
 		<div class="mainContentContainer">
 			<div class="sidebarNameLayout">
 				<div class="sidebarNameText">
-					<span> 회원관리 </span>
+					<span> 공지사항 </span>
 				</div>
 			</div>
 			<div class="stageLayout">
@@ -38,9 +38,9 @@
 						<div class="inputBox">
 							<div class="filterButtonLayout">
 								<div class="memberIdSearchText">
-									<input class="filterButton" type="button" value="기관회원보기" />
-									<input class="filterButton" type="button" value="회원수정" />
-									<input class="filterButton" type="button" value="회원삭제" />
+									<input class="filterButton" type="button" value="공지등록" />
+									<input class="filterButton" type="button" value="공지수정" />
+									<input class="filterButton" type="button" value="공지삭제" />
 								</div>
 									<input type="text" id="myInput" onkeyup="myFunction()" placeholder="회원 아이디 검색" />
 							</div>
@@ -52,13 +52,11 @@
 										<input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="">
 									</form>
 								</th>
-								<th style="width: 6%">사용자번호</th>
-								<th style="width: 12.5%">회원아이디</th>
-								<th style="width: 12.5%">가입일자</th>
-								<th style="width: 12.5%">이메일</th>
-								<th style="width: 18%">주소</th>
-								<th style="width: 12.5%">핸드폰번호</th>
-								<th style="width: 6%">성별</th>
+								<th style="width: 16%">공지번호</th>
+								<th style="width: 16%">공지제목</th>
+								<th style="width: 16%">공지내용</th>
+								<th style="width: 16%">공지날짜</th>
+								<th style="width: 16%">수정날짜</th>
 								
 							</tr>
 							<tr>
@@ -68,12 +66,10 @@
 									</form>
 								</td>
 								<td>1</td>
-								<td>hds1234</td>
+								<td>첫 회원가입시 이벤트</td>
+								<td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
 								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>2023/02/15</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -82,12 +78,10 @@
 									</form>
 								</td>
 								<td>2</td>
-								<td>hds1234</td>
+								<td>첫 회원가입시 이벤트</td>
+								<td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
 								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>2023/02/15</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -96,12 +90,10 @@
 									</form>
 								</td>
 								<td>3</td>
-								<td>hds1234</td>
+								<td>첫 회원가입시 이벤트</td>
+								<td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
 								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>2023/02/15</td>
 							</tr>
 							<tr>
 								<td style="width: 6%">
@@ -110,12 +102,10 @@
 									</form>
 								</td>
 								<td>4</td>
-								<td>hds1234</td>
+								<td>첫 회원가입시 이벤트</td>
+								<td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
 								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>010-0312-1234</td>
-								<td>남</td>
+								<td>2023/02/15</td>
 							</tr>
 						</table>
 						<div class="paginationLayout">
