@@ -1,42 +1,46 @@
 let arraysObj = {
     stageArr: new Array(
-        "stage-list/trip-history.html",
-        "stage-list/cash-history.html",
-        "stage-list/my-info.html",
-        "stage-list/my-review.html",
-        "stage-list/my-qna.html",
-        "stage-list/unregister.html"
+        'stage-list/trip-history.html',
+        'stage-list/cash-history.html',
+        'stage-list/my-info.html',
+        'stage-list/my-review.html',
+        'stage-list/my-qna.html',
+        'stage-list/unregister.html'
     ),
 };
 
 let globalObj = {
     isModalActive: false,
-    radioPrev: $($(".register-radio-inner")[0]),
+    radioPrev: $($('.register-radio-inner')[0]),
 };
 
 let jqueryDomObj = (function () {
     function load() {
         return {
-            $stage: $(".stage"),
+            $stage: $('.stage'),
             modalObj: {
-                themeName: $(".theme-name"),
-                themeSelecter: $("#theme-selecter"),
-                modal: $(".theme-name").closest("div.selecter-options"),
+                themeName: $('.theme-name'),
+                themeSelecter: $('#theme-selecter'),
+                modal: $('.theme-name').closest('div.selecter-options'),
                 inputName: $("input[name='theme']"),
-                theme: $("#themeName"),
+                theme: $('#themeName'),
             },
             unregister: {
-                reasonList: $(".reason-list-checkbox"),
-                radio: $(".register-radio-inner"),
+                reasonList: $('.reason-list-checkbox'),
+                radio: $('.register-radio-inner'),
                 uncheckedCSS: {
-                    border: "1px solid rgb(200, 202, 210)",
-                    "background-color": "rgb(255, 255, 255)",
+                    border: '1px solid rgb(200, 202, 210)',
+                    'background-color': 'rgb(255, 255, 255)',
                 },
                 checkedCSS: {
-                    border: "1px solid rgb(255, 255, 255)",
-                    "background-color": "rgb(255, 212, 0)",
+                    border: '1px solid rgb(255, 255, 255)',
+                    'background-color': 'rgb(255, 212, 0)',
                 },
-                checkSvg: $("path.unregister-svg"),
+                checkSvg: $('path.unregister-svg'),
+            },
+            myInfo: {
+                errorText: $('p.info-form-warning'),
+                input: $('.my-info-form .form-input input'),
             },
         };
     }
@@ -52,18 +56,18 @@ let functionsObj = {
                 var $themeSelecter = jqueryDomObj.load().modalObj.themeSelecter;
                 var $modal = jqueryDomObj.load().modalObj.modal;
 
-                $themeSelecter.on("click", () => {
+                $themeSelecter.on('click', () => {
                     if (globalObj.isModalActive) {
-                        console.log("disable if 문 들어옴");
+                        console.log('disable if 문 들어옴');
                         functionsObj.modal.disable.excute($modal);
                     } else {
-                        console.log("activate if 문 들어옴");
+                        console.log('activate if 문 들어옴');
                         functionsObj.modal.activate.excute($modal);
                     }
                 });
 
                 $theme.each(function (i, e) {
-                    $(e).on("click", function () {
+                    $(e).on('click', function () {
                         var $value = $(this).text();
 
                         jqueryDomObj.load().modalObj.theme.text($value);
@@ -80,11 +84,11 @@ let functionsObj = {
 
         disable: (function () {
             function excute($dom) {
-                console.log("disable");
+                console.log('disable');
 
                 $dom.animate(
                     {
-                        top: "45px",
+                        top: '45px',
                         opacity: 0,
                     },
                     500
@@ -98,11 +102,11 @@ let functionsObj = {
 
         activate: (function () {
             function excute($dom) {
-                console.log("activate");
+                console.log('activate');
 
                 $dom.animate(
                     {
-                        top: "35px",
+                        top: '35px',
                         opacity: 1,
                     },
                     500
@@ -133,7 +137,7 @@ let functionsObj = {
                 console.log($reasonList[0]);
 
                 $radio.each((i, e) => {
-                    $(e).on("click", function (e) {
+                    $(e).on('click', function (e) {
                         e.preventDefault();
 
                         console.log($radioPrev);
@@ -143,14 +147,14 @@ let functionsObj = {
                         }
 
                         if ($svgPrev) {
-                            $svgPrev.css("opacity", 0);
+                            $svgPrev.css('opacity', 0);
                         }
                         $radioPrev.css(
                             jqueryDomObj.load().unregister.uncheckedCSS
                         );
 
                         $(jqueryDomObj.load().unregister.checkSvg[i]).css(
-                            "opacity",
+                            'opacity',
                             1
                         );
                         $(this).css(jqueryDomObj.load().unregister.checkedCSS);
@@ -169,29 +173,90 @@ let functionsObj = {
             var checked = false;
 
             function excute() {
-                $(".unregister-svg-path").css("transition", "fill 0.1s linear");
+                $('.unregister-svg-path').css('transition', 'fill 0.1s linear');
 
-                $(".unregister-agrement-check").on("click", function () {
+                $('.unregister-agrement-check').on('click', function () {
                     var btn = document.querySelector(
-                        "div.unregister-agrement-btn-wrapper button"
+                        'div.unregister-agrement-btn-wrapper button'
                     );
 
                     if (!checked) {
-                        $(".unregister-svg-path").css(
-                            "fill",
-                            "rgb(255, 212, 0)"
+                        $('.unregister-svg-path').css(
+                            'fill',
+                            'rgb(255, 212, 0)'
                         );
                         btn.disabled = false;
                         checked = true;
                     } else {
                         btn.disabled = true;
-                        $(".unregister-svg-path").css(
-                            "fill",
-                            "rgb(111 113 122)"
+                        $('.unregister-svg-path').css(
+                            'fill',
+                            'rgb(111 113 122)'
                         );
                         checked = false;
                     }
                 });
+            }
+
+            return { excute: excute };
+        })(),
+    },
+    myInfo: {
+        inputCheckService: (function () {
+            function excute() {
+                var $inputs = jqueryDomObj.load().myInfo.input;
+                var reg;
+                $inputs.each((i, e) => {
+                    $(e).on('blur', function () {
+                        switch (i) {
+                            case 0:
+                                reg =
+                                    /^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,12}$/;
+                                functionsObj.myInfo.check.excute(i, e, reg);
+                                break;
+                            case 1:
+                                reg =
+                                    /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+                                functionsObj.myInfo.check.excute(i, e, reg);
+                                break;
+                            case 2:
+                                reg = /^[0-9]{3}-[0-9]{3,4}-[0-9]{4}/;
+                                functionsObj.myInfo.check.excute(i, e, reg);
+                                break;
+                            case 3:
+                                reg =
+                                    /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*()._-]{6,16}$/;
+                                functionsObj.myInfo.check.excute(i, e, reg);
+                                break;
+                            case 4:
+                                functionsObj.myInfo.check.excute(i, e);
+                                break;
+                            default:
+                                break;
+                        }
+                    });
+                });
+            }
+
+            return { excute: excute };
+        })(),
+
+        check: (function () {
+            function excute(i, e, reg) {
+                if (reg) {
+                    var check = reg.test($(e).val());
+                } else {
+                    var input = jqueryDomObj.load().myInfo.input;
+                    pwPrev = $(input[i - 1]).val();
+                    check = pwPrev == $(input[i]).val();
+                }
+                var $texts = jqueryDomObj.load().myInfo.errorText;
+
+                if (check) {
+                    $($texts[i]).css('display', 'none');
+                } else {
+                    $($texts[i]).css('display', 'block');
+                }
             }
 
             return { excute: excute };
