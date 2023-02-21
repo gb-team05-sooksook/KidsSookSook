@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키즈쑥쑥 | 아이들에게 다양한 경험을 시켜주세요</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/pay.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
 </head>
 <body>
     <div id="orderDiv" style="">
