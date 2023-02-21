@@ -170,6 +170,13 @@ div.my-info-form .form-input input {
     color: inherit;
 }
 
+p.info-form-warning{
+    display: none;
+    margin-top: 8px;
+    color: #ff402b;
+    font-size: 12px;
+}   
+
 .identification-conditions-list {
     margin: 6px 0px 0px;
     padding: 0px;
