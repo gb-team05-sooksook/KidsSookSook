@@ -22,8 +22,8 @@ ul.unregister-reason-list li {
 }
 
 ul.unregister-reason-list li span {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 ul.unregister-reason-list li label {
@@ -59,6 +59,19 @@ div.register-radio-inner {
     border: 1px solid #bcbcbc;
     border-radius: 50%;
     padding: 2px;
+    position: relative;
+}
+
+div.register-radio-inner svg {
+    position: absolute;
+    top: -1px;
+    left: -3px;
+    height: 16px;
+}
+
+path.unregister-svg {
+    opacity: 0;
+    transition: "opacity 0.3s linear";
 }
 
 span.unregister-reason {
@@ -173,7 +186,7 @@ span.unregister-agrement-check span.checkbox {
 }
 
 span.unregister-agrement-check span.confirm-text {
-	cursor:pointer;
+    cursor: pointer;
     margin-left: 8px;
     color: #303441;
 }
@@ -211,4 +224,3 @@ div.unregister-agrement-btn-wrapper button:disabled {
     border-color: #e4e5ed;
     color: #9a9ba7;
 }
-
