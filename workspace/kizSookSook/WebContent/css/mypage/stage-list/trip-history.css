@@ -101,12 +101,12 @@ section.trip-history-container {
     margin-top: 40px;
 }
 
-form[name="fieldTripForm"] {
+form[name='fieldTripForm'] {
     display: flex;
     column-gap: 8px;
 }
 
-div.form-selecter{
+div.form-selecter {
     width: 150px;
     position: relative;
 }
@@ -150,7 +150,7 @@ div.selecter-options {
     opacity: 0;
 }
 
-input[name="date"] {
+input[name='date'] {
     background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
@@ -269,7 +269,7 @@ div.form-text-input {
     flex: 1;
 }
 
-div.form-text-input input[name="fieldTripName"] {
+div.form-text-input input[name='fieldTripName'] {
     outline: none;
     flex: 1;
     width: 100%;
@@ -369,7 +369,7 @@ section.history-warnings ul li {
     margin: 0;
 }
 
-input[type="date"]::-webkit-datetime-edit-text {
+input[type='date']::-webkit-datetime-edit-text {
     -webkit-appearance: none;
     display: none;
 }

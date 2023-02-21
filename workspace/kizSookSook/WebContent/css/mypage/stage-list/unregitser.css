@@ -21,6 +21,11 @@ ul.unregister-reason-list li {
     margin: 4px 0;
 }
 
+ul.unregister-reason-list li span {
+	display: flex;
+	align-items: center;
+}
+
 ul.unregister-reason-list li label {
     font-size: 14px;
     color: #303441;
@@ -48,17 +53,12 @@ input.unregister-radio-input {
     cursor: inherit;
 }
 
-span.register-radio-inner {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: inline-block;
+div.register-radio-inner {
     width: 16px;
     height: 16px;
-    border: 1px solid #c8cad2;
+    border: 1px solid #bcbcbc;
     border-radius: 50%;
-    background-color: #ffffff;
-    transition: border-color 0.36s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    padding: 2px;
 }
 
 span.unregister-reason {
@@ -66,6 +66,8 @@ span.unregister-reason {
     font-size: 14px;
     color: #303441;
     cursor: pointer;
+    transition: border-color 0.36s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    transition: background-color 0.36s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 section.unregister-email-varify-container {
@@ -124,6 +126,7 @@ ul.unregister-warnings-list li {
 
 div.unregister-agrement-btn-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 div.unregister-agrement-btn-wrapper label {
@@ -139,7 +142,7 @@ div.unregister-agrement-btn-wrapper label label {
     cursor: pointer;
 }
 
-div.unregister-agrement-btn-wrapper label label .unregister-agrement-check {
+div.unregister-agrement-btn-wrapper .unregister-agrement-check {
     outline: none;
     display: inline-flex;
     position: relative;
@@ -167,23 +170,16 @@ span.unregister-agrement-check span.checkbox {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 3px;
-    border-color: #c8cad2;
-    background-color: #ffffff;
-    transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-        background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 span.unregister-agrement-check span.confirm-text {
+	cursor:pointer;
     margin-left: 8px;
     color: #303441;
 }
 
 div.unregister-agrement-btn-wrapper button {
     outline: none;
-    margin-top: 8px;
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
@@ -204,8 +200,8 @@ div.unregister-agrement-btn-wrapper button {
     font-size: 15px;
     padding: 0 22px;
     min-width: 64px;
-    background-color: #ffffff;
-    border-color: #e4e5ed;
+    background-color: rgb(255, 212, 0);
+    border-color: rgb(255, 212, 0);
     color: #303441;
 }
 
@@ -215,3 +211,4 @@ div.unregister-agrement-btn-wrapper button:disabled {
     border-color: #e4e5ed;
     color: #9a9ba7;
 }
+
