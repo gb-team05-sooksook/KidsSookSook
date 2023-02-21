@@ -8,11 +8,11 @@ let stageArr = new Array(
 );
 
 const $stage = $(".stage");
-let isModalActive = false;
+var isModalActive = false;
 
 let modalDisableService = (function () {
     function disable($dom) {
-        console.log($dom);
+        console.log("올라감");
 
         $dom.animate(
             {
@@ -30,7 +30,7 @@ let modalDisableService = (function () {
 
 let modalActivateService = (function () {
     function activate($dom) {
-        console.log($dom);
+        console.log("내려감");
 
         $dom.animate(
             {
@@ -45,6 +45,7 @@ let modalActivateService = (function () {
 
     return { activate: activate };
 })();
+
 
 let categoryModalService = (function () {
     function load() {
@@ -88,6 +89,15 @@ $(".item-name").each((i, e) => {
 
         $stage.load(stageArr[index], () => {
             categoryModalService.load();
+
+			if(index == 2){
+				checkInputs();
+			}
+			
+            else if(index == 5) {
+                unregisterCheckService.check();
+				unregisterWarningsService.check(registerBtnChange);
+            }
         });
     });
 });
