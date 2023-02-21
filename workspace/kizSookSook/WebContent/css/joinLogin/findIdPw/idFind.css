@@ -352,7 +352,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
     text-align: center;
     text-transform: none;
     word-wrap: break-word;
-    left: 94px;
+    left: 102px;
 }
 
 .swal2-actions {

@@ -31,11 +31,11 @@
                 <section>
                     <h2 class="main-pw-find-title">비밀번호 찾기</h2>
                     <p class="main-pw-find-explain">가입 시 등록하신 이메일 주소를 입력해 주세요. 비밀번호 재설정 링크를 보내드립니다.</p>
-                    <form class="main-pw-find-form">
+                    <form class="main-pw-find-form" novalidate>
                         <section>
                             <label class="main-pw-find-input-text">이메일</label>
                             <div class="main-pw-find-input-div">
-                                <input data-testid="email" type="text" placeholder="이메일 주소를 입력해 주세요." name="memberEmail" class="main-pw-find-input" value="" onkeyup="removeAttrBtn()">
+                                <input data-testid="email" type="email" placeholder="이메일 주소를 입력해 주세요." name="memberEmail" class="main-pw-find-input" value="" onkeyup="removeAttrBtn()">
                             </div>
                         </section>
                         <div class="main-pw-find-btn-div">
