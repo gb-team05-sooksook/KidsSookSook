@@ -107,7 +107,7 @@ form[name="fieldTripForm"] {
 }
 
 div.form-selecter{
-    width: 120px;
+    width: 150px;
     position: relative;
 }
 
@@ -130,15 +130,10 @@ div.selecter {
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    outline: 0 !important;
-    position: relative;
-    transition: all 100ms;
-    box-sizing: border-box;
+    justify-content: space-around;
     border-width: 1px;
     border-style: solid;
     border-color: #e4e5ed;
-    box-shadow: none;
     height: 37px;
 }
 
@@ -232,7 +227,6 @@ div.selecter-arrow-wrapper {
 div.selecter-arrow {
     color: hsl(0, 0%, 80%);
     display: flex;
-    padding: 0 12px;
     transition: color 150ms;
     box-sizing: border-box;
 }
