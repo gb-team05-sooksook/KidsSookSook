@@ -22,12 +22,12 @@
         });
     });
 
-    // $btnModal.click((event) => {
-    //     event.preventDefault();
-    //     $body.css('overflow', 'hidden');
-    //     $modalFail.css('display', 'block');
+    /*$btnModal.click((event) => {
+        event.preventDefault();
+        $body.css('overflow', 'hidden');
+        $modalFail.css('display', 'block');
 
-    //     $('.swal2-confirm').click(function() {
-    //         $btnModal.unbind('click').click();
-    //     });
-    // });
+        $('.swal2-confirm').click(function() {
+            $btnModal.unbind('click').click();
+        });
+    });*/

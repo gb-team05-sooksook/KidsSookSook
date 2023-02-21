@@ -27,12 +27,10 @@
                     </h1>
                     <p class="choice-explain">
                         원하는 회원가입 유형을 선택하세요.
-                        <br>
-                        의뢰인으로 가입 후에도 전문가 등록이 가능합니다.
                     </p>
                     <label class="choice-first">
                         <div class="choice-btn-explain">
-                            서비스를 의뢰하고 싶다면
+                            서비스를 이용하고 싶다면
                         </div>
                         <button role="button" color="yellow" class="choice-btn">
                             <span class="button__start-icon-wrapper">
@@ -43,12 +41,12 @@
                                     </svg>
                                 </span>
                             </span>
-                            <span>의뢰인으로 가입</span>
+                            <span>일반회원으로 가입</span>
                         </button>
                     </label>
                     <label class="choice-second">
                         <div class="choice-btn-explain">
-                            내 전문성을 판매하고 싶다면
+                            서비스를 제공하고 싶다면
                         </div>
                         <button role="button" color="yellow" class="choice-btn">
                             <span class="button__start-icon-wrapper">
@@ -59,7 +57,7 @@
                                     </svg>
                                 </span>
                             </span>
-                            <span>전문가로 가입</span>
+                            <span>기관회원으로 가입</span>
                         </button>
                     </label>
                 </div>
