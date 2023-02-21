@@ -81,6 +81,11 @@ a:visited {
     position: absolute;
     left: 20px;
 }
+@media (min-width: 768px){
+    .sub-nav input[type="search"] {
+        min-width: 300px;
+    }
+}
 
 
 @media (min-width: 768px) {
@@ -229,6 +234,20 @@ a:visited {
     display: flex;
     justify-content: space-between;
 }
+.section-content {
+    flex: 1;
+}
+.section-container {
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 1024px){
+    .section-content {
+        flex: 0 0 80%;
+    }
+}
+
+
 
 
 [class^="icon-"]::before,

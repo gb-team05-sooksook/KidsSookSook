@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전체공지</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/detail-page.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 
 <body>
@@ -17,8 +18,7 @@
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
                 <a href="">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png"
-                        class="logo-kmong">
+                    <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
                 <a title="홈" href="">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
@@ -63,14 +63,45 @@
                         <ul>
                             <li>
                                 <a href="" class="sidenav-item current-article">
-                                    <p class="sidenav-item-text">2월, 고객센터 운영 시간 안내</p>
+                                    <p class="sidenav-item-text">12월, 고객센터 운영 시간 안내</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="" class="sidenav-item ">
-                                    <p class="sidenav-item-text">[업데이트] iOS / 프로젝트 테스트</p>
+                                    <p class="sidenav-item-text">1월 키즈쑥쑥 테스트</p>
                                 </a>
                             </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">2월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">3월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">4월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">5월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">6월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sidenav-item ">
+                                    <p class="sidenav-item-text">7월 키즈쑥쑥 테스트</p>
+                                </a>
+                            </li>
+
 
                         </ul>
                         <a href="" class="article-sidebar-item">더보기</a>
@@ -90,8 +121,24 @@
                                     <div class="article-body">
                                         <p class="wysiwyg-text-align-left">2023년 2월, TEST.
                                         </p>
-                                        <p class="wysiwyg-text-align-left">회원님의 너그러운 양해를 부탁드리며, 서비스 이용에 참고해 주시기 바랍니다.
+                                        <p class="wysiwyg-text-align-left">
+                                            회원님의 너그러운 양해를 부탁드리며, 서비스 이용에 참고해 주시기 바랍니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
+                                            키즈쑥쑥 TEST 입니다.<br>
                                         </p>
+                                        
                                         <p class="wysiwyg-text-align-center">&nbsp;</p>
                                     </div>
                                 </div>
@@ -127,10 +174,10 @@
     <footer class="footer">
         <div class="footer-inner">
             <ol style="width:40%">
-                <b>(주)크몽</b> | 서울시 서초구 사임당로 157, 3층 | 대표 : 박현호<br>
-                개인정보보호책임 : 송준이 | 사업자등록번호 : 613-81-65278<br>
-                통신판매업신고 : 2018-서울서초-2134 | 1544-6254<br>
-                help@kmong.com | 호스팅 사업자: Amazon Web Service(AWS)
+                <b>(주)키즈쑥쑥</b> | 서울시 서초구 테헤란로 145, 4층 | 대표 : HJH<br>
+                개인정보보호책임 : HJH | 사업자등록번호 : 111-777-33333<br>
+                통신판매업신고 : 2023-서울서초-2134 | 1111-2222<br>
+                help@kidsSookSook.com | 호스팅 사업자: Amazon Web Service(AWS)
             </ol>
             <ol><a href="">공지사항</a></ol>
             <ol><a href="">FAQ</a></ol>
@@ -138,17 +185,16 @@
             <ol><a href=""><b>개인정보처리방침</b></a></ol>
         </div>
         <div class="footer-mweb">
-            &nbsp;&nbsp; (주) 크몽 &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp; (주) 키즈쑥쑥 &nbsp;&nbsp;&nbsp;
             <a href="">공지사항</a>&nbsp;
             <a href="">FAQ</a>&nbsp;
             <a href="">이용약관</a>&nbsp;
             <a href=""><b>개인정보처리방침</b></a>&nbsp;
             <a href="">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
-
     </footer>
     <!-- footer end -->
 </body>
-<script src="detail-page.js"></script>
+<script src="${pageContext.request.contextPath}/js/customerCenter/clickChangeBorder.js"></script>
 
 </html>

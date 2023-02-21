@@ -49,3 +49,9 @@
         url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Light.otf) format('truetype'), url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Light.eot),
         url(https://d2v80xjmx68n4w.cloudfront.net/assets/fonts/MetroSans/MetroSans-Light.eot?#iefix) format('embedded-opentype');
 }
+@font-face {
+    font-family: "copenhagen-icons";
+    src: url(copenhagen-icons-268fb7c014de8a06d7d40310b5000daa..woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
