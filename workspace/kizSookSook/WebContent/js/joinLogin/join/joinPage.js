@@ -107,3 +107,27 @@ $checkboxes.click(function(){
     }
     $btnModal.attr('disabled', true);
 });
+
+$('.join-item-select-dropdown-div').on('click', () => {
+        let $click = $('#drop-content');
+        if($click.css('display') === 'none'){
+            $click.css('display', 'block');
+        }else{
+            $click.css('display', 'none')
+        }
+    });
+
+function selectGender(e) {
+    $('.join-item-select-placeholder').text($(e).text()).css('color', 'black');
+    $('#memberGender').val($(e).text());
+    $('#drop-content').css('display', 'none');
+}
+
+function sample6_execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            document.querySelector("#memberAddress").value = data.address; // 주소 넣기
+            document.querySelector("input[name=memberAddressDetail]").focus(); //상세입력 포커싱
+        }
+    }).open();
+}

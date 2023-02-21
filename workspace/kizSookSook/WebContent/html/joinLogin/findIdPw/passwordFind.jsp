@@ -34,11 +34,10 @@
                         <section>
                             <label class="main-pw-find-input-text">이메일</label>
                             <div class="main-pw-find-input-div">
-                                <input data-testid="email" type="text" placeholder="이메일 주소를 입력해 주세요." class="main-pw-find-input" value="">
+                                <input data-testid="email" type="email" placeholder="이메일 주소를 입력해 주세요." name="memberEmail" class="main-pw-find-input" value="" onkeyup="removeAttrBtn()">
                             </div>
                         </section>
                         <div class="main-pw-find-btn-div">
-                            <!-- 여기submit이었음 -->
                             <button role="button" color="yellow" disabled type="submit" class="main-pw-find-btn">
                                 <span>비밀번호 재설정 링크 받기</span>
                             </button>
@@ -67,33 +66,22 @@
             <div class="swal2-timer-progress-bar-container"></div>
         </div>
     </div>
+
+    <div class="swal2-container-fail swal2-center swal2-backdrop-show" style="overflow-y: auto;">
+        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal kmong-desktop-sweetalert-popup swal2-icon-success swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex;">
+            <div class="swal2-header">
+                <div class="swal2-fail-image"></div>
+                <h2 class="swal2-title-fail kmong-desktop-sweetalert-title" id="swal2-title" style="display: flex;">
+                    회원정보가 없습니다.
+                </h2>
+            </div>
+            <div class="swal2-actions">
+                <button type="button" class="swal2-confirm kmong-desktop-sweetalert-confirm swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(255, 212, 0);">확인</button>
+            </div>
+            <div class="swal2-timer-progress-bar-container"></div>
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>
-    const $body = $('body');
-    const $modal = $('.swal2-container');
-    const $btnModal = $('.main-pw-find-btn');
-
-    $('.main-id-page').click(() => {
-        location.href = '${pageContext.request.contextPath}/html/joinLogin/findIdPw/idFind.jsp';
-    });
-
-    $(".main-pw-find-input").on("blur", function(){
-        if($('.main-pw-find-input').val()) {
-            $btnModal.removeAttr('disabled');
-        } else {
-            $btnModal.attr('disabled', true);
-        }
-	});
-    
-    $btnModal.click((event) => {
-        event.preventDefault();
-        $body.css('overflow', 'hidden');
-        $modal.css('display', 'block');
-
-        $('.swal2-confirm').click(function() {
-            $btnModal.unbind('click').click();
-        });
-    });
-</script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/findIdPw/passwordFind.js"></script>
 </html>
