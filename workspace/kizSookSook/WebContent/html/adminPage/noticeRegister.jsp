@@ -4,11 +4,11 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>관리자페이지_회원조회_기관</title>
+        <title>관리자페이지</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/userInfo.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/noticeRegister.css">
     </head>
     <body>
         <section class="adminPage">
@@ -29,107 +29,15 @@
 		<div class="mainContentContainer">
 			<div class="sidebarNameLayout">
 				<div class="sidebarNameText">
-					<span> 회원관리 </span>
+					<span> 공지사항등록 </span>
 				</div>
 			</div>
 			<div class="stageLayout">
 				<div class="dataTableLayout">
 					<div class="dataTable">
-						<div class="inputBox">
-							<div class="filterButtonLayout">
-								<div class="memberIdSearchText">
-									<input class="filterButton" type="button" value="개인회원보기" />
-									<input class="filterButton" type="button" value="회원수정" />
-									<input class="filterButton" type="button" value="회원삭제" />
-								</div>
-									<input type="text" id="myInput" onkeyup="myFunction()" placeholder="회원 아이디 검색" />
-							</div>
-						</div>
-						<table id="myTable">
-							<tr class="trHeader">
-								<th style="width: 6%">
-									<form>
-										<input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</th>
-								<th style="width: 6%">사용자번호</th>
-								<th style="width: 12.5%">회원아이디</th>
-								<th style="width: 12.5%">가입일자</th>
-								<th style="width: 12.5%">이메일</th>
-								<th style="width: 18%">주소</th>
-								<th style="width: 12.5%">사업자등록번호</th>
-								<th style="width: 6%">기관명</th>
-								
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>1</td>
-								<td>hds1234</td>
-								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>613-81-65278</td>
-								<td>크몽</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>2</td>
-								<td>hds1234</td>
-								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>613-81-65278</td>
-								<td>크몽</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>3</td>
-								<td>hds1234</td>
-								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>613-81-65278</td>
-								<td>크몽</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>4</td>
-								<td>hds1234</td>
-								<td>2023/02/09</td>
-								<td>이메일</td>
-								<td>서울특별시</td>
-								<td>613-81-65278</td>
-								<td>크몽</td>
-							</tr>
-						</table>
-						<div class="paginationLayout">
-							<div class="pagination">
-								<a href="#">&laquo;</a>
-								<a class="active" href="#">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
-								<a href="#">6</a>
-								<a href="#">&raquo;</a>
-							</div>
-						</div>
+						<div class="upTextLayout"></div>
+						<div class="bottomTextLayout"></div>
+						<div></div>
 					</div>
 				</div>
 			</div>
