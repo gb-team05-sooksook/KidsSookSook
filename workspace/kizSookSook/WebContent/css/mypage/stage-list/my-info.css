@@ -117,6 +117,13 @@ div.my-info-form-btn-wrapper button {
     cursor: pointer;
 }
 
+div.my-info-form-btn-wrapper button:disabled {
+    cursor: not-allowed;
+    background-color: #e4e5ed;
+    border-color: #e4e5ed;
+    color: #9a9ba7;
+}
+
 div.my-info-form {
     margin-bottom: 20px;
 }
