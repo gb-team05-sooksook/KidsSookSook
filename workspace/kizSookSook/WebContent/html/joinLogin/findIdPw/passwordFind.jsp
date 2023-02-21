@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전문가가 필요한 순간 샬라샬라</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/findIdPw/passwordFind.css">
 </head>
 <body>
@@ -34,7 +35,7 @@
                         <section>
                             <label class="main-pw-find-input-text">이메일</label>
                             <div class="main-pw-find-input-div">
-                                <input data-testid="email" type="email" placeholder="이메일 주소를 입력해 주세요." name="memberEmail" class="main-pw-find-input" value="" onkeyup="removeAttrBtn()">
+                                <input data-testid="email" type="text" placeholder="이메일 주소를 입력해 주세요." name="memberEmail" class="main-pw-find-input" value="" onkeyup="removeAttrBtn()">
                             </div>
                         </section>
                         <div class="main-pw-find-btn-div">
