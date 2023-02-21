@@ -1,37 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - 키즈쑥쑥</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/faq.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - 키즈쑥쑥</title>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/customerCenter/faq.css">
+	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 
 <body>
-    <!-- header -->
+    <!-- header start-->
     <div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
                 <a href="">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png"
-                        class="logo-kmong">
+                    <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
-                <a title="홈" href="/hc/ko">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="cs">
+                <a title="홈" href="">
+                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
+                        class="cs">
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="https://support.kmong.com/hc/ko/requests/new" target="_parent">문의하기</a>
+                <a href="" target="_parent">문의하기</a>
                 <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
-                    href="/hc/ko/signin?return_to=https%3A%2F%2Fsupport.kmong.com%2Fhc%2Fko%2Frequests%2Fnew&amp;locale=ko">로그인</a>
+                    href="">로그인</a>
             </div>
         </header>
     </div>
-
+    <!-- header end -->
 
     <!-- main -->
     <main role="main">
@@ -39,8 +41,8 @@
         <div class="container">
             <nav class="sub-nav">
                 <ol class="breadcrumbs">
-                    <li title="크몽 고객센터">
-                        <a href="/hc/ko">크몽 고객센터</a>
+                    <li title="키즈쑥쑥 고객센터">
+                        <a href="">키즈쑥쑥 고객센터</a>
                     </li>
                     <li title="FAQ">
                         FAQ
@@ -274,30 +276,32 @@
 
 
 
-    <!-- footer -->
+    <!-- footer start-->
     <footer class="footer">
         <div class="footer-inner">
             <ol style="width:40%">
-                <b>(주)크몽</b> | 서울시 서초구 사임당로 157, 3층 | 대표 : 박현호<br>
-                개인정보보호책임 : 송준이 | 사업자등록번호 : 613-81-65278<br>
-                통신판매업신고 : 2018-서울서초-2134 | 1544-6254<br>
-                help@kmong.com | 호스팅 사업자: Amazon Web Service(AWS)
+                <b>(주)키즈쑥쑥</b> | 서울시 서초구 테헤란로 145, 4층 | 대표 : HJH<br>
+                개인정보보호책임 : HJH | 사업자등록번호 : 111-777-33333<br>
+                통신판매업신고 : 2023-서울서초-2134 | 1111-2222<br>
+                help@kidsSookSook.com | 호스팅 사업자: Amazon Web Service(AWS)
             </ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001764912">공지사항</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/articles/900005915466">이용약관</a></ol>
-            <ol><a href="https://support.kmong.com/hc/ko/articles/9619995282713"><b>개인정보처리방침</b></a></ol>
+            <ol><a href="">공지사항</a></ol>
+            <ol><a href="">FAQ</a></ol>
+            <ol><a href="">이용약관</a></ol>
+            <ol><a href=""><b>개인정보처리방침</b></a></ol>
         </div>
         <div class="footer-mweb">
-            &nbsp;&nbsp; (주) 크몽 &nbsp;&nbsp;&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001764912">공지사항</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/categories/360001643071">FAQ</a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/articles/900005915466">이용약관</a>&nbsp;
+            &nbsp;&nbsp; (주) 키즈쑥쑥 &nbsp;&nbsp;&nbsp;
+            <a href="">공지사항</a>&nbsp;
+            <a href="">FAQ</a>&nbsp;
+            <a href="">이용약관</a>&nbsp;
             <a href=""><b>개인정보처리방침</b></a>&nbsp;
-            <a href="https://support.kmong.com/hc/ko/requests/new">1:1 문의하기</a>&nbsp;&nbsp;
+            <a href="">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
-
     </footer>
+    <!-- footer end -->
 </body>
+<script src="${pageContext.request.contextPath}/js/customerCenter/clickChangeBorder.js"></script>
+
 
 </html>

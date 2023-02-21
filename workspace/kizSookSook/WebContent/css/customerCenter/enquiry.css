@@ -129,30 +129,33 @@ img {
     border: 0;
 }
 
-.logo-kmong {
-    height: 16px;
+.logo-kidsSookSook {
+    height: 44px;
     margin-top: 8px;
 }
 
 @media (min-width: 1160px) {
-    .logo-kmong {
-        height: 25px;
-        margin-top: 6px;
+    .logo-kidsSookSook {
+        height: 74px;
+        margin-top: 7px
     }
 }
 
 .cs {
-    height: 16px;
+    height: 20px;
     padding-left: 6px;
+    margin-bottom: 10px;
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1160px){
     .cs {
-        height: 25px;
+        height: 27px;
         padding-left: 10px;
         margin-top: 6px;
+        margin-bottom: 23px;
     }
 }
+
 
 
 .nav-wrapper a {
@@ -416,16 +419,16 @@ img {
     overflow: hidden;
     text-overflow: ellipsis;
     color: #666666;
-  }
-  
-  .breadcrumbs li + li::before {
+}
+
+.breadcrumbs li+li::before {
     content: ">";
     margin: 0 4px;
-  }
-  
-  .breadcrumbs li a:visited {
+}
+
+.breadcrumbs li a:visited {
     color: #666666;
-  }
+}
 
 .search {
     position: relative;
@@ -550,9 +553,12 @@ h1 {
     font-size: 13px;
     color: #666666;
 }
-.custom-breadcrumbs a:link, a:hover, a:visited {
+
+.custom-breadcrumbs a:link,
+a:hover,
+a:visited {
     color: #666666;
-  }
+}
 
 b,
 strong {
@@ -909,4 +915,24 @@ a:visited {
     color: #999;
     display: inline-block;
     font-weight: 300;
+}
+
+
+/* footer 끝 */
+
+.notification-inline.notification-error::before {
+    border-radius: 50%;
+    border: 1px solid #e35b66;
+    color: #e35b66;
+    content: "!";
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-weight: normal;
+    height: 12px;
+    line-height: 12px;
+    margin: -2px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 12px;
 }
