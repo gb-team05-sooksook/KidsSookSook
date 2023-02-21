@@ -11,7 +11,7 @@
         }
     }
 
-    $btnModal.click((event) => {
+    /*$btnModal.click((event) => {
         event.preventDefault();
         $body.css('overflow', 'hidden');
         $modal.css('display', 'block');
@@ -19,9 +19,9 @@
         $('.swal2-confirm').click(function() {
             $btnModal.unbind('click').click();
         });
-    });
+    });*/
 
-    /* $btnModal.click((event) => {
+    $btnModal.click((event) => {
         event.preventDefault();
         $body.css('overflow', 'hidden');
         $modalFail.css('display', 'block');
@@ -29,4 +29,4 @@
         $('.swal2-confirm').click(function() {
             $btnModal.unbind('click').click();
         });
-    }); */
+    });

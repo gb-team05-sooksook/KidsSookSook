@@ -311,7 +311,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 .swal2-ok-image {
     position: relative;
-    background-image: url('success.png');
+    background-image: url('/resources/img/success.png');
     background-repeat: no-repeat;
     height: 100px;
     left: 127px;
@@ -320,7 +320,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 .swal2-fail-image {
     position: relative;
-    background-image: url('fail.png');
+    background-image: url('/resources/img/fail.png');
     background-repeat: no-repeat;
     height: 100px;
     left: 127px;
@@ -338,7 +338,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
     text-align: center;
     text-transform: none;
     word-wrap: break-word;
-    left: 67px;
+    left: 80px;
 }
 
 .swal2-title-fail {

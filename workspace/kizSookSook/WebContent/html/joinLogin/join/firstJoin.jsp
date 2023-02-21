@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>프리랜서 마켓 크몽! 샬라샬라</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/join/firstJoin.css">
+	<meta charset="UTF-8">
+	<title>프리랜서 마켓 크몽! 샬라샬라</title>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/join/firstJoin.css">
 </head>
 <body style="cursor: default;">
 	<div class="global-body">
