@@ -73,8 +73,8 @@
 	                        			</div>
 	                        		</div>
 	                        		<div class="border-top-dashed-gray">
-	                        			<a class="flex-center-center btn btn-default width-100 NGM button-signup" style="background-color: rgb(255, 253, 236); border-color: rgb(250, 229, 124);">
-	                        				<span style="font-size: 15px;">이메일로 가입하기</span>
+	                        			<a class="flex-center-center btn btn-default width-100 NGM button-signup" style="background-color: rgb(255, 212, 0); border-color: rgb(255, 212, 0);">
+	                        				<span style="font-size: 15px; font-weight: 600;">이메일로 가입하기</span>
 	                        			</a>
 	                        		</div>
                         		</div>
