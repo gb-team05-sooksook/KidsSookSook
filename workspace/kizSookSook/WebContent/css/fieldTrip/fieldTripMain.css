@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
 .css-ozn38e {
     background-color: rgb(7, 30, 54);
     height: 480px;
@@ -10,16 +15,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 0px 80px
-    
-   /*  -webkit-box-pack: center;
+    padding: 0px 80px;
+    -webkit-box-pack: center;
     justify-content: center;
     height: 100%;
-    background-image: url(${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/kiz.png);
+    background-image: url(./../../resources/img/fieldTrip/fieldTripMain/kiz.png);
     background-size: 705px 450px;
     background-repeat: no-repeat;
     background-position: right 100%;
-    padding: 0px 75px */
+    padding: 0px 75px;
 }
 
 /* 실제 기업이 참여하고 현실에 바탕을 둔 생생한 직업체험 */
@@ -145,10 +149,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-    width: 1200px;
-    padding: 0 16px;
+    width: 1230px;
+    padding: 10px 15px;
     margin: 0 auto;
 }
+
 .bestVowels{
     display: flex;
     -webkit-box-pack: justify;
@@ -193,7 +198,7 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
-.bestBannerD{
+.bestBannerD-1{
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -216,6 +221,30 @@
     opacity: 1;
     background-color: rgba(255,255,255,0.76);
     left: -44px;
+}
+.bestBannerD-2{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    border: 0;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    color: #303441;
+    transition: color 0.3s,background-color 0.3s,opacity 0.3s,transform 0.3s;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent, 0px 2px 4px rgb(0 0 0 / 18%);
+    z-index: 1;
+    opacity: 1;
+    background-color: rgba(255,255,255,0.76);
+    left: 1205px;
 }
 .bestBannerE{
     display: inline-block;
@@ -244,7 +273,8 @@
     min-height: 1px;
 }
 .bestBannerG{
-    width: 374px;
+    width: 417px;
+    padding-right: 50px;
 }
 .bestBannerH{
     width: 100%;
@@ -258,7 +288,7 @@
     position: relative;
     width: calc(100% - 2px);
     height: 212px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid rgba(0,0,0,0.05);
@@ -290,6 +320,40 @@
     line-height: normal;
     cursor: default;
 }
+/* 중간 광고 배너 */
+.middle-benner{
+	display: flex;
+	flex-direction: column;
+    row-gap: 24px;
+    width: 1200px;
+    padding: 10px 10px;
+    margin: 35px auto;
+}
+.middle-benner-wrapper{
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.middle-benner-wrapper2{
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+    gap: 20px;
+}
+.left-benner{
+	width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.right-benner{
+	width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
 /* 주간 TOP10 */
 .topTitle{
     display: flex;
@@ -298,7 +362,7 @@
     width: 1200px;
     padding: 0 16px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 5px;
 }
 .topTitles{
     display: flex;
@@ -328,18 +392,7 @@
     color: #303441;
     text-decoration: none;
 }
-.topList{
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.topListA{
-    width: 100%;
-}
-.topListB{
-    cursor: pointer;
-}
+
 .slick-slider{
     position: relative;
     display: block;
@@ -355,6 +408,22 @@
     margin: 0;
     padding: 0;
 }
+#slick-listA{
+	width: 248px;
+}
+
+div.top-list-container{
+	display: flex;
+    gap: 45px;
+    flex-direction: column;
+}
+
+div.top-list-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 .topListC{
     display: flex;
     width: 214px;
@@ -450,7 +519,7 @@
 .topListO{
     display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .topListP{
     display: flex;
@@ -464,7 +533,7 @@
     height: 23px;
 }
 .topListQ{
-    margin-top: 4px;
+    margin-top: -10px;
     display: flex;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -472,6 +541,10 @@
     align-items: center;
     color: rgb(154, 155, 167);
     font-size: 11px;
+}
+#topListRR{
+	color: black;
+	
 }
 .topListR{
     display: inline-block;
@@ -482,8 +555,8 @@
     vertical-align: -0.125em;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
-    margin: -2px 2px 0px 0px;
-    color: rgb(251, 132, 45);
+    margin: 10px 0px 0px 0px;
+    color: rgb(255, 212, 0);
 }
 .topListS{
     display: inline-block;
