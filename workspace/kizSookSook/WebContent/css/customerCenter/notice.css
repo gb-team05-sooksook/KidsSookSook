@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@charset "UTF-8";
 
 /** font **/
 @font-face {
@@ -53,13 +52,17 @@
 }
 
 /* 1. header 시작 */
+body {
+    display: block;
+    margin: 8px;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    display: block;
-    margin: 8px;
+    margin: 0;
 }
 
 body {
@@ -71,12 +74,6 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
-
-
-body {
-    margin: 0;
-}
-
 
 article,
 aside,
@@ -132,32 +129,34 @@ img {
     border: 0;
 }
 
-.logo-kmong {
-    height: 16px;
+.logo-kidsSookSook {
+    height: 44px;
     margin-top: 8px;
 }
 
 @media (min-width: 1160px) {
-    .logo-kmong {
-        height: 25px;
-        margin-top: 6px;
+    .logo-kidsSookSook {
+        height: 74px;
+        margin-top: 7px
     }
 }
 
 .cs {
-    height: 16px;
+    height: 20px;
     padding-left: 6px;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 1160px) {
     .cs {
-        height: 25px;
+        height: 27px;
         padding-left: 10px;
         margin-top: 6px;
+        margin-bottom: 23px;
     }
 }
 
-.logo img {}
+
 
 .nav-wrapper a {
     border: 0;
@@ -179,7 +178,11 @@ img {
 }
 
 
-
+@media (min-width: 768px) {
+    .nav-wrapper a {
+        display: inline-block;
+    }
+}
 
 .dropdown-toggle {
     display: inline-block;
@@ -327,7 +330,11 @@ img {
     min-width: 200px;
 }
 
-
+@media (min-width: 768px) {
+    .nav-wrapper a {
+        display: inline-block;
+    }
+}
 
 .dropdown-menu [role=menuitem] {
     color: #333;
@@ -346,10 +353,6 @@ img {
     .nav-wrapper a {
         display: inline-block;
     }
-}
-
-.nav-wrapper a.login {
-    display: inline-block;
 }
 
 [dir="ltr"] .dropdown-menu [role=menuitem] {

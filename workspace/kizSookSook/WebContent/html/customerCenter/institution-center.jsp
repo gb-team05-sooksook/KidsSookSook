@@ -7,21 +7,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기관안내센터</title>
+    <title>기관 안내센터</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/institution-center.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/font.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/footer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/header.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 
 <body>
     <!-- header start-->
-    <div style="background-color:#FAE57C">
+   	<div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
                 <a href="">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/ed54b2d958a2f7b420f8412b529519e676c20bc3.png"
-                        class="logo-kmong">
+                    <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png"
+                        class="logo-kidsSookSook">
                 </a>
                 <a title="홈" href="">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
@@ -281,5 +282,5 @@
     </footer>
     <!-- footer end -->
 </body>
-
+<script src="${pageContext.request.contextPath}/js/customerCenter/clickChangeBorder.js"></script>
 </html>

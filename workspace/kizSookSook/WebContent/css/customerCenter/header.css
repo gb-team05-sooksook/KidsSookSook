@@ -1,5 +1,6 @@
-@charset "UTF-8";
 /* base */
+
+
 input {
     line-height: normal;
 }
@@ -61,13 +62,17 @@ ul {
 /* base 끝 */
 
 /* 1. header 시작 */
+body {
+    display: block;
+    margin: 8px;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    display: block;
-    margin: 8px;
+    margin: 0;
 }
 
 body {
@@ -79,12 +84,6 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
-
-
-body {
-    margin: 0;
-}
-
 
 article,
 aside,
@@ -136,58 +135,38 @@ a {
     text-decoration: none;
 }
 
-.button-request-yellow,
-input[type="submit"] {
-    background-color: rgba(255, 212, 0, 1);
-    border: 0;
-    border-radius: 4px;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 2.72;
-    min-width: 240px;
-    padding: 10px 50px 10px 50px;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-
-    .button-request-yellow,
-    input[type="submit"] {
-        width: auto;
-    }
-}
-
 img {
     border: 0;
 }
 
-.logo-kmong {
-    height: 16px;
+.logo-kidsSookSook {
+    height: 44px;
     margin-top: 8px;
 }
 
 @media (min-width: 1160px) {
-    .logo-kmong {
-        height: 25px;
-        margin-top: 6px;
+    .logo-kidsSookSook {
+        height: 74px;
+        margin-top: 7px
     }
 }
 
 .cs {
-    height: 16px;
+    height: 20px;
     padding-left: 6px;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 1160px) {
     .cs {
-        height: 25px;
+        height: 27px;
         padding-left: 10px;
         margin-top: 6px;
+        margin-bottom: 23px;
     }
 }
 
-.logo img {}
+
 
 .nav-wrapper a {
     border: 0;
@@ -199,41 +178,6 @@ img {
     width: auto;
 }
 
-@media (min-width: 768px) {
-    .nav-wrapper a {
-        display: inline-block;
-    }
-}
-
-[dir="rtl"] .nav-wrapper a {
-    padding: 0 0 0 20px;
-}
-
-.nav-wrapper a:hover,
-.nav-wrapper a:focus,
-.nav-wrapper a:active {
-    background-color: transparent;
-    color: rgba(22, 158, 230, 1);
-    text-decoration: none;
-}
-
-.nav-wrapper .icon-menu {
-    border: 0;
-    color: rgba(22, 158, 230, 1);
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 0;
-    width: auto;
-}
-
-.nav-wrapper .icon-menu:hover,
-.nav-wrapper .icon-menu:focus,
-.nav-wrapper .icon-menu:active {
-    background-color: transparent;
-    color: rgba(22, 158, 230, 1);
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -241,6 +185,13 @@ img {
 
 .user-info {
     display: inline-block;
+}
+
+
+@media (min-width: 768px) {
+    .nav-wrapper a {
+        display: inline-block;
+    }
 }
 
 .dropdown-toggle {
@@ -389,7 +340,11 @@ img {
     min-width: 200px;
 }
 
-
+@media (min-width: 768px) {
+    .nav-wrapper a {
+        display: inline-block;
+    }
+}
 
 .dropdown-menu [role=menuitem] {
     color: #333;
@@ -408,10 +363,6 @@ img {
     .nav-wrapper a {
         display: inline-block;
     }
-}
-
-.nav-wrapper a.login {
-    display: inline-block;
 }
 
 [dir="ltr"] .dropdown-menu [role=menuitem] {
