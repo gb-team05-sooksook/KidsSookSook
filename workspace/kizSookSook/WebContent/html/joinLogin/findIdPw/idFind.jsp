@@ -34,13 +34,13 @@
                         <section>
                             <label class="main-id-find-input-text">실명</label>
                             <div class="main-id-find-input-div">
-                                <input data-testid="realName" type="text" placeholder="실명을 입력해주세요." class="main-id-find-input" value="">
+                                <input data-testid="realName" type="text" placeholder="실명을 입력해주세요." class="main-id-find-input" name="memberName" value="" onkeyup="removeAttrBtn()">
                             </div>
                         </section>
                         <section>
                             <label class="main-id-find-input-text">휴대폰 번호</label>
                             <div class="main-id-find-input-div">
-                                <input data-testid="mobile" type="text" placeholder="휴대폰 번호를 입력해 주세요." class="main-id-find-input" value="">
+                                <input data-testid="mobile" type="text" placeholder="휴대폰 번호를 입력해 주세요." class="main-id-find-input" name="memberPhoneNumber" value="" onkeyup="removeAttrBtn()">
                             </div>
                         </section>
                         <div class="main-id-find-btn-div">
@@ -71,33 +71,23 @@
             <div class="swal2-timer-progress-bar-container"></div>
         </div>
     </div>
+
+
+    <div class="swal2-container-fail swal2-center swal2-backdrop-show" style="overflow-y: auto;">
+        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal kmong-desktop-sweetalert-popup swal2-icon-success swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex;">
+            <div class="swal2-header">
+                <div class="swal2-fail-image"></div>
+                <h2 class="swal2-title-fail kmong-desktop-sweetalert-title" id="swal2-title" style="display: flex;">
+                    회원정보가 없습니다.
+                </h2>
+            </div>
+            <div class="swal2-actions">
+                <button type="button" class="swal2-confirm kmong-desktop-sweetalert-confirm swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(255, 212, 0);">확인</button>
+            </div>
+            <div class="swal2-timer-progress-bar-container"></div>
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>
-    const $body = $('body');
-    const $modal = $('.swal2-container');
-    const $btnModal = $('.main-id-find-btn');
-
-    $('.main-pw-page').click(() => {
-        location.href = '${pageContext.request.contextPath}/html/joinLogin/findIdPw/passwordFind.jsp';
-    });
-
-    $(".main-id-find-input").on("blur", function(){
-        if($("input[data-testid='realName']").val() && $("input[data-testid='mobile']").val().length >= 10) {
-            $btnModal.removeAttr('disabled');
-        } else {
-            $btnModal.attr('disabled', true);
-        }
-	});
-
-    $btnModal.click((event) => {
-        event.preventDefault();
-        $body.css('overflow', 'hidden');
-        $modal.css('display', 'block');
-
-        $('.swal2-confirm').click(function() {
-            $btnModal.unbind('click').click();
-        });
-    });
-</script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/findIdPw/idFind.js"></script>
 </html>
