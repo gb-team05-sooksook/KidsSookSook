@@ -50,7 +50,7 @@ pageEncoding="UTF-8"%>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/font/mypage-font.css"
+            href="${pageContext.request.contextPath}/font/font.css"
         />
     </head>
     <body>
@@ -102,6 +102,7 @@ pageEncoding="UTF-8"%>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/js/mypage/unregister-check.js"></script>
     <script src="${pageContext.request.contextPath}/js/mypage/mypage.js"></script>
 </html>

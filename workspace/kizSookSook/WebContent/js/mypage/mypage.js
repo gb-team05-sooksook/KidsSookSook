@@ -1,84 +1,7 @@
-let stageArr = new Array(
-    "stage-list/trip-history.html",
-    "stage-list/cash-history.html",
-    "stage-list/my-info.html",
-    "stage-list/my-review.html",
-    "stage-list/my-qna.html",
-    "stage-list/unregister.html"
-);
+$.get(arraysObj.stageArr[0], function (data) {
+    jqueryDomObj.load().$stage.append($(data).fadeIn());
 
-const $stage = $(".stage");
-var isModalActive = false;
-
-let modalDisableService = (function () {
-    function disable($dom) {
-        console.log("올라감");
-
-        $dom.animate(
-            {
-                top: "45px",
-                opacity: 0,
-            },
-            500
-        );
-
-        isModalActive = false;
-    }
-
-    return { disable: disable };
-})();
-
-let modalActivateService = (function () {
-    function activate($dom) {
-        console.log("내려감");
-
-        $dom.animate(
-            {
-                top: "35px",
-                opacity: 1,
-            },
-            500
-        );
-
-        isModalActive = true;
-    }
-
-    return { activate: activate };
-})();
-
-
-let categoryModalService = (function () {
-    function load() {
-        var $theme = $(".theme-name");
-        var $themeName = $("#theme-selecter");
-        var $modal = $theme.closest("div.selecter-options");
-
-        $themeName.on("click", () => {
-            if (isModalActive) {
-                modalDisableService.disable($modal);
-            } else modalActivateService.activate($modal);
-        });
-
-        $theme.each(function (i, e) {
-            $(e).on("click", function () {
-                var $value = $(this).text();
-
-                $("#themeName").text($value);
-
-                modalDisableService.disable($modal);
-
-                $("input[name='theme']").val($value);
-            });
-        });
-    }
-
-    return { load: load };
-})();
-
-$.get(stageArr[0], function (data) {
-    $stage.append($(data).fadeIn());
-
-    categoryModalService.load();
+    functionsObj.modal.service.excute();
 });
 
 $(".item-name").each((i, e) => {
@@ -87,16 +10,38 @@ $(".item-name").each((i, e) => {
     $(e).on("click", function (e) {
         e.preventDefault();
 
-        $stage.load(stageArr[index], () => {
-            categoryModalService.load();
+        jqueryDomObj.load().$stage.load(arraysObj.stageArr[index], () => {
+            // categoryModalService.load();
 
-			if(index == 2){
-				checkInputs();
-			}
-			
-            else if(index == 5) {
-                unregisterCheckService.check();
-				unregisterWarningsService.check(registerBtnChange);
+            switch (index) {
+                case 0:
+                    console.log("케이스 0들어옴");
+                    functionsObj.modal.service.excute();
+                    break;
+                case 1:
+                    console.log("케이스 1들어옴");
+                    functionsObj.modal.service.excute();
+                    break;
+                case 2:
+                    console.log("케이스 2들어옴");
+                    checkInputs();
+                    break;
+                case 3:
+                    console.log("케이스 3들어옴");
+                    functionsObj.modal.service.excute();
+                    break;
+                case 4:
+                    console.log("케이스 4들어옴");
+                    functionsObj.modal.service.excute();
+                    break;
+                case 5:
+                    console.log("케이스 5들어옴");
+                    functionsObj.unregister.checkService.excute();
+                    functionsObj.unregister.warningsService.excute();
+                    break;
+                default:
+                    alert("페이지 전환 오류!");
+                    break;
             }
         });
     });
