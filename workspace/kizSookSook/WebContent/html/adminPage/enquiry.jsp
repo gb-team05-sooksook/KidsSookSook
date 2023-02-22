@@ -3,10 +3,9 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>관리자페이지_공지사항</title>
+    <title>관리자페이지_문의사항</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" />
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" />
 
@@ -14,10 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/adminPage/notice.css"
-    />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/enquiry.css" />
   </head>
   <body>
     <section class="adminPage">
@@ -36,7 +32,7 @@
       <div class="mainContentContainer">
         <div class="sidebarNameLayout">
           <div class="sidebarNameText">
-            <span> 공지사항 </span>
+            <span> 문의사항 </span>
           </div>
         </div>
         <div class="stageLayout">
@@ -45,14 +41,9 @@
               <div class="inputBox">
                 <div class="filterButtonLayout">
                   <div class="memberIdSearchText">
-                    <input
-                      id="noticeRegisterButton"
-                      class="filterButton"
-                      type="button"
-                      value="공지등록"
-                    />
-                    <input class="filterButton" type="button" value="공지수정" />
-                    <input class="filterButton" type="button" value="공지삭제" />
+                    <input class="filterButton" type="button" value="전체보기" />
+                    <input class="filterButton" type="button" value="대기문의보기" />
+                    <input class="filterButton" type="button" value="답변하기" />
                   </div>
                   <input
                     type="text"
@@ -69,59 +60,41 @@
                       <input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="" />
                     </form>
                   </th>
-                  <th style="width: 16%">공지번호</th>
-                  <th style="width: 16%">공지제목</th>
-                  <th style="width: 16%">공지내용</th>
-                  <th style="width: 16%">공지날짜</th>
-                  <th style="width: 16%">수정날짜</th>
+                  <th style="width: 10%">문의번호</th>
+                  <th style="width: 12.5%">회원아이디</th>
+                  <th style="width: 12.5%">수신이메일</th>
+                  <th style="width: 12.5%">문의제목</th>
+                  <th style="width: 18%">문의내용</th>
+                  <th style="width: 12.5%">문의날짜</th>
+                  <th style="width: 12.5%">답변완료여부</th>
                 </tr>
-                <tr>
+                <tr class="trData">
                   <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
                   </td>
                   <td>1</td>
-                  <td>첫 회원가입시 이벤트</td>
-                  <td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
+                  <td>kjy1234</td>
+                  <td>kjy1234@google.com</td>
+                  <td>가운데정렬이 안먹어요</td>
+                  <td>div div div 너무 많아서 못찾겠어요 어떻게하나요?</td>
                   <td>2023/02/09</td>
-                  <td>2023/02/15</td>
+                  <td class="trDataOK">답변완료</td>
                 </tr>
-                <tr>
+                <tr class="trData">
                   <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
                   </td>
-                  <td>2</td>
-                  <td>첫 회원가입시 이벤트</td>
-                  <td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
+                  <td>1</td>
+                  <td>kjy1234</td>
+                  <td>kjy1234@google.com</td>
+                  <td>last-child 함수 이상해요</td>
+                  <td>자꾸 안먹어요</td>
                   <td>2023/02/09</td>
-                  <td>2023/02/15</td>
-                </tr>
-                <tr>
-                  <td style="width: 6%">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>3</td>
-                  <td>첫 회원가입시 이벤트</td>
-                  <td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
-                  <td>2023/02/09</td>
-                  <td>2023/02/15</td>
-                </tr>
-                <tr>
-                  <td style="width: 6%">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>4</td>
-                  <td>첫 회원가입시 이벤트</td>
-                  <td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
-                  <td>2023/02/09</td>
-                  <td>2023/02/15</td>
+                  <td class="trDataNO">답변대기</td>
                 </tr>
               </table>
               <div class="paginationLayout">
@@ -143,16 +116,29 @@
     </section>
     <div id="root"></div>
     <div id="layer"></div>
-
-    <!-- 나중에 모달창용 -->
+    <!-- 모달 -->
     <div>
       <div class="modal-bg">
         <section class="container">
           <form action="">
             <div class="title-wrapper">
               <div class="titleAndX">
-                <h2 class="title">공지사항 작성</h2>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="X"><path xmlns="http://www.w3.org/2000/svg" d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path></svg>
+                <h2 class="title">답변 작성</h2>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  class="X"
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"
+                  ></path>
+                </svg>
               </div>
               <div class="details">
                 <div class="det_title-wrapper">
@@ -179,5 +165,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script src="${pageContext.request.contextPath}/js/adminPage/notice.js"></script>
+  <script src="${pageContext.request.contextPath}/js/adminPage/memberInfo.js"></script>
 </html>

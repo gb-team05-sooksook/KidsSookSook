@@ -7,6 +7,10 @@
         <title>관리자페이지_회원관리_개인</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
+        <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
+		
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/userInfo.css">
     </head>
@@ -137,62 +141,6 @@
 	</section>
         <div id="root"></div>
         <div id="layer"></div>
-
-        <!-- 나중에 모달창용 -->
-        <div style="display: none">
-            <table id="myTable">
-                <tr class="trHeader">
-                    <th style="width: 12.5%">사용자번호</th>
-                    <th style="width: 12.5%">회원아이디</th>
-                    <th style="width: 12.5%">가입일자</th>
-                    <th style="width: 12.5%">이메일</th>
-                    <th style="width: 12.5%">주소</th>
-                    <th style="width: 12.5%">핸드폰번호</th>
-                    <th style="width: 12.5%">성별</th>
-                    <th style="width: 12.5%">계정관리</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-            </table>
-        </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/adminPage/memberInfo.js"></script>

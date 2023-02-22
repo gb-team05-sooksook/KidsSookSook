@@ -1,17 +1,15 @@
 /**
- * fiedTripFind.jsp
+ * fieldTripFind.jsp
  */
 
+const size = 4;
+const $all = $(".tableCheckboxAll");
+const $checkboxes = $(".tableCheckbox");
 
-/*function stateChange() {*/
-	/*const $checkboxes = $("tableCheckbox").children();*/
-	/*const $checkboxes = $("tableCheckbox");
-	
-	$checkboxes.each((i, checkbox) => {
-		
-		if($(checkbox).is(':checked')) {
-            $checkboxes.css('background-color', 'red');
-        }
-    });*/
-/*}*/
-	
+$all.on("click", function(){
+	$checkboxes.prop('checked', $(this).is(":checked"));
+});
+
+$checkboxes.click(function(){
+	$all.prop("checked", $checkboxes.filter(":checked").length == size);
+});

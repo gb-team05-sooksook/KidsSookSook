@@ -1,5 +1,5 @@
 /**
- * 
+ * memberInfo.jsp
  */
 
 const size = 4;

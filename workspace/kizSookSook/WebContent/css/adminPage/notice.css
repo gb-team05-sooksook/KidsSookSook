@@ -2,8 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap');
 
-body, html {
-	font-family: 'IBM Plex Sans KR', sans-serif;
+body,
+html {
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .adminPage {
@@ -15,6 +16,8 @@ body, html {
 }
 
 .logoImg {
+  width: 42px;
+  height: 42px;
   vertical-align: middle;
 }
 
@@ -89,10 +92,10 @@ body, html {
 }
 
 .sidebarNameText span {
-	font-weight: 500;
-	margin-left: 32px;
-	color: #1664eb;
-	vertical-align: -webkit-baseline-middle;
+  font-weight: 500;
+  margin-left: 32px;
+  color: #1664eb;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .main-content-container {
@@ -102,33 +105,32 @@ body, html {
 }
 
 .stageLayout {
-	/* margin-left: 40px; */
-	/* margin-top: 40px; */
+  /* margin-left: 40px; */
+  /* margin-top: 40px; */
 }
 
-
 .memberIdSearchText {
-    text-align: left;
+  text-align: left;
 }
 /* 데이터 테이블 */
 .filterButtonLayout {
-	width: 100%;
-  	display: flex;
-    float: left;
-    text-align: left;
-    /* letter-spacing: 20px; */
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  float: left;
+  text-align: left;
+  /* letter-spacing: 20px; */
+  justify-content: space-between;
 }
 
 .filterButton {
-	cursor: pointer;
-  	background-color: white;
-  	border: 1px solid #111;
-  	border-radius: 4px;
-  	width: 100px;
-  	height: 35px;
-  	text-align: center;
-  	color: #111;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #111;
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: #111;
 }
 
 .inputBox {
@@ -137,36 +139,36 @@ body, html {
 }
 
 .dataTableLayout {
-	width: 1980px;
-	background-color: white;
-	display: inline-block;
-	margin: 38px;
+  min-width: 1280px;
+  background-color: white;
+  display: inline-block;
+  margin: 38px;
 }
 
 .dataTable {
-	margin: 40px 40px;
-	display: flex;
-	flex-direction: column;
+  margin: 40px 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .upTextLayout {
-	position: relative;
-    padding-top: 2px;
-    background-color: #fff;
+  position: relative;
+  padding-top: 2px;
+  background-color: #fff;
 }
 
 .bottomTextLayout {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .tableCheckbox {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
-.tableCheckboxAll{
-	width: 20px;
-	height: 20px;
+.tableCheckboxAll {
+  width: 20px;
+  height: 20px;
 }
 
 #myInput {
@@ -196,17 +198,17 @@ body, html {
 }
 
 #myTable td button {
-	background-color: white;
-	border: 1px solid #a6a6a6;
-    border-radius: 4px;
-    width: 50px;
-    height: 35px;
-    text-align: center;
-    color: #111;
+  background-color: white;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  width: 50px;
+  height: 35px;
+  text-align: center;
+  color: #111;
 }
 
 #myTable td button:last-child {
-	color: coral;
+  color: coral;
 }
 
 #myTable tr {
@@ -214,7 +216,7 @@ body, html {
 }
 
 .logo:hover {
-	background-color: #bcd4fa;
+  background-color: #bcd4fa;
 }
 
 #myTable tr.trHeader {
@@ -222,7 +224,7 @@ body, html {
 }
 
 #myTable tbody tr:not(:first-child):hover {
-	background-color: #bcd4fa;
+  background-color: #bcd4fa;
 }
 
 /* Pagination */
@@ -250,4 +252,111 @@ body, html {
 /* 마우스 올렸을 때 */
 .pagination a:hover:not(.active) {
   background-color: #bcd4fa;
+}
+
+/* 모달창 */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+div.modal-bg {
+  background-color: hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-bg.active {
+  display: flex;
+}
+
+section.container {
+  position: absolute;
+  background-color: white;
+  border: 2px solid #474747;
+  border-radius: 8px;
+  color: #303441;
+  padding: 0px 20px 17px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-114%, -55%); */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+div.title-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+div.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #303441;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.det_title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.det_title span {
+  margin-right: 12px;
+}
+
+.det_title input {
+  margin-right: 12px;
+}
+
+div.title {
+  margin-bottom: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* input[name='title'] {
+} */
+
+input[name='writtenDate'] {
+  margin: 6px 0;
+}
+
+textarea[name='content'] {
+  width: 100%;
+  resize: none;
+}
+
+.det_submitButton {
+  border: 1px solid #111;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.X {
+  cursor: pointer;
+  display: block;
+}
+
+.titleAndX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

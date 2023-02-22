@@ -15,9 +15,10 @@ body, html {
 }
 
 .logoImg {
+  width: 42px;
+  height: 42px;
   vertical-align: middle;
 }
-
 .logoText {
   color: black;
   vertical-align: middle;
@@ -137,7 +138,7 @@ body, html {
 }
 
 .dataTableLayout {
-	width: 1980px;
+	max-width: 1280px;
 	background-color: white;
 	display: inline-block;
 	margin: 38px;

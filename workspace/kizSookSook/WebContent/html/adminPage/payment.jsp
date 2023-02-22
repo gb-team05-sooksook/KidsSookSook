@@ -7,6 +7,10 @@
         <title>관리자페이지_결제</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
+        <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
+		
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/payment.css">
     </head>

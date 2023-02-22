@@ -15,6 +15,8 @@ body, html {
 }
 
 .logoImg {
+  width: 42px;
+  height: 42px;
   vertical-align: middle;
 }
 
@@ -102,6 +104,7 @@ body, html {
 }
 
 .stageLayout {
+  min-width: 1280px;
 	/* margin-left: 40px; */
 	/* margin-top: 40px; */
 }
@@ -137,7 +140,7 @@ body, html {
 }
 
 .dataTableLayout {
-	width: 1980px;
+	width: 1280px;
 	background-color: white;
 	display: inline-block;
 	margin: 38px;
