@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 | 키즈쑥쑥</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldPage.css">
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/icon.png">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
 </head>
 <body>
     <!-- 왼쪽 카테고리 창 -->
@@ -91,7 +91,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study1-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -114,9 +114,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">과학수사대 C.S.I는 다양한 증거를 분석해 사건의 진실을 밝히는 수사를 합니다.</h3>
+						                   <h3 class="topListN">법원에서는 다양한 모의재판 체험을 통해 법과 정의에 대해 생각해 볼 수 있습니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -140,7 +140,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science2-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study2-2.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -163,9 +163,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">로봇이 주는 편리함에 대해 배우고 로봇 성능테스트를 통해 개발에 참여합니다.</h3>
+						                   <h3 class="topListN">관세청에서는 관세 공무원으로서 키자니아 공항을 통해 들어오는 물건 중 위험한 물건은 없는지 검사하는 등 관세 국경을 지킵니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -189,7 +189,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science3-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study3-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -212,9 +212,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 시스템을 통해 전기안전 사고와 재해를 예방하고 관리합니다.</h3>
+						                   <h3 class="topListN">경찰서에서는 법과 질서를 지키는 경찰관이 되어 시민들을 위해 활동합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">10,000원</div>
@@ -238,7 +238,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science4-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study4-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -261,9 +261,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 토이 제작자가 되어 인공지능(AI)기술과 장난감이 합쳐진 스마트 토이 제작에 참여합니다.</h3>
+						                   <h3 class="topListN">키자니아 은행에서는 은행원이 되어 스마트 뱅킹 시스템을 이용해 고객의 요청업무를 처리 합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">12,000원</div>
@@ -291,7 +291,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science5-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study5-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -314,9 +314,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">제철소에서 만들어진 차체의 성능을 테스트하고, 철을 재활용해 친환경 철을 만듭니다.</h3>
+						                   <h3 class="topListN">마트에서는 쇼핑객으로 물품을 구입할 수 있을 뿐만 아니라 직원이 되어 마트를 운영합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -340,7 +340,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science6-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study6-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -363,9 +363,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">게임의 구성에 대해 배우고 직접 모바일 게임을 개발합니다.</h3>
+						                   <h3 class="topListN">세계적인 호텔의 호텔리어로서 고객을 위한 객실 준비 및 러기지 서비스와 레스토랑 서비스를 체험합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">9,000원</div>
@@ -389,7 +389,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science7-2.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study7-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -412,9 +412,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">항만의 정의를 배우고 스마트 시스템을 통해 항만으로 들어오는 물류를 손쉽고 안전하게 운반합니다.</h3>
+						                   <h3 class="topListN">승무원 교육센터에서는 진짜 비행기 안에서 비행 시뮬레이션과 기내 안전 및 고객 서비스에 대해 배웁니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -438,7 +438,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science9-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/study/study8-2.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -461,9 +461,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">사회</span>
 						                   </div>
-						                   <h3 class="topListN">첨단 특수장비로 해충을 박멸하고 환경위생의 중요성을 깨닫습니다.</h3>
+						                   <h3 class="topListN">조종사 교육센터에서는 진짜 비행기 안에서 비행 시뮬레이션과 기내 안전 및 고객 서비스에 대해 배웁니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>

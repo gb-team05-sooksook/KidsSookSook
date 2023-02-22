@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 | 키즈쑥쑥</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldPage.css">
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/icon.png">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 <body>
     <!-- 왼쪽 카테고리 창 -->

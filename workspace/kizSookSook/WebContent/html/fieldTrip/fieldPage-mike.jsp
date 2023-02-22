@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 | 키즈쑥쑥</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldPage.css">
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/icon.png">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
 </head>
 <body>
     <!-- 왼쪽 카테고리 창 -->
@@ -91,7 +91,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike1-2.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -114,9 +114,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">과학수사대 C.S.I는 다양한 증거를 분석해 사건의 진실을 밝히는 수사를 합니다.</h3>
+						                   <h3 class="topListN">1인 방송 스튜디오에서는 1인 미디어가 무엇인지에 대해 배우고, 미디어 콘텐츠 제작에 참여해봅니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -140,7 +140,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science2-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike2-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -163,9 +163,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">로봇이 주는 편리함에 대해 배우고 로봇 성능테스트를 통해 개발에 참여합니다.</h3>
+						                   <h3 class="topListN">광고회사에서는 광고 모델이 되어 광고의 역할과 효과에 대해 배우고 제품 홍보사진을 촬영하며 자신감과 표현력을 키울 수 있습니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -189,7 +189,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science3-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike3-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -212,9 +212,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 시스템을 통해 전기안전 사고와 재해를 예방하고 관리합니다.</h3>
+						                   <h3 class="topListN">라디오 스튜디오에서는 라디오 방송 제작 과정을 배우고, 함께 생방송 라디오 프로그램을 만들며 순발력과 자신감을 키울 수 있습니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">10,000원</div>
@@ -238,7 +238,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science4-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike4-2.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -261,9 +261,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 토이 제작자가 되어 인공지능(AI)기술과 장난감이 합쳐진 스마트 토이 제작에 참여합니다.</h3>
+						                   <h3 class="topListN">성우가 되어 애니메이션 속 캐릭터 목소리를 연기합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">12,000원</div>
@@ -291,7 +291,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science5-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike5-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -314,9 +314,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">제철소에서 만들어진 차체의 성능을 테스트하고, 철을 재활용해 친환경 철을 만듭니다.</h3>
+						                   <h3 class="topListN">온/오프라인을 총괄하는 언론사의 기자로서 취재한 기사를 인터넷에 게시해 알리고, 종이 신문으로도 제작합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -340,7 +340,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science6-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike6-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -363,9 +363,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">게임의 구성에 대해 배우고 직접 모바일 게임을 개발합니다.</h3>
+						                   <h3 class="topListN">MC와 리포터가 되어 강원도 축제를 소개하는 TV 프로그램을 생방송으로 진행합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">9,000원</div>
@@ -389,7 +389,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science7-2.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike7-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -412,9 +412,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">항만의 정의를 배우고 스마트 시스템을 통해 항만으로 들어오는 물류를 손쉽고 안전하게 운반합니다.</h3>
+						                   <h3 class="topListN">TV스튜디오에서는 기상캐스터, 기자, 아나운서로 역할을 나누어 생방송으로 뉴스 프로그램을 제작하며 방송이 제작되는 과정을 배웁니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -438,7 +438,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science9-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/mike/mike8-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -461,9 +461,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">방송</span>
 						                   </div>
-						                   <h3 class="topListN">첨단 특수장비로 해충을 박멸하고 환경위생의 중요성을 깨닫습니다.</h3>
+						                   <h3 class="topListN">스포츠 방송 센터에서는 스포츠 캐스터로 경기를 중계합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>

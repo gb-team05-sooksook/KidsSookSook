@@ -258,11 +258,98 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
-
-
-
-
+/* 하단 페이지 쪽 번호 */
+.page-number-containel{
+    margin-top: 48px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.page-number-wrapper{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+}
+.page-left-arrow{
+    display: inline-flex;
+    padding: 0px 1px;
+}
+.page-left-arrow-button-wrapper{
+    opacity: 0.3;
+    background: none;
+}
+.page-left-arrow-button{
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.page-left-arrow-button-svg{
+    width: 25.2px;
+    height: 25.2px;
+}
+.page-middle-number-containel{
+    display: inline-flex;
+    padding: 0px 1px;
+}
+.page-middle-number-button{
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 1;
+    font-weight: 500;
+    transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 12px;
+    padding: 0px 8px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    min-width: 36px;
+    height: 36px;
+    color: rgb(48, 52, 65);
+}
+.page-right-arrow{
+    display: inline-flex;
+    padding: 0px 1px;
+}
+.page-right-arrow-button-wrapper{
+    opacity: 0.3;
+    background: none;
+}
+.page-right-arrow-button{
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.page-right-arrow-svg{
+    width: 25.2px;
+    height: 25.2px;
+}
 
 
 

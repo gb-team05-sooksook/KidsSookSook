@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키즈쑥쑥 | 아이들에게 다양한 경험을 시켜주세요</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/pay.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 <body>
-    <div id="orderDiv" style="">
+    <div id="orderDiv">
         <!-- head -->
         <!-- 주문단계 -->
         <div class="OrderHeader layout__container">
@@ -96,12 +97,6 @@
                     <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-price-item first-row">                    9,000원                </div>
                 </td>
             </tr>
-            
-        
-        <!--
-            주문제작  or 메시지로 결제 승인 했을 시
-         -->
-        
         </tbody>
     </table>
     
@@ -147,9 +142,6 @@
                     </div>
         </div>
     
-        
-                    
-                    
                     <section class="OrderPaymentAmount">
         <h2 class="OrderPaymentAmount__title">할인 / 캐시사용</h2>
         <div class="OrderPaymentAmount__coupon-wrapper">
@@ -267,8 +259,6 @@
         </ul>
     </div>
     
-    
-    
     <div style="display: none;">
         <div class="OrderPaymentMethods__virtual-accounts">
             ∙ 가상계좌(무통장)는 간편송금 서비스를 이용하여 입금하실 경우, 송금이 원활하지 않을 수 있습니다. <br>
@@ -285,12 +275,7 @@
     </div>
     </section>
     
-    
-    
-    
-    
-    
-                    <section class="OrderTax">
+    <section class="OrderTax">
         <div>
             <div>
                             <!--기업-->
@@ -455,18 +440,18 @@
                 </div>
             </div>
             <div>
-                            <button id="payBtn" class="btn btn-brand-yellow NGB btn-block" style="height: 52px;">
+                <button id="payBtn" class="btn btn-brand-yellow NGB btn-block" style="height: 52px;">
                     <span class="OrderSummary__pay-button-text">
                         결제하기
                     </span>
                 </button>
-                            <p class="OrderSummary__safe-trade">
+                    <p class="OrderSummary__safe-trade">
                     서비스 제공이 완료된 이후에 전문가에게 결제 대금이 전달됩니다.
-                </p>
+                	</p>
             </div>
         </div>
     </div>
-        </div>
+    </div>
     </div>
 </body>
 </html>
