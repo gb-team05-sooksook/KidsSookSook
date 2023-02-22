@@ -1,11 +1,16 @@
+/**
+ * 
+ */
+
 	const $body = $('body');
     const $modal = $('.swal2-container');
     const $modalFail = $('.swal2-container-fail');
     const $btnModal = $('.main-pw-find-btn');
 
     function removeAttrBtn() {
-    	/*실제 페이지 버튼 활성화는 @앞에 한글자라도 붙이고 뒤에 한글자 이상 + . + c 뒤에부터 활성화가 됨*/
-        if($('.main-pw-find-input').val()) {
+        var $test = $('.main-pw-find-input').val();
+        const exptext = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+        if(exptext.test($test)) {
             $btnModal.removeAttr('disabled');
         } else {
             $btnModal.attr('disabled', true);

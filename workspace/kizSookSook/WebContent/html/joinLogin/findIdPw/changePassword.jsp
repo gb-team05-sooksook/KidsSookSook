@@ -33,7 +33,7 @@
                             </div>
                             <div data-testid="newPassword">
                                 <div class="error-div">
-                                    <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+                                    <p class="error-text" style="display: none;">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
                                 </div>
                             </div>
                         </section>
@@ -44,7 +44,7 @@
                             </div>
                             <div data-testid="newConfirmPassword">
                                 <div class="error-div">
-                                    <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+                                    <p class="error-text" style="display: none;">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
                                 </div>
                             </div>
                         </section>
@@ -76,19 +76,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>
-    const $body = $('body');
-    const $modal = $('.swal2-container');
-    const $btnModal = $('.submit-btn');
-
-    $btnModal.click((event) => {
-        event.preventDefault();
-        $body.css('overflow', 'hidden');
-        $modal.css('display', 'block');
-
-        $('.swal2-confirm').click(function() {
-            $btnModal.unbind('click').click();
-        });
-    });
-</script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/findIdPw/changePassword.js"></script>
 </html>

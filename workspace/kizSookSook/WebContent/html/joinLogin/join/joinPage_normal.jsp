@@ -19,7 +19,7 @@
                 </svg>
             </a>
             <div class="main-join-box">
-                <form novalidate="" class="join-form">
+                <form novalidate="" class="join-form" id="joinForm">
                     <h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
@@ -28,7 +28,7 @@
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">아이디를 입력해 주세요.</p>
+                                <p class="error-text" style="display: none;">아이디를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <input type="password" required placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="password" autocomplete="current-password" class="join-item-input" value=""></div>
                             <div data-testid="password-error">
                                 <div class="error-div">
-                                    <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+                                    <p class="error-text" style="display: none;">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
                                 </div>
                             </div>
                         <div class="join-item-div">
@@ -47,7 +47,7 @@
                             </div>
                             <div data-testid="password-confirm-error">
                                 <div class="error-div">
-                                    <p class="error-text">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
+                                    <p class="error-text" style="display: none;">8자 이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</p>
                                 </div>
                             </div>
                         </div>
@@ -59,18 +59,18 @@
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">이메일을 입력해 주세요.</p>
+                                <p class="error-text" style="display: none;">이메일을 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
                     <div class="join-item-div">
-                        <div class="join-item-title">전화번호</div>
+                        <div class="join-item-title">휴대폰번호</div>
                         <div class="join-item-input-div">
-                            <input type="phoneNumber" required placeholder="전화번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="phoneNumber" required placeholder="휴대폰번호를 입력해 주세요.(-미포함)" name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">전화번호를 입력해 주세요.</p>
+                                <p class="error-text" style="display: none;">휴대폰번호를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
-                                <p class="error-text">주소를 입력해 주세요.</p>
+                                <p class="error-text" style="display: none;">주소를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -112,11 +112,11 @@
                                 <p onclick="selectGender(this)">남</p>
                                 <p onclick="selectGender(this)">여</p>
                             </div>
-                            <input name="gender" type="hidden" value="" id="memberGender">
+                            <input name="gender" type="hidden" value="" id="memberGender" class="join-item-input">
                         </div>
                         <div data-testid="job-type-error">
                             <div class="error-div">
-                                <p class="error-text">최소 한가지를 선택해 주세요</p>
+                                <p class="error-text" style="display: none;">최소 한가지를 선택해 주세요</p>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         <div class="join-item-agreements-one-div">
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
-                                    <input type="checkbox" style="display: none;" id="firstCheck">
+                                    <input type="checkbox" style="display: none;" class="checkbox">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -149,7 +149,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
-                                    <input type="checkbox" style="display: none;" id="secondCheck">
+                                    <input type="checkbox" style="display: none;" class="checkbox">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -163,7 +163,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
-                                    <input type="checkbox" style="display: none;" id="thirdCheck">
+                                    <input type="checkbox" style="display: none;" class="checkbox">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -177,7 +177,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
-                                    <input type="checkbox" style="display: none;" id="forthCheck">
+                                    <input type="checkbox" style="display: none;" class="checkbox">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -191,7 +191,7 @@
                             </div>
                             <div class="join-item-agreements-one">
                                 <div class="join-item-agreements-check-img">
-                                    <input type="checkbox" style="display: none;" id="fifthCheck">
+                                    <input type="checkbox" style="display: none;" class="checkbox">
                                     <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                             <path d="M0 0h24v24H0V0z" fill="none"></path>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="join-item-agreements-one">
                             <div class="join-item-agreements-check-img">
-                                <input type="checkbox" style="display: none;" id="sixthCheck">
+                                <input type="checkbox" style="display: none;" class="checkbox">
                                 <span role="img" color="#ffffff" rotate="0" class="join-item-agreements-check-span">
                                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="join-item-agreements-check-svg">
                                         <path d="M0 0h24v24H0V0z" fill="none"></path>
