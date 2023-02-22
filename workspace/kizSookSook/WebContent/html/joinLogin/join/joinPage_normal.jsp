@@ -53,6 +53,28 @@
                         </div>
                     </div>
                     <div class="join-item-div">
+                        <div class="join-item-title">이름</div>
+                        <div class="join-item-input-div">
+                            <input type="email" required placeholder="이름을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text" style="display: none;">이름을 입력해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
+                        <div class="join-item-title">닉네임</div>
+                        <div class="join-item-input-div">
+                            <input type="email" required placeholder="닉네임을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text" style="display: none;">닉네임을 입력해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
                         <div class="join-item-title">이메일</div>
                         <div class="join-item-input-div">
                             <input type="email" required placeholder="이메일을 입력해 주세요." name="email" autocomplete="email" class="join-item-input" value="">
@@ -231,4 +253,5 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage.js"></script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage_normal.js"></script>
 </html>

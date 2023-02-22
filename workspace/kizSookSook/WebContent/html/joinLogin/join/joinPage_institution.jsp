@@ -92,6 +92,17 @@
                         </div>
                     </div>
                     <div class="join-item-div">
+                        <div class="join-item-title">기관명</div>
+                        <div class="join-item-input-div">
+                            <input type="phoneNumber" required placeholder="기관명을 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                        </div>
+                        <div data-testid="email-error">
+                            <div class="error-div">
+                                <p class="error-text" style="display: none;">기관명을 입력해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join-item-div">
                         <div class="join-item-title">사업자등록번호</div>
                         <div class="join-item-input-div">
                             <input type="phoneNumber" required placeholder="사업자등록번호를 입력해 주세요." name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
@@ -213,4 +224,5 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage.js"></script>
+<script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage_institution.js"></script>
 </html>
