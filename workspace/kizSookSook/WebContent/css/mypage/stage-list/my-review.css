@@ -4,6 +4,7 @@ h5 {
 }
 
 div.my-review-info-conainer {
+    margin-top: 50px;
     border: 1px solid #e6e6e6;
     background-color: #f3f4f8;
 }

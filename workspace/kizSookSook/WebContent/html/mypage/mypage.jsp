@@ -62,7 +62,7 @@ pageEncoding="UTF-8"%>
                         <div class="profile-wrapper">
                             <div class="profile-img">
                                 <img
-                                    src="https://kmong.com/img/tools/main_user_gray.png"
+                                    src="${pageContext.request.contextPath}/resources/img/mypage/mypage_male_profile.png"
                                 />
                                 <div class="member-type">의뢰인</div>
                             </div>
@@ -70,7 +70,7 @@ pageEncoding="UTF-8"%>
                                 신중한여우6531
                             </div>
                             <a href="" class="profile-a">
-                                <span>개인 회원</span>
+                                <span>문의하기 페이지로 이동</span>
                             </a>
                         </div>
                         <div class="aside-menu-wrapper">
@@ -102,6 +102,7 @@ pageEncoding="UTF-8"%>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="${pageContext.request.contextPath}/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/js/mypage/unregister-check.js"></script>
     <script src="${pageContext.request.contextPath}/js/mypage/mypage.js"></script>

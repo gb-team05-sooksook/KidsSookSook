@@ -170,16 +170,46 @@ div.my-info-form .form-input input {
     color: inherit;
 }
 
-p.info-form-warning{
+p.info-form-warning {
     display: none;
     margin-top: 8px;
     color: #ff402b;
     font-size: 12px;
-}   
+}
 
 .identification-conditions-list {
     margin: 6px 0px 0px;
     padding: 0px;
     color: rgb(154, 155, 167);
     font-size: 12px;
+}
+
+#postCode {
+    flex: 1;
+}
+
+#postCodeBtn {
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    line-height: 1;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 42px;
+    font-size: 14px;
+    padding: 0 16px;
+    margin-left: 8px;
+    background-color: #ffd400;
+    border-color: #ffd400;
+    color: #303441;
+}
+
+div.my-info-adress {
+    display: flex;
+    margin-bottom: 8px;
 }

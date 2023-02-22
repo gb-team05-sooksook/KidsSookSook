@@ -36,7 +36,6 @@ div.status-item-name {
 }
 
 div.status-item-count {
-    width: 155px;
     margin-top: 4px;
     text-align: right;
     color: #303441;
@@ -101,7 +100,7 @@ section.trip-history-container {
     margin-top: 40px;
 }
 
-form[name='fieldTripForm'] {
+form[name="fieldTripForm"] {
     display: flex;
     column-gap: 8px;
 }
@@ -150,7 +149,7 @@ div.selecter-options {
     opacity: 0;
 }
 
-input[name='date'] {
+input[name="date"] {
     background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
@@ -269,7 +268,7 @@ div.form-text-input {
     flex: 1;
 }
 
-div.form-text-input input[name='fieldTripName'] {
+div.form-text-input input[name="fieldTripName"] {
     outline: none;
     flex: 1;
     width: 100%;
@@ -320,20 +319,83 @@ div.form-btn {
     font-weight: 500;
 }
 
-section.history-result {
+section.history-result-container {
     margin-top: 12px;
-    height: 600px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     border: 1px solid rgb(228, 229, 237);
     border-radius: 8px;
     font-weight: 400;
     font-size: 14px;
     color: rgb(154, 155, 167);
+}
+
+div.history-result-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+div.history-result {
+    border: 1px solid rgb(228, 229, 237);
+    border-radius: 8px;
+    color: #303441;
+    padding: 20px 17px;
+    width: 95%;
+}
+
+div.history-result .h_result-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+div.h_result-info .h_title {
+    margin-bottom: 8px;
+}
+
+div.h_result-info div.h_details {
+    font-size: 12px;
+    color: rgb(123, 124, 133);
+}
+
+div.h_details .h_category::after {
+    content: " ";
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+div.h_details .h_date::after {
+    content: " ";
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+div.h_result-content {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+div.h_result-content div {
+    text-align: start;
+    flex: 1;
+}
+
+div.h_result-pagenation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 #noResult {
@@ -369,7 +431,7 @@ section.history-warnings ul li {
     margin: 0;
 }
 
-input[type='date']::-webkit-datetime-edit-text {
+input[type="date"]::-webkit-datetime-edit-text {
     -webkit-appearance: none;
     display: none;
 }
