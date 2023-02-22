@@ -198,6 +198,10 @@ button, [type='button'], [type='reset'], [type='submit'] {
     margin-top: 48px;
 }
 
+.choice-third{
+    margin-top: 48px;
+}
+
 .choice-btn:hover {
     background-color: rgb(255, 250, 209);
     border-color: rgb(255, 212, 0);
