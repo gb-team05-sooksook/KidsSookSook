@@ -1,54 +1,5 @@
 @charset "UTF-8";
 
-.bannerLayout {
-  display: flex;
-}
-
-.banner {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin-right: 40px;
-  text-align: center;
-}
-
-.banner-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.banner-wrap span {
-  display: block;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover,
-a:hover {
-  opacity: 0.7;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap');
 
 body,
@@ -154,9 +105,7 @@ html {
 }
 
 .stageLayout {
-  min-width: 1280;
-  /* margin-left: 40px; */
-  /* margin-top: 40px; */
+  min-width: 1280px;
 }
 
 .memberIdSearchText {
@@ -189,7 +138,7 @@ html {
 }
 
 .dataTableLayout {
-  max-width: 1980px;
+  min-width: 1280px;
   background-color: white;
   display: inline-block;
   margin: 38px;
@@ -209,11 +158,6 @@ html {
 .tableCheckboxAll {
   width: 20px;
   height: 20px;
-}
-
-.paddingA {
-  padding: 12px 20px 12px 40px;
-  margin-bottom: 30px;
 }
 
 #myInput {
@@ -268,6 +212,16 @@ html {
   background-color: #f1f1f1;
 }
 
+.trDataOK {
+  font-weight: 500;
+  color: #679f7b;
+}
+
+.trDataNO {
+  font-weight: 500;
+  color: #ff3668;
+}
+
 #myTable tbody tr:not(:first-child):hover {
   background-color: #bcd4fa;
 }
@@ -297,4 +251,111 @@ html {
 /* 마우스 올렸을 때 */
 .pagination a:hover:not(.active) {
   background-color: #bcd4fa;
+}
+
+/* 모달창 */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+div.modal-bg {
+  background-color: hsla(0, 0%, 0%, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-bg.active {
+  display: flex;
+}
+
+section.container {
+  position: absolute;
+  background-color: white;
+  border: 2px solid #474747;
+  border-radius: 8px;
+  color: #303441;
+  padding: 0px 20px 17px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-114%, -55%); */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+div.title-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+div.details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #303441;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.det_title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.det_title span {
+  margin-right: 12px;
+}
+
+.det_title input {
+  margin-right: 12px;
+}
+
+div.title {
+  margin-bottom: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* input[name='title'] {
+} */
+
+input[name='writtenDate'] {
+  margin: 6px 0;
+}
+
+textarea[name='content'] {
+  width: 100%;
+  resize: none;
+}
+
+.det_submitButton {
+  border: 1px solid #111;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.X {
+  cursor: pointer;
+  display: block;
+}
+
+.titleAndX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
