@@ -42,41 +42,41 @@
 </div>
 <div class="filters-wrapper">
     <div class="form-selecter">
-            <div class="selecter" id="theme-selecter">
-                <div class="theme-names">
-                    <div id="themeName">전체 카테고리</div>
-                </div>
-                <div class="selecter-arrow-wrapper">
-                    <div class="selecter-arrow">
-                        <svg
-                            height="20"
-                            width="20"
-                            viewBox="0 0 20 20"
-                            aria-hidden="true"
-                            focusable="false"
-                            class="css-8mmkcg"
-                        >
-                            <path
-                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
+        <div class="selecter" id="theme-selecter">
+            <div class="theme-names">
+                <div id="themeName">전체 카테고리</div>
             </div>
-            <div class="selecter-options">
-                <div class="theme-names">
-                    <div class="theme-name">전체 카테고리</div>
-                    <div class="theme-name">카테고리2</div>
-                    <div class="theme-name">카테고리3</div>
-                    <div class="theme-name">카테고리4</div>
-                    <div class="theme-name">카테고리5</div>
-                    <div class="theme-name">카테고리6</div>
+            <div class="selecter-arrow-wrapper">
+                <div class="selecter-arrow">
+                    <svg
+                        height="20"
+                        width="20"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                        focusable="false"
+                        class="css-8mmkcg"
+                    >
+                        <path
+                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        ></path>
+                    </svg>
                 </div>
-                <!-- 카테고리 검색 인풋 -->
-                <input type="text" name="theme" style="display: none" />
             </div>
         </div>
-    <div class="date-selecter-wrapper" style="margin-left: 9px;">
+        <div class="selecter-options" style="display: none">
+            <div class="theme-names">
+                <div class="theme-name">전체 카테고리</div>
+                <div class="theme-name">카테고리2</div>
+                <div class="theme-name">카테고리3</div>
+                <div class="theme-name">카테고리4</div>
+                <div class="theme-name">카테고리5</div>
+                <div class="theme-name">카테고리6</div>
+            </div>
+            <!-- 카테고리 검색 인풋 -->
+            <input type="text" name="theme" style="display: none" />
+        </div>
+    </div>
+    <div class="date-selecter-wrapper" style="margin-left: 9px">
         <input type="date" name="date" />
         ~
         <input type="date" name="date" />
@@ -92,14 +92,46 @@
     </ul>
 </div>
 <div class="cash-history-list">
-    <div>
-        <div>
-            <img
-                src="https://kmong.com/img/seller/nothing.png"
-                title="내역없음"
-                class="width-50px"
-            />
-            <h5>내역이 없습니다.</h5>
+    <div class="history-result">
+        <div class="h_result-info">
+            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
+            <div class="h_details">
+                <span class="h_category">카테고리</span>
+                <span class="h_date">2022.01.01</span>
+                <span class="h_institution">업체명</span>
+            </div>
+        </div>
+        <div class="h_result-content">
+            <div>체험학습 내용의 요약본 한 줄</div>
+            <span>금액란10000</span>
+        </div>
+    </div>
+    <div class="history-result">
+        <div class="h_result-info">
+            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
+            <div class="h_details">
+                <span class="h_category">카테고리</span>
+                <span class="h_date">2022.01.01</span>
+                <span class="h_institution">업체명</span>
+            </div>
+        </div>
+        <div class="h_result-content">
+            <div>체험학습 내용의 요약본 한 줄</div>
+            <span>금액란10000</span>
+        </div>
+    </div>
+    <div class="history-result">
+        <div class="h_result-info">
+            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
+            <div class="h_details">
+                <span class="h_category">카테고리</span>
+                <span class="h_date">2022.01.01</span>
+                <span class="h_institution">업체명</span>
+            </div>
+        </div>
+        <div class="h_result-content">
+            <div>체험학습 내용의 요약본 한 줄</div>
+            <span>금액란10000</span>
         </div>
     </div>
 </div>
