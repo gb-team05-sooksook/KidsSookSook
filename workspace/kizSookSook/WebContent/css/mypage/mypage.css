@@ -21,3 +21,9 @@ section.main {
 section.stage {
     margin-left: 24px;
 }
+
+._no-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
