@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 	const $body = $('body');
     const $modal = $('.swal2-container');
     const $modalFail = $('.swal2-container-fail');
