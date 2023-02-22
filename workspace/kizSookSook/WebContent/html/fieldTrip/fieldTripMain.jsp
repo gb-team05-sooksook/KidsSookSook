@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세상 모든 직업을 체험해볼 수 있는 곳, 키즈쑥쑥</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldTripMain.css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 <body>
     <div>
@@ -279,7 +280,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical10-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -304,12 +305,12 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">의료</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">응급의학과 의사가 되어 응급구조대에서 이송한 환자를 치료합니다</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">10,000원</div>
                        </div>
                    </div>
                </div>
@@ -322,7 +323,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       35
                        개의 평가
                    </div>
                </div>
@@ -332,7 +333,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/mike7-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -357,12 +358,12 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">방송</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">TV스튜디오에서는 기상캐스터, 기자, 아니운서로 역활을 나누어 생방송으로 뉴스 프로그램을 제작하며 방송이 제작되는 과정을 배웁니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">12,000원</div>
                        </div>
                    </div>
                </div>
@@ -375,7 +376,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       32
                        개의 평가
                    </div>
                </div>
@@ -385,7 +386,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study3-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -412,10 +413,10 @@
                    <div class="topListL">
                        <span class="topListM">사회</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">법원에서는 다양한 모의재판 체험을 통해 법과 정의에 대해 생각해 볼 수 있습니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">13,000원</div>
                        </div>
                    </div>
                </div>
@@ -428,7 +429,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       39
                        개의 평가
                    </div>
                </div>
@@ -438,7 +439,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study8-2.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -465,10 +466,10 @@
                    <div class="topListL">
                        <span class="topListM">사회</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">승무원 교육센터에서는 진짜 비행기 안에서 비행 시뮬레이션과 기내 안전 및 고객 서비스에 대해 배웁니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">11,000원</div>
                        </div>
                    </div>
                </div>
@@ -481,7 +482,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       45
                        개의 평가
                    </div>
                </div>
@@ -492,7 +493,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/art5-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -517,9 +518,9 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">예술</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">연기학교 단원이 되어 퍼레이드 행렬에 직접 참여합니다. 탭댄스를 배우고 탭댄서가 되어 공연을 펼칩니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
                            <div class="topListR" id="topListRR">9,000원</div>
@@ -535,7 +536,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       26
                        개의 평가
                    </div>
                </div>
@@ -545,7 +546,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study4-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -572,10 +573,10 @@
                    <div class="topListL">
                        <span class="topListM">사회</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">은행에서는 은행원이 되어 스마트 뱅킹 시스템을 이용해 고객의 요청업무를 처리 합니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">8,000원</div>
                        </div>
                    </div>
                </div>
@@ -588,7 +589,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       31
                        개의 평가
                    </div>
                </div>
@@ -598,7 +599,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/cook12-2.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -623,12 +624,12 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">요리</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">햄버거 카페테리아의 햄버거 요리사로서 맛과 영양의 조화를 살린 레시피로 직접 햄버거를 만들어봅니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">10,000원</div>
                        </div>
                    </div>
                </div>
@@ -641,7 +642,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       42
                        개의 평가
                    </div>
                </div>
@@ -651,7 +652,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical6-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -676,12 +677,12 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">의료</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">치과에서는 다양한 구강 질환의 종류와 치료법, 건강한 치아 관리법에 대해 알 수 있습니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
-                           <div class="topListR" id="topListRR">9,000원</div>
+                           <div class="topListR" id="topListRR">11,000원</div>
                        </div>
                    </div>
                </div>
@@ -694,7 +695,7 @@
                    "5.0"
                    <span class="topListS"></span>
                    <div class="topListT">
-                       30
+                       40
                        개의 평가
                    </div>
                </div>
@@ -704,7 +705,7 @@
                    <div class="topListE">
                        <div class="topListF">
                            <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/history5-1.jpg" class="topListH">
                            </div>
                        </div>
                    </div>
@@ -729,9 +730,9 @@
                </div>
                <div class="topListK">
                    <div class="topListL">
-                       <span class="topListM">사회</span>
+                       <span class="topListM">역사</span>
                    </div>
-                   <h3 class="topListN">소방서에서는 화재현장에 출동하여 용감하게 화재를 진압해 투철한 봉사정신을 실천할 수 있습니다.</h3>
+                   <h3 class="topListN">고고학자가 되어 피라미드 내부의 다양한 코스를 탐험합니다.</h3>
                    <div class="topListO">
                        <div class="topListP">
                            <div class="topListR" id="topListRR">9,000원</div>

@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 | 키즈쑥쑥</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldPage.css">
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/icon.png">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/mypage-font.css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
 </head>
 <body>
     <!-- 왼쪽 카테고리 창 -->
@@ -91,7 +91,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history1-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -114,9 +114,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">과학수사대 C.S.I는 다양한 증거를 분석해 사건의 진실을 밝히는 수사를 합니다.</h3>
+						                   <h3 class="topListN">공룡의 특징을 알아보고 공룡 화석을 발굴해 화석 복원 연구를 진행합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -140,7 +140,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science2-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history2-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -163,9 +163,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">로봇이 주는 편리함에 대해 배우고 로봇 성능테스트를 통해 개발에 참여합니다.</h3>
+						                   <h3 class="topListN">고고학자가 되어 피라미드 내부의 다양한 코스를 탐험합니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -189,7 +189,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science3-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history3-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -212,9 +212,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 시스템을 통해 전기안전 사고와 재해를 예방하고 관리합니다.</h3>
+						                   <h3 class="topListN">경복궁은 조선을 세운 태조가 한양에 도읍을 정하면서 지은 조선의 대표적인 궁궐입니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">10,000원</div>
@@ -238,7 +238,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science4-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history4-1.png" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -261,9 +261,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">스마트 토이 제작자가 되어 인공지능(AI)기술과 장난감이 합쳐진 스마트 토이 제작에 참여합니다.</h3>
+						                   <h3 class="topListN">창경궁은 태종이 아들 세종에게 왕위를 물려주면서 자신이 머물기 위해 지은 궁궐입니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">12,000원</div>
@@ -291,7 +291,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science5-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history5-1.png" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -314,9 +314,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">제철소에서 만들어진 차체의 성능을 테스트하고, 철을 재활용해 친환경 철을 만듭니다.</h3>
+						                   <h3 class="topListN">조선왕조 역대 왕과 왕후의 신주를 모신 사당입니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -340,7 +340,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science6-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history6-1.png" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -363,9 +363,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">게임의 구성에 대해 배우고 직접 모바일 게임을 개발합니다.</h3>
+						                   <h3 class="topListN">경운궁은 조선 시대 5대 궁궐 중에서 가장 규모가 작으며, 광해군 때에 정식 왕궁이 되었습니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">9,000원</div>
@@ -389,7 +389,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science7-2.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history7-1.png" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -412,9 +412,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">항만의 정의를 배우고 스마트 시스템을 통해 항만으로 들어오는 물류를 손쉽고 안전하게 운반합니다.</h3>
+						                   <h3 class="topListN">1796년 정조가 축조한 성입니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">15,000원</div>
@@ -438,7 +438,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science9-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/history/history8-1.png" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -461,9 +461,9 @@
                             			</div>
                             			<div class="topListK">
 						                   <div class="topListL">
-						                       <span class="topListM">과학IT</span>
+						                       <span class="topListM">역사</span>
 						                   </div>
-						                   <h3 class="topListN">첨단 특수장비로 해충을 박멸하고 환경위생의 중요성을 깨닫습니다.</h3>
+						                   <h3 class="topListN">태종 때 지어진 창덕궁은 조선의 5대 궁궐 중에서도 가장 아름다운 궁궐로 손꼽힙니다.</h3>
 						                   <div class="topListO">
 						                       <div class="topListP">
 						                           <div class="topListR" id="topListRR">11,000원</div>
@@ -486,6 +486,34 @@
                             		</a>
                             	</article>
                             </div>
+							<!-- 하단 페이지 쪽 번호 -->
+							<div class="page-number-containel">
+								<ul class="page-number-wrapper">
+									<li class="page-left-arrow">
+										<button class="page-left-arrow-button-wrapper">
+											<span class="page-left-arrow-button">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
+													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+												</svg>
+											</span>
+										</button>
+									</li>
+									<li class="page-middle-number-containel">
+										<button class="page-middle-number-button">
+											<span>1</span>
+										</button>
+									</li>
+									<li class="page-right-arrow">
+										<button class="page-right-arrow-button-wrapper">
+											<span class="page-right-arrow-button">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
+													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+												</svg>
+											</span>
+										</button>
+									</li>
+								</ul>
+							</div>
                         </div> <!-- 카테고리 4개 담은 div -->
                     </div>
                 </main>
