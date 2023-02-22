@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/main.css">
 </head>
 <body>
-	<body>
+
 	<div id="wrap">
 	
 	<!--header -->
