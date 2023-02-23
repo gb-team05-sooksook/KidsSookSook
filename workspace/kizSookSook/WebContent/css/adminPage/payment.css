@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Noto+Sans+KR:wght@300;500&display=swap');
 
 body, html {
-	font-family: 'IBM Plex Sans KR', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 14px;
 }
-
 .adminPage {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: #eeeeee;
-  margin-left: 202px;
+  margin-left: 142px;
 }
 
 .logoImg {
@@ -28,7 +28,7 @@ body, html {
 
 .sidebar {
   height: 100%;
-  width: 210px;
+  width: 150px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -39,7 +39,7 @@ body, html {
 }
 
 .sidebar a:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   border-bottom: solid;
   border-bottom-color: #eeeeee;
 }
@@ -49,7 +49,7 @@ body, html {
   margin-bottom: 2px;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   display: block;
 }
@@ -91,10 +91,10 @@ body, html {
 }
 
 .sidebarNameText span {
-	font-weight: 500;
-	margin-left: 32px;
-	color: #1664eb;
-	vertical-align: -webkit-baseline-middle;
+  font-weight: 500;
+  margin-left: 15px;
+  color: #1664eb;
+  vertical-align: -webkit-baseline-middle;
 }
 
 .main-content-container {
@@ -140,36 +140,38 @@ body, html {
 }
 
 .dataTableLayout {
-	width: 1280px;
-	background-color: white;
-	display: inline-block;
-	margin: 38px;
+  min-width: 1300px;
+  background-color: white;
+  display: inline-block;
+  //margin: 15px;
+  margin: 30px;
 }
 
 .dataTable {
-	margin: 40px 40px;
-	display: flex;
-	flex-direction: column;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tableCheckbox {
-	width: 20px;
-	height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
-.tableCheckboxAll{
-	width: 20px;
-	height: 20px;
+.tableCheckboxAll {
+  width: 16px;
+  height: 16px;
 }
+
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('/kizSookSook/resources/img/search.png');
+  background-image: url(/kizSookSook/resources/img/search.png);
   background-size: 20px;
-  background-position: 10px 12px;
+  background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 30%;
-  font-size: 16px;
+  width: 29%;
+  font-size: 14px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 30px;
@@ -179,7 +181,7 @@ body, html {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #myTable th,
@@ -214,15 +216,15 @@ body, html {
 /* Pagination */
 
 .pagination {
+  font-size: 7px;
   margin-top: 30px;
   text-align: -webkit-center;
   width: 100%;
 }
-
 .pagination a {
   color: black;
   float: none;
-  padding: 8px 16px;
+  padding: 8px 12px;
   text-decoration: none;
   transition: background-color 0.3s;
 }

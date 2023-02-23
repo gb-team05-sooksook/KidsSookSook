@@ -14,10 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/adminPage/notice.css"
-    />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/notice.css" />
   </head>
   <body>
     <section class="adminPage">
@@ -51,8 +48,18 @@
                       type="button"
                       value="공지등록"
                     />
-                    <input id="noticeUpdaterButton" class="filterButton" type="button" value="공지수정" />
-                    <input id="noticeDeleteButton" class="filterButton" type="button" value="공지삭제" />
+                    <input
+                      id="noticeUpdateButton"
+                      class="filterButton"
+                      type="button"
+                      value="공지수정"
+                    />
+                    <input
+                      id="noticeDeleteButton"
+                      class="filterButton"
+                      type="button"
+                      value="공지삭제"
+                    />
                   </div>
                   <input
                     type="text"
@@ -69,14 +76,14 @@
                       <input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="" />
                     </form>
                   </th>
-                  <th class="thStyle">공지번호</th>
-                  <th class="thStyle">공지제목</th>
-                  <th class="thStyle">공지내용</th>
-                  <th class="thStyle">공지날짜</th>
-                  <th class="thStyle">수정날짜</th>
+                  <th style="width: 16%">공지번호</th>
+                  <th style="width: 16%">공지제목</th>
+                  <th style="width: 16%">공지내용</th>
+                  <th style="width: 16%">공지날짜</th>
+                  <th style="width: 16%">수정날짜</th>
                 </tr>
                 <tr>
-                  <td class="tdStyle">
+                  <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
@@ -88,7 +95,7 @@
                   <td>2023/02/15</td>
                 </tr>
                 <tr>
-                  <td class="tdStyle">
+                  <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
@@ -100,7 +107,7 @@
                   <td>2023/02/15</td>
                 </tr>
                 <tr>
-                  <td class="tdStyle">
+                  <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
@@ -112,19 +119,7 @@
                   <td>2023/02/15</td>
                 </tr>
                 <tr>
-                  <td class="tdStyle">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>4</td>
-                  <td>첫 회원가입시 이벤트</td>
-                  <td>첫 회원가입을 하시면 체험학습 하나 무료권을 드립니다.</td>
-                  <td>2023/02/09</td>
-                  <td>2023/02/15</td>
-                </tr>
-                <tr>
-                  <td class="tdStyle">
+                  <td style="width: 6%">
                     <form>
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
@@ -164,7 +159,21 @@
             <div class="title-wrapper">
               <div class="titleAndX">
                 <h2 class="title">공지사항 작성</h2>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="X"><path xmlns="http://www.w3.org/2000/svg" d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                  preserveAspectRatio="xMidYMid meet"
+                  class="X"
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"
+                  ></path>
+                </svg>
               </div>
               <div class="details">
                 <div class="det_title-wrapper">
@@ -179,39 +188,6 @@
                 </div>
                 <div class="det_submit">
                   <input class="det_submitButton" type="button" value="공지사항 등록" />
-                </div>
-              </div>
-            </div>
-            <div class="content">
-              <textarea name="content" id="content" cols="40" rows="20"></textarea>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
-
-    <div>
-      <div class="updateModal-bg">
-        <section class="container">
-          <form action="">
-            <div class="title-wrapper">
-              <div class="titleAndX">
-                <h2 class="title">공지사항 수정</h2>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="updateX"><path xmlns="http://www.w3.org/2000/svg" d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path></svg>
-              </div>
-              <div class="details">
-                <div class="det_title-wrapper">
-                  <div class="det_title">
-                    <span>제목 작성</span>
-                    <input type="text" name="title" />
-                  </div>
-                  <div class="det_title">
-                    <span>날짜 선택</span>
-                    <input type="date" name="writtenDate" />
-                  </div>
-                </div>
-                <div class="det_submit">
-                  <input class="det_submitButton" type="button" value="공지사항 수정" />
                 </div>
               </div>
             </div>
