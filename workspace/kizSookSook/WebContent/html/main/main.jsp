@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/main.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
 </head>
 <body>
 
@@ -24,13 +25,13 @@
 				0 0 1 4.136-1.571zm31.847 0a6.8 6.8 0 0 1 6.8 6.8v7.331h-4.194v-7.34a2.607 2.607 0 0 0-2.441-2.602l-.165-.006a2.607 2.607 0 0 0-2.602 2.442l-.005.165v7.34l-4.193.001v-7.33a6.8 6.8 0 0 1 6.8-6.8zM45.56 8.818a3.282 3.282 0 0 0-3.287 3.279 3.282 3.282 0 0 0 3.287 3.278 3.282 3.282 0 0 0 3.287-3.278 3.282 3.282 0 0 0-3.287-3.279zm32.13.226a3 3 0 0 0-3.003 2.996 3 3 0 0 0 3.003 2.996 3 3 0 0 0 3.003-2.996 3 3 0 0 0-3.003-2.996z" fill="#212224" fill-rule="evenodd"></path>
 				</svg>
 				</a>
-				<div></div>
 				<div style="flex-grow: 1;"></div>
 				<form class="search">
 					<div class="search-d">
 						<input type="text" placeholder="검색어를 입력하세요" class="search-input" maxlength="30">
 						<div class="wrapper">
 							<span class="img">
+                                <!-- 검색 이미지 -->
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
 									<path xmlns="http://www.w3.org/2000/svg" d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 
 									C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 
@@ -89,6 +90,7 @@
                                     <li class="categoryList">
                                         <a class="list-1" href="#">전자책∙VOD</a>                                        
                                     </li>
+                                </ul>
                             </nav>
                         </div>
                     </div>
@@ -108,11 +110,12 @@
                             <form class="search-f">
                                 <div class="search-Wrap">
                                     <div class="search-Category">
-                                        <!-- 검색기능 javascript -->
+                                       <!--  검색기능 javascript -->
                                         <span class="text"></span>
                                             <input class="banner-input" type="text" />
                                         <span class="cursor"></span> 
                                     </div>
+                                   
                                     <div class="search-icon">
                                         <span class="icon">
                                             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
@@ -157,62 +160,63 @@
                                     </a>
                                 </div>
                             </div>
-                    </section>
+                </section>
 
-                   
-                    <!-- banner -->
-                    <section class="bannerContainer">
-                        <div class="bannerPrev">
-                            <div class="bannerPrev-wrap">
-                                <button class="prev-icon">
-                                    <span class="prev">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                            <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,
-                                            11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
-                                <div class="bannerWrap">
-                                     <div class="banner">
-                                          <!-- banner img1 -->
-                                        <div  class="bannerslide">
-                                             <div>
-                                                 <article class="banner-a">
-                                                     <a href="https://kmong.com/md-pick/395--%EC%95%B5%EC%BD%9C-2023-%EC%8B%A0%EB%85%84%EC%9A%B4%EC%84%B8-%EB%B3%B4%EA%B3%A0-%EB%98%90-%EB%B3%B4%EA%B3%A0">
-                                                        <div class="today-img-1">
-                                                             <div></div>
-                                                             <div></div>
-                                                             <div></div>
-                                                             <div></div>
-                                                        </div>    
-                                                     </a>
-                                                 </article>
+                 
+                    
+                            <div class="slideshow-container">
+                                    <!-- banner -->
+                                <div class="mySlideDiv fade active">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong1.jpg"> 
+                                </div>
+                                
+                                <div class="mySlideDiv fade active">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong2.jpg"> 
+                                </div>
+                                
+                                <div class="mySlideDiv fade active">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong3.jpg"> 
+                                </div>
+                                
+                                <div class="mySlideDiv fade active">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong4.jpg"> 
+                                </div>
+                        	
+                                    <!-- 이전 버튼 -->
+                                    <div class="bannerPrev">
+                                        <div class="bannerPrev-wrap">
+                                            <div class="prev-icon">
+                                                <a class="prev" onclick="prevSlide()">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+                                                        <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,
+                                                        11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+                                                    </svg>
+                                                </a>
                                             </div>
-                                         </div>
+                                        </div>
                                     </div>
-                                </div>
-                            <!--next icon -->
-                            <div class="bannerNext">
-                                <div class="bannerNext-wrap">
-                                    <button class="next-icon">
-                                        <span class="next">
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                                <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 
-                                                14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
-                                            </svg>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
+                                    <!-- 다음 버튼 -->
+                                <div class="bannerNext">
+                                    <div class="bannerNext-wrap">
+                                        <div class="next-icon">
+                                            <a class="next" onclick="nextSlide()">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+                                                    <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 
+                                                    14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> 
+							</div>
+
                     
                         <!-- 배너의 카운트 -->
-                        <span class="banner-count"></span>
+                        <span id="banner-count"></span>
                     </section>
                 </div>
             </section>
 
-      
 
             <section class="Context-container">
                 <div class="Context-wrap">
@@ -264,7 +268,6 @@
                             </div>
                         </article>
                     </div>
-
 
                     </div>
                 </div>
@@ -526,7 +529,6 @@
                                         </a>
                                     </article>
                                 </div>
-                                    
                             </div>
                                 
                                 <div class="ranking-0">
@@ -619,6 +621,21 @@
                 </section>
         </div>
 
+
+        <section>
+           <!--  <hr orientation="horizontal" class="line"> -->
+                <div class="kids-info">
+                    <span class="footer-p">
+                     고객센터
+                     </span>   
+                </div>
+                <div class="footer-info-wrap">
+                    <span class="footer-info">
+                        평일 09:00 ~ 18:00  (점심시간 13:00~14:00)<br>주말 공휴일 휴무
+                    </span>
+                </div>
+        </section>
+
         <!-- footer -->
             <footer>
                 <hr orientation="horizontal" class="line">
@@ -664,7 +681,7 @@
                         </p>
                         <div class="footer-copy-wrap">
                         <p class="footerCopy">
-                            Copyright © 2023 kmong Inc. All rights reserved.
+                            Copyright © 2023 kidsSookSook Inc. All rights reserved.
                         </p>
                         </div>
                     </div>
@@ -673,4 +690,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/mainpage/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/mainpage/banner.js"></script>
 </html>
