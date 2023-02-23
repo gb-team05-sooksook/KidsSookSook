@@ -8,7 +8,7 @@
     const $btnModal = $('.main-id-find-btn');
 
     function removeAttrBtn() {
-        if($("input[data-testid='realName']").val() && $("input[data-testid='mobile']").val().length >= 10) {
+        if($($inputs[0]).val() && $($inputs[1]).val().length >= 10) {
             $btnModal.removeAttr('disabled');
         } else {
             $btnModal.attr('disabled', true);
