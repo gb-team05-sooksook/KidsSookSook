@@ -1,0 +1,176 @@
+<section class="OrderGigInfo">
+    <div>
+        <h3 class="OrderGigInfo__title">주문 내역</h3>
+
+        <div class="OrderGigInfo__gig-summary">
+            <div class="OrderGigInfo__thumnail-wrapper">
+                <img
+                    data-type="1-1"
+                    width="120px"
+                    height="auto"
+                    class="border-radius"
+                    src="/kizSookSook/resources/img/fieldTrip/pay/Science1-1.jpg"
+                />
+            </div>
+
+            <div class="OrderGigInfo__description-wrapper">
+                <h4 class="OrderGigInfo__gig-title">
+                    최첨단 과학 수사로 사건의 진실을 밝혀라!
+                </h4>
+                <div class="OrderGigInfo__seller-info">
+                    <span class="OrderGigInfo__seller-name"
+                        >과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을
+                        밝히는 수사를 합니다.</span
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 주문 옵션 테이블 I-->
+    <table
+        class="OrderGigInfo__option-table OrderGigInfo__option-table--not-additional"
+    >
+        <colgroup>
+            <col width="400px" />
+            <col width="104px" />
+            <col width="104px" />
+            <col width="128px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>기본항목</th>
+                <th class="text-center">수량</th>
+                <th class="text-center">이용시간</th>
+                <th class="text-right">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="OrderGigInfo__option-table-row" data-type="2-1">
+                <td class="OrderGigInfo__option-table-cell">
+                    <div
+                        class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-title first-row"
+                    >
+                        <div>C.S.I 과학수사대</div>
+                    </div>
+                </td>
+                <td class="OrderGigInfo__option-table-cell">
+                    <div class="OrderGigInfo__option-table-cell-item first-row">
+                        <span>1</span>
+                    </div>
+                </td>
+                <td class="OrderGigInfo__option-table-cell">
+                    <div class="OrderGigInfo__option-table-cell-item first-row">
+                        1 시간
+                    </div>
+                </td>
+                <td class="OrderGigInfo__option-table-cell">
+                    <div
+                        class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-price-item first-row"
+                    >
+                        9,000원
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section class="OrderGigInfo" name="second">
+    <h1>
+        <div class="page-title">후기 작성</div>
+    </h1>
+    <div class="form">
+        <div class="form">
+            <form id="new_request" class="request-form" action="" method="post">
+                <div class="form-field string required request_subject">
+                    <label id="request_subject_label" for="request_subject"
+                        >후기 제목</label
+                    >
+                    <input
+                        type="text"
+                        name="request[subject]"
+                        id="request_subject"
+                        maxlength="150"
+                        class="change"
+                    />
+                </div>
+                <div class="form-field text required request_description">
+                    <label
+                        id="request_description_label"
+                        for="request_description"
+                        >후기 내용</label
+                    >
+                    <textarea
+                        name="request[description]"
+                        id="request_description"
+                        aria-required="true"
+                        aria-describedby="request_description_hint"
+                        aria-labelledby="request_description_label"
+                        class="change"
+                    ></textarea>
+                    <input
+                        type="hidden"
+                        name="request[description_mimetype]"
+                        id="request_description_mimetype"
+                        value="text/plain"
+                        autocomplete="off"
+                        class=""
+                    />
+                    <p id="request_description_hint">
+                        불건전한 내용 혹은 악의성 후기글은 관리자에 의해 삭제될
+                        수 있습니다.
+                    </p>
+                </div>
+
+                <div class="form-field">
+                    <label for="request-attachments"> 첨부 파일 </label>
+                    <div id="upload-dropzone" class="upload-dropzone">
+                        <input
+                            type="file"
+                            multiple="true"
+                            id="request-attachments"
+                            data-fileupload="true"
+                            data-dropzone="upload-dropzone"
+                            data-error="upload-error"
+                            data-create-url="/hc/ko/request_uploads"
+                            data-name="request[attachments][]"
+                            data-pool="request-attachments-pool"
+                            data-delete-confirm-msg=""
+                            aria-describedby="upload-error"
+                        />
+                        <span>
+                            <a>파일 추가</a> 또는 파일을 여기로 드래그
+                        </span>
+                    </div>
+
+                    <div
+                        id="upload-error"
+                        class="notification notification-error notification-inline"
+                        style="display: none"
+                    >
+                        <span data-upload-error-message=""></span>
+                    </div>
+                    <ul
+                        id="request-attachments-pool"
+                        class="upload-pool"
+                        data-template="upload-template"
+                    ></ul>
+                </div>
+                <footer>
+                    <input
+                        type="submit"
+                        name="commit"
+                        value="제출"
+                        class="submitButton"
+                    />
+                    <input
+                        type="button"
+                        name="commit"
+                        value="닫기"
+                        class="submitButton"
+                        onclick="functionsObj.modal.disableReiviewModalService.excute()"
+                    />
+                </footer>
+            </form>
+        </div>
+    </div>
+</section>

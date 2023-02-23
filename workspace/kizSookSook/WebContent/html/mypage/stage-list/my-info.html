@@ -4,19 +4,19 @@
         <div class="profile-img">
             <img src="https://kmong.com/img/tools/main_user_gray.png" />
         </div>
-        <div class="change-profile">
-            <div class="change-profile-btn-wrapper">
-                <button class="change-profile-btn">
-                    <span>
-                        프로필 변경
-                        <input type="file" id="file-input" />
-                    </span>
-                </button>
+        <label for="file-input">
+            <div class="change-profile">
+                <div class="change-profile-btn-wrapper">
+                    <div type="button" class="change-profile-btn">
+                        <span> 프로필 변경 </span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </label>
     </section>
     <section class="my-info-form-container">
         <form action="">
+            <input type="file" id="file-input" style="display: none" />
             <div class="my-info-form">
                 <div class="form-title">
                     <span>닉네임</span>
@@ -87,12 +87,20 @@
                 </div>
                 <div class="my-info-adress">
                     <div class="form-input" id="postCode">
-                        <input type="text" placeholder="주소 입력" id="postCodeInput"/>
+                        <input
+                            type="text"
+                            placeholder="주소 입력"
+                            id="postCodeInput"
+                        />
                     </div>
                     <button type="button" id="postCodeBtn">주소 찾기</button>
                 </div>
                 <div class="form-input">
-                    <input type="text" placeholder="상세주소 입력" id="postCodeDetail"/>
+                    <input
+                        type="text"
+                        placeholder="상세주소 입력"
+                        id="postCodeDetail"
+                    />
                 </div>
             </div>
             <div class="my-info-form">
