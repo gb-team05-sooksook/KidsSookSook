@@ -13,3 +13,5 @@ $all.on("click", function(){
 $checkboxes.click(function(){
 	$all.prop("checked", $checkboxes.filter(":checked").length == size);
 });
+
+
