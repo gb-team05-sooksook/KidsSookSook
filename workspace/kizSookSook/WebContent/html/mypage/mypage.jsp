@@ -7,7 +7,10 @@ pageEncoding="UTF-8"%>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>마이페이지</title>
-        <link rel="stylesheet" href="" />
+        <link
+            rel="icon"
+            href="${pageContext.request.contextPath}/resources/img/logo/icon.png"
+        />
         <link
             rel="stylesheet"
             href="${pageContext.request.contextPath}/css/mypage/mypage-default.css"
@@ -50,11 +53,21 @@ pageEncoding="UTF-8"%>
         />
         <link
             rel="stylesheet"
+            href="${pageContext.request.contextPath}/css/mypage/modal.css"
+        />
+        <link
+            rel="stylesheet"
             href="${pageContext.request.contextPath}/font/font.css"
         />
     </head>
     <body>
         <header></header>
+        <div class="modal-background" style="display: none">
+            <section
+                class="modal-container"
+                style="display: none; opacity: 0"
+            ></section>
+        </div>
         <div>
             <div class="main-container">
                 <div class="main">

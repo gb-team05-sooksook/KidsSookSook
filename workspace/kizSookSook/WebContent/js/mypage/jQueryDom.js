@@ -1,51 +1,57 @@
 let arraysObj = {
     stageArr: new Array(
-        "stage-list/trip-history.html",
-        "stage-list/cash-history.html",
-        "stage-list/my-info.html",
-        "stage-list/my-review.html",
-        "stage-list/my-qna.html",
-        "stage-list/unregister.html"
+        'stage-list/trip-history.html',
+        'stage-list/cash-history.html',
+        'stage-list/my-info.html',
+        'stage-list/my-review.html',
+        'stage-list/my-qna.html',
+        'stage-list/unregister.html'
     ),
+};
+
+let modalURI = {
+    reviewModal: 'review-modal.html',
 };
 
 let globalObj = {
     isModalActive: false,
-    radioPrev: $($(".register-radio-inner")[0]),
+    radioPrev: $($('.register-radio-inner')[0]),
 };
 
 let jqueryDomObj = (function () {
     function load() {
         return {
-            $stage: $(".stage"),
+            $stage: $('.stage'),
+            $modalContainer: $('section.modal-container'),
+            $modalBackground: $('div.modal-background'),
             sideMenu: {
-                menuItem: $("a.menu-item .item-name"),
+                menuItem: $('a.menu-item .item-name'),
             },
             modalObj: {
-                themeName: $(".theme-name"),
-                themeSelecter: $("#theme-selecter"),
-                modal: $(".theme-name").closest("div.selecter-options"),
+                themeName: $('.theme-name'),
+                themeSelecter: $('#theme-selecter'),
+                modal: $('.theme-name').closest('div.selecter-options'),
                 inputName: $("input[name='theme']"),
-                theme: $("#themeName"),
+                theme: $('#themeName'),
             },
             unregister: {
-                radio: $(".register-radio-inner"),
+                radio: $('.register-radio-inner'),
                 uncheckedCSS: {
-                    border: "1px solid rgb(200, 202, 210)",
-                    "background-color": "rgb(255, 255, 255)",
+                    border: '1px solid rgb(200, 202, 210)',
+                    'background-color': 'rgb(255, 255, 255)',
                 },
                 checkedCSS: {
-                    border: "1px solid rgb(255, 255, 255)",
-                    "background-color": "rgb(255, 212, 0)",
+                    border: '1px solid rgb(255, 255, 255)',
+                    'background-color': 'rgb(255, 212, 0)',
                 },
-                checkSvg: $("path.unregister-svg"),
-                checkLabel: $(".reason-list-checkbox"),
+                checkSvg: $('path.unregister-svg'),
+                checkLabel: $('.reason-list-checkbox'),
             },
             myInfo: {
-                errorText: $("p.info-form-warning"),
-                input: $(".my-info-form .form-input input"),
-                address: $("#postCodeInput"),
-                addressDetail: $("#postCodeDetail"),
+                errorText: $('p.info-form-warning'),
+                input: $('.my-info-form .form-input input'),
+                address: $('#postCodeInput'),
+                addressDetail: $('#postCodeDetail'),
             },
         };
     }
@@ -61,11 +67,11 @@ let functionsObj = {
 
                 menu.each((i, e) => {
                     $(e).mouseover(function () {
-                        $(this).css("font-weight", 500);
+                        $(this).css('font-weight', 500);
                     });
 
                     $(e).mouseout(function () {
-                        $(this).css("font-weight", "inherit");
+                        $(this).css('font-weight', 'inherit');
                     });
                 });
             }
@@ -75,23 +81,31 @@ let functionsObj = {
     },
     modal: {
         service: (function () {
+            /**
+             * 모달창을 기능 구현 서비스
+             * globalObj.isModalActive로 모달창이 켜져있는지 꺼져있는지 판단.
+             *
+             * jqueryDomObj.load().modalObj.inputName에 카테고리 값을 전달한다.
+             *
+             * @param {*} $dom 카테고리창
+             */
             function excute() {
                 var $theme = jqueryDomObj.load().modalObj.themeName;
                 var $themeSelecter = jqueryDomObj.load().modalObj.themeSelecter;
                 var $modal = jqueryDomObj.load().modalObj.modal;
 
-                $themeSelecter.on("click", () => {
+                $themeSelecter.on('click', () => {
                     if (globalObj.isModalActive) {
-                        console.log("disable if 문 들어옴");
+                        console.log('disable if 문 들어옴');
                         functionsObj.modal.disable.excute($modal);
                     } else {
-                        console.log("activate if 문 들어옴");
+                        console.log('activate if 문 들어옴');
                         functionsObj.modal.activate.excute($modal);
                     }
                 });
 
                 $theme.each(function (i, e) {
-                    $(e).on("click", function () {
+                    $(e).on('click', function () {
                         var $value = $(this).text();
 
                         jqueryDomObj.load().modalObj.theme.text($value);
@@ -107,17 +121,23 @@ let functionsObj = {
         })(),
 
         disable: (function () {
+            /**
+             * 카테고리창 opacity를 0으로 0.5초동안 움직임
+             *
+             * @param {*} $dom 카테고리창
+             *
+             */
             function excute($dom) {
-                console.log("disable");
+                console.log('disable');
 
                 $dom.animate(
                     {
-                        top: "45px",
+                        top: '45px',
                         opacity: 0,
                     },
                     500,
                     function () {
-                        $(this).css("display", "none");
+                        $(this).css('display', 'none');
                     }
                 );
 
@@ -128,23 +148,76 @@ let functionsObj = {
         })(),
 
         activate: (function () {
+            /**
+             * 카테고리창 opacity를 1로 0.5초동안 움직임
+             *
+             * @param {*} $dom 카테고리창
+             *
+             */
             function excute($dom) {
-                console.log("activate");
+                console.log('activate');
 
                 $dom.animate(
                     {
-                        top: "35px",
+                        top: '35px',
                         opacity: 1,
                     },
                     500,
                     function () {
-                        $(this).css("display", "block");
+                        $(this).css('display', 'block');
                     }
                 );
 
-                $dom.css("display", "block");
+                $dom.css('display', 'block');
 
                 globalObj.isModalActive = true;
+            }
+
+            return { excute: excute };
+        })(),
+
+        activateReviewModalService: (function () {
+            /**
+             * 리뷰 작성 모달을 불러옴
+             * 추후에 백엔드 작업 떄 데이터도 함께 불러와야 함
+             */
+            function excute() {
+                jqueryDomObj.load().$modalContainer.load(modalURI.reviewModal);
+                jqueryDomObj.load().$modalBackground.css('display', 'block');
+                jqueryDomObj.load().$modalContainer.css('display', 'block');
+                jqueryDomObj.load().$modalContainer.animate(
+                    // css 변경요소
+                    {
+                        opacity: 1,
+                        top: '29%',
+                    },
+                    // 시간
+                    500
+                );
+            }
+            return { excute: excute };
+        })(),
+
+        disableReiviewModalService: (function () {
+            function excute() {
+                if (confirm('창을 닫으시겠습니까? 내용은 저장되지 않습니다.')) {
+                    jqueryDomObj.load().$modalContainer.animate(
+                        // css 변경요소
+                        {
+                            opacity: 0,
+                            top: '34%',
+                        },
+                        // 시간
+                        500,
+                        // 콜백함수
+                        function () {
+                            $(this).css('display', 'none');
+                            jqueryDomObj
+                                .load()
+                                .$modalBackground.css('display', 'none');
+                        }
+                    );
+                }
             }
 
             return { excute: excute };
@@ -168,7 +241,7 @@ let functionsObj = {
                 console.log($checkLabel[0]);
 
                 $radio.each((i, e) => {
-                    $(e).on("click", function (e) {
+                    $(e).on('click', function (e) {
                         e.preventDefault();
 
                         console.log($radioPrev);
@@ -178,14 +251,14 @@ let functionsObj = {
                         }
 
                         if ($svgPrev) {
-                            $svgPrev.css("opacity", 0);
+                            $svgPrev.css('opacity', 0);
                         }
                         $radioPrev.css(
                             jqueryDomObj.load().unregister.uncheckedCSS
                         );
 
                         $(jqueryDomObj.load().unregister.checkSvg[i]).css(
-                            "opacity",
+                            'opacity',
                             1
                         );
                         $(this).css(jqueryDomObj.load().unregister.checkedCSS);
@@ -204,25 +277,25 @@ let functionsObj = {
             var checked = false;
 
             function excute() {
-                $(".unregister-svg-path").css("transition", "fill 0.1s linear");
+                $('.unregister-svg-path').css('transition', 'fill 0.1s linear');
 
-                $(".unregister-agrement-check").on("click", function () {
+                $('.unregister-agrement-check').on('click', function () {
                     var btn = document.querySelector(
-                        "div.unregister-agrement-btn-wrapper button"
+                        'div.unregister-agrement-btn-wrapper button'
                     );
 
                     if (!checked) {
-                        $(".unregister-svg-path").css(
-                            "fill",
-                            "rgb(255, 212, 0)"
+                        $('.unregister-svg-path').css(
+                            'fill',
+                            'rgb(255, 212, 0)'
                         );
                         btn.disabled = false;
                         checked = true;
                     } else {
                         btn.disabled = true;
-                        $(".unregister-svg-path").css(
-                            "fill",
-                            "rgb(111 113 122)"
+                        $('.unregister-svg-path').css(
+                            'fill',
+                            'rgb(111 113 122)'
                         );
                         checked = false;
                     }
@@ -242,7 +315,7 @@ let functionsObj = {
                         return;
                     }
 
-                    $(e).on("blur", function () {
+                    $(e).on('blur', function () {
                         switch (i) {
                             case 0:
                                 reg =
@@ -288,9 +361,9 @@ let functionsObj = {
                 var $texts = jqueryDomObj.load().myInfo.errorText;
 
                 if (check) {
-                    $($texts[i]).css("display", "none");
+                    $($texts[i]).css('display', 'none');
                 } else {
-                    $($texts[i]).css("display", "block");
+                    $($texts[i]).css('display', 'block');
                 }
             }
 
@@ -299,9 +372,9 @@ let functionsObj = {
 
         openAdress: (function () {
             function excute() {
-                console.log("openAdress");
-                $("#postCodeBtn").on("click", function () {
-                    console.log("postcode onclick");
+                console.log('openAdress');
+                $('#postCodeBtn').on('click', function () {
+                    console.log('postcode onclick');
 
                     functionsObj.myInfo.loadPostCode.excute();
                 });
@@ -316,17 +389,16 @@ let functionsObj = {
                         console.log(data.address);
 
                         if (!data.address) {
-                            console.log("주소 입력 실패");
+                            console.log('주소 입력 실패');
                             return;
                         }
 
                         jqueryDomObj
                             .load()
-                            .myInfo.address.attr("value", data.address);
-                        document.querySelector("#postCodeDetail").focus(); //상세입력 포커싱
+                            .myInfo.address.attr('value', data.address);
+                        document.querySelector('#postCodeDetail').focus(); //상세입력 포커싱
                     },
                 }).open();
-
             }
 
             return { excute: excute };
@@ -343,3 +415,8 @@ let functionsObj = {
 };
 
 // return { load: load };
+
+$('.change-profile-btn').on('click', function () {
+    console.log('클릭됨!');
+    $('#file-input').trigger('click');
+});
