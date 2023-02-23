@@ -109,12 +109,10 @@
                                 <div class="search-Wrap">
                                     <div class="search-Category">
                                         <!-- 검색기능 javascript -->
-                                        <span class="search-span">IT</span>
-                                        <span class="cursor"></span>
+                                        <span class="text"></span>
+                                            <input class="banner-input" type="text" />
+                                        <span class="cursor"></span> 
                                     </div>
-                                    <label for="category-search">
-                                        <input id="category-search" class="search-in">
-                                    </label>
                                     <div class="search-icon">
                                         <span class="icon">
                                             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
@@ -161,15 +159,518 @@
                             </div>
                     </section>
 
+                   
                     <!-- banner -->
-                    <section>
-
+                    <section class="bannerContainer">
+                        <div class="bannerPrev">
+                            <div class="bannerPrev-wrap">
+                                <button class="prev-icon">
+                                    <span class="prev">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+                                            <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,
+                                            11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                                <div class="bannerWrap">
+                                     <div class="banner">
+                                          <!-- banner img1 -->
+                                        <div  class="bannerslide">
+                                             <div>
+                                                 <article class="banner-a">
+                                                     <a href="https://kmong.com/md-pick/395--%EC%95%B5%EC%BD%9C-2023-%EC%8B%A0%EB%85%84%EC%9A%B4%EC%84%B8-%EB%B3%B4%EA%B3%A0-%EB%98%90-%EB%B3%B4%EA%B3%A0">
+                                                        <div class="today-img-1">
+                                                             <div></div>
+                                                             <div></div>
+                                                             <div></div>
+                                                             <div></div>
+                                                        </div>    
+                                                     </a>
+                                                 </article>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </div>
+                            <!--next icon -->
+                            <div class="bannerNext">
+                                <div class="bannerNext-wrap">
+                                    <button class="next-icon">
+                                        <span class="next">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+                                                <path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 
+                                                14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                    
+                        <!-- 배너의 카운트 -->
+                        <span class="banner-count"></span>
                     </section>
                 </div>
             </section>
 
       
+
+            <section class="Context-container">
+                <div class="Context-wrap">
+                    <div class="Context-box">
+                        <div class="contextBox">
+                            <h1 class="context">
+                                아이에게 필요한 모든 전문가를
+                                <br>
+                                만날 수 있는 키즈쑥쑥!
+                            </h1>
+                            <h2 class="context-2">
+                                누적 거래수
+                                360
+                                만 건
+                                <br>
+                                500여 개의 카테고리, 3만여개의 서비스에서
+                                <br>
+                                여러분에게 필요한 모든 전문가를 만나보세요.
+                            </h2>
+                        </div>
+                        <!-- video -->
+                        <div class="video-Container">
+                            <div class="video-box">
+                                <iframe width="692" height="390"  src="https://www.youtube.com/embed/jwysq-KGOgA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boardTitleWrap">
+                        <article class="boardTitle">
+                            <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
+                            <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
+                            <div class="imgWrap">
+                                <img src="${pageContext.request.contextPath}/resources/img/main/01.png" width="28" height="28">
+                            </div>
+                        </article>
+                        <article class="boardTitle">
+                            <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
+                            <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
+                            <div class="imgWrap">
+                                <img src="${pageContext.request.contextPath}/resources/img/main/02.png" width="28" height="28">
+                            </div>
+                        </article>
+                        <article class="boardTitle">
+                            <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
+                            <h4 class="boardTitle-2">평균 만족도 98.9점<br>분야별 전문가가<br>만족스러운 결과물을 제공합니다.</h4>
+                            <div class="imgWrap">
+                                <img src="${pageContext.request.contextPath}/resources/img/main/03.png" width="28" height="28">
+                            </div>
+                        </article>
+                    </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+                <section class="reviewTitle-container">
+                    <div class="reviewTitle-wrap">
+                        <h1 class="reviewContext-Title">키즈쑥쑥을 이용한 고객들의 생생한 후기!</h1>
+                        <h2 class="review">211만명의 의뢰인이 98.6% 만족했습니다.</h2>
+                        <section class="reviewVideo-container">
+                            <article class="reviewVideo-wrap">
+                                <div class="reviewVideo-Review">
+                                    <div class="reviewVideo-content">
+                                        <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="reviewText-wrap">
+                                    <div class="reviewText-title">IT</div>
+                                    |
+                                    <div class="reviewText-job">웹개발자</div>
+                            </div>
+                        </article>
+                        <article class="reviewVideo-wrap">
+                            <div class="reviewVideo-Review">
+                                <div class="reviewVideo-content">
+                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="reviewText-wrap">
+                                <div class="reviewText-title">IT</div>
+                                |
+                                <div class="reviewText-job"> 웹개발자</div>
+                            </div>
+                        </article>
+                        <article class="reviewVideo-wrap">
+                            <div class="reviewVideo-Review">
+                                <div class="reviewVideo-content">
+                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="reviewText-wrap">
+                                <div class="reviewText-title">IT</div>
+                                |
+                                <div class="reviewText-job">웹개발자</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="guide-container">
+                    <div class="guide-wrap">
+                        <h1 class="guide-title">키즈쑥쑥을 200% 활용하는 법</h1>
+                        <h2 class="guide-content">키즈쑥쑥까지 내 능력으로 만드는 콘텐츠</h2>
+                        <section class="guideContent-wrap">
+                            <article class="guideContent-box">
+                                <div class="guide-imgWrap">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids1.png">
+                                </div>
+                                <div class="guideText-wrap">
+                                    <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
+                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                </div>
+                            </article>
+                            <article class="guideContent-box">
+                                <div class="guide-imgWrap">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids2.png" >
+                                </div>
+                                <div class="guideText-wrap">
+                                    <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
+                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                </div>
+                            </article>
+                            <article class="guideContent-box">
+                                <div class="guide-imgWrap">
+                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids3.png" >
+                                </div>
+                                <div class="guideText-wrap">
+                                    <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
+                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- Ranking-Top -->
+                <section class="ranking-container">
+                    <div class="ranking-wrap">
+                        <h1 class="ranking-title">TOP 카테고리 전문가 랭킹</h1>
+                        <h2 class="ranking-small-title">키즈쑥쑥에서 가장 많이 판매한 인기 체험학습 랭킹 입니다.</h2>
+                        <div class="ranking-box">
+                            <div class="ranking-0">
+                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-1box">
+                                    <article class="ranking-gold">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="gold-context">
+                                                11,500,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    코리아IT아카데미
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="gold-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                            </div>                                           
+                                        </a>     
+                                    </article>
+                                </div>
+                                <div class="ranking-2box">
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                11,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    지구컴즈
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <div class="height-line"></div>
+                                        <article class="ranking-sliver">
+                                            <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                            <div class="context-box">
+                                                <span class="sliver-context">
+                                                    9,100,000
+                                                    원
+                                                </span>
+                                                <a href="#" class="gold-a">
+                                                    <span class="gold-first">
+                                                        SBS
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <a href="#" class="gold-a">
+                                                <div class="sliver-img-wrap">
+                                                    <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <div class="height-line"></div>
+                                        <article class="ranking-sliver">
+                                            <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                            <div class="context-box">
+                                                <span class="sliver-context">
+                                                    7,100,000
+                                                    원
+                                                </span>
+                                                <a href="#" class="gold-a">
+                                                    <span class="gold-first">
+                                                        미술
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <a href="#" class="gold-a">
+                                                <div class="sliver-img-wrap">
+                                                    <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                </div>
+                                            </a>
+                                        </article>
+                                </div>
+                            </div>
+
+                            <div class="ranking-0">
+                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-1box">
+                                    <article class="ranking-gold">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="gold-context">
+                                                11,500,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    코리아IT아카데미
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="gold-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                            </div>                                           
+                                        </a>     
+                                    </article>
+                                </div>
+                                <div class="ranking-2box">
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                11,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    지구컴즈
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <div class="height-line"></div>
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                9,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    SBS
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <div class="height-line"></div>
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                7,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    미술
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                </div>
+                                    
+                            </div>
+                                
+                                <div class="ranking-0">
+                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-1box">
+                                    <article class="ranking-gold">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="gold-context">
+                                                11,500,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    코리아IT아카데미
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="gold-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                            </div>                                           
+                                        </a>     
+                                    </article>
+                                </div>
+                                <div class="ranking-2box">
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                11,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    지구컴즈
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <div class="height-line"></div>
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                9,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    SBS
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <div class="height-line"></div>
+                                    <article class="ranking-sliver">
+                                        <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                        <div class="context-box">
+                                            <span class="sliver-context">
+                                                9,100,000
+                                                원
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                    SBS
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="gold-a">
+                                            <div class="sliver-img-wrap">
+                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                            </div>
+                                        </a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         </div>
-	</div>
+
+        <!-- footer -->
+            <footer>
+                <hr orientation="horizontal" class="line">
+                    <div class="kids-info">
+                        <p class="footer-p">
+                            (주)키즈쑥쑥
+                            <span class="footer-s">
+                                |
+                            </span>
+                            서울특별시 강남구 역삼동 736-7 4층 C강의실
+                            <span class="footer-s">
+                                |
+                            </span>
+                            대표 : 한동석
+                            <span class="footer-s">
+                                |
+                            </span>
+                            개인정보관리책임자 : 문은서
+                            <span class="footer-s">
+                                |
+                            </span>
+                            사업자등록번호: 123-45-12345
+                            <br>
+                            통신판매업신고 : 2022-서울강남-4567
+                            <span class="footer-s">
+                                |
+                            </span>
+                            고객센터 : 1111-4567
+                            <span class="footer-s">
+                                |
+                            </span>
+                             help@kidsSookSook.com
+                        </p>
+                    </div>
+
+                    <!-- footer2 -->
+                    <div class="footer-info-wrap">
+                        <p class="footer-info">
+                            (주)키즈쑥쑥은 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.
+                        </p>
+                        <p class="footer-info">
+                            (주)키즈쑥쑥 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI 등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히 금지됩니다.
+                        </p>
+                        <div class="footer-copy-wrap">
+                        <p class="footerCopy">
+                            Copyright © 2023 kmong Inc. All rights reserved.
+                        </p>
+                        </div>
+                    </div>
+            </footer>
+	    </div>
 </body>
-</html>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="main.js"></script>
+</html>l
