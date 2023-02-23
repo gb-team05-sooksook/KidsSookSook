@@ -521,4 +521,5 @@
         </div>
     </div>
 </body>
+<script src="${pageContext.request.contextPath}/js/fieldTrip/fieldPage.js"></script>
 </html>

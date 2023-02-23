@@ -23332,6 +23332,13 @@ img.searchMainFlag {
     top: 200px;
     right: 0
 }
+.OrderSummary__agreement-warning {
+    color: #ff7262;
+    font-size: 13px;
+    line-height: 16px;
+    padding-left: 24px;
+    display: none;
+}
 
 .OrderSummary__price-wrapper,.OrderSummary__total-price-wrapper {
     display: flex;
