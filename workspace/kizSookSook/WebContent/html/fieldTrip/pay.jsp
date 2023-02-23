@@ -22,7 +22,7 @@
             <!-- main -->
             <div class="OrderMain">
                     <!-- 주문내역 -->
-                    <section class="OrderGigInfo">
+<section class="OrderGigInfo">
     <div>
         <h3 class="OrderGigInfo__title">
             주문 내역
@@ -30,8 +30,8 @@
     
             <div class="OrderGigInfo__gig-summary">
                 <div class="OrderGigInfo__thumnail-wrapper">
-                                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="${pageContext.request.contextPath}/resources/img/fieldTrip/pay/Science1-1.jpg">
-                                </div>
+                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="${pageContext.request.contextPath}/resources/img/fieldTrip/pay/Science1-1.jpg">
+                </div>
     
                 <div class="OrderGigInfo__description-wrapper">
                     <h4 class="OrderGigInfo__gig-title" style="strong">최첨단 과학 수사로 사건의 진실을 밝혀라!</h4>
@@ -52,13 +52,13 @@
         <thead>
         <tr>
             <th>기본항목</th>
-            <th class="text-center">수량선택</th>
+            <th class="text-center">인원 수</th>
             <th class="text-center">이용시간</th>
             <th class="text-right">가격</th>
         </tr>
         </thead>
         <tbody>
-                <tr class="OrderGigInfo__option-table-row" data-type="2-1">
+            <tr class="OrderGigInfo__option-table-row" data-type="2-1">
                 <td class="OrderGigInfo__option-table-cell">
                     <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-title  first-row">
                         <div>C.S.I 과학수사대 </div>
@@ -67,12 +67,7 @@
                     <ul class="OrderGigInfo__option-table-options">
                         <li class="OrderGigInfo__option-table-option-list-item" key="2803">
                             <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_check.svg" alt="check-mark" width="13px" style="margin-right: 12px;">
-                            <div>
-                                
-                                
-                            </div>
                                  <span> 과학IT</span>
-                                    
                                     <div class="icon-wrapper">
                                          <img width="24px" aria-hidden="true" data-toggle="tooltip" data-placement="right" src="https://d2v80xjmx68n4w.cloudfront.net/assets/order/info.png" alt="info-mark" data-title="해당 패키지의 최대 포함 페이지 수입니다." data-original-title="" title="">
                                     </div>
@@ -115,33 +110,8 @@
             <th class="text-right">가격</th>
         </tr>
         </thead>
-        <tbody>
-        
-        </tbody>
     </table>
-        </section>
-                    <div id="customer_info"></div>
-        <div>
-            <div>
-                    <div id="mobileAuthInfo" class="OrderCustomerInfo" style="display: none;">
-                <div class="OrderCustomerInfo__title">
-                    의뢰인 정보
-                </div>
-                <div class="OrderCustomerInfo__main">
-                    <ul class="OrderCustomerInfo__descriptions">
-                        <li>∙본인 확인 후 구매가 가능합니다.( 첫 결제 1회만)</li>
-                        <li>∙인증된 정보에 따라 실명이 자동 업데이트됩니다. </li>
-                    </ul>
-                    <div class="OrderCustomerInfo__mobile-confirm-wrapper">
-                        <span class="OrderCustomerInfo__user-mobile">김서현 /  01093819026</span>
-                        <img width="16px" height="16px" src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/check_green.svg" alt="체크">
-                    </div>
-                </div>
-                <div class="OrderCustomerInfo__divider"></div>
-            </div>
-                    </div>
-        </div>
-    
+    </section>
                     <section class="OrderPaymentAmount">
         <h2 class="OrderPaymentAmount__title">할인 / 캐시사용</h2>
         <div class="OrderPaymentAmount__coupon-wrapper">
@@ -275,135 +245,6 @@
     </div>
     </section>
     
-    <section class="OrderTax">
-        <div>
-            <div>
-                            <!--기업-->
-                <div class="OrderTax__request-wrapper">
-                    <div class="awesome-checkbox">
-                        <label style="display: flex;">
-                            <input id="taxApplyCheckbox" type="checkbox">
-                            <span class="awesome-checkbox-body" style="margin-right: 8px;"></span>
-                            <div class="checkbox-label">세금계산서 발행신청</div>
-                        </label>
-                    </div>
-                </div>
-    
-                <div class="orderBill">
-                    <ul class="OrderTax__bill-descriptions">
-                        <li>
-                            <span>∙</span>
-                            <p>
-                                세금계산서 신청시, 세금계산서와 결제증빙 영수증이 모두 발행됩니다.
-                            </p>
-                        </li>
-                        <li>
-                            <span>∙</span>
-                            <p>매입세액 공제시 사용가능한 자료는 전문가가 발행하는 '세금계산서'이며, 크몽의 이름으로 발행되는 <br>
-                                '결제증빙 영수증' 은 활용하실 수 없습니다.
-                            </p>
-                        </li>
-                        <li>
-                        <span>∙</span>
-                        <p>
-                            쿠폰할인 금액은 세금계산서 발행내역에 포함되지 않습니다. 관련된 자세한 내용은
-                            <a class="OrderTax__bill-noti-link" href="https://support.kmong.com/hc/ko/articles/900001834866" target="_blank">
-                            <span>여기</span></a>를 통해 확인해주시기 바랍니다.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                        </div>
-        </div>
-        <div class="OrderTaxForm" style="display: none;">
-            <div>
-                <div class="OrderTaxForm__field">
-                    <label> 회사명(법인명)</label>
-                    <div id="c_nameDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--small" placeholder="ex) (주)크몽">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field">
-                    <label>사업자등록번호</label>
-                    <div id="c_rnDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--medium" placeholder="123-45-67890">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field">
-                    <label> 대표자명</label>
-                    <div id="c_pnameDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--small" placeholder="박크몽">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__kind-type-wrapper">
-                    <div class="OrderTaxForm__field" style="margin-right: 40px;">
-                        <label>업태</label>
-                        <div id="c_pnameDiv" class="OrderTaxForm__input-wrapper">
-                            <input type="text" class="OrderTaxForm__input OrderTaxForm__input--small" placeholder="도매 및 소매">
-                            <div class="OrderTaxForm__error-text" style="display: none;">
-                                필수 항목입니다.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="OrderTaxForm__field OrderTaxForm__field--second">
-                        <label>종목</label>
-                        <div id="c_typeDiv" class="OrderTaxForm__input-wrapper">
-                            <input type="text" class="OrderTaxForm__input OrderTaxForm__input--small" placeholder="전자상거래">
-                            <div class="OrderTaxForm__error-text" style="display: none;">
-                                필수 항목입니다.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field">
-                    <label> 사업장 주소</label>
-                    <div id="c_addrDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--large" placeholder="서울시 서초구 사임당로 157, 3층">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field">
-                    <label>세금계산서 이메일</label>
-                    <div id="c_emailDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--large" placeholder="ex) kmong@example.com">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field">
-                    <label> 담당자명</label>
-                    <div id="c_mnameDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--small" placeholder="ex) 박크몽">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-                <div class="OrderTaxForm__field" style="margin: 0;">
-                    <label> 담당자 연락처</label>
-                    <div id="c_mcontactDiv" class="OrderTaxForm__input-wrapper">
-                        <input type="text" class="OrderTaxForm__input OrderTaxForm__input--medium" placeholder="1544-6254">
-                        <div class="OrderTaxForm__error-text" style="display: none;">
-                            필수 항목입니다.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
             </div>
             <!-- summary -->
             <div class="OrderSummary">
@@ -438,6 +279,7 @@
                         </label>
                     </div>
                 </div>
+                <div class="OrderSummary__agreement-warning">                결제 동의에 체크해주세요.            </div>
             </div>
             <div>
                 <button id="payBtn" class="btn btn-brand-yellow NGB btn-block" style="height: 52px;">
@@ -454,4 +296,6 @@
     </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/fieldTrip/pay.js"></script>
 </html>
