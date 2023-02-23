@@ -11,118 +11,105 @@
 
     </head>
 
-    <body>
-        <!-- header start-->
-        <div style="background-color:#FAE57C">
-            <header class="header" style="background-color:#FAE57C">
-                <div class="logo">
-                    <a href="">
-                        <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png"
-                            class="logo-kidsSookSook">
-                    </a>
-                    <a title="홈" href="">
-                        <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
-                            class="cs">
-                    </a>
-                </div>
-                <div class="nav-wrapper">
-                    <a href="" target="_parent">문의하기</a>
-                    <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
-                        href="">로그인</a>
-                </div>
-            </header>
-        </div>
-        <!-- header end -->
+     <!-- header start-->
+    <div style="background-color:#FAE57C">
+        <header class="header" style="background-color:#FAE57C">
+            <div class="logo">
+                <a href="">
+                    <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png" class="logo-kidsSookSook">
+                </a>
+                <a title="홈" href="">
+                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
+                        class="cs">
+                </a>
+            </div>
+            <div class="nav-wrapper">
+                <a>문의하기</a>
+                <a class="login" role="button" title="대화 상자를 엽니다." href="">로그인</a>
+            </div>
+        </header>
+    </div>
+    <!-- header end -->
 
-        <!-- main start -->
-        <main role="main">
-            <section class="section hero">
-                <div class="hero-inner">
-                    <div class="hero-text"></div>
-                    <form role="search" class="search search-full" data-search="" data-instant="true" autocomplete="off"
-                        action="" accept-charset="UTF-8" method="get">
-                        <input name="utf8" type="hidden" value="✓" autocomplete="off">
-                        <input type="search" name="query" id="query" placeholder="검색" autocomplete="off"
-                            aria-label="검색">
-                    </form>
+    <!-- main start -->
+    <main role="main">
+        <section class="section hero">
+            <div class="hero-inner">
+                <div class="hero-text"></div>
+                <form role="search" class="search search-full" accept-charset="UTF-8">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="search" name="query" id="query" placeholder="검색">
+                </form>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section knowledge-base">
+                <div class="home-list-title">공지사항&nbsp;&nbsp;
+                    <h5 style="display:inline">
+                        <a href="">더보기</a>
+                    </h5>
                 </div>
+                <li class="home-list">
+                    <a href="">2월, 고객센터 키즈쑥쑥 TEST</a>
+                </li>
+                <li class="home-list">
+                    <a href="">[업데이트] iOS / 안드로이드 키즈쑥쑥 TEST(2023.02.27)</a>
+                </li>
+                <li class="home-list">
+                    <a href="">[업데이트] 키즈쑥쑥 TEST(2023.01.05)</a>
+                </li>
+                <li class="home-list">
+                    <a href="">크몽을 사칭하는 메시지, 키즈쑥쑥 TEST</a>
+                </li>
+                <li class="home-list">
+                    <a href="">페널티 정책 안내 키즈쑥쑥 TEST</a>
+                </li>
             </section>
 
-            <div class="container">
-                <section class="section knowledge-base">
-                    <div class="home-list-title">공지사항&nbsp;&nbsp;
-                        <h5 style="display:inline">
-                            <a href="">더보기</a>
-                        </h5>
+            <section class="section knowledge-base">
+                <div class="home-list-title">FAQ&nbsp;&nbsp;<h5 style="display:inline"><a href="">더보기</a></h5>
+                </div>
+                <li class="home-list">
+                    <a href="">[서비스 소개] 키즈쑥쑥은 어떻게 이용하나요? </a>
+                </li>
+                <li class="home-list">
+                    <a href="">[서비스 소개] 키즈쑥쑥 이용가이드: 개인회원 편</a>
+                </li>
+                <li class="home-list">
+                    <a href="">[서비스 소개] 키즈쑥쑥 이용가이드: 단체회원 편</a>
+                </li>
+
+
+            </section>
+            <section class="section knowledge-base">
+                <div class="home-list-title">기관 문의센터&nbsp;&nbsp;
+                    <h5 style="display:inline">
+                        <a href="">더보기</a>
+                    </h5>
+                </div>
+                <ul class="blocks-list">
+
+                    <div class="blocks-item">
+                        <a href="" class="blocks-item-link">
+                            <h4 class="blocks-item-title">공지사항</h4>
+                        </a>
                     </div>
-                    <li class="home-list">
-                        <a href="">2월, 고객센터 키즈쑥쑥 TEST</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[업데이트] iOS / 안드로이드 키즈쑥쑥 TEST(2023.02.27)</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[업데이트] 키즈쑥쑥 TEST(2023.01.05)</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">크몽을 사칭하는 메시지, 키즈쑥쑥 TEST</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">페널티 정책 안내 키즈쑥쑥 TEST</a>
-                    </li>
-                </section>
 
-                <section class="section knowledge-base">
-                    <div class="home-list-title">FAQ&nbsp;&nbsp;<h5 style="display:inline"><a href="">더보기</a></h5>
+                    <div class="blocks-item">
+                        <a href="" class="blocks-item-link">
+                            <h4 class="blocks-item-title">FAQ</h4>
+                        </a>
                     </div>
-                    <li class="home-list">
-                        <a href="">[서비스 소개] 키즈쑥쑥은 어떻게 이용하나요? </a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[서비스 소개] 키즈쑥쑥 이용가이드: 개인회원 편</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[서비스 소개] 키즈쑥쑥 이용가이드: 단체회원 편</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[구매 및 영수증] 세금계산서는 누가 발행하며, 어떻게 신청하나요?</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[문제 해결] 거래 중 분쟁이 발생하면 어떻게 하나요?</a>
-                    </li>
-                    <li class="home-list">
-                        <a href="">[이용방법] 키즈쑥쑥 캐시는 어떻게 환불받나요?</a>
-                    </li>
-
-                </section>
-                <section class="section knowledge-base">
-                    <div class="home-list-title">기관 안내센터&nbsp;&nbsp;
-                        <h5 style="display:inline">
-                            <a href="">더보기</a>
-                        </h5>
-                    </div>
-                    <ul class="blocks-list">
-
-                        <div class="blocks-item">
-                            <a href="" class="blocks-item-link">
-                                <h4 class="blocks-item-title">공지사항</h4>
-                            </a>
-                        </div>
-
-                        <div class="blocks-item">
-                            <a href="" class="blocks-item-link">
-                                <h4 class="blocks-item-title">FAQ</h4>
-                            </a>
-                        </div>
-                        <div class="blocks-item">
-                            <a href="" class="blocks-item-link">
-                                <h4 class="blocks-item-title">교육자료</h4>
-                            </a>
-                    </ul>
-                </section>
-            </div>
-        </main>
-        <!-- main end -->
+                    <div class="blocks-item">
+                        <a href="" class="blocks-item-link">
+                            <h4 class="blocks-item-title">교육자료</h4>
+                        </a>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <!-- main end -->
 
         <!-- footer start-->
         <footer class="footer">

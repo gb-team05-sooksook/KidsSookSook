@@ -1,5 +1,5 @@
 const click = document.getElementById("query");
-console.log(click)
+// console.log(click);
 
 const temp = click.getAttribute('style');
 
@@ -10,9 +10,7 @@ click.addEventListener('focus', (e) => {
 });
 //blur 했을 때
 click.addEventListener('blur', (e) => {
-
     click.style.border = temp;
-
 });
 
 
@@ -44,14 +42,22 @@ $(document).ready(function () {
     });
 });
 
+
+
+
+
+
+
 const $change = $('.change');
 const $button = $('.submitButton');
 const $error = $('.notification-error');
+const $test = $('#request_description');
 
 console.log($error);
 
 $button.click(function (event) {
     event.preventDefault();
+
     $change.each((i, e) => {
         var check;
         switch (i) {
@@ -81,7 +87,10 @@ $button.click(function (event) {
                 break;
             case 3:
                 check = $(e).val() == '';
+                consolo.log(check = $(e).val() == '');
+                console.log("드가자")
                 if (check) {
+                    console.log("드가자")
                     $($error[i]).css("display", "block");
                 } else {
                     $($error[i]).css("display", "none");
@@ -89,4 +98,108 @@ $button.click(function (event) {
                 break;
         }
     });
+    check = $test.val() == '';
+    if (check) {
+        $($error[3]).css("display", "block");
+
+    } else {
+        $($error[3]).css("display", "none");
+    }
 })
+
+
+const $dropContent = $('.drop-content');
+const $dropClick = $('.dropClick p');
+const $hidden = $('#request_custom_fields');
+
+$dropClick.click(function (event) {
+    if ($dropContent.css("display") == 'none') {
+        $dropContent.css("display", "block");
+
+    } else {
+        $dropContent.css("display", "none");
+    }
+});
+
+
+function selectType(e) {
+    $('.result_p').text($(e).text());
+    $hidden.val($(e).text());
+    console.log("왔나?");
+    console.log($dropContent);
+    // $('.drop-content').css("display", "none");
+    console.log($dropContent.css('display'))
+    // $('.test1').css("display", "none");
+    // $('.test2').css("display", "none");
+    // $('.test3').css("display", "none");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

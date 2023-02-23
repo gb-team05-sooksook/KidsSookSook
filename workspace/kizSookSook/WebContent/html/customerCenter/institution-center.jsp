@@ -30,9 +30,8 @@
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="" target="_parent">문의하기</a>
-                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
-                    href="">로그인</a>
+                <a href="">문의하기</a>
+                <a class="login" role="button"title="대화 상자를 엽니다." href="">로그인</a>
             </div>
         </header>
     </div>
