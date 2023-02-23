@@ -28,16 +28,15 @@
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="" target="_parent">문의하기</a>
-                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
-                    href="">로그인</a>
+                <a href="">문의하기</a>
+                <a class="login" role="button"  title="대화 상자를 엽니다." href="">로그인</a>
             </div>
         </header>
     </div>
     <!-- header end -->
 
 
-    <!-- main start -->
+   <!-- main start -->
     <main role="main">
         <div class="container-divider"></div>
         <div class="container">
@@ -47,15 +46,15 @@
                         <a href="">키즈쑥쑥 고객센터</a>
                     </li>
                     <li title="기관 문의센터">
-                        <a href="">기관 안내센터</a>
+                        <a href="">기관 문의센터</a>
                     </li>
                     <li title="FAQ">
                         <a href="">FAQ</a>
                     </li>
                 </ol>
-                <form role="search" class="search" data-search="" action="" accept-charset="UTF-8" method="get"><input
-                        name="utf8" type="hidden" value="✓" autocomplete="off">
-                    <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
+                <form role="search" class="search" accept-charset="UTF-8">
+                    <input name="utf8" type="hidden" value="✓" autocomplete="off">
+                    <input type="search" name="query" id="query" placeholder="검색">
                 </form>
             </nav>
             <div class="section-container">
@@ -126,8 +125,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <a tabindex="0" class="see-all-sections-trigger" aria-hidden="false"
-                            id="see-all-sections-trigger" title="모든 섹션 보기…">
+                        <a tabindex="0" class="see-all-sections-trigger" id="see-all-sections-trigger"
+                            title="모든 섹션 보기…">
                             모든 섹션 보기…
                         </a>
                     </ul>

@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/customerCenter/detail-page.css">
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
-
+<!--${pageContext.request.contextPath}/resources/img/logo/logo.png  -->
 <body>
-    <!-- header start-->
+      <!-- header start-->
     <div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
@@ -26,9 +26,8 @@
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="" target="_parent">문의하기</a>
-                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
-                    href="">로그인</a>
+                <a href="">문의하기</a>
+                <a class="login" role="button"title="대화 상자를 엽니다." href="">로그인</a>
             </div>
         </header>
     </div>
@@ -50,10 +49,10 @@
                         <a href="">전체공지</a>
                     </li>
                 </ol>
-                <form role="search" class="search" data-search="" action="" accept-charset="UTF-8" method="get">
-                    <input name="utf8" type="hidden" value="✓" autocomplete="off">
+                <form role="search" class="search" accept-charset="UTF-8" >
+                    <input name="utf8" type="hidden" value="✓" >
                     <input type="hidden" name="category" id="category" value="360001764912" autocomplete="off">
-                    <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
+                    <input type="search" name="query" id="query" placeholder="검색">
                 </form>
             </nav>
             <div class="article-container" id="article-container">
@@ -119,9 +118,8 @@
                                 <p>안녕하세요. 키즈쑥쑥입니다! TEST</p>
                                 <div class="article-content">
                                     <div class="article-body">
-                                        <p class="wysiwyg-text-align-left">2023년 2월, TEST.
-                                        </p>
-                                        <p class="wysiwyg-text-align-left">
+                                        <p>2023년 2월, TEST.</p>
+                                        <p>
                                             회원님의 너그러운 양해를 부탁드리며, 서비스 이용에 참고해 주시기 바랍니다.<br>
                                             키즈쑥쑥 TEST 입니다.<br>
                                             키즈쑥쑥 TEST 입니다.<br>
@@ -139,14 +137,12 @@
                                             키즈쑥쑥 TEST 입니다.<br>
                                         </p>
                                         
-                                        <p class="wysiwyg-text-align-center">&nbsp;</p>
+                                        <p>&nbsp;</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="article-attachments">
-                                <ul class="attachments">
-
-                                </ul>
+                                <ul class="attachments"></ul>
                             </div>
                         </div>
                     </section>
@@ -168,7 +164,6 @@
         </div>
     </main>
     <!-- main end -->
-
 
     <!-- footer start-->
     <footer class="footer">

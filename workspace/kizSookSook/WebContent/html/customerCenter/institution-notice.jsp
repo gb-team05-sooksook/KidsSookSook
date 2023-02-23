@@ -36,26 +36,26 @@
         </header>
     </div>
     <!-- header end -->
-    <!-- main start -->
+  <!-- main start -->
     <main role="main">
         <div class="container-divider"></div>
         <div class="container">
             <nav class="sub-nav">
                 <ol class="breadcrumbs">
-                    <li title="키즈쑥쑥 고객센터">
+                    <li title="크몽 고객센터">
                         <a href="">키즈쑥쑥 고객센터</a>
                     </li>
-                    <li title="기관 센터">
-                        <a href="">기관 안내센터</a>
+                    <li title="전문가 센터">
+                        <a href="">기관 문의센터</a>
                     </li>
                     <li title="공지사항">
                         <a href="">공지사항</a>
                     </li>
                 </ol>
-                <form role="search" class="search" data-search="" action="" accept-charset="UTF-8"
-                    method="get"><input name="utf8" type="hidden" value="✓" autocomplete="off"><input type="search"
-                        name="query" id="query" placeholder="검색" aria-label="검색">
-                    </form>
+                <form role="search" class="search" accept-charset="UTF-8">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="search" name="query" id="query" placeholder="검색">
+                </form>
             </nav>
             <div class="section-container">
                 <section class="section-content">
@@ -105,7 +105,6 @@
 
     </main>
     <!-- main end -->
-
 
 
     <!-- footer start-->

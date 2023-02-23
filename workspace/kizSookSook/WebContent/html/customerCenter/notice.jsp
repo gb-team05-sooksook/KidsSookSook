@@ -27,8 +27,8 @@
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="" target="_parent">문의하기</a>
-                <a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다."
+                <a href="" >문의하기</a>
+                <a class="login" role="button" title="대화 상자를 엽니다."
                     href="">로그인</a>
             </div>
         </header>
@@ -48,10 +48,9 @@
                         공지사항
                     </li>
                 </ol>
-                <form role="search" class="search" data-search="" action="/hc/ko/search" accept-charset="UTF-8"
-                    method="get">
+                <form role="search" class="search" accept-charset="UTF-8">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
-                    <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
+                    <input type="search" name="query" id="query" placeholder="검색">
                 </form>
             </nav>
             <div class="category-container">
@@ -67,7 +66,7 @@
                                 <a href="">전체공지</a>
                             </h3>
                             <ul class="article-list">
-                    			<li class="article-list-item article-promoted">
+                                <li class="article-list-item article-promoted">
                                     <span data-title="승격된 문서" class="icon-star"></span>
                                     <a href="" class="article-list-link">2월, 고객센터 운영 시간 안내</a>
                                 </li>
