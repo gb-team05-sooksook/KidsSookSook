@@ -672,5 +672,5 @@
 	    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="main.js"></script>
-</html>l
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+</html>
