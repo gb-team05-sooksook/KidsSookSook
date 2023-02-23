@@ -47,7 +47,7 @@ $update.on('click', function() {
 			console.log($(e));
 		}
 		if(count > 1) {
-			alert('하나만 하자');
+			alert('하나만 선택해 주세요.');
 			return false;
 		}
 	});

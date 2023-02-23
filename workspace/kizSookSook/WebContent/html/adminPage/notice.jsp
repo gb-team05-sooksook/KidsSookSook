@@ -16,8 +16,7 @@
     />
     <link
       rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/adminPage/notice.css"
-    />
+      href="${pageContext.request.contextPath}/css/adminPage/notice.css"/>
   </head>
   <body>
     <section class="adminPage">
