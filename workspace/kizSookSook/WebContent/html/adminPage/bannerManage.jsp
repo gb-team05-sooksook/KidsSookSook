@@ -53,7 +53,7 @@
   								<div>
   									<div class="banner-wrap">
 										<input class="tableCheckbox" type="checkbox" name="deleteCheck">
-										<span>메인배너</span>
+										<span>첫번째배너</span>
 									</div>
   								</div>
   								
@@ -64,7 +64,7 @@
   								<div>
   									<div class="banner-wrap">
 										<input class="tableCheckbox" type="checkbox" name="deleteCheck">
-										<span>메인배너</span>
+										<span>두번째배너</span>
 									</div>
   								</div>
   								
@@ -75,7 +75,7 @@
   								<div>
   									<div class="banner-wrap">
 										<input class="tableCheckbox" type="checkbox" name="deleteCheck">
-										<span>메인배너</span>
+										<span>세번째배너</span>
 									</div>
   								</div>
 							</div>
@@ -84,7 +84,7 @@
   								<div>
   									<div class="banner-wrap">
 										<input class="tableCheckbox" type="checkbox" name="deleteCheck">
-										<span>메인배너</span>
+										<span>네번째배너</span>
 									</div>
   								</div>
 							</div>

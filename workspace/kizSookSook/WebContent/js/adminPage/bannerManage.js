@@ -10,3 +10,5 @@ $checkboxes.click(function(){
 	$checkboxes.prop("checked", false);
 	$(this).prop("checked",true);
 });
+
+

@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/enquiry.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/notice.css" />
   </head>
   <body>
     <section class="adminPage">
@@ -118,12 +119,12 @@
     <div id="layer"></div>
     <!-- 모달 -->
     <div>
-      <div class="modal-bg">
+      <div class="updateModal-bg">
         <section class="container">
           <form action="">
             <div class="title-wrapper">
               <div class="titleAndX">
-                <h2 class="title">답변 작성</h2>
+                <h2 class="title">공지사항 수정</h2>
                 <svg
                   width="24"
                   height="24"
@@ -132,7 +133,7 @@
                   aria-hidden="true"
                   focusable="false"
                   preserveAspectRatio="xMidYMid meet"
-                  class="X"
+                  class="updateX"
                 >
                   <path
                     xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +153,7 @@
                   </div>
                 </div>
                 <div class="det_submit">
-                  <input class="det_submitButton" type="button" value="공지사항 등록" />
+                  <input class="det_submitButton" type="button" value="공지사항 수정" />
                 </div>
               </div>
             </div>
@@ -166,4 +167,5 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <script src="${pageContext.request.contextPath}/js/adminPage/memberInfo.js"></script>
+  <script src="${pageContext.request.contextPath}/js/adminPage/enquiry.js"></script>
 </html>
