@@ -672,5 +672,5 @@
 	    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/mainpage/main.js"></script>
 </html>
