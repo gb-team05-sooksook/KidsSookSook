@@ -49,26 +49,10 @@
 	                        				</a>
 	                        			</div>
 	                        			<div class="SnsLoginBtn">
-	                        				<a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(24, 119, 242);">
-	                        					<div class="flex-left-center">
-	                        						<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_facebook.png" alt="sns아이콘" class="width-30px margin-right-5">
-	                        						<span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">페이스북 간편 가입 하기</span>
-	                        					</div>
-	                        				</a>
-	                        			</div>
-	                        			<div class="SnsLoginBtn">
 	                        				<a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(208, 83, 63);">
 	                        					<div class="flex-left-center">
 	                        						<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_google.png" alt="sns아이콘" class="width-30px margin-right-5">
 	                        						<span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">구글 간편 가입 하기</span>
-	                        					</div>
-	                        				</a>
-	                        			</div>
-	                        			<div class="SnsLoginBtn">
-	                        				<a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(0, 0, 0);">
-	                        					<div class="flex-left-center">
-	                        						<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_apple.png" alt="sns아이콘" class="width-30px margin-right-5">
-	                        						<span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">애플 간편 가입 하기</span>
 	                        					</div>
 	                        				</a>
 	                        			</div>

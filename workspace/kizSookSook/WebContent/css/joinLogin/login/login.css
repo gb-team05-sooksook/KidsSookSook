@@ -402,7 +402,7 @@ hr {
 }
 
 .modal-sns-login {
-    margin-bottom: 24px;
+    margin-top: 45px;
 }
 
 .modal-sns-login-text {
@@ -417,6 +417,8 @@ hr {
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin-top: 16px;
+    padding-right: 60px;
+    margin-left: 60px;
 }
 
 .modal-sns-login-choice-sns {
@@ -500,4 +502,76 @@ hr {
     height: 100%;
     display: none;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.SnsLoginBtn {
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 15px 15px;
+    font-size: 13px;
+    line-height: 1.5438;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-default {
+    color: #4d4d4d;
+    background-color: #fff;
+    border-color: #e6e6e6;
+}
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.btn {
+    border-radius: 4px !important;
+}
+
+.SnsLoginBtn .btn-sns-signup {
+    height: 50px;
+}
+
+.NGM, .NGR {
+    font-weight: 400;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.flex-left-center {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.margin-right-5 {
+    margin-right: 5px !important;
+}
+
+.width-30px {
+    width: 30px !important;
 }
