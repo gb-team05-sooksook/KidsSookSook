@@ -117,21 +117,28 @@
                             </form>
                             <div class="modal-sns-login">
                                 <p class="modal-sns-login-text">SNS계정으로 간편하게 로그인하세요.</p>
-                                <div class="modal-sns-login-choice">
-                                    <a href="/signup/naver?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-sns-login-choice-sns" style="background-color: rgb(30, 200, 0);">
-                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/naver_logo.png" width="32" height="32" alt="소셜 로고">
+                                <div class="SnsLoginBtn">
+                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(99, 195, 61);">
+                                        <div class="flex-left-center">
+                                            <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_naver.png" alt="sns아이콘" class="width-30px margin-right-5">
+                                            <span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">네이버 간편 가입 하기</span>
+                                        </div>
                                     </a>
-                                    <a href="/signup/kakao?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-sns-login-choice-sns" style="background-color: rgb(249, 224, 0);">
-                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/kakao_logo.png" width="32" height="32" alt="소셜 로고">
+                                </div>
+                                <div class="SnsLoginBtn">
+                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(252, 232, 77);">
+                                        <div class="flex-left-center">
+                                            <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_kakao.png" alt="sns아이콘" class="width-30px margin-right-5">
+                                            <span style="font-size: 15px; color: rgb(51, 51, 51); border-color: rgb(51, 51, 51);">카카오톡 간편 가입 하기</span>
+                                        </div>
                                     </a>
-                                    <a href="/signup/facebook?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-sns-login-choice-sns" style="background-color: rgb(24, 119, 242);">
-                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/facebook_logo_white.png" width="32" height="32" alt="소셜 로고">
-                                    </a>
-                                    <a href="/signup/google?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-sns-login-choice-sns" style="background-color: rgb(248, 249, 253);">
-                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/google_logo.png" width="32" height="32" alt="소셜 로고">
-                                    </a>
-                                    <a href="/signup/apple?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-sns-login-choice-sns" style="background-color: rgb(0, 0, 0);">
-                                        <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/apple_logo.png" width="20" height="24" alt="소셜 로고">
+                                </div>
+                                <div class="SnsLoginBtn">
+                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(208, 83, 63);">
+                                        <div class="flex-left-center">
+                                            <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_google.png" alt="sns아이콘" class="width-30px margin-right-5">
+                                            <span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">구글 간편 가입 하기</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
