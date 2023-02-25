@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/kidsSookSook"/>
+				<property name="username" value="root"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/app/mybatis/mapper/adminMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/fieldTripMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/mainMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/mypageMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/noticeMapper.xml"/>
+	</mappers>
+</configuration>
