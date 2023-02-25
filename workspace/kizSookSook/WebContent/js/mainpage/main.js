@@ -38,7 +38,7 @@ function typeText() {
         while (letter.length) {
             await wait(speed);
             $text.innerHTML += letter.shift();
-        }
+        };
 
         // 잠시 대기
         await wait(800);
@@ -57,7 +57,7 @@ function typeText() {
 
             letter.pop();
             $text.innerHTML = letter.join('');
-        }
+        };
 
         // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
         i = !letters[i + 1] ? 0 : i + 1;
@@ -67,7 +67,7 @@ function typeText() {
     // 딜레이 기능 ( 마이크로초 )
     function wait(ms) {
         return new Promise((res) => setTimeout(res, ms));
-    }
+    };
 
     // 초기 실행
     setTimeout(typing, 1500);

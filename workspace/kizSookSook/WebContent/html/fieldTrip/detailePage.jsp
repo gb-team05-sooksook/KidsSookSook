@@ -53,15 +53,15 @@
 					</section>
 <!-- 목차항목별 -->		<nav class="detaile-topics">
 						<div class="detaile-topics-wrapper">
-							<div class="detaile-topics-list">상세 내용</div>
-							<div class="detaile-topics-list">기관 정보</div>
-							<div class="detaile-topics-list">가격 정보</div>
-							<div class="detaile-topics-list">취소.환불</div>
-							<div class="detaile-topics-list">체험 평가</div>
+							<a href="#book1" class="detaile-topics-list">상세 내용</a>
+							<a href="#book2" class="detaile-topics-list">기관 정보</a>
+							<a href="#book3" class="detaile-topics-list">가격 정보</a>
+							<a href="#book4" class="detaile-topics-list">취소.환불</a>
+							<a href="#book5" class="detaile-topics-list">체험 평가</a>
 						</div>
 					</nav>
 <!-- 상세내용 -->		<section class="detaile-explain">
-						<div class="detaile-content">상세 내용</div>
+						<div id='book1' class="detaile-content">상세 내용</div>
 						<div class="detaile-content-writing">
 							<p style=margin:0px;>
 								"C.S.I 과학수사대"
@@ -73,7 +73,7 @@
 						</div>
 					</section>
 <!-- 기관정보 -->		<section class="detaile-explain">
-						<div class="detaile-content">기관 정보</div>
+						<div id='book2' class="detaile-content">기관 정보</div>
 						<div class="detaile-content-writing">
 							<p style=margin:0px;>
 								"KCSI"
@@ -85,7 +85,7 @@
 						</div>
 					</section>
 <!-- 가격정보 -->		<section class="detaile-price">
-						<div class="detaile-content">가격 정보</div>
+						<div id='book3' class="detaile-content">가격 정보</div>
 						<div class="detaile-price-content">
 							<div class="detaile-price-content-wrapper">
 								<div class="detaile-price-content-wrapper-price">
@@ -115,7 +115,7 @@
 						</div>
 					</section>
 <!-- 취소.환불 -->		<section class="detaile-price-refund">
-						<div class="detaile-content">취소 및 환불 규정</div>
+						<div id='book4' class="detaile-content">취소 및 환불 규정</div>
 						<div class="detaile-price-refund-content">
 가. 기본 환불 규정
 1. 작업 진행 전일 경우 전문가와 의뢰인 상호 협의하에 청약 철회 및 환불이 가능합니다.
@@ -141,7 +141,7 @@
 					</section>
 <!-- 체험 평가 -->	<section class="field-evaluation">
 					<div class="field-evaluation-containal">
-						<div class="detaile-content">체험 평가</div>
+						<div id='book5' class="detaile-content">체험 평가</div>
 						<div class="field-evaluation-wrapper">
 							<div class="field-evaluation-star">
 								<div class="field-evaluation-star-container">
