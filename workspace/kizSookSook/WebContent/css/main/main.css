@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+
 body { 
 	margin: 0;
 }
@@ -17,10 +20,12 @@ body {
 	align-items: center;
 }
 
-.logo {
+.logo img {
 	cursor: pointer;
-	width: 85px;
-	height: 26px;
+	width: 55px;
+	height: 55px;
+	margin-top: 8px;
+	background-color:transparent;
 }
 
 
@@ -231,19 +236,22 @@ body {
     color: #303441;
     cursor: pointer;
     font-weight: bold;
-    margin: 0 0 0 8px;
+    margin: 11px 0 0 0;
+    border: none;
+    outline: none;
+    background-color: white;
 }
 
 .categoryImg {
     display: inline-block;
     color: inherit;
     font-style: normal;
-    line-height: 0;
+    line-height: 3;
     text-align: center;
     text-transform: none;
     vertical-align: -0.125em;
     text-rendering: optimizeLegibility;
-    margin-left: 4px;
+    margin-top: 3px;
 }
 
 .list {
@@ -421,17 +429,22 @@ li {
     color: #ffffff;
 }
 
-.bannerContainer {
-    width: 540px;
-
+.slideshow-container {
+    max-width: 1440px;
+    position: relative;
+    margin: auto;
 }
 
 .bannerPrev {
     cursor: pointer;
 }
 
+.mySlideDiv img {
+    width: 540px;
+    height: 380px;
+}
+
 .bannerPrev-wrap {
-    position: relative;
     display: block;
     user-select: none;
     touch-action: pan-y;
@@ -442,8 +455,8 @@ li {
     cursor: pointer;
     position: absolute;
     padding: 0;
-	left: -16px;
-    bottom: 170px;
+    top: 180px;
+    left: -14px;
     border: 0;
     outline: none;
     width: 32px;
@@ -478,7 +491,7 @@ li {
 }
 
 .banner {
-    width: 6480px;
+    width: 2160px;
     opacity: 1;
     transition: transform 0.3s;
 
@@ -506,10 +519,13 @@ li {
 
 }
 
-.mySlideDiv img {
+.today-img-1 {
+  /*   background-image: url('image/kmong1.jpeg'); */
     width: 540px;
     height: 380px;
 }
+
+
 
 span.banner-count{
     background-color: rgba(160, 160, 160, 0.3);
@@ -551,7 +567,7 @@ span.banner-count{
     color: #303441;
     background-color: rgba(255,255,255,0.76);
     z-index: 1;
-    right: 8px;
+    right: -16px;
 }
 
 .next {
@@ -867,7 +883,7 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 80px 0px;
+    margin: 80px;
 }
 
 .ranking-wrap {
@@ -1065,3 +1081,10 @@ li {
     color: #c8cad2;
 
 }
+
+
+
+
+
+
+
