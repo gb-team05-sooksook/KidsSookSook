@@ -101,7 +101,31 @@
     border-bottom: 1px solid rgb(0, 0, 0);
     text-decoration-line: none;
 }
-
+.detaile-topics-list-change{
+    position: relative;
+    flex: 1 1 0%;
+    justify-content: space-around;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    height: 60px;
+    padding: 0px 4px;
+    font-weight: 700;
+    color: rgb(48, 52, 65);
+    background: rgb(255, 255, 255);
+    border-width: 1px 1px 0px;
+    border-top-style: solid;
+    border-top-color: rgb(0, 0, 0);
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+    border-left-style: solid;
+    border-left-color: rgb(0, 0, 0);
+    border-bottom-style: initial;
+    border-bottom-color: initial;
+    text-decoration-line: none;
+}
 /* 상세내용, 기관정보 */
 .detaile-explain{
 	border-bottom: 1px solid rgb(228, 229, 237);
@@ -480,6 +504,7 @@
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin: 36px 0px 8px;
+    justify-content: flex-end;
 }
 .right-first-section-link{
     outline: none;

@@ -1,4 +1,6 @@
 const $btn = $('.like-svg');
+// const item = document.getElementById('item');
+// const btn = document.getElementById('btn-item');
 
 $btn.each((i, e) => {
    $(e).on("click", function() {
@@ -8,3 +10,7 @@ $btn.each((i, e) => {
         } else $($('.like-btn')[i]).attr("fill", "red");
    })
 });
+
+// $btn.onclick = function(){
+//     item.setAttribute('class','done');
+// }
