@@ -18,6 +18,33 @@ public class MypageFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
+		if(target.equals("/purchaseListAction")) {
+			result = new PurchaseListActionController().execute(req, resp);	
+		}else if(target.equals("/review")) {
+			result = new ReviewController().execute(req, resp);
+		}else if(target.equals("/connectCategory")) {
+			result = new ConnectCategoryController().execute(req, resp);
+		}else if(target.equals("/cashCheckAction")) {
+			result = new CashCheckActionController().execute(req, resp);
+		}else if(target.equals("/changeInfoAction")) {
+			result = new ChangeInfoActionController().execute(req, resp);
+		}else if(target.equals("/reviewListCheckAction")) {
+			result = new ReviewListCheckActionController().execute(req, resp);
+		}else if(target.equals("/enquiryListCheckAction")) {
+			result = new EnquiryListCheckActionController().execute(req, resp);
+		}else if(target.equals("/deleteAccountAction")) {
+			result = new DeleteAccountActionController().execute(req, resp);
+		}else {
+			
+		}
+		
+		if(result != null) {
+			if(result.isRedirect()) {
+				resp.sendRedirect(result.getPath());
+			}else {
+				req.getRequestDispatcher(result.getPath()).forward(req, resp);
+			}
+		}
 	}
 	
 	

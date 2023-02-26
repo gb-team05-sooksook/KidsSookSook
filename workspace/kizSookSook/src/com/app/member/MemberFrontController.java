@@ -18,19 +18,43 @@ public class MemberFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("/join")) {
+		if(target.equals("/joinInstitution")) {
+			result = new Result();
+			result.setPath("/html/joinLogin/join/joinPage_institution.jsp");
 			
-		}else if(target.equals("/joinAction")) {
+		}else if(target.equals("/joinNormal")) {
+			result = new Result();
+			result.setPath("/html/joinLogin/join/joinPage_normal.jsp");
+			
+		}else if(target.equals("/joinNormalAction")) {
+			result = new JoinNormalActionController().execute(req, resp);
+					 
+		}else if(target.equals("/joinInstitutionAction")) {
+			result = new JoinInstitutionActionController().execute(req, resp); 
 			
 		}else if(target.equals("/checkIdAction")) {
+			new CheckIdActionController().execute(req, resp);
 			
 		}else if(target.equals("/login")) {
+			result = new LoginController().execute(req, resp);
 			
 		}else if(target.equals("/loginAction")) {
+			result = new LoginActionController().execute(req, resp);
 			
 		}else if(target.equals("/logout")) {
+			result = new LogoutController().execute(req, resp);
 			
-		}else if(target.equals("/sendEmail")) {
+		}else if(target.equals("/sendEmailAction")) {
+			result = new SendEmailActionController().execute(req, resp);
+			
+		}else if(target.equals("/changePwAction")) {
+			result = new ChangePwActionController().execute(req, resp);
+			
+		}else if(target.equals("/findIdAction")) {
+			result = new FindIdActionController().execute(req, resp);
+			
+		}else if(target.equals("/findPwAction")) {
+			result = new FindPwActionController().execute(req, resp);
 			
 		}else {
 			
