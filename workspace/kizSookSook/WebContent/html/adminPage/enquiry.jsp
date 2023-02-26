@@ -9,26 +9,22 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" />
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/enquiry.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/notice.css" />
   </head>
   <body>
     <section class="adminPage">
       <div class="sidebar">
-        <a class="logo" href="https://www.naver.com">
-          <img class="logoImg" src="/kizSookSook/resources/img/icon.png" />
+        <a class="logo" href="${pageContext.request.contextPath}/html/main/main.jsp">
+          <img class="logoImg" src="${pageContext.request.contextPath}/resources/img/logo/logo_main_02.png"/>
           <span class="logoText">키즈쑥쑥</span>
         </a>
-        <a><i class="bannerText"></i> 회원관리</a>
-        <a><i class="bannerText"></i> 결제</a>
-        <a><i class="bannerText"></i> 체험학습조회</a>
-        <a><i class="bannerText"></i> 공지사항</a>
-        <a><i class="bannerText"></i> 문의사항</a>
-        <a><i class="bannerText"></i> 배너관리</a>
+        <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
+        <a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
+        <a href="javascript:location.href='fieldTripFind.jsp'"><i class="bannerText"></i> 체험학습조회</a>
+        <a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
+        <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
+        <a href="javascript:location.href='bannerManage.jsp'"><i class="bannerText"></i> 배너관리</a>
       </div>
       <div class="mainContentContainer">
         <div class="sidebarNameLayout">
@@ -42,16 +38,13 @@
               <div class="inputBox">
                 <div class="filterButtonLayout">
                   <div class="memberIdSearchText">
-                    <input class="filterButton" type="button" value="전체보기" />
+                    <a href="javascript:location.href='enquiry.jsp'">
+                      <input class="filterButton" type="button" value="전체보기" />
+                    </a>
                     <input class="filterButton" type="button" value="대기문의보기" />
                     <input class="filterButton" type="button" value="답변하기" />
                   </div>
-                  <input
-                    type="text"
-                    id="myInput"
-                    onkeyup="myFunction()"
-                    placeholder="회원 아이디 검색"
-                  />
+                  <input type="text" id="myInput" placeholder="회원 아이디 검색"/>
                 </div>
               </div>
               <table id="myTable">
@@ -89,7 +82,7 @@
                       <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                     </form>
                   </td>
-                  <td>1</td>
+                  <td>2</td>
                   <td>kjy1234</td>
                   <td>kjy1234@google.com</td>
                   <td>last-child 함수 이상해요</td>
@@ -119,12 +112,12 @@
     <div id="layer"></div>
     <!-- 모달 -->
     <div>
-      <div class="updateModal-bg">
+      <div class="modal-bg">
         <section class="container">
           <form action="">
             <div class="title-wrapper">
               <div class="titleAndX">
-                <h2 class="title">공지사항 수정</h2>
+                <h2 class="title">문의사항 답변</h2>
                 <svg
                   width="24"
                   height="24"
@@ -133,7 +126,7 @@
                   aria-hidden="true"
                   focusable="false"
                   preserveAspectRatio="xMidYMid meet"
-                  class="updateX"
+                  class="X"
                 >
                   <path
                     xmlns="http://www.w3.org/2000/svg"
@@ -144,21 +137,22 @@
               <div class="details">
                 <div class="det_title-wrapper">
                   <div class="det_title">
-                    <span>제목 작성</span>
+                    <span>제목</span>
                     <input type="text" name="title" />
                   </div>
                   <div class="det_title">
-                    <span>날짜 선택</span>
-                    <input type="date" name="writtenDate" />
+                    <span>아이디</span>
+                    <input type="text" name="title" />
                   </div>
                 </div>
                 <div class="det_submit">
-                  <input class="det_submitButton" type="button" value="공지사항 수정" />
+                  <input class="det_submitButton" type="button" value="답변등록하기" />
                 </div>
               </div>
             </div>
-            <div class="content">
-              <textarea name="content" id="content" cols="40" rows="20"></textarea>
+            <div class="contentQuestion"></div>
+            <div class="contentAnswer">
+              <textarea name="content" id="contentA" cols="20" rows="10"></textarea>
             </div>
           </form>
         </section>
@@ -166,6 +160,5 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script src="${pageContext.request.contextPath}/js/adminPage/memberInfo.js"></script>
   <script src="${pageContext.request.contextPath}/js/adminPage/enquiry.js"></script>
 </html>

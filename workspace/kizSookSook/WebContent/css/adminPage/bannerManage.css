@@ -1,117 +1,127 @@
 @charset "UTF-8";
 
+body, html {
+    font-family: "Metro Sans", sans-serif;
+    font-size: 14px;
+}
+
 .bannerLayout {
-  display: flex;
+    display: flex;
 }
 
 .banner {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin-right: 40px;
-  text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin-right: 40px;
+    text-align: center;
 }
 
 .banner-wrap {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .banner-wrap span {
-  display: block;
+    display: block;
+}
+
+.bannerTopWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.bannerTopWrap span {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
-  color: grey;
-  font-size: 18px;
+    color: grey;
+    font-size: 18px;
 }
 
 button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
 }
 
 a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
 }
 
 button:hover,
 a:hover {
-  opacity: 0.7;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap');
-
-body, html {
-  font-family: 'IBM Plex Sans KR', sans-serif;
-  font-size: 14px;
+    opacity: 0.7;
 }
 
 .adminPage {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #eeeeee;
-  margin-left: 142px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #eeeeee;
+    margin-left: 142px;
 }
 
 .logoImg {
-  width: 42px;
-  height: 42px;
-  vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    vertical-align: middle;
 }
 
 .logoText {
-  color: black;
-  vertical-align: middle;
-  text-align: center;
+    color: black;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .sidebar {
-  height: 100%;
-  width: 150px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  padding-top: 3px;
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 3px;
 }
 
 .sidebar a:first-child {
-  margin-bottom: 25px;
-  border-bottom: solid;
-  border-bottom-color: #eeeeee;
+    margin-bottom: 25px;
+    border-bottom: solid;
+    border-bottom-color: #eeeeee;
 }
 
 .sidebar a {
-  font-weight: 300;
-  margin-bottom: 2px;
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: black;
-  display: block;
+    font-weight: 300;
+    margin-bottom: 2px;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    display: block;
 }
 
 /* 사이드바 마우스 올렸을때 */
 .sidebar a:hover {
-  background-color: #bcd4fa;
+    background-color: #bcd4fa;
 }
 
 .main {
-  margin-left: 160px;
-  padding: 0px 10px;
+    margin-left: 160px;
+    padding: 0px 10px;
 }
 
 /* @media screen and (max-height: 450px) {
@@ -125,54 +135,55 @@ body, html {
 
 /* 현재경로이름 */
 .sidebarNameLayout {
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  height: 5%;
-  width: 100%;
-  background-color: white;
-  top: 0;
-  padding-bottom: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    height: 5%;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    padding-bottom: 12px;
 }
 
 .sidebarNameText {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .sidebarNameText span {
-  font-weight: 500;
-  margin-left: 32px;
-  color: #1664eb;
-  vertical-align: -webkit-baseline-middle;
+    font-weight: 500;
+    margin-left: 32px;
+    color: #1664eb;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .main-content-container {
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .stageLayout {
-  min-width: 1280px;
-  /* margin-left: 40px; */
-  /* margin-top: 40px; */
+    min-width: 1280px;
+    /* margin-left: 40px; */
+    /* margin-top: 40px; */
 }
 
 .memberIdSearchText {
-  text-align: left;
+    text-align: left;
 }
 /* 데이터 테이블 */
 .filterButtonLayout {
-  width: 100%;
-  display: flex;
-  float: left;
-  text-align: left;
-  /* letter-spacing: 20px; */
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    float: left;
+    text-align: left;
+    /* letter-spacing: 20px; */
+    justify-content: space-between;
 }
 
 .filterButton {
+  display: inline-flex;
   cursor: pointer;
   background-color: white;
   border: 1px solid #111;
@@ -181,123 +192,141 @@ body, html {
   height: 35px;
   text-align: center;
   color: #111;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputBox {
-  position: relative;
-  text-align: end;
+    position: relative;
+    text-align: end;
 }
 
 .dataTableLayout {
-  max-width: 1300px;
-  background-color: white;
-  display: inline-block;
-  margin: 30px;
+    max-width: 1300px;
+    background-color: white;
+    display: inline-block;
+    margin: 30px;
 }
 
 .dataTable {
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
+    margin: 30px 0px 30px 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-
 .tableCheckbox {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .tableCheckboxAll {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 .paddingA {
-  padding: 12px 20px 12px 40px;
-  margin-bottom: 30px;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 30px;
 }
 
 #myInput {
-  background-color: #eeeeee;
-  background-image: url(/kizSookSook/resources/img/search.png);
-  background-size: 20px;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 29%;
-  font-size: 14px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 30px;
+    background-color: #eeeeee;
+    background-image: url(/kizSookSook/resources/img/search.png);
+    background-size: 20px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 29%;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
 }
 
-
 #myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 #myTable th,
 #myTable td {
-  text-align: center;
-  padding: 12px;
+    text-align: center;
+    padding: 12px;
 }
 
 #myTable td button {
-  background-color: white;
-  border: 1px solid #a6a6a6;
-  border-radius: 4px;
-  width: 50px;
-  height: 35px;
-  text-align: center;
-  color: #111;
+    background-color: white;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    color: #111;
 }
 
 #myTable td button:last-child {
-  color: coral;
+    color: coral;
 }
 
 #myTable tr {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo:hover {
-  background-color: #bcd4fa;
+    background-color: #bcd4fa;
 }
 
 #myTable tr.trHeader {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 #myTable tbody tr:not(:first-child):hover {
-  background-color: #bcd4fa;
+    background-color: #bcd4fa;
 }
 
 /* Pagination */
 
 .pagination {
-  font-size: 7px;
-  margin-top: 30px;
-  text-align: -webkit-center;
-  width: 100%;
+    font-size: 7px;
+    margin-top: 30px;
+    text-align: -webkit-center;
+    width: 100%;
 }
 
 .pagination a {
-  color: black;
-  float: none;
-  padding: 8px 12px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+    color: black;
+    float: none;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 /* 현재 페이지는 파란색으로 */
 .pagination a.active {
-  background-color: dodgerblue;
-  color: white;
+    background-color: dodgerblue;
+    color: white;
 }
 
 /* 마우스 올렸을 때 */
 .pagination a:hover:not(.active) {
-  background-color: #bcd4fa;
+    background-color: #bcd4fa;
+}
+
+/* 파일입출력 썸네일 */
+#attach {
+    display: none;
+}
+
+.image {
+  background: no-repeat;
+  background-size: 70%;
+  position: relative;
+  width: 100%;
+  background-image: url('/resources/img/no_image.png');
+  cursor: pointer;
+  height: 200px;
+  background-position-x: center;
+  background-position-y: center;
 }

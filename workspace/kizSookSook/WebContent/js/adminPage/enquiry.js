@@ -1,11 +1,15 @@
-const openUpdate = document.querySelectorAll('.filterButton')[2];
-const close = document.querySelector('.updateX');
-const submit = document.querySelector('.det_submitButton')
-const modalBox = document.querySelector('.updateModal-bg');
+const open = document.querySelectorAll('.filterButton')[2];
+const close = document.querySelector('.X');
+const submit = document.querySelector('.det_submitButton');
+const modalBox = document.querySelector('.modal-bg');
 
-console.log(openUpdate);
+/* 한 페이지당 테이블 최대개수 */
+const size = 5;
 
-openUpdate.addEventListener('click', () => {
+const $all = $('.tableCheckboxAll');
+const $checkboxes = $('.tableCheckbox');
+
+open.addEventListener('click', () => {
     modalBox.classList.add('active');
 });
 
@@ -17,10 +21,12 @@ submit.addEventListener('click', () => {
     modalBox.classList.remove('active');
 });
 
-$("input[name='deleteCheck']:checked");
-
-$('.trData').each((i, e) => {
-    $(e).on('click', function () {
-        console.log($('.tableCheckbox:checked'));
-    });
+$checkboxes.click(function () {
+    $all.prop('checked', $checkboxes.filter(':checked').length == size);
 });
+
+$all.on('click', function () {
+    $checkboxes.prop('checked', $(this).is(':checked'));
+});
+
+

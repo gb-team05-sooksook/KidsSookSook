@@ -4,38 +4,25 @@
     <head>
         <meta charset="UTF-8" />
         <title>관리자페이지_회원조회_기관</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-        <link
-            rel="shortcut icon"
-            href="${pageContext.request.contextPath}/resources/img/favicon.png"
-        />
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png"/>
         <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" />
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/adminPage/userInfo.css"
-        />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/notice.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/userInfo.css"/>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css" />
     </head>
     <body>
         <section class="adminPage">
             <div class="sidebar">
-                <a class="logo" href="https://www.naver.com">
-                    <img class="logoImg" src="/kizSookSook/resources/img/icon.png" />
+                <a class="logo" href="${pageContext.request.contextPath}/html/main/main.jsp">
+                    <img class="logoImg" src="${pageContext.request.contextPath}/resources/img/logo/logo_main_02.png"/>
                     <span class="logoText">키즈쑥쑥</span>
                 </a>
-                <a><i class="bannerText"></i> 회원관리</a>
-                <a><i class="bannerText"></i> 결제</a>
-                <a><i class="bannerText"></i> 체험학습조회</a>
-                <a><i class="bannerText"></i> 공지사항</a>
-                <a><i class="bannerText"></i> 문의사항</a>
-                <a><i class="bannerText"></i> 배너관리</a>
+                <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
+                <a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
+                <a href="javascript:location.href='fieldTripFind.jsp'"><i class="bannerText"></i> 체험학습조회</a>
+                <a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
+                <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
+                <a href="javascript:location.href='bannerManage.jsp'"><i class="bannerText"></i> 배너관리</a>
             </div>
             <div class="mainContentContainer">
                 <div class="sidebarNameLayout">
@@ -49,29 +36,13 @@
                             <div class="inputBox">
                                 <div class="filterButtonLayout">
                                     <div class="memberIdSearchText">
-                                        <input
-                                            class="filterButton"
-                                            type="button"
-                                            value="개인회원보기"
-                                        />
-                                        <input
-                                            id="userUpdateButton"
-                                            class="filterButton"
-                                            type="button"
-                                            value="회원수정"
-                                        />
-                                        <input
-                                            class="filterButton"
-                                            type="button"
-                                            value="회원삭제"
-                                        />
+                                        <a href="javascript:location.href='memberInfo.jsp'">
+                                            <input class="filterButton" type="button" value="개인회원보기"/>
+                                        </a>
+                                        <input id="userUpdateButton" class="filterButton" type="button" value="회원수정"/>
+                                        <input class="filterButton" type="button" value="회원삭제" />
                                     </div>
-                                    <input
-                                        type="text"
-                                        id="myInput"
-                                        onkeyup="myFunction()"
-                                        placeholder="회원 아이디 검색"
-                                    />
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="회원 아이디 검색"/>
                                 </div>
                             </div>
                             <table id="myTable">
