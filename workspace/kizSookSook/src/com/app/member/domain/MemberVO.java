@@ -1,56 +1,75 @@
 package com.app.member.domain;
 
 public class MemberVO {
-	private Long memberId;
-	private String memberIdentification;
-	private String memberPhoneNumber;
-	private String memberGender;
+	private Long userId;
+	private String userIdentification;
+	private String userPassword;
+	private String userEmail;
+	private String userAddress;
+	private String userRegister;
 	
 	public MemberVO() {;}
 
-	public Long getMemberId() {
-		return memberId;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setMemberId(Long memberId) {
-		this.memberId = memberId;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public String getMemberIdentification() {
-		return memberIdentification;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setMemberIdentification(String memberIdentification) {
-		this.memberIdentification = memberIdentification;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
-	public String getMemberPhoneNumber() {
-		return memberPhoneNumber;
+	public String getUserPassword() {
+		return userPassword;
 	}
 
-	public void setMemberPhoneNumber(String memberPhoneNumber) {
-		this.memberPhoneNumber = memberPhoneNumber;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 
-	public String getMemberGender() {
-		return memberGender;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
-	public void setMemberGender(String memberGender) {
-		this.memberGender = memberGender;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+	public String getUserRegister() {
+		return userRegister;
+	}
+
+	public void setUserRegister(String userRegister) {
+		this.userRegister = userRegister;
 	}
 
 	@Override
 	public String toString() {
-		return "MemberVO [memberId=" + memberId + ", memberIdentification=" + memberIdentification
-				+ ", memberPhoneNumber=" + memberPhoneNumber + ", memberGender=" + memberGender + "]";
+		return "UserVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
+				+ userPassword + ", userEmail=" + userEmail + ", userAddress=" + userAddress + ", userRegister="
+				+ userRegister + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((memberId == null) ? 0 : memberId.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -63,12 +82,13 @@ public class MemberVO {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberVO other = (MemberVO) obj;
-		if (memberId == null) {
-			if (other.memberId != null)
+		if (userId == null) {
+			if (other.userId != null)
 				return false;
-		} else if (!memberId.equals(other.memberId))
+		} else if (!userId.equals(other.userId))
 			return false;
 		return true;
 	}
-	
+
+
 }

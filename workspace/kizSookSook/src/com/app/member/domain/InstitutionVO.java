@@ -1,47 +1,75 @@
 package com.app.member.domain;
 
 public class InstitutionVO {
-	private Long institutionId;
-	private String institutionName;
-	private String institutionBusinessNumber;
+	private Long userId;
+	private String userIdentification;
+	private String userPassword;
+	private String userEmail;
+	private String userAddress;
+	private String userRegister;
 	
 	public InstitutionVO() {;}
 
-	public Long getInstitutionId() {
-		return institutionId;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setInstitutionId(Long institutionId) {
-		this.institutionId = institutionId;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public String getInstitutionName() {
-		return institutionName;
+	public String getUserIdentification() {
+		return userIdentification;
 	}
 
-	public void setInstitutionName(String institutionName) {
-		this.institutionName = institutionName;
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
 	}
 
-	public String getInstitutionBusinessNumber() {
-		return institutionBusinessNumber;
+	public String getUserPassword() {
+		return userPassword;
 	}
 
-	public void setInstitutionBusinessNumber(String institutionBusinessNumber) {
-		this.institutionBusinessNumber = institutionBusinessNumber;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
+	public String getUserAddress() {
+		return userAddress;
+	}
+
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
+	}
+
+	public String getUserRegister() {
+		return userRegister;
+	}
+
+	public void setUserRegister(String userRegister) {
+		this.userRegister = userRegister;
 	}
 
 	@Override
 	public String toString() {
-		return "InstitutionVO [institutionId=" + institutionId + ", institutionName=" + institutionName
-				+ ", institutionBusinessNumber=" + institutionBusinessNumber + "]";
+		return "UserVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
+				+ userPassword + ", userEmail=" + userEmail + ", userAddress=" + userAddress + ", userRegister="
+				+ userRegister + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((institutionId == null) ? 0 : institutionId.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -54,12 +82,16 @@ public class InstitutionVO {
 		if (getClass() != obj.getClass())
 			return false;
 		InstitutionVO other = (InstitutionVO) obj;
-		if (institutionId == null) {
-			if (other.institutionId != null)
+		if (userId == null) {
+			if (other.userId != null)
 				return false;
-		} else if (!institutionId.equals(other.institutionId))
+		} else if (!userId.equals(other.userId))
 			return false;
 		return true;
 	}
+
+
+	
+	
 	
 }
