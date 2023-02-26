@@ -12,6 +12,7 @@
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 <body>
+	<%@ include file="/html/main/header.jsp"%>
     <div>
         <!-- 배너 -->
         <section class="css-ozn38e e18eubmx0">
@@ -672,6 +673,7 @@
            	</a>
         </div>
     </section>
+    <%@ include file="/html/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fieldTrip/fieldTripMain.js"></script>
