@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 
-public class MypageFrontController extends HttpServlet {
+public class MyPageFrontController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
