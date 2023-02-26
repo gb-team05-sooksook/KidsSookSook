@@ -10,6 +10,7 @@
 	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
 </head>
 <body>
+	<%@ include file="/html/main/header.jsp"%>
     <div>
         <div class="detaile-all">
             <section class="detaile-all-part">
@@ -270,6 +271,7 @@
             </section>
         </div>
     </div>
+    <%@ include file="/html/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fieldTrip/detailePage.js"></script>

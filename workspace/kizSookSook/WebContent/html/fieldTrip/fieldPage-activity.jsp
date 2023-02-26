@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
 </head>
 <body>
+	<%@ include file="/html/main/header.jsp"%>
         <!-- 왼쪽 카테고리 창 -->
     <div>
         <div class="category-container">
@@ -294,6 +295,7 @@
             </div>
         </div>
     </div>
+    <%@ include file="/html/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fieldTrip/fieldPage.js"></script>
