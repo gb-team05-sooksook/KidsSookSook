@@ -1,10 +1,7 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500&display=swap');
-
-
 body, html {
-  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-family: "Metro Sans", sans-serif;
   font-size: 14px;
 }
 
@@ -129,8 +126,8 @@ body, html {
   border-radius: 4px;
   width: 100px;
   height: 35px;
-  text-align: center;
   color: #111;
+  margin-right: 6px;
 }
 
 .inputBox {
@@ -139,10 +136,10 @@ body, html {
 }
 
 .dataTableLayout {
-  min-width: 1335px;
+  min-width: 1300px;
   background-color: white;
   display: inline-block;
-  margin: 15px;
+  margin: 30px;
 }
 
 .dataTable {
@@ -163,7 +160,7 @@ body, html {
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url(/kizSookSook/resources/img/search.png);
+  background-image: url('/resources/img/search.png');
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -311,6 +308,10 @@ div.details {
   color: #303441;
   align-items: center;
   justify-content: space-between;
+}
+
+.det_title {
+  display:flex;
 }
 
 .det_title-wrapper {
