@@ -113,28 +113,7 @@
     </table>
     </section>
                     <section class="OrderPaymentAmount">
-        <h2 class="OrderPaymentAmount__title">할인 / 캐시사용</h2>
-        <div class="OrderPaymentAmount__coupon-wrapper">
-            <h3 class="OrderPaymentAmount__coupon-label">사용 가능한 쿠폰</h3>
-            <div class="OrderPaymentAmount__coupon-select-wrapper" data-type="select">
-                <button type="button" class="couponSelectButton">
-                    <span class="selectedButtonText">                     사용 가능한 쿠폰  1 장                  </span>
-                    <span class="bs-caret">
-                    </span>
-                </button>
-                <div class="dropdownMenuWrapper">
-                    <ul class="dropdownMenus" role="menu">
-                        <li key="coupon-reset" class="dropdownMenuItem">
-                            <a>
-                                <div class="dropdownMenuItem__coupon-information">
-                                        - 사용 안 함
-                                </div>  
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <h2 class="OrderPaymentAmount__title">캐시사용</h2>
         <div class="OrderPaymentAmount__cash-wrapper">
             <h3 class="OrderPaymentAmount__cash-label">캐시 사용</h3>
                 <div class="OrderPaymentAmount__cash-input-wrapper">

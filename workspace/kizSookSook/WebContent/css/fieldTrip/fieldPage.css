@@ -81,7 +81,7 @@
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    margin: 13px 0px 0px;
+    margin: 13px 15px 0px;
 }
 .category-right-listName-turn{
     position: relative;
@@ -89,13 +89,13 @@
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
-    margin-left: 905px;
+    margin-left: 751px;
 }
 .category-right-listName-turn-name{
     color: rgb(85, 89, 105);
     cursor: pointer;
     font-size: 14px;
-    margin-right: 4px;
+    margin-right: 25px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -113,7 +113,7 @@
 }
 /* 체험학습 리스트 */
 .trip-list{
-    margin-top: 10px;
+    margin-top: -10px;
 }
 .trip-list-containal{
 	display: grid;
