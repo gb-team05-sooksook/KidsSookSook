@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.kids-info {
+    max-width: 1200px;
+    text-align: center;
+    margin: 16px auto 0 auto;
+}
+
+.footer-p{
+    font-size: 13px;
+    text-align: inherit;
+    margin: 0;
+    line-height: 1.43;
+    font-weight: 400;
+
+}
+
+.footer-s {
+    margin: 0 4px;
+    font-size: 14px;
+    color: #303441;
+}
+
+.footer-info-wrap {
+    padding: 16px;
+    cursor: pointer;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-info {
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin: 0;
+    text-align: center;
+    color: #9a9ba7;
+}
+
+.footer-copy-wrap {
+    margin: 16px 0 8px 0;
+}
+
+
+.footerCopy {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    margin: 0;
+    text-align: inherit;
+    color: #c8cad2;
+
+}
