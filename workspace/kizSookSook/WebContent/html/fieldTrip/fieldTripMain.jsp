@@ -42,7 +42,7 @@
                     <li class="ByCategory">
                     
                     
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
                             <div class="category-img">
 								<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Science.png">
                             </div>

@@ -18,10 +18,11 @@ public class ConnectCategoryPageActionController implements Action {
 		Result result = new Result();
 		
 		String categoryId = req.getParameter("categoryId");
+		String categoryName = req.getParameter("categoryName");
 		
 		fieldTripDAO.selectCategoryAll(categoryId);
 		
-		result.setPath("/html/fieldTrip/fieldPage-activity.jsp");
+		result.setPath("/html/fieldTrip/fieldPage-" + categoryName + ".jsp");
 		
 		return result;
 	}
