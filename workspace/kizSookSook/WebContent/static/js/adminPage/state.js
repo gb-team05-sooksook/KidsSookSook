@@ -1,7 +1,7 @@
 let state = (function () {
   function load() {
     return {
-      $myTable: $('#myTable'),
+      $myInfoTable: $(".myInfo-table"),
       member: {
         $userType: $("input[name='userType']"),
       },

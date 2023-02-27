@@ -17,8 +17,8 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public Long getTotal(String userType) {
-		return sqlSession.selectOne("member.getTotal", userType);
+	public Long getTotal(Map<String, Object> searchMap) {
+		return sqlSession.selectOne("member.getTotal", searchMap);
 	}
 
 	public List<MemberVO> selectMemberAll(Map<String, Object> searchMap) {
