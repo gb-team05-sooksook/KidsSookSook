@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="fieldTrip">
-	<select id="selectCategoryAll" parameterType="string" resultType="fieldTripVO">
+	<select id="selectCategoryAll" parameterType="string" resultType="FieldTripVO">
 		select field_trip_id, user_id, category_id, field_trip_registation_date, 
 		field_trip_deadline_date, field_trip_program_date, field_trip_place, 
 		field_trip_price, field_trip_context_description
