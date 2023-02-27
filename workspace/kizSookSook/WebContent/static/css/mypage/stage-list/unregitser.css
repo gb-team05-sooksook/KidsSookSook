@@ -139,6 +139,7 @@ ul.unregister-warnings-list li {
 div.unregister-agrement-btn-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 div.unregister-agrement-btn-wrapper label {
