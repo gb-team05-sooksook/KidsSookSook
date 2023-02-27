@@ -32,7 +32,7 @@
                             <a id="btn-change2" href="#book2" class="detaile-topics-list">기관 정보</a>
                             <a id="btn-change3" href="#book3" class="detaile-topics-list">가격 정보</a>
                             <a id="btn-change4" href="#book4" class="detaile-topics-list">취소.환불</a>
-                            <a id="btn-change5" href="#book5" class="detaile-topics-list">체험 평가</a>
+                            <a id="btn-change5" href="#book5" class="detaile-topics-list1">체험 평가</a>
                         </div>
                     </nav>
                     <!-- 상세내용 -->
