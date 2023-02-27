@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키즈쑥쑥 | 아이들에게 다양한 경험을 시켜주세요</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/pay.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/pay.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 <body>
     <div id="orderDiv">
