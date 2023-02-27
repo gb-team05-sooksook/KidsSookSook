@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/main.css">
- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/dropdown.css">
- <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
- <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/main.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/dropdown.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+ <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 			<section class="wrap-s">
 				<a class="logo" href="#">
                     <!-- logo 이미지 -->
-                   <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png">
+                   <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png">
 				<!-- <svg width="85" height="100%" viewBox="0 0 85 26" xmlns="http://www.w3.org/2000/svg">
 				<path d="M77.69 4.86c3.975 0 7.197 3.215 7.197 7.18l-.002.055h.002c.073 3.477.074 5.769.003 6.874-.108 1.659-.724 3.372-1.947 4.693A7.21 7.21 0 0 1 77.593 
 				26c-2.724 0-4.998-.984-6.653-2.921l-.05-.059 3.226-2.684c.837.997 1.938 1.48 3.478 1.48.9 0 1.67-.358 2.259-.992.515-.556.817-1.263.832-1.813v-.443a7.186 7.186 
@@ -171,19 +171,19 @@
                             <div class="slideshow-container">
                                     <!-- banner -->
                                 <div class="mySlideDiv fade active">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong1.jpg"> 
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong1.jpg"> 
                                 </div>
                                 
                                 <div class="mySlideDiv fade active">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong2.jpg"> 
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
                                 </div>
                                 
                                 <div class="mySlideDiv fade active">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong3.jpg"> 
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong3.jpg"> 
                                 </div>
                                 
                                 <div class="mySlideDiv fade active">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kmong4.jpg"> 
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong4.jpg"> 
                                 </div>
                         	
                                     <!-- 이전 버튼 -->
@@ -254,21 +254,21 @@
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
                             <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
                             <div class="imgWrap">
-                                <img src="${pageContext.request.contextPath}/resources/img/main/01.png" width="28" height="28">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/main/01.png" width="28" height="28">
                             </div>
                         </article>
                         <article class="boardTitle">
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
                             <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
                             <div class="imgWrap">
-                                <img src="${pageContext.request.contextPath}/resources/img/main/02.png" width="28" height="28">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/main/02.png" width="28" height="28">
                             </div>
                         </article>
                         <article class="boardTitle">
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
                             <h4 class="boardTitle-2">평균 만족도 98.9점<br>분야별 전문가가<br>만족스러운 결과물을 제공합니다.</h4>
                             <div class="imgWrap">
-                                <img src="${pageContext.request.contextPath}/resources/img/main/03.png" width="28" height="28">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/main/03.png" width="28" height="28">
                             </div>
                         </article>
                     </div>
@@ -328,7 +328,7 @@
                         <section class="guideContent-wrap">
                             <article class="guideContent-box">
                                 <div class="guide-imgWrap">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids1.png">
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kids1.png">
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
@@ -337,7 +337,7 @@
                             </article>
                             <article class="guideContent-box">
                                 <div class="guide-imgWrap">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids2.png" >
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kids2.png" >
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
@@ -346,7 +346,7 @@
                             </article>
                             <article class="guideContent-box">
                                 <div class="guide-imgWrap">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/kids3.png" >
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kids3.png" >
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
@@ -367,7 +367,7 @@
                                 <div class="ranking-T">컴퓨터</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
                                                 11,500,000
@@ -381,14 +381,14 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="gold-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/korea.png" class="gold-img">
                                             </div>                                           
                                         </a>     
                                     </article>
                                 </div>
                                 <div class="ranking-2box">
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 11,100,000
@@ -402,13 +402,13 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
                                     <div class="height-line"></div>
                                         <article class="ranking-sliver">
-                                            <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                            <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                             <div class="context-box">
                                                 <span class="sliver-context">
                                                     9,100,000
@@ -422,13 +422,13 @@
                                             </div>
                                             <a href="#" class="gold-a">
                                                 <div class="sliver-img-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                                 </div>
                                             </a>
                                         </article>
                                         <div class="height-line"></div>
                                         <article class="ranking-sliver">
-                                            <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                            <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                             <div class="context-box">
                                                 <span class="sliver-context">
                                                     7,100,000
@@ -442,7 +442,7 @@
                                             </div>
                                             <a href="#" class="gold-a">
                                                 <div class="sliver-img-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                                 </div>
                                             </a>
                                         </article>
@@ -453,7 +453,7 @@
                                 <div class="ranking-T">컴퓨터</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
                                                 11,500,000
@@ -467,14 +467,14 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="gold-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/korea.png" class="gold-img">
                                             </div>                                           
                                         </a>     
                                     </article>
                                 </div>
                                 <div class="ranking-2box">
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 11,100,000
@@ -488,13 +488,13 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
                                     <div class="height-line"></div>
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 9,100,000
@@ -508,13 +508,13 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
                                     <div class="height-line"></div>
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 7,100,000
@@ -528,7 +528,7 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
@@ -539,7 +539,7 @@
                                 <div class="ranking-T">컴퓨터</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/gold.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
                                                 11,500,000
@@ -553,14 +553,14 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="gold-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/korea.png" class="gold-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/korea.png" class="gold-img">
                                             </div>                                           
                                         </a>     
                                     </article>
                                 </div>
                                 <div class="ranking-2box">
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/sliver.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 11,100,000
@@ -574,13 +574,13 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
                                     <div class="height-line"></div>
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/bronze.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 9,100,000
@@ -594,13 +594,13 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
                                     <div class="height-line"></div>
                                     <article class="ranking-sliver">
-                                        <img src="${pageContext.request.contextPath}/resources/img/main/four.png" width="40" height="40">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
                                                 9,100,000
@@ -614,7 +614,7 @@
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
@@ -693,7 +693,7 @@
 	    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/mainpage/main.js"></script>
-<script src="${pageContext.request.contextPath}/js/mainpage/banner.js"></script>
-<script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage/main.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage/banner.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
 </html>

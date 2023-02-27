@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/footer.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/footer.css">
 </head>
 <body>
 	 <div id="wrap">
