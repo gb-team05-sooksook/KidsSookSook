@@ -45,8 +45,13 @@
               <div class="inputBox">
                 <div class="filterButtonLayout">
                   <div class="memberIdSearchText">
-                    <a href="javascript:location.href='institutionInfo.jsp'">
-                      <input class="filterButton" type="button" value="기관회원보기" />
+                    <a href="javascript:app().user.reloadByUserType.excute()">
+                      <input
+                        class="filterButton"
+                        name="userType"
+                        type="button"
+                        value="기관회원보기"
+                        userType="institution" />
                     </a>
                     <input
                       id="userUpdateButton"
@@ -77,31 +82,39 @@
                   <th style="width: 12.5%">핸드폰번호</th>
                   <th style="width: 6%">성별</th>
                 </tr>
-                <tr>
-                  <td style="width: 6%">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>1</td>
-                  <td>hds1234</td>
-                  <td>2023/02/09</td>
-                  <td>이메일</td>
-                  <td>서울특별시</td>
-                  <td>010-0312-1234</td>
-                  <td>남</td>
-                </tr>
               </table>
               <div class="paginationLayout">
                 <div class="pagination">
-                  <a href="#">&laquo;</a>
-                  <a class="active" href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#">6</a>
-                  <a href="#">&raquo;</a>
+                  <c:if test="${prev}">
+                    <a
+                      href="javascript:location.href='/board/listOk.board?page=${startPage - 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &laquo;
+                    </a>
+                  </c:if>
+                  <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                    <c:choose>
+                      <c:when test="${i eq page}">
+                        <a href="javascript:void(0)" class="paging paging-checked"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:when>
+                      <c:otherwise>
+                        <a
+                          href="javascript:location.href='/board/listOk.board?page=${i}&sort=${sort}'"
+                          class="paging"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:otherwise>
+                    </c:choose>
+                  </c:forEach>
+                  <c:if test="${next}">
+                    <a
+                      href="javascript:location.href='/board/listOk.board?page=${endPage + 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &raquo;
+                    </a>
+                  </c:if>
                 </div>
               </div>
             </div>
@@ -167,5 +180,11 @@
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    let members = `${users}`,
+      pageContext = '${pageContext.request.contextPath}';
+  </script>
+  <script src="${pageContext.request.contextPath}/js/adminPage/state.js"></script>
+  <script src="${pageContext.request.contextPath}/js/adminPage/app.js"></script>
   <script src="${pageContext.request.contextPath}/js/adminPage/memberInfo.js"></script>
 </html>

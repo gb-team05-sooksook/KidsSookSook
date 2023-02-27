@@ -1,5 +1,7 @@
 package com.app.member.dao;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -15,12 +17,16 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public Long getTotal() {
-		return sqlSession.selectOne("member.getTotal");
+	public Long getTotal(String userType) {
+		return sqlSession.selectOne("member.getTotal", userType);
 	}
 
-	public List<MemberVO> selectAll(Map<String, Object> searchMap) {
-		return sqlSession.selectList("member.selectAll", searchMap);
+	public List<MemberVO> selectMemberAll(Map<String, Object> searchMap) {
+		return sqlSession.selectList("member.selectMemberAll", searchMap);
+	}
+
+	public List<MemberVO> selectInstitutionAll(Map<String, Object> searchMap) {
+		return new ArrayList<MemberVO>();
 	}
 
 	
