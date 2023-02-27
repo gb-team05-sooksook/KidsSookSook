@@ -8,13 +8,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.fieldTrip.dao.FieldTripDAO;
 
 public class ConnectCategoryPageActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		FieldTripDAO fieldTripDAO = new FieldTripDAO();
+		Result result = new Result();
+		
+		String categoryId = req.getParameter("categoryId");
+		
+		fieldTripDAO.selectCategoryAll(categoryId);
+		
+		result.setPath("/html/fieldTrip/fieldPage-activity.jsp");
+		
+		return result;
 	}
 
 }

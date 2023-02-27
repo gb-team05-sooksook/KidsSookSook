@@ -71,7 +71,7 @@
 	<!-- 체험학습 -->
 	<servlet>
 		<servlet-name>fieldTrip</servlet-name>
-		<servlet-class>com.app.category.FieldTripFrontController</servlet-class>
+		<servlet-class>com.app.fieldTrip.FieldTripFrontController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

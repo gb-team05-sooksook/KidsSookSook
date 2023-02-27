@@ -40,9 +40,11 @@
             <div class="categoryListAll">
                 <ul class="category-field">
                     <li class="ByCategory">
-                        <a href="" class="ByCategoryList">
+                    
+                    
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1'" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Science.png">
+								<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Science.png">
                             </div>
                             <span class="categoryName">과학IT</span>
                         </a>
@@ -679,6 +681,7 @@
     <%@ include file="/html/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}";</script>
 <script src="${pageContext.request.contextPath}/js/fieldTrip/fieldTripMain.js"></script>
 <script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
 </html>
