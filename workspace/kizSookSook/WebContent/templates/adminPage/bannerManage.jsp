@@ -7,19 +7,19 @@
         <title>관리자페이지_배너관리</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png">
         <link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png">
 
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminPage/bannerManage.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminPage/bannerManage.css">
     </head>
     <body>
         <section class="adminPage">
             <div class="sidebar">
-                <a class="logo" href="${pageContext.request.contextPath}/html/main/main.jsp">
+                <a class="logo" href="${pageContext.request.contextPath}/static/main/main.jsp">
                     <img
                         class="logoImg"
-                        src="${pageContext.request.contextPath}/resources/img/logo/logo_main_02.png"/>
+                        src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png"/>
                     <span class="logoText">키즈쑥쑥</span>
                 </a>
                 <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
@@ -113,5 +113,5 @@
         <div id="layer"></div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/adminPage/bannerManage.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/adminPage/bannerManage.js"></script>
 </html>
