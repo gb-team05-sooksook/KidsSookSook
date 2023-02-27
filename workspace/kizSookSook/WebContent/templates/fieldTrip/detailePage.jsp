@@ -5,12 +5,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>키즈쑥쑥 | 상세페이지</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/detailePage.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
-	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/detailePage.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+	<link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 <body>
-	<%@ include file="/html/main/header.jsp"%>
+	<%@ include file="/templates/main/header.jsp"%>
     <div>
         <div class="detaile-all">
             <section class="detaile-all-part">
@@ -22,7 +22,7 @@
                     </section>
                     <!-- 이미지 -->
                     <section class="detaile-left-img">
-                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" width="100%">
+                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" width="100%">
                     </section>
 
                     <!-- 목차항목별 -->
@@ -170,7 +170,7 @@
                             <div class="review-list-containal">
                                 <div class="review-list-person">
                                     <div class="review-list-person-profile">
-                                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
                                     </div>
                                     <div class="review-list-person-profile-next">
                                         <div class="review-list-person-profile-nikename">hds****</div>
@@ -195,7 +195,7 @@
                             <div class="review-list-containal">
                                 <div class="review-list-person">
                                     <div class="review-list-person-profile">
-                                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
+                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
                                     </div>
                                     <div class="review-list-person-profile-next">
                                         <div class="review-list-person-profile-nikename">hds****</div>
@@ -271,8 +271,8 @@
             </section>
         </div>
     </div>
-    <%@ include file="/html/main/footer.jsp"%>
+    <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/fieldTrip/detailePage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailePage.js"></script>
 </html>

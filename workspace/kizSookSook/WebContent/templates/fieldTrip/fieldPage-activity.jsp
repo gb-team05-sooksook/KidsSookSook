@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카테고리 | 키즈쑥쑥</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldPage.css">
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/fieldPage.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css"/>
 </head>
 <body>
-	<%@ include file="/html/main/header.jsp"%>
+	<%@ include file="/templates/main/header.jsp"%>
         <!-- 왼쪽 카테고리 창 -->
     <div>
         <div class="category-container">
@@ -93,7 +93,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/activity/activity1-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity1-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -135,7 +135,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/activity/activity2-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity2-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -177,7 +177,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/activity/activity4-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity4-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -219,7 +219,7 @@
                             		<a class="trip-list-wrapper">
                             			<div class="trip-image">
                             				<div class="trip-image-wrapper">
-                            					<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldPage/activity/activity3-1.jpg" class="trip-image-size">
+                            					<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity3-1.jpg" class="trip-image-size">
                             				</div>
                             			</div>
                             			<div class="trip-img-heart">
@@ -295,8 +295,8 @@
             </div>
         </div>
     </div>
-    <%@ include file="/html/main/footer.jsp"%>
+    <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/fieldTrip/fieldPage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/fieldTrip/fieldPage.js"></script>
 </html>
