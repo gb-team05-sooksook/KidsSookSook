@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/dropdown.css"> 
+
 </head>
 <body>
 	<div id="wrap">
@@ -106,4 +108,7 @@
 </header>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
+
 </html>
