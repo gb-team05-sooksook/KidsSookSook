@@ -6,6 +6,10 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	
+	<typeAliases>
+		<typeAlias type="com.app.member.domain.MemberVO"/>
+	</typeAliases>
+	
 	<environments default="mysql">
 		<environment id="mysql">
 			<transactionManager type="JDBC"/>
