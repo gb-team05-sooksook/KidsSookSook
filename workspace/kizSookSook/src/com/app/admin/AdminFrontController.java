@@ -18,12 +18,9 @@ public class AdminFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
-		System.out.println(target);
-		System.out.println(contextPath);
-		
 		if(target.equals("/memberInfo")) {
 			result = new Result();
-			result.setPath("/html/adminPage/memberInfo.jsp");
+			result.setPath(req.getContextPath() + "/selectMemberAction.admin");
 		} else if(target.equals("/selectMemberAction")) {
 			result = new SelectMemberActionController().execute(req, resp);
 		}
