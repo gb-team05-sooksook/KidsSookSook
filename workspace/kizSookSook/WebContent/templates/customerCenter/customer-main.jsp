@@ -18,7 +18,7 @@
                 <a href="">
                     <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
-                <a title="홈" href="">
+                <a title="홈" href="javascript:location.href='${pageContext.request.contextPath}/main.main'">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
                         class="cs">
                 </a>
