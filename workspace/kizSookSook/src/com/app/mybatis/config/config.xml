@@ -8,7 +8,6 @@
 	
 	<typeAliases>
 		<typeAlias type="com.app.member.domain.MemberVO"/>
-		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="fieldTripVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
