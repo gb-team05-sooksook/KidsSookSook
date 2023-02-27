@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css"/>
 </head>
 <body>
-	<%@ include file="/templates/main/header.jsp"%>
+    <%@ include file="/templates/main/header.jsp"%>
         <!-- 왼쪽 카테고리 창 -->
     <div>
         <div class="category-container">
@@ -20,7 +20,7 @@
                 <main class="category-fieldPage">
                     <nav class="category-left">
                         <div class="category-left-title">
-                            <h1 class="category-left-title-name">카테고리</h1>
+                            <h1 class="category-left-title-name">역사</h1>
                         </div>
                         <section>
                             <ul class="category-left-title-list" style="list-style:none;">

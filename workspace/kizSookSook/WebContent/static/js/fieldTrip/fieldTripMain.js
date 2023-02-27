@@ -8,6 +8,3 @@ $btn.each((i, e) => {
         } else $($('.like-btn')[i]).attr("fill", "red");
    })
 });
-
-
-
