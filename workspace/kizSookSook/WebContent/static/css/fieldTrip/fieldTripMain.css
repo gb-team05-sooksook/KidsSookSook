@@ -413,9 +413,11 @@ body{
 }
 
 div.top-list-container{
-	display: flex;
-    gap: 45px;
-    flex-direction: column;
+	margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-height: 400px;
+    gap: 24px;
 }
 
 div.top-list-wrapper{

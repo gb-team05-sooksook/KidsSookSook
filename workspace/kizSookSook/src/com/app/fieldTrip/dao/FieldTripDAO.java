@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.app.fieldTrip.domain.FieldTripVO;
+import com.app.fieldTrip.domain.FieldTripDTO;
 import com.app.mybatis.config.MyBatisConfig;
 
 public class FieldTripDAO {
@@ -14,8 +14,8 @@ public class FieldTripDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public List<FieldTripVO> selectCategoryAll(String categoryId) {
-		List<FieldTripVO> fields = sqlSession.selectList("fieldTrip.selectCategoryAll", categoryId);
+	public List<FieldTripDTO> selectCategoryAll(String categoryId) {
+		List<FieldTripDTO> fields = sqlSession.selectList("fieldTrip.selectCategoryAll", categoryId);
 		
 		return fields;
 	}

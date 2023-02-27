@@ -17,6 +17,7 @@ public class FieldTripFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
+		System.out.println(target);
 
 		if(target.equals("/likeAction")) {
 			result = new LikeActionController().execute(req, resp);
@@ -24,7 +25,7 @@ public class FieldTripFrontController extends HttpServlet {
 			result = new RankingListActionController().execute(req, resp);
 		}else if(target.equals("/bestListAction")) {
 			result = new BestListActionController().execute(req, resp);
-		}else if(target.equals("/fieldTrip/connectCategoryPageAction")) {
+		}else if(target.equals("/static/fieldTrip/connectCategoryPageAction")) {
 			result = new ConnectCategoryPageActionController().execute(req, resp);
 		}else if(target.equals("/getReviewAction")) {
 			result = new GetReviewActionController().execute(req, resp);
