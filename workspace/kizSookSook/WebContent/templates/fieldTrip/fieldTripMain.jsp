@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세상 모든 직업을 체험해볼 수 있는 곳, 키즈쑥쑥</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldTripMain.css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
-    <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/header.css"> 
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/dropdown.css"> 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/fieldTripMain.css"/>
+     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/header.css"> 
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/dropdown.css"> 
 </head>
 <body>
-	<%@ include file="/html/main/header.jsp"%>
+	<%@ include file="/templates/main/header.jsp"%>
     
     <div>
         <!-- 배너 -->
@@ -42,9 +42,9 @@
                     <li class="ByCategory">
                     
                     
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
                             <div class="category-img">
-								<img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Science.png">
+								<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/Science.png">
                             </div>
                             <span class="categoryName">과학IT</span>
                         </a>
@@ -52,7 +52,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/mike.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/mike.png">
                             </div>
                             <span class="categoryName">방송</span>
                         </a>
@@ -60,7 +60,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/study.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/study.png">
                             </div>
                             <span class="categoryName">사회</span>
                         </a>
@@ -68,7 +68,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Activity.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/Activity.png">
                             </div>
                             <span class="categoryName">엑티비티</span>
                         </a>
@@ -76,7 +76,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/history.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/history.png">
                             </div>
                             <span class="categoryName">역사</span>
                         </a>
@@ -84,7 +84,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/art.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/art.png">
                             </div>
                             <span class="categoryName">예술</span>
                         </a>
@@ -92,7 +92,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/cook.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/cook.png">
                             </div>
                             <span class="categoryName">요리</span>
                         </a>
@@ -100,7 +100,7 @@
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
                             <div class="category-img">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/medical.png">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/medical.png">
                             </div>
                             <span class="categoryName">의료</span>
                         </a>
@@ -130,7 +130,7 @@
                                             <article class="bestBannerG">
                                                 <a href="" class="bestBannerH">
                                                     <div class="bestBannerI">
-                                                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/Science2-1.jpg" class="bestBannerJ">
+                                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/Science2-1.jpg" class="bestBannerJ">
                                                     </div>
                                                     <div class="bestBannerK">
                                                         <h3>과학IT의 모든 것</h3>
@@ -148,7 +148,7 @@
                                             <article class="bestBannerG">
                                                 <a href="" class="bestBannerH">
                                                     <div class="bestBannerI">
-                                                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/cook12-2.jpg" class="bestBannerJ">
+                                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/cook12-2.jpg" class="bestBannerJ">
                                                     </div>
                                                     <div class="bestBannerK">
                                                         <h3>요리의 모든 것</h3>
@@ -166,7 +166,7 @@
                                             <article class="bestBannerG">
                                                 <a href="" class="bestBannerH">
                                                     <div class="bestBannerI">
-                                                        <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical10-1.jpg" class="bestBannerJ">
+                                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/medical10-1.jpg" class="bestBannerJ">
                                                     </div>
                                                     <div class="bestBannerK">
                                                         <h3>의료의 모든 것</h3>
@@ -219,7 +219,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/medical5-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical10-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/medical10-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -311,7 +311,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/mike7-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/mike7-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -357,7 +357,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study3-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/study3-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -403,7 +403,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study8-2.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/study8-2.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                               <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/art5-1.jpg" class="topListH">
+                               <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/art5-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -497,7 +497,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/study4-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/study4-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -543,7 +543,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/cook12-2.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/cook12-2.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -589,7 +589,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/medical6-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/medical6-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -635,7 +635,7 @@
                     <div class="topListE">
                         <div class="topListF">
                             <div class="topListG">
-                                <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/fieldTripMain/history5-1.jpg" class="topListH">
+                                <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldTripMain/history5-1.jpg" class="topListH">
                             </div>
                         </div>
                     </div>
@@ -678,10 +678,10 @@
            	</a>
         </div>
     </section>
-    <%@ include file="/html/main/footer.jsp"%>
+    <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>let contextPath = "${pageContext.request.contextPath}";</script>
-<script src="${pageContext.request.contextPath}/js/fieldTrip/fieldTripMain.js"></script>
-<script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/fieldTrip/fieldTripMain.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
 </html>
