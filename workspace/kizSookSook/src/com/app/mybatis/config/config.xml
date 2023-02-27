@@ -6,6 +6,10 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	
+	<typeAliases>
+		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="FieldTripVO"/>
+	</typeAliases>
+	
 	<environments default="mysql">
 		<environment id="mysql">
 			<transactionManager type="JDBC"/>
