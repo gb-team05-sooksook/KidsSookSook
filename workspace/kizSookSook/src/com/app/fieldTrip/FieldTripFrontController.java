@@ -24,7 +24,7 @@ public class FieldTripFrontController extends HttpServlet {
 			result = new RankingListActionController().execute(req, resp);
 		}else if(target.equals("/bestListAction")) {
 			result = new BestListActionController().execute(req, resp);
-		}else if(target.equals("/connectCategoryPageAction")) {
+		}else if(target.equals("/fieldTrip/connectCategoryPageAction")) {
 			result = new ConnectCategoryPageActionController().execute(req, resp);
 		}else if(target.equals("/getReviewAction")) {
 			result = new GetReviewActionController().execute(req, resp);

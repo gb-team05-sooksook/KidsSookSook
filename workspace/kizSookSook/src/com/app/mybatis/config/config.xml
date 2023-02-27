@@ -6,12 +6,17 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 	
+	<typeAliases>
+		<typeAlias type="com.app.member.domain.MemberVO"/>
+		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="fieldTripVO"/>
+	</typeAliases>
+	
 	<environments default="mysql">
 		<environment id="mysql">
 			<transactionManager type="JDBC"/>
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-				<property name="url" value="jdbc:mysql://localhost:3306/kidsSookSook"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/kids"/>
 				<property name="username" value="root"/>
 				<property name="password" value="1234"/>
 			</dataSource>
