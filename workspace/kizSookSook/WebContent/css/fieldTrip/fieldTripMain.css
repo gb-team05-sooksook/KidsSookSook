@@ -97,7 +97,7 @@ body{
     justify-content: space-between;
     align-items: flex-end;
 }
-.category{
+.category-field{
     display: flex;
     column-gap: 79px;
     width: 100%;
@@ -119,7 +119,7 @@ body{
     justify-content: center;
     row-gap: 8px;
 }
-.categoryImg{
+.category-img{
     width: 72px;
     height: 72px;
     display: flex;

@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fieldTrip/fieldTripMain.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css"/>
     <link rel="icon" href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/header.css"> 
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/dropdown.css"> 
 </head>
 <body>
 	<%@ include file="/html/main/header.jsp"%>
+    
     <div>
         <!-- 배너 -->
         <section class="banner-section">
@@ -35,10 +38,10 @@
     <div class="categorymold">
         <section class="categoryList">
             <div class="categoryListAll">
-                <ul class="category">
+                <ul class="category-field">
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Science.png">
                             </div>
                             <span class="categoryName">과학IT</span>
@@ -46,7 +49,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/mike.png">
                             </div>
                             <span class="categoryName">방송</span>
@@ -54,7 +57,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/study.png">
                             </div>
                             <span class="categoryName">사회</span>
@@ -62,7 +65,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/Activity.png">
                             </div>
                             <span class="categoryName">엑티비티</span>
@@ -70,7 +73,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/history.png">
                             </div>
                             <span class="categoryName">역사</span>
@@ -78,7 +81,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/art.png">
                             </div>
                             <span class="categoryName">예술</span>
@@ -86,7 +89,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/cook.png">
                             </div>
                             <span class="categoryName">요리</span>
@@ -94,7 +97,7 @@
                     </li>
                     <li class="ByCategory">
                         <a href="" class="ByCategoryList">
-                            <div class="categoryImg">
+                            <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/resources/img/fieldTrip/category/medical.png">
                             </div>
                             <span class="categoryName">의료</span>
@@ -677,4 +680,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/fieldTrip/fieldTripMain.js"></script>
+<script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
 </html>
