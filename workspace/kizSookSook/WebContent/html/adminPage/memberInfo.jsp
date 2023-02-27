@@ -45,7 +45,7 @@
               <div class="inputBox">
                 <div class="filterButtonLayout">
                   <div class="memberIdSearchText">
-                    <a href="javascript:app().user.reloadByUserType.excute()">
+                    <a href="javascript:location.href=app().user.reloadByUserType.excute()">
                       <input
                         class="filterButton"
                         name="userType"

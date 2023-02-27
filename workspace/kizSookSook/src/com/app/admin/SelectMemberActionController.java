@@ -33,9 +33,7 @@ public class SelectMemberActionController implements Action {
 		Long total = null;
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		System.out.println(userType);
 		total = memberDAO.getTotal(userType);
-		System.out.println(total);
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;
 //		한 페이지에서 나오는 페이지 버튼의 개수
@@ -64,6 +62,7 @@ public class SelectMemberActionController implements Action {
 		req.setAttribute("next", pageDTO.isNext());
 		req.setAttribute("sort", sort);
 		
+//		System.out.println(jsons);
 		result.setPath("/html/adminPage/memberInfo.jsp");
 		
 		return result;

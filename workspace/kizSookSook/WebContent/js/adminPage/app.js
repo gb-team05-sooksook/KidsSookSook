@@ -30,23 +30,27 @@ function app() {
 
         return { excute: excute };
       })(),
-    },
 
-    reloadByUserType: (function () {
-      function excute() {
-        var memberObj = state.load().member;
-        var userType = memberObj.$userType.attr('userType');
+      reloadByUserType: (function () {
+        function excute() {
+          var memberObj = state.load().member;
+          var userType = memberObj.$userType.attr('userType');
+          var uri;
+          console.log(userType);
 
-        if (userType == 'institution') {
-          memberObj.$userType.attr('userType', 'member');
-          location.href = pageContext + 'memberInfo.admin?userType=' + `${userType}`;
-        } else {
-          memberObj.$userType.attr('userType', 'institution');
-          location.href = pageContext + 'memberInfo.admin?userType=' + `${userType}`;
+          if (userType == 'institution') {
+            memberObj.$userType.attr('userType', 'member');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
+          } else {
+            memberObj.$userType.attr('userType', 'institution');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
+          }
+
+          return uri;
         }
-      }
 
-      return { excute: excute };
-    })(),
+        return { excute: excute };
+      })(),
+    },
   };
 }
