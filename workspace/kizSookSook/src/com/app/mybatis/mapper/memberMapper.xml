@@ -24,4 +24,17 @@
 			</otherwise>
 		</choose>
 	</select>
+	
+	<insert id="insertUser" parameterType="memberVO">
+		insert into tbl_user
+		(user_identification, user_password, user_email, user_phoneNumber, user_address, user_register_date)
+		VALUES(#{userIdentification}, #{userPassword}, #{userEmail}, 
+		#{userPhoneNumber}, #{userAddress}, CURRENT_TIMESTAMP)
+	</insert>
+	
+	<insert id="insertMember" parameterType="memberVO">
+		insert into tbl_member
+		(member_name, member_nickname, member_gender)
+		values(#{memberName}, #{memberNickname}, #{memberGender});
+	</insert>
 </mapper>

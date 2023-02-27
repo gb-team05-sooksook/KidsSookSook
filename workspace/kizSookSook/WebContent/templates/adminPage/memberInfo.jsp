@@ -7,10 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
+    <link
+      rel="shortcut icon"
+      href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
     <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminPage/userInfo.css" />
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/static/css/adminPage/userInfo.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css" />
   </head>
   <body>
@@ -50,8 +54,7 @@
                         class="filterButton"
                         name="userType"
                         type="button"
-                        value="기관회원보기"
-                        userType="institution" />
+                        value="기관회원보기" />
                     </a>
                     <input
                       id="userUpdateButton"

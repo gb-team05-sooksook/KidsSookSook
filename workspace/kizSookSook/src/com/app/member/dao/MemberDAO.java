@@ -28,6 +28,16 @@ public class MemberDAO {
 	public List<MemberVO> selectInstitutionAll(Map<String, Object> searchMap) {
 		return new ArrayList<MemberVO>();
 	}
-
 	
+	public void insertUser(MemberVO memberVO) {
+		sqlSession.insert("member.insertUser", memberVO);
+	}
+	
+	public void insertMember(MemberVO memberVO) {
+		sqlSession.insert("member.insertMember", memberVO);
+	}
+	
+	public void insertInstitution() {
+		
+	}
 }
