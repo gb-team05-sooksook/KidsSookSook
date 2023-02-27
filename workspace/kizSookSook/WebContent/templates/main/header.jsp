@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/main/dropdown.css"> 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/dropdown.css"> 
 
 </head>
 <body>
@@ -55,7 +55,7 @@
                         <a  href="#" class="mypage">
                             <span>
                                 <div class="default-profile">
-                                    <img src="${pageContext.request.contextPath}/resources/img/main/profile.png" class="profile-img">
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/profile.png" class="profile-img">
                                 </div>
                             </span>
                         </a>
@@ -109,6 +109,6 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/mainpage/dropdown.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
 
 </html>
