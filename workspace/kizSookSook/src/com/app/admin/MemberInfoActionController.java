@@ -15,8 +15,9 @@ import com.app.Action;
 import com.app.PageDTO;
 import com.app.Result;
 import com.app.member.dao.MemberDAO;
+import com.app.member.domain.MemberVO;
 
-public class SelectMemberActionController implements Action {
+public class MemberInfoActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -63,7 +64,21 @@ public class SelectMemberActionController implements Action {
 		req.setAttribute("sort", sort);
 		
 //		System.out.println(jsons);
-		result.setPath("/html/adminPage/memberInfo.jsp");
+		result.setPath("/templates/adminPage/memberInfo.jsp");
+		
+//		MemberVO vo = new MemberVO();
+//		
+//		vo.setUserIdentification("test00");
+//		vo.setUserPassword("1234");
+//		vo.setUserEmail("test03@gmail.com");
+//		vo.setUserPhoneNumber("01011112222");
+//		vo.setUserAddress("서울 역삼동");
+//		vo.setMemberName("테스트00");
+//		vo.setMemberNickname("테스트123");
+//		vo.setMemberGender("선택안함");
+//		
+//		memberDAO.insertUser(vo);
+//		memberDAO.insertMember(vo);
 		
 		return result;
 	}
