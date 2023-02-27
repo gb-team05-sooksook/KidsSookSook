@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전문가가 필요한 순간 샬라샬라</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/join/joinPage_institution.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/joinLogin/join/joinPage_institution.css">
 </head>
 <body>
     <div id="__next">
@@ -223,6 +223,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage.js"></script>
-<script src="${pageContext.request.contextPath}/js/joinLogin/join/joinPage_institution.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/joinLogin/join/joinPage.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/joinLogin/join/joinPage_institution.js"></script>
 </html>
