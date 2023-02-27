@@ -13,51 +13,51 @@ pageEncoding="UTF-8"%>
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/mypage-default.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/mypage-default.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/mypage.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/mypage.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/mypage-profile-wrapper.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/mypage-profile-wrapper.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/mypage-aside-menu.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/mypage-aside-menu.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/stage-default.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/stage-default.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/trip-history.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/trip-history.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/cash-history.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/cash-history.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/my-info.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/my-info.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/unregitser.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/unregitser.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/stage-list/my-review.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/stage-list/my-review.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/css/mypage/modal.css"
+            href="${pageContext.request.contextPath}/static/css/mypage/modal.css"
         />
         <link
             rel="stylesheet"
-            href="${pageContext.request.contextPath}/font/font.css"
+            href="${pageContext.request.contextPath}/static/font/font.css"
         />
     </head>
     <body>
@@ -75,7 +75,7 @@ pageEncoding="UTF-8"%>
                         <div class="profile-wrapper">
                             <div class="profile-img">
                                 <img
-                                    src="${pageContext.request.contextPath}/resources/img/mypage/mypage_male_profile.png"
+                                    src="${pageContext.request.contextPath}/static/resources/img/mypage/mypage_male_profile.png"
                                 />
                                 <div class="member-type">의뢰인</div>
                             </div>
@@ -116,7 +116,7 @@ pageEncoding="UTF-8"%>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="${pageContext.request.contextPath}/js/mypage/jQueryDom.js"></script>
-    <script src="${pageContext.request.contextPath}/js/mypage/unregister-check.js"></script>
-    <script src="${pageContext.request.contextPath}/js/mypage/mypage.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/mypage.js"></script>
 </html>
