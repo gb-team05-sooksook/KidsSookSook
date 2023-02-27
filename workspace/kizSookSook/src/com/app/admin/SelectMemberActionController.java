@@ -29,10 +29,11 @@ public class SelectMemberActionController implements Action {
 		
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
+		String userType = req.getParameter("userType");
+		Long total = null;
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		
-		Long total = memberDAO.getTotal();
+		total = memberDAO.getTotal(userType);
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;
 //		한 페이지에서 나오는 페이지 버튼의 개수
@@ -46,9 +47,13 @@ public class SelectMemberActionController implements Action {
 		searchMap.put("startRow", pageDTO.getStartRow());
 		searchMap.put("sort", sort);
 		
-		memberDAO.selectAll(searchMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		if(userType == null || userType.equals("member")) {
+			memberDAO.selectMemberAll(searchMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		} else if(userType.equals("institution")) {
+			memberDAO.selectInstitutionAll(searchMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		}
 		
-		req.setAttribute("boards", jsons.toString());
+		req.setAttribute("users", jsons.toString());
 		req.setAttribute("total", total);
 		req.setAttribute("startPage", pageDTO.getStartPage());
 		req.setAttribute("endPage", pageDTO.getEndPage());
@@ -57,6 +62,7 @@ public class SelectMemberActionController implements Action {
 		req.setAttribute("next", pageDTO.isNext());
 		req.setAttribute("sort", sort);
 		
+//		System.out.println(jsons);
 		result.setPath("/html/adminPage/memberInfo.jsp");
 		
 		return result;

@@ -5,9 +5,22 @@ public class MemberVO {
 	private String userIdentification;
 	private String userPassword;
 	private String userEmail;
+	private String userPhoneNumber;
 	private String userAddress;
-	private String userRegister;
+	private String userRegisterDate;
 	
+	private String memberName;
+	private String memberNickname;
+	private String memberGender;
+	
+	public String getMemberGender() {
+		return memberGender;
+	}
+
+	public void setMemberGender(String memberGender) {
+		this.memberGender = memberGender;
+	}
+
 	public MemberVO() {;}
 
 	public Long getUserId() {
@@ -42,6 +55,14 @@ public class MemberVO {
 		this.userEmail = userEmail;
 	}
 
+	public String getUserPhoneNumber() {
+		return userPhoneNumber;
+	}
+
+	public void setUserPhoneNumber(String userPhoneNumber) {
+		this.userPhoneNumber = userPhoneNumber;
+	}
+
 	public String getUserAddress() {
 		return userAddress;
 	}
@@ -50,19 +71,28 @@ public class MemberVO {
 		this.userAddress = userAddress;
 	}
 
-	public String getUserRegister() {
-		return userRegister;
+	public String getUserRegisterDate() {
+		return userRegisterDate;
 	}
 
-	public void setUserRegister(String userRegister) {
-		this.userRegister = userRegister;
+	public void setUserRegisterDate(String userRegisterDate) {
+		this.userRegisterDate = userRegisterDate;
 	}
 
-	@Override
-	public String toString() {
-		return "UserVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
-				+ userPassword + ", userEmail=" + userEmail + ", userAddress=" + userAddress + ", userRegister="
-				+ userRegister + "]";
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
 	}
 
 	@Override
@@ -90,5 +120,12 @@ public class MemberVO {
 		return true;
 	}
 
-
+	@Override
+	public String toString() {
+		return "MemberVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
+				+ userPassword + ", userEmail=" + userEmail + ", userPhoneNumber=" + userPhoneNumber + ", userAddress="
+				+ userAddress + ", userRegisterDate=" + userRegisterDate + ", memberName=" + memberName
+				+ ", memberNickname=" + memberNickname + ", memberGender=" + memberGender + "]";
+	}
+	
 }

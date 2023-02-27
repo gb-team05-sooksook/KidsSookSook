@@ -24,17 +24,20 @@ const modalBox = document.querySelector('.modal-bg');
 }); */
 
 $checkboxes.click(function () {
-    $all.prop('checked', $checkboxes.filter(':checked').length == size);
+  $all.prop('checked', $checkboxes.filter(':checked').length == size);
 });
 
 $all.on('click', function () {
-    $checkboxes.prop('checked', $(this).is(':checked'));
+  $checkboxes.prop('checked', $(this).is(':checked'));
 });
 
 open.addEventListener('click', () => {
-    modalBox.classList.add('active');
+  modalBox.classList.add('active');
 });
 
 close.addEventListener('click', () => {
-    modalBox.classList.remove('active');
+  modalBox.classList.remove('active');
 });
+
+app().user.loadMember.excute(members);
+
