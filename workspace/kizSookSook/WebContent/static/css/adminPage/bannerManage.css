@@ -324,7 +324,7 @@ a:hover {
   background-size: 70%;
   position: relative;
   width: 100%;
-  background-image: url('/resources/img/no_image.png');
+  background-image: url('/static/resources/img/no_image.png');
   cursor: pointer;
   height: 200px;
   background-position-x: center;

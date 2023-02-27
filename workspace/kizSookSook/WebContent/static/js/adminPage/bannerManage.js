@@ -42,7 +42,7 @@ file.addEventListener('change', function (e) {
 		if (result.includes('image')) {
 			imgDiv[index].style.backgroundImage = `url('${result}')`;
 		} else {
-			imgDiv[index].style.backgroundImage = `url('/resources/img/no_image.png')`;
+			imgDiv[index].style.backgroundImage = `url('/static/resources/img/no_image.png')`;
 		}
 	};
 });
@@ -59,6 +59,6 @@ closeSpan.addEventListener('click', function (e) {
 
 	/* 삭제했을 때 이미지 뿐만 아니라 data 없애주기 */
 	input.value = "";
-	imgDiv[index].style.backgroundImage = `url('/resources/img/no_image.png')`;
+	imgDiv[index].style.backgroundImage = `url('/static/resources/img/no_image.png')`;
 });
 
