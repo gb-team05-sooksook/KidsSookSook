@@ -9,9 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>문의 등록 - 키즈쑥쑥 고객센터</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/customerCenter/enquiry.css">
+	href="${pageContext.request.contextPath}/static/css/customerCenter/enquiry.css">
 <link rel="icon"
-	href="${pageContext.request.contextPath}/resources/img/logo/icon.png">
+	href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 		<header class="header" style="background-color: #FAE57C">
 			<div class="logo">
 				<a href=""> <img
-					src="${pageContext.request.contextPath}/resources/img/logo/logo.png"
+					src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png"
 					class="logo-kidsSookSook">
 				</a> <a title="홈" href=""> <img
 					src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
@@ -162,6 +162,6 @@
 	<!-- footer end -->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/customerCenter/enquiry.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/customerCenter/enquiry.js"></script>
 
 </html>

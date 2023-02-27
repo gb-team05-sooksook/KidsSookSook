@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전문가가 필요한 순간 샬라샬라</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/font/font.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/joinLogin/findIdPw/idFind.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/joinLogin/findIdPw/idFind.css">
 </head>
 <body>
     <div id="__next" aria-hidden="true">
@@ -90,5 +90,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/joinLogin/findIdPw/idFind.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/joinLogin/findIdPw/idFind.js"></script>
 </html>
