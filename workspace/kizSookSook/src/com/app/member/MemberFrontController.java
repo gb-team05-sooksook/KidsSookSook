@@ -33,6 +33,11 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/templates/joinLogin/join/secondJoin")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/secondJoin.jsp");
+		
+		//firstJoin으로 이동			 
+		}else if(target.equals("/templates/joinLogin/join/firstJoin")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/join/firstJoin.jsp");
 					 
 		}else if(target.equals("/joinNormalAction")) {
 			result = new JoinNormalActionController().execute(req, resp);
