@@ -29,7 +29,7 @@ public class PurchaseListActionController implements Action {
 		req.setAttribute("userPhoneNumber", memberDTO.getUserPhoneNumber());
 		req.setAttribute("userRegisterDate", memberDTO.getUserRegisterDate());
 		
-		/* myPageDAO.myInfoAllSelect(null); */
+//		myPageDAO.myInfoAllSelect(); 
 		
 		result.setPath("/templates/mypage/mypage.jsp");
 		
