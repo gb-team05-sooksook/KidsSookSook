@@ -1,8 +1,3 @@
-/**
- * 
- */
-
-
 
 // 자동 글자 기능
 let input = $('.banner-input');
@@ -76,5 +71,8 @@ function typeText() {
     // 초기 실행
     setTimeout(typing, 1500);
 };
+
+
+
 
 
