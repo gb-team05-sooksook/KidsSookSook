@@ -4,7 +4,7 @@ function app() {
       loadMember: (function () {
         function excute(members) {
           var members = JSON.parse(members);
-          let dom = '';
+          let dom = "";
 
           members.forEach((member, i) => {
             dom += `
@@ -25,7 +25,7 @@ function app() {
           });
 
           console.log(dom);
-          state.load().$myTable.append(dom);
+          state.load().$myInfoTable.empty().append(dom);
         }
 
         return { excute: excute };
@@ -34,16 +34,16 @@ function app() {
       reloadByUserType: (function () {
         function excute() {
           var memberObj = state.load().member;
-          var userType = memberObj.$userType.attr('userType');
+          var userType = memberObj.$userType.attr("userType");
           var uri;
           console.log(userType);
 
-          if (userType == 'institution') {
-            memberObj.$userType.attr('userType', 'member');
-            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
+          if (userType == "institution") {
+            memberObj.$userType.attr("userType", "member");
+            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
           } else {
-            memberObj.$userType.attr('userType', 'institution');
-            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
+            memberObj.$userType.attr("userType", "institution");
+            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
           }
 
           return uri;
@@ -52,5 +52,29 @@ function app() {
         return { excute: excute };
       })(),
     },
+    ajaxService: (function () {
+      function excute(url, data, callback) {
+        $.ajax({
+          url: url, //request 보낼 서버의 경로
+          type: "post", // 메소드(get, post, put 등)
+          data: data, //보낼 데이터
+          success: function (data) {
+            //서버로부터 정상적으로 응답이 왔을 때 실행
+            callback(data);
+          },
+          error: function (err) {
+            //서버로부터 응답이 정상적으로 처리되지 못햇을 때 실행
+          },
+        });
+      }
+
+      return { excute: excute };
+    })(),
   };
 }
+
+// app().ajaxService.excute(
+//   url,
+//   { type: "userIdentification", keyword: "inputValue" },
+//   app().user.loadMember.excute
+// );

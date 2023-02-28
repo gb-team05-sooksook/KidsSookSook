@@ -20,9 +20,11 @@ public class AdminFrontController extends HttpServlet {
 		
 		if(target.equals("/memberInfo")) {
 			result = new Result();
-			result.setPath(req.getContextPath() + "/selectMemberAction.admin");
-		} else if(target.equals("/selectMemberAction")) {
+			result.setPath(req.getContextPath() + "/memberInfoAction.admin");
+		} else if(target.equals("/memberInfoAction")) {
 			result = new MemberInfoActionController().execute(req, resp);
+		} else if(target.equals("/searchMemberAction")) {
+			result = new SearchMemberActionController().execute(req, resp);
 		}
 		else {
 			

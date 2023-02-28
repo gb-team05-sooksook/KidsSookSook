@@ -39,5 +39,5 @@ close.addEventListener('click', () => {
   modalBox.classList.remove('active');
 });
 
-app().user.loadMember.excute(members);
+// app().user.loadMember.excute(members);
 
