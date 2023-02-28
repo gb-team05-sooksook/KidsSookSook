@@ -59,7 +59,7 @@
 	                        		</div>
 	                        		<div class="border-top-dashed-gray">
 	                        			<a class="flex-center-center btn btn-default width-100 NGM button-signup" style="background-color: rgb(255, 212, 0); border-color: rgb(255, 212, 0);">
-	                        				<span style="font-size: 15px; font-weight: 600;">이메일로 가입하기</span>
+	                        				<span onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/join/secondJoin.member'" style="font-size: 15px; font-weight: 600;">이메일로 가입하기</span>
 	                        			</a>
 	                        		</div>
                         		</div>
@@ -72,4 +72,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
