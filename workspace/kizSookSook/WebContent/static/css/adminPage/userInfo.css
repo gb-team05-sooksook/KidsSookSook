@@ -163,11 +163,11 @@ body, html {
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('/static/resources/img/search.png');
+  background-image: url('../../resources/img/search.png');
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 29%;
+  width: 100%;
   font-size: 14px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;

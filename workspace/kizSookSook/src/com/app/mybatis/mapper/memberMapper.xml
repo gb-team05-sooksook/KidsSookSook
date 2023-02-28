@@ -3,14 +3,14 @@
 
 <mapper namespace="member">
 	<sql id="searchType">
-		<if test="types != null">
+		<if test="types != null and keyword != null">
 			where
 			<trim prefixOverrides="or">
 				<foreach item="type" collection="types">
 					<trim prefix="or">
 						<choose>
 							<when test="type == 'userIdentification'.toString()">
-								user_identification concat('%', #{keyword}, '%')
+								user_identification like concat('%', #{keyword}, '%')
 							</when>
 							<!-- <when test="type == 'content'.toString()">
 								board_content like concat('%', #{keyword}, '%')
