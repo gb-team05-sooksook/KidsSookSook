@@ -24,8 +24,8 @@
         <main class="page-main">
             <h1 class="page-main-title">아이디 비밀번호 찾기</h1>
             <section class="main-id-pw-select">
-                <div class="main-id-page">아이디</div>
-                <div class="main-pw-page">비밀번호</div>
+                <div class="main-id-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/findIdPw/idFind.member'">아이디</div>
+                <div class="main-pw-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/findIdPw/passwordFind.member'">비밀번호</div>
             </section>
             <section>
                 <section>
