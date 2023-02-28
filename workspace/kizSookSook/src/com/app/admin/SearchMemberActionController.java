@@ -1,6 +1,7 @@
 package com.app.admin;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -23,19 +24,29 @@ public class SearchMemberActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		resp.setCharacterEncoding("UTF-8");
+		
 		MemberDAO memberDAO = new MemberDAO();
 		PageDTO pageDTO = null;
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 		
+		PrintWriter out = resp.getWriter();
+		
 		String type = req.getParameter("type");
 		String keyword = req.getParameter("keyword");
+		keyword = keyword == "" ? null : keyword;
+		System.out.println(keyword);
+		
+
 		List<String> types = new ArrayList<String>(Arrays.asList(type.split("&")));
 		
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
 		String userType = req.getParameter("userType");
+		
+//		검색조건 중 유저타입 : member or intitution
 		searchMap.put("userType", userType);
 		
 		Long total = null;
@@ -58,6 +69,11 @@ public class SearchMemberActionController implements Action {
 		searchMap.put("keyword", keyword);
 		
 		memberDAO.selectMemberAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);;
+		
+		System.out.println(searchMap);
+		
+		out.append(jsons.toString());
+		out.close();
 		
 		req.setAttribute("users", jsons.toString());
 		req.setAttribute("total", total);

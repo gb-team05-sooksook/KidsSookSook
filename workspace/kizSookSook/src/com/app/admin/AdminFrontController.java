@@ -25,7 +25,7 @@ public class AdminFrontController extends HttpServlet {
 			result = new MemberInfoActionController().execute(req, resp);
 		} else if(target.equals("/searchMemberAction")) {
 			result = new SearchMemberActionController().execute(req, resp);
-		}
+		} 
 		else {
 			
 		}

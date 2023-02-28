@@ -1,9 +1,13 @@
 let state = (function () {
   function load() {
     return {
-      $myInfoTable: $(".myInfo-table"),
+      $myInfoTable: $('#myTable'),
+      $trHeader: $('.trHeader'),
       member: {
         $userType: $("input[name='userType']"),
+        $tableStage: $('div.table-stage'),
+        $searchMember: $("form[name='searchMember']"),
+        $update: $('#userUpdateButton'),
       },
     };
   }

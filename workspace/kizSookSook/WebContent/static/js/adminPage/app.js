@@ -4,11 +4,11 @@ function app() {
       loadMember: (function () {
         function excute(members) {
           var members = JSON.parse(members);
-          let dom = "";
+          let dom = '';
 
           members.forEach((member, i) => {
             dom += `
-            <tr>
+            <tr name='member'>
               <td style="width: 6%">
                 <form>
                   <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
@@ -23,9 +23,9 @@ function app() {
               <td>${member.memberGender}</td>
             </tr>`;
           });
-
-          console.log(dom);
-          state.load().$myInfoTable.empty().append(dom);
+          state.load().$myInfoTable.find("tr[name='member']").remove();
+          state.load().$myInfoTable.append(dom);
+          $checkboxes = $('.tableCheckbox');
         }
 
         return { excute: excute };
@@ -34,16 +34,16 @@ function app() {
       reloadByUserType: (function () {
         function excute() {
           var memberObj = state.load().member;
-          var userType = memberObj.$userType.attr("userType");
+          var userType = memberObj.$userType.attr('userType');
           var uri;
           console.log(userType);
 
-          if (userType == "institution") {
-            memberObj.$userType.attr("userType", "member");
-            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
+          if (userType == 'institution') {
+            memberObj.$userType.attr('userType', 'member');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
           } else {
-            memberObj.$userType.attr("userType", "institution");
-            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
+            memberObj.$userType.attr('userType', 'institution');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
           }
 
           return uri;
@@ -56,19 +56,49 @@ function app() {
       function excute(url, data, callback) {
         $.ajax({
           url: url, //request 보낼 서버의 경로
-          type: "post", // 메소드(get, post, put 등)
-          data: data, //보낼 데이터
+          type: 'get', // 메소드(get, post, put 등)
+          data: data,
           success: function (data) {
-            //서버로부터 정상적으로 응답이 왔을 때 실행
-            callback(data);
+            app().user.loadMember.excute(data);
           },
-          error: function (err) {
-            //서버로부터 응답이 정상적으로 처리되지 못햇을 때 실행
-          },
+          error: function (err) {},
         });
       }
 
       return { excute: excute };
+    })(),
+    searchService: (function () {
+      /**
+       * ajaxService를 실행시켜 검색하는 메소드
+       *
+       * @param {*} $search input ajax 객체
+       * @param {*} url ajax url 경로
+       * @param {*} callback 콜백함수
+       */
+
+      function excute($search, url, callback) {
+        $search.on('submit', function (e) {
+          e.preventDefault();
+          var keyword = $("input[name='userIdentification']").val();
+          var data = {
+            keyword: keyword,
+          };
+
+          console.log(keyword);
+
+          app().ajaxService.excute(url, data);
+        });
+      }
+
+      return { excute: excute };
+    })(),
+    selectChecked : (function() {
+      function excute(){
+        var checked = $(".tableCheckbox").filter(":checked");
+        console.log(checked);
+      }
+
+      return {excute : excute};
     })(),
   };
 }

@@ -2,28 +2,25 @@
  * memberInfo.jsp
  */
 
-const size = 4;
+//
+
+const searchURL = 
+  pageContext + "/searchMemberAction.admin?type=userIdentification";
+
+const size = JSON.parse(membersData).length;
 const $all = $('.tableCheckboxAll');
-const $checkboxes = $('.tableCheckbox');
+let $checkboxes = $('.tableCheckbox');
 const $trData = $('.trData');
 
 const open = document.querySelector('#userUpdateButton');
 const close = document.querySelector('.X');
 const modalBox = document.querySelector('.modal-bg');
 
-/* $all.on('click', function () {
-    $checkboxes.each((i, e) => {
-        var child = $(e).children('.trDataNO');
-
-        if (child != null) {
-            return;
-        } else {
-            prop('checked', $(this).is(':checked'));
-        }
-    });
-}); */
+app().user.loadMember.excute(membersData);
+app().searchService.excute(state.load().member.$searchMember, searchURL);
 
 $checkboxes.click(function () {
+  console.log('클릭됨');
   $all.prop('checked', $checkboxes.filter(':checked').length == size);
 });
 
@@ -39,5 +36,8 @@ close.addEventListener('click', () => {
   modalBox.classList.remove('active');
 });
 
-// app().user.loadMember.excute(members);
-
+state.load().member.$update.on("click", function(e) {
+  e.preventDefault();
+  
+  app().selectChecked.excute();
+});

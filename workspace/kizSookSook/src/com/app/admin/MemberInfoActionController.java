@@ -82,6 +82,8 @@ public class MemberInfoActionController implements Action {
 //		memberDAO.insertUser(vo);
 //		memberDAO.insertMember(vo);
 		
+		System.out.println(jsons);
+		
 		return result;
 	}
 
