@@ -57,11 +57,11 @@
                                             />
                                         </form>
                                     </th>
-                                    <th style="width: 6%">사용자번호</th>
+                                    <th style="width: 12%">사용자번호</th>
                                     <th style="width: 12.5%">회원아이디</th>
                                     <th style="width: 12.5%">가입일자</th>
                                     <th style="width: 12.5%">이메일</th>
-                                    <th style="width: 18%">주소</th>
+                                    <th style="width: 12%">주소</th>
                                     <th style="width: 12.5%">사업자등록번호</th>
                                     <th style="width: 6%">기관명</th>
                                 </tr>

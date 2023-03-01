@@ -8,8 +8,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ - 키즈쑥쑥</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/customerCenter/faq.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/customerCenter/faq.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
 	<link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 

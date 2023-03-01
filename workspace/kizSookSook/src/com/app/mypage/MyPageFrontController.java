@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.Result;
 
@@ -17,6 +18,7 @@ public class MyPageFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
+		HttpSession session = req.getSession();
 		
 		if(target.equals("/purchaseListAction")) {
 			result = new PurchaseListActionController().execute(req, resp);	

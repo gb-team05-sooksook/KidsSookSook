@@ -7,8 +7,10 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.app.member.domain.MemberVO"/>
+		<typeAlias type="com.app.member.domain.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="fieldTripVO"/>
+		<typeAlias type="com.app.member.domain.MemberDTO" alias="memberDTO"/>
+		<typeAlias type="com.app.fieldTrip.domain.FieldTripDTO" alias="fieldTripDTO"/>
 	</typeAliases>
 	
 	<environments default="mysql">

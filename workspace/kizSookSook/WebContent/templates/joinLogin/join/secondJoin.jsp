@@ -32,7 +32,7 @@
                         <div class="choice-btn-explain">
                             서비스를 이용하고 싶다면
                         </div>
-                        <button role="button" color="yellow" class="choice-btn">
+                        <button onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/join/joinPage_normal.member'" role="button" color="yellow" class="choice-btn">
                             <span class="button__start-icon-wrapper">
                                 <span role="img" color="#e4e5ed" rotate="0" class="choice-btn-check">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="choice-btn-img">
@@ -48,7 +48,7 @@
                         <div class="choice-btn-explain">
                             서비스를 제공하고 싶다면
                         </div>
-                        <button role="button" color="yellow" class="choice-btn">
+                        <button onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/join/joinPage_institution.member'" role="button" color="yellow" class="choice-btn">
                             <span class="button__start-icon-wrapper">
                                 <span role="img" color="#e4e5ed" rotate="0" class="choice-btn-check">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="choice-btn-img">
@@ -65,4 +65,7 @@
         </main>
     </div>
 </body>
+<script>
+	
+</script>
 </html>

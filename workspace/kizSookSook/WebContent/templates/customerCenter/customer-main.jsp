@@ -10,22 +10,22 @@
         <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 
     </head>
-
+	
      <!-- header start-->
     <div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
-                <a href="">
+                <a href="${pageContext.request.contextPath}/templates/main/main.main">
                     <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
-                <a title="홈" href="javascript:location.href='${pageContext.request.contextPath}/main.main'">
+                <a title="홈" href="">
                     <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
                         class="cs">
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a>문의하기</a>
-                <a class="login" role="button" title="대화 상자를 엽니다." href="">로그인</a>
+                <a title="문의등록하기" href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice">문의하기</a>
+                <a class="login" role="button" title="대화 상자를 엽니다." href="${pageContext.request.contextPath}/templates/joinLogin/login.member">로그인</a>
             </div>
         </header>
     </div>
@@ -47,7 +47,7 @@
             <section class="section knowledge-base">
                 <div class="home-list-title">공지사항&nbsp;&nbsp;
                     <h5 style="display:inline">
-                        <a href="">더보기</a>
+                        <a href="javascript:${pageContext.request.contextPath}">더보기</a>
                     </h5>
                 </div>
                 <li class="home-list">
