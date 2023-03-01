@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,29 +137,35 @@
 							<!-- 하단 페이지 쪽 번호 -->
 							<div class="page-number-containel">
 								<ul class="page-number-wrapper">
-									<li class="page-left-arrow">
-										<button class="page-left-arrow-button-wrapper">
-											<span class="page-left-arrow-button">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
-													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
-												</svg>
-											</span>
-										</button>
-									</li>
-									<li class="page-middle-number-containel">
-										<button class="page-middle-number-button">
-											<span>1</span>
-										</button>
-									</li>
-									<li class="page-right-arrow">
-										<button class="page-right-arrow-button-wrapper">
-											<span class="page-right-arrow-button">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
-													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
-												</svg>
-											</span>
-										</button>
-									</li>
+									<c:if test="${prev}">
+										<li class="page-left-arrow">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=8&categoryName=medical&page=${startPage - 1}'" class="page-left-arrow-button-wrapper">
+												<span class="page-left-arrow-button">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
+														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+													</svg>
+												</span>
+											</button>
+										</li>
+									</c:if>
+									<c:forEach var="i" begin="${startPage}" end="${endPage}">
+										<li class="page-middle-number-containel">
+											<button class="page-middle-number-button">
+												<span><c:out value="${i}"/></span>
+											</button>
+										</li>
+									</c:forEach>
+									<c:if test="${next}">
+										<li class="page-right-arrow">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=8&categoryName=medical&page=${endPage + 1}'" class="page-right-arrow-button-wrapper">
+												<span class="page-right-arrow-button">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
+														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+													</svg>
+												</span>
+											</button>
+										</li>
+									</c:if>
 								</ul>
 							</div>
                         </div> <!-- 카테고리 4개 담은 div -->
