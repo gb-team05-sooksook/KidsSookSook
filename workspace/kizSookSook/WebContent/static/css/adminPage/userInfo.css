@@ -1,6 +1,9 @@
+/** @format */
+
 @charset "UTF-8";
 
-body, html {
+body,
+html {
   font-family: "Metro Sans", sans-serif;
   font-size: 14px;
 }
@@ -163,7 +166,7 @@ body, html {
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('../../resources/img/search.png');
+  background-image: url("../../resources/img/search.png");
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -174,20 +177,20 @@ body, html {
   margin-bottom: 30px;
 }
 
-#myTable {
+.myTable {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 14px;
 }
 
-#myTable th,
-#myTable td {
+.myTable th,
+.myTable td {
   text-align: center;
   padding: 12px;
 }
 
-#myTable td button {
+.myTable td button {
   background-color: white;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
@@ -197,11 +200,11 @@ body, html {
   color: #111;
 }
 
-#myTable td button:last-child {
+.myTable td button:last-child {
   color: coral;
 }
 
-#myTable tr {
+.myTable tr {
   border-bottom: 1px solid #ddd;
 }
 
@@ -209,11 +212,11 @@ body, html {
   background-color: #bcd4fa;
 }
 
-#myTable tr.trHeader {
+.myTable tr.trHeader {
   background-color: #f1f1f1;
 }
 
-#myTable tbody tr:not(:first-child):hover {
+.myTable tbody tr:not(:first-child):hover {
   background-color: #bcd4fa;
 }
 
@@ -272,20 +275,20 @@ div.modal-bg {
 }
 
 .xLayout {
+  margin-top: 20px;
   text-align: -webkit-right;
 }
 
-.memberInfoModalContainer{
+.memberInfoModalContainer {
   position: absolute;
   background-color: white;
   border: 2px solid #474747;
   border-radius: 8px;
   color: #303441;
   padding: 0px 20px 17px;
-  width: 1200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -110%);
+  width: 1450px;
+  top: 5%;
+  left: 14%;
   z-index: 1;
 }
 
@@ -294,6 +297,19 @@ div.modal-bg {
   border: 1px solid #111;
   border-radius: 4px;
   width: 80%;
+}
+
+div.modal-submit{
+  text-align: center;
+}
+
+div.modal-submit a[name="submit"] {
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #bad4ff;
+  border: 1px solid #637bba;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 .X {

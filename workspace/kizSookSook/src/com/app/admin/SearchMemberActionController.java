@@ -44,10 +44,8 @@ public class SearchMemberActionController implements Action {
 		
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
-		String userType = req.getParameter("userType");
 		
 //		검색조건 중 유저타입 : member or intitution
-		searchMap.put("userType", userType);
 		
 		Long total = null;
 		
