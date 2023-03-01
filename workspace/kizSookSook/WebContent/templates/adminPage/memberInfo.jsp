@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -8,35 +10,25 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      rel="shortcut icon"
-      href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
     <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
 
-    <link
-      rel="stylesheet"
-      href="${pageContext.request.contextPath}/static/css/adminPage/userInfo.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminPage/userInfo.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css" />
   </head>
   <body>
     <section class="adminPage">
       <div class="sidebar">
         <a class="logo" href="${pageContext.request.contextPath}/templates/main/main.jsp">
-          <img
-            class="logoImg"
-            src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png" />
+          <img class="logoImg" src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png" />
           <span class="logoText">키즈쑥쑥</span>
         </a>
         <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
         <a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
-        <a href="javascript:location.href='fieldTripFind.jsp'"
-          ><i class="bannerText"></i> 체험학습조회</a
-        >
+        <a href="javascript:location.href='fieldTripFind.jsp'"><i class="bannerText"></i> 체험학습조회</a>
         <a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
         <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
-        <a href="javascript:location.href='bannerManage.jsp'"
-          ><i class="bannerText"></i> 배너관리</a
-        >
+        <a href="javascript:location.href='bannerManage.jsp'"><i class="bannerText"></i> 배너관리</a>
       </div>
       <div class="mainContentContainer">
         <div class="sidebarNameLayout">
@@ -54,37 +46,21 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       <c:when test="${param.userType eq 'institution'}">
                         <a
                           href="javascript:location.href='${pageContext.request.contextPath}/memberInfo.admin?userType=member'">
-                          <input
-                            class="filterButton"
-                            name="userType"
-                            type="button"
-                            value="개인회원보기" />
+                          <input class="filterButton" name="userType" type="button" value="개인회원보기" />
                         </a>
                       </c:when>
                       <c:otherwise>
                         <a
                           href="javascript:location.href='${pageContext.request.contextPath}/memberInfo.admin?userType=institution'">
-                          <input
-                            class="filterButton"
-                            name="userType"
-                            type="button"
-                            value="기관회원보기" />
+                          <input class="filterButton" name="userType" type="button" value="기관회원보기" />
                         </a>
                       </c:otherwise>
                     </c:choose>
-                    <input
-                      id="userUpdateButton"
-                      class="filterButton"
-                      type="button"
-                      value="회원수정" />
-                    <input class="filterButton" type="button" value="회원삭제" />
+                    <input id="userUpdateButton" class="filterButton" type="button" value="회원수정" />
+                    <input id="userDeleteButton" class="filterButton" type="button" value="회원삭제" />
                   </div>
                   <form name="searchMember">
-                    <input
-                      type="text"
-                      id="myInput"
-                      name="userIdentification"
-                      placeholder="회원 아이디 검색" />
+                    <input type="text" id="myInput" name="userIdentification" placeholder="회원 아이디 검색" />
                   </form>
                 </div>
               </div>
@@ -108,7 +84,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <div class="pagination">
                   <c:if test="${prev}">
                     <a
-                      href="javascript:location.href='/board/listOk.board?page=${startPage - 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${startPage - 1}&sort=${sort}'"
                       class="paging paging-move">
                       &laquo;
                     </a>
@@ -116,13 +92,11 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   <c:forEach var="i" begin="${startPage}" end="${endPage}">
                     <c:choose>
                       <c:when test="${i eq page}">
-                        <a href="javascript:void(0)" class="paging paging-checked"
-                          ><c:out value="${i}"
-                        /></a>
+                        <a href="javascript:void(0)" style="cursor: default;" class="paging paging-checked"><c:out value="${i}" /></a>
                       </c:when>
                       <c:otherwise>
                         <a
-                          href="javascript:location.href='/board/listOk.board?page=${i}&sort=${sort}'"
+                          href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${i}&sort=${sort}'"
                           class="paging"
                           ><c:out value="${i}"
                         /></a>
@@ -131,7 +105,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   </c:forEach>
                   <c:if test="${next}">
                     <a
-                      href="javascript:location.href='/board/listOk.board?page=${endPage + 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${endPage + 1}&sort=${sort}'"
                       class="paging paging-move">
                       &raquo;
                     </a>
@@ -149,7 +123,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <div>
       <div class="modal-bg">
         <section class="memberInfoModalContainer">
-          <table class="myTable">
+          <table id="userForm" class="myTable">
             <div class="xLayout">
               <svg
                 width="24"
@@ -172,9 +146,13 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
               <th style="width: 14%">이메일</th>
               <th style="width: 14%">주소</th>
               <th style="width: 14%">핸드폰번호</th>
+              <th style="width: 14%">닉네임</th>
               <th style="width: 14%">성별</th>
             </tr>
           </table>
+          <div class="modal-submit">
+            <a name="submit" href="${pageContext.request.contextPath}/upadateMembersAction.admin">제출</a>
+          </div>
         </section>
       </div>
     </div>
@@ -182,7 +160,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <script>
     let membersData = `${users}`,
-      pageContext = '${pageContext.request.contextPath}';
+      pageContext = "${pageContext.request.contextPath}";
   </script>
   <script src="${pageContext.request.contextPath}/static/js/adminPage/state.js"></script>
   <script src="${pageContext.request.contextPath}/static/js/adminPage/app.js"></script>

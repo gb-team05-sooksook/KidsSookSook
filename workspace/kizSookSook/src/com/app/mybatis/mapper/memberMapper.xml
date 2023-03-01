@@ -67,4 +67,26 @@
 		(member_name, member_nickname, member_gender)
 		values(#{memberName}, #{memberNickname}, #{memberGender});
 	</insert>
+	
+	<update id="updateUser" parameterType="memberVO">
+		update tbl_user
+		set user_email = #{userEmail}, user_address = #{userAddress}, user_phonenumber = #{userPhoneNumber}
+		where user_id = #{userId}
+	</update>
+	
+	<update id="updateMember" parameterType="memberVO">
+		update tbl_member
+		set member_nickname = #{memberNickname}
+		where user_id = #{userId}
+	</update>
+	
+	<delete id="deleteUser" parameterType="long">
+		delete from tbl_user
+		where user_id = #{userId}
+	</delete>
+	
+	<delete id="deleteMember" parameterType="long">
+		delete from tbl_member
+		where user_id = #{userId}
+	</delete>
 </mapper>

@@ -43,4 +43,20 @@ public class MemberDAO {
 	public void insertInstitution() {
 		
 	}
+	
+	public void updateUser(MemberVO memberVO) {
+		sqlSession.update("member.updateUser", memberVO);
+	}
+	
+	public void updateMember(MemberVO memberVO) {
+		sqlSession.update("member.updateMember", memberVO);
+	}
+
+	public void deleteUser(Long userId) {
+		sqlSession.delete("member.deleteUser", userId);
+	}
+
+	public void deleteMember(Long userId) {
+		sqlSession.delete("member.deleteMember", userId);
+	}
 }
