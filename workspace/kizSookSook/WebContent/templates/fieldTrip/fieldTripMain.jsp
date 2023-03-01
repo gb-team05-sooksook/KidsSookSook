@@ -40,8 +40,6 @@
             <div class="categoryListAll">
                 <ul class="category-field">
                     <li class="ByCategory">
-                    
-                    
                         <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
                             <div class="category-img">
 								<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/Science.png">

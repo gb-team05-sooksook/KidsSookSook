@@ -1,6 +1,7 @@
 package com.app.fieldTrip.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -14,9 +15,11 @@ public class FieldTripDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public List<FieldTripDTO> selectCategoryAll(String categoryId) {
-		List<FieldTripDTO> fields = sqlSession.selectList("fieldTrip.selectCategoryAll", categoryId);
-		
-		return fields;
+	public List<FieldTripDTO> selectCategoryAll(Map<String, Object> pageMap) {
+		return sqlSession.selectList("fieldTrip.selectCategoryAll", pageMap);
+	}
+
+	public Long getTotal(Long categoryId) {
+		return sqlSession.selectOne("fieldTrip.getTotal", categoryId);
 	}
 }
