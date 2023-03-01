@@ -49,6 +49,12 @@
 		<include refid="searchType"/>
 	</select>
 	
+	<select id="selectMember" resultType="memberVO" parameterType="long">
+		select user_id,  user_identification, user_password, user_email, user_phoneNumber, user_address, user_register_date,
+		member_name, member_nickname, member_gender
+		from view_member_info where user_id = #{userId}
+	</select>
+	
 	<insert id="insertUser" parameterType="memberVO">
 		insert into tbl_user
 		(user_identification, user_password, user_email, user_phoneNumber, user_address, user_register_date)

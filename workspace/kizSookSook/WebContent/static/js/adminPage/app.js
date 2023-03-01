@@ -2,7 +2,7 @@ function app() {
   return {
     user: {
       loadMember: (function () {
-        function excute(members) {
+        function excute(members, stage) {
           var members = JSON.parse(members);
           let dom = '';
 
@@ -23,8 +23,8 @@ function app() {
               <td>${member.memberGender}</td>
             </tr>`;
           });
-          state.load().$myInfoTable.find("tr[name='member']").remove();
-          state.load().$myInfoTable.append(dom);
+          stage.find("tr[name='member']").remove();
+          stage.append(dom);
           $checkboxes = $('.tableCheckbox');
         }
 
@@ -56,10 +56,10 @@ function app() {
       function excute(url, data, callback) {
         $.ajax({
           url: url, //request 보낼 서버의 경로
-          type: 'get', // 메소드(get, post, put 등)
-          data: data,
-          success: function (data) {
-            app().user.loadMember.excute(data);
+          type: 'post', // 메소드(get, post, put 등)
+          data: JSON.stringify(data),
+          success: function (result) {
+            callback(result);
           },
           error: function (err) {},
         });
@@ -84,21 +84,29 @@ function app() {
             keyword: keyword,
           };
 
-          console.log(keyword);
-
-          app().ajaxService.excute(url, data);
+          app().ajaxService.excute(url, data, (result) => {
+            app().user.loadMember.excute(result, state.load().$myInfoTable);
+          });
         });
       }
 
       return { excute: excute };
     })(),
-    selectChecked : (function() {
-      function excute(){
-        var checked = $(".tableCheckbox").filter(":checked");
+    selectChecked: (function () {
+      function excute() {
+        var checked = $('.tableCheckbox').filter(':checked').parent().parent().next();
+        var userIds = new Array();
+
         console.log(checked);
+
+        checked.each((i, e) => {
+          userIds.push($(e).text());
+        });
+
+        return { userIds: userIds };
       }
 
-      return {excute : excute};
+      return { excute: excute };
     })(),
   };
 }

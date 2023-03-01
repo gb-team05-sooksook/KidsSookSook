@@ -88,7 +88,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   </form>
                 </div>
               </div>
-              <table id="myTable">
+              <table class="myTable">
                 <tr class="trHeader">
                   <th style="width: 6%">
                     <form>
@@ -149,7 +149,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <div>
       <div class="modal-bg">
         <section class="memberInfoModalContainer">
-          <table id="myTable">
+          <table class="myTable">
             <div class="xLayout">
               <svg
                 width="24"
@@ -173,27 +173,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
               <th style="width: 14%">주소</th>
               <th style="width: 14%">핸드폰번호</th>
               <th style="width: 14%">성별</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userId" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="joinDate" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userEmail" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userAddress" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userphone" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userGender" />
-              </td>
             </tr>
           </table>
         </section>

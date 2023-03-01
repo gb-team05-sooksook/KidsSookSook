@@ -1,7 +1,6 @@
 package com.app.member.dao;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +26,10 @@ public class MemberDAO {
 
 	public List<MemberVO> selectInstitutionAll(Map<String, Object> searchMap) {
 		return new ArrayList<MemberVO>();
+	}
+	
+	public MemberVO selectMember(Long memberId) {
+		return sqlSession.selectOne("member.selectMember", memberId);
 	}
 	
 	public void insertUser(MemberVO memberVO) {
