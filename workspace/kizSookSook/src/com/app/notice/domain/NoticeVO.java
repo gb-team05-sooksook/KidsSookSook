@@ -1,13 +1,13 @@
 package com.app.notice.domain;
 
-public class CustomerNoticeVO {
+public class NoticeVO {
 	private Long noticeId;
 	private String noticeTitle;
 	private String noticeContext;
 	private String noticeDate;
 	private String noticeAlterDate;
 	
-	public CustomerNoticeVO() {;}
+	public NoticeVO() {;}
 
 	
 
@@ -99,7 +99,7 @@ public class CustomerNoticeVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CustomerNoticeVO other = (CustomerNoticeVO) obj;
+		NoticeVO other = (NoticeVO) obj;
 		if (noticeId == null) {
 			if (other.noticeId != null)
 				return false;

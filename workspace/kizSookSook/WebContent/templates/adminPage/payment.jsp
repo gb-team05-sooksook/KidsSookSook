@@ -33,16 +33,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <a href="javascript:location.href='${pageContext.request.contextPath}/payment.admin'"
           ><i class="bannerText"></i> 결제</a
         >
-        <a href="javascript:location.href='fieldTripFind.jsp'"
+        <a href="javascript:location.href='${pageContext.request.contextPath}fieldTripFind.jsp'"
           ><i class="bannerText"></i> 체험학습조회</a
         >
-        <a href="javascript:location.href='${pageContext.request.contextPath}'"
+        <a href="javascript:location.href='${pageContext.request.contextPath}/notice.admin'"
           ><i class="bannerText"></i> 공지사항</a
         >
-        <a href="javascript:location.href='${pageContext.request.contextPath}'"
-          ><i class="bannerText"></i> 문의사항</a
-        >
-        <a href="javascript:location.href='${pageContext.request.contextPath}'"
+        <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
+        <a href="javascript:location.href='bannerManage.jsp'"
           ><i class="bannerText"></i> 배너관리</a
         >
       </div>
@@ -77,7 +75,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                     </form>
                   </th>
                   <th style="width: 13%">결제번호</th>
-                  <th style="width: 13%">회원번호</th>
+                  <th style="width: 13%">회원아이디</th>
                   <th style="width: 13%">체험학습번호</th>
                   <th style="width: 13%">결제금액</th>
                   <th style="width: 13%">결제일</th>

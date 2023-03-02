@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-
-body, html {
-  font-family: "Metro Sans", sans-serif;
+body,
+html {
+  font-family: 'Metro Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -173,31 +173,31 @@ body, html {
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('/static/resources/img/search.png');
+  background-image: url('../../resources/img/search.png');
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 29%;
+  width: 100%;
   font-size: 14px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 30px;
 }
 
-#myTable {
+.myTable {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 14px;
 }
 
-#myTable th,
-#myTable td {
+.myTable th,
+.myTable td {
   text-align: center;
   padding: 12px;
 }
 
-#myTable td button {
+.myTable td button {
   background-color: white;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
@@ -207,11 +207,11 @@ body, html {
   color: #111;
 }
 
-#myTable td button:last-child {
+.myTable td button:last-child {
   color: coral;
 }
 
-#myTable tr {
+.myTable tr {
   border-bottom: 1px solid #ddd;
 }
 
@@ -219,11 +219,11 @@ body, html {
   background-color: #bcd4fa;
 }
 
-#myTable tr.trHeader {
+.myTable tr.trHeader {
   background-color: #f1f1f1;
 }
 
-#myTable tbody tr:not(:first-child):hover {
+.myTable tbody tr:not(:first-child):hover {
   background-color: #bcd4fa;
 }
 
