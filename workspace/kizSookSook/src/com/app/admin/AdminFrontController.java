@@ -31,7 +31,14 @@ public class AdminFrontController extends HttpServlet {
 			result = new UpadateMembersActionController().execute(req, resp);
 		} else if(target.equals("/deleteUserAction")) {
 			result = new DeleteUserActionController().execute(req, resp);
-		} 
+		} else if(target.equals("/payment")) {
+			result = new Result();
+			result.setPath(req.getContextPath() + "/paymentAction.admin");
+		} else if(target.equals("/paymentAction")) {
+			result = new PaymentActionController().execute(req, resp);
+		} else if(target.equals("/searchPaymentAction")) {
+			result = new SearchPaymentActionController().execute(req, resp);
+		}
 		else {
 			
 		}

@@ -11,6 +11,8 @@
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="fieldTripVO"/>
 		<typeAlias type="com.app.member.domain.MemberDTO" alias="memberDTO"/>
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripDTO" alias="fieldTripDTO"/>
+		<typeAlias type="com.app.pay.domain.PaymentVO" alias="paymentVO"/>
+		<typeAlias type="com.app.pay.domain.PaymentDTO" alias="paymentDTO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
@@ -32,5 +34,6 @@
 		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"/>
 		<mapper resource="com/app/mybatis/mapper/mypageMapper.xml"/>
 		<mapper resource="com/app/mybatis/mapper/noticeMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/paymentMapper.xml"/>
 	</mappers>
 </configuration>
