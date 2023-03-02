@@ -25,8 +25,8 @@ public class NoticeFrontController extends HttpServlet {
 		
 		 if(target.equals("/searchAction")) {
 			result = new SearchActionController().execute(req, resp);	
-		}else if(target.equals("/getNoticeAction")) {
-			result = new GetNoticeActionController().execute(req, resp);
+		}else if(target.equals("/enquiryOkAction")) {
+			result = new enquiryOkActionController().execute(req, resp);
 		}else if(target.equals("/getFAQAction")) {
 			result = new GetFAQActionController().execute(req, resp);
 		}else if(target.equals("/templates/customerCenter/enquiry")) {
