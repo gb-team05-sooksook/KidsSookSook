@@ -13,6 +13,7 @@
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripDTO" alias="fieldTripDTO"/>
 		<typeAlias type="com.app.pay.domain.PaymentVO" alias="paymentVO"/>
 		<typeAlias type="com.app.pay.domain.PaymentDTO" alias="paymentDTO"/>
+		<typeAlias type="com.app.member.domain.InstitutionDTO" alias="institutionDTO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
