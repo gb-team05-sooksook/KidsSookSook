@@ -6,6 +6,8 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.member.domain.InstitutionDTO;
+import com.app.member.domain.MemberDTO;
 import com.app.member.domain.MemberVO;
 import com.app.mybatis.config.MyBatisConfig;
 
@@ -58,5 +60,14 @@ public class MemberDAO {
 
 	public void deleteMember(Long userId) {
 		sqlSession.delete("member.deleteMember", userId);
+	}
+	
+	// 일반회원가입
+	public void insertJoinMember(MemberDTO memberDTO) {
+		sqlSession.insert("memberDTO.insertJoinMember", memberDTO);
+	}
+	// 기관회원가입
+	public void insertJoinInstitution(InstitutionDTO institutionDTO) {
+		sqlSession.insert("institutionDTO.insertJoinInstitution", institutionDTO);
 	}
 }

@@ -42,6 +42,10 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/joinNormalAction")) {
 			result = new JoinNormalActionController().execute(req, resp);
 					 
+		}else if(target.equals("/joinNormal")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/join/secondJoin.jsp");
+					 
 		}else if(target.equals("/joinInstitutionAction")) {
 			result = new JoinInstitutionActionController().execute(req, resp); 
 			
