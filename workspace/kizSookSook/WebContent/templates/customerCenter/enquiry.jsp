@@ -58,8 +58,8 @@
 				</div>
 			</h1>
 			<div class="form">
-				<form id="new_request" class="request-form" accept-charset="UTF-8">
-					<input name="utf8" type="hidden" value="✓"> <input
+				<form id="new_request" class="request-form" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
+					<input name="utf8" type="hidden" value=""> <input
 						type="hidden" value="">
 					<div class="form-field required request_anonymous_requester_email">
 						<label for="request_anonymous_requester_email"> 이메일 주소 </label> <input
@@ -77,7 +77,6 @@
 							<div class="drop-content" style="display: none; font-size: 14px;"">
 								<p onclick=" selectType(this)"">이용문의</p>
 								<p onclick=" selectType(this)"">고객의 소리/제보</p>
-								<p onclick=" selectType(this)">제휴</p>
 							</div>
 						</div>
 						<div id="request_custom_fields_error"
