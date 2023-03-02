@@ -54,7 +54,7 @@ function showCategoryList() {
 		                    <h3 class="topListN">${category.fieldTripContextDescription}</h3>
 		                    <div class="topListO">
 		                        <div class="topListP">
-		                            <div class="topListR" id="topListRR">${category.fieldTripPrice}</div>
+		                            <div class="topListR" id="topListRR">${category.fieldTripPrice}원</div>
 		                        </div>
 		                    </div>
 		                </div>

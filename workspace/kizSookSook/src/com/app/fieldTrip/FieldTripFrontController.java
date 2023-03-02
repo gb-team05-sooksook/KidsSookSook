@@ -17,7 +17,6 @@ public class FieldTripFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
-		System.out.println(target);
 
 		if(target.equals("/likeAction")) {
 			result = new LikeActionController().execute(req, resp);
@@ -33,6 +32,8 @@ public class FieldTripFrontController extends HttpServlet {
 			result = new GetDetailPageActionController().execute(req, resp);
 		}else if(target.equals("/sortAction")) {
 			result = new SortActionController().execute(req, resp);
+		}else {
+			System.out.println(target);
 		}
 		
 		if(result != null) {
