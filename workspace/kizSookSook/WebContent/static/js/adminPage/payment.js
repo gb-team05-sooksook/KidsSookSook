@@ -23,3 +23,23 @@ app().searchService.excute(
   state.load().$myInfoTable,
   app().payment.loadPayment.excute
 );
+
+// 결제내역 삭제
+state.load().payment.$delete.on('click', function () {
+  var json = app().selectChecked.excute().checkedIds;
+
+  var length = JSON.parse(json);
+
+  if (length < 1) {
+    alert('선택된 내역이 없습니다');
+    return;
+  }
+
+  if (!confirm('정말로 삭제하시겠습니까?')) {
+    return;
+  }
+
+  var encoded = encodeURI(`${pageContext}/deletePaymentAction.admin?checkedIds=${json}`);
+
+  location.href = encoded;
+});

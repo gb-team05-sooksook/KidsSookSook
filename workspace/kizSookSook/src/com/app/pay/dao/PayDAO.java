@@ -26,5 +26,9 @@ public class PayDAO {
 	public Long getTotal() {
 		return sqlSession.selectOne("payment.getTotal");
 	}
+
+	public void delete(Long paymentId) {
+		sqlSession.delete("payment.delete", paymentId);
+	}
 	
 }

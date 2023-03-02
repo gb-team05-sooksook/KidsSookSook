@@ -38,7 +38,6 @@ function app() {
           var memberObj = state.load().member;
           var userType = memberObj.$userType.attr('userType');
           var uri;
-          console.log(userType);
 
           if (userType == 'institution') {
             memberObj.$userType.attr('userType', 'member');
@@ -85,8 +84,6 @@ function app() {
         function excute(payments, stage) {
           var payments = JSON.parse(payments);
           let dom = '';
-
-          console.log(stage);
 
           payments.forEach((payment, i) => {
             dom += `

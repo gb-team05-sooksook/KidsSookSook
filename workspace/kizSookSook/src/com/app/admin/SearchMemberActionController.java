@@ -37,8 +37,6 @@ public class SearchMemberActionController implements Action {
 		String type = req.getParameter("type");
 		String keyword = req.getParameter("keyword");
 		keyword = keyword == "" ? null : keyword;
-		System.out.println(keyword);
-		
 
 		List<String> types = new ArrayList<String>(Arrays.asList(type.split("&")));
 		
