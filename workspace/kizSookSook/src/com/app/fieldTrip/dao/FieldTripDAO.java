@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.fieldTrip.domain.FieldTripDTO;
+import com.app.fieldTrip.domain.FieldTripDetailDTO;
 import com.app.mybatis.config.MyBatisConfig;
 
 public class FieldTripDAO {
@@ -21,6 +22,10 @@ public class FieldTripDAO {
 
 	public Long getTotal(Long categoryId) {
 		return sqlSession.selectOne("fieldTrip.getTotal", categoryId);
+	}
+	
+	public FieldTripDetailDTO fieldTripDetail(Long fieldTripId) {
+		return sqlSession.selectOne("fieldTrip.fieldTripDetail", fieldTripId);
 	}
 	
 }
