@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>키즈쑥쑥 | 상세페이지</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/detailePage.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/fieldTrip/detailPage.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
 	<link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
@@ -18,7 +18,7 @@
                 <main class="detaile-page-left">
                     <!--카테고리 경로-->	 
                     <section class="detaile-left-name">
-                        <div class="detaile-left-category">과학IT &gt; C.S.I 과학수사대</div>
+                        <div class="detaile-left-category">과학IT &gt; ${fieldTripDetailDTO.fieldTripName}</div>
                     </section>
                     <!-- 이미지 -->
                     <section class="detaile-left-img">
@@ -40,11 +40,7 @@
                         <div id="book1" class="detaile-content">상세 내용</div>
                         <div class="detaile-content-writing">
                             <p style="margin:0px;">
-                                "C.S.I 과학수사대"
-                                <br>
-                                "최첨단 과학 수사로 사건의 진실을 밝혀라!"
-                                <br>
-                                "과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다."
+                            	${fieldTripDetailDTO.fieldTripDetailContext}
                             </p>
                         </div>
                     </section>
@@ -53,11 +49,7 @@
                         <div id="book2" class="detaile-content">기관 정보</div>
                         <div class="detaile-content-writing">
                             <p style="margin:0px;">
-                                "KCSI"
-                                <br>
-                                "범죄 현장에서 채취된 지문을 DB지문과 매칭하여 지문의 신원을 확인"
-                                <br>
-                                "대형 사건･사고의 신원 불상자 및 피해자의 신속한 신원 확인"
+                            	${fieldTripDetailDTO.fieldTripDetailInstitutionInfo}
                             </p>
                         </div>
                     </section>
@@ -67,19 +59,27 @@
                         <div class="detaile-price-content">
                             <div class="detaile-price-content-wrapper">
                                 <div class="detaile-price-content-wrapper-price">
-                                    "11,000원"
+                                    "${fieldTripDetailDTO.fieldTripPrice}원"
                                     <span class="detaile-price-content-wrapper-price-vat">(VAT 포함가)</span>
                                 </div>
-                                <div class="detaile-price-content-wrapper-content">C.S.I 과학수사대</div>
+                                <div class="detaile-price-content-wrapper-content">${fieldTripDetailDTO.fieldTripName}</div>
                                 <div class="detaile-price-content-wrapper-content-next">과학 수사대원 체험</div>
                                 <div class="detaile-price-content-wrapper-content-wrapper">
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
                                         <span>과학IT</span>
-                                        <span>C.S.I 과학수사대</span>
+                                        <span>${fieldTripDetailDTO.fieldTripName}</span>
                                     </div>
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
-                                        <span>이용시간</span>
-                                        <span>1 시간</span>
+                                        <span>장소</span>
+                                        <span>${fieldTripDetailDTO.fieldTripPlace}</span>
+                                    </div>
+                                    <div class="detaile-price-content-wrapper-content-wrapper-list">
+                                        <span>체험일자</span>
+                                        <span>${fieldTripDetailDTO.fieldTripProgramDate}</span>
+                                    </div>
+                                    <div class="detaile-price-content-wrapper-content-wrapper-list">
+                                        <span>신청 마감일</span>
+                                        <span>${fieldTripDetailDTO.fieldTripDeadlineDate}</span>
                                     </div>
                                 </div>
                             </div>
@@ -95,28 +95,7 @@
                     <!-- 취소.환불 -->
             		<section class="detaile-price-refund">
                         <div id="book4" class="detaile-content">취소 및 환불 규정</div>
-                        <div class="detaile-price-refund-content">
-                            가. 기본 환불 규정
-                            1. 작업 진행 전일 경우 전문가와 의뢰인 상호 협의하에 청약 철회 및 환불이 가능합니다.
-                            2. 상담 예약 전 혹은 예약된 상담 시간 3시간 전: 환불 신청 시 100% 환불
-                            3. 예약된 상담 시간 3시간 이내: 환불 신청 시 50% 환불
-                            4. 상담이 완료된 이후에는 환불이 불가합니다.
-
-                            나. 전문가 책임 사유
-                            1. 전문가의 귀책사유로 당초 약정했던 서비스 미이행 혹은 보편적인 관점에서 심각하게 잘못 이행한 경우 결제 금액 전체 환불이 가능합니다.
-
-                            다. 의뢰인 책임 사유
-                            1. 서비스 진행 도중 의뢰인의 귀책사유로 인해 환불을 요청할 경우, 사용 금액을 아래와 같이 계산 후 총 금액의 10%를 공제하여 환불합니다.
-                            - 총 작업 진행량의 1/3 경과 전 : 이미 납부한 요금의 2/3해당액
-                            - 총 작업 진행량의 1/2 경과 전 : 이미 납부한 요금의 1/2해당액
-                            - 총 작업 진행량의 1/2 경과 후 : 반환하지 않음
-                            2. 상담 진행 중 의뢰인의 폭언, 욕설 등이 있을 경우 상담은 종료되며 잔여 이용요금은 환불되지 않습니다.
-
-                            라. 노하우·전자책 카테고리 환불규정
-                            1. 해당카테고리에서 제공되는 서비스는 컨설팅이 아닌, 노하우·전자책 자료 제공 서비스이며 별도 컨설팅은 포함되어있지 않습니다.
-                            2. 구매 이후, 크몽 사이트를 통해 자료가 전달됩니다.
-                            3. 노하우·전자책은 자료형태이므로, 발송된 이후에는 환불이 불가능합니다.
-                        </div>
+                        <div class="detaile-price-refund-content">${fieldTripDetailDTO.fieldTripDetailRefundPolicy}</div>
                     </section>
 
                     <!-- 체험 평가 -->
@@ -132,38 +111,6 @@
             	    <section>
                         <div class="field-review-latter-containal">
                             <div>체험 후기 113개</div>
-                            <div class="field-review-latter-check-containal">
-                                <button class="field-review-latter-check1">
-                                    <div class="field-review-latter-check1-text">
-                                        <span style="margin-right: 4px;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="field-review-latter-check1-text">
-                                                <path d="M0 0h24v24H0V0z" fill="none"></path><path d="M7.13322158,10.821143 C6.77457526,10.3822153 6.17602724,10.3624856 5.79632715,10.7770754 C5.41662707,11.1916652 5.39955962,11.8835778 5.75820594,12.3225054 L9.30027691,16.6574524 C9.66714471,17.1064419 10.2826916,17.1152317 10.6590418,16.6768551 L18.2255456,7.86331213 C18.5934618,7.43475954 18.5911847,6.74257073 18.2204597,6.31726515 C17.8497347,5.89195957 17.2509477,5.89459179 16.8830316,6.32314438 L10.004578,14.3352391 L7.13322158,10.821143 Z"></path>
-                                            </svg>
-                                        </span>
-                                        최신순
-                                    </div>
-                                </button>
-                                <button class="field-review-latter-check1">
-                                    <div class="field-review-latter-check1-text">
-                                        <span style="margin-right: 4px;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="field-review-latter-check1-text">
-                                                <path d="M0 0h24v24H0V0z" fill="none"></path><path d="M7.13322158,10.821143 C6.77457526,10.3822153 6.17602724,10.3624856 5.79632715,10.7770754 C5.41662707,11.1916652 5.39955962,11.8835778 5.75820594,12.3225054 L9.30027691,16.6574524 C9.66714471,17.1064419 10.2826916,17.1152317 10.6590418,16.6768551 L18.2255456,7.86331213 C18.5934618,7.43475954 18.5911847,6.74257073 18.2204597,6.31726515 C17.8497347,5.89195957 17.2509477,5.89459179 16.8830316,6.32314438 L10.004578,14.3352391 L7.13322158,10.821143 Z"></path>
-                                            </svg>
-                                        </span>
-                                        별점 높은 순
-                                    </div>
-                                </button>
-                                <button class="field-review-latter-check1">
-                                    <div class="field-review-latter-check1-text">
-                                        <span style="margin-right: 4px;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="field-review-latter-check1-text">
-                                                <path d="M0 0h24v24H0V0z" fill="none"></path><path d="M7.13322158,10.821143 C6.77457526,10.3822153 6.17602724,10.3624856 5.79632715,10.7770754 C5.41662707,11.1916652 5.39955962,11.8835778 5.75820594,12.3225054 L9.30027691,16.6574524 C9.66714471,17.1064419 10.2826916,17.1152317 10.6590418,16.6768551 L18.2255456,7.86331213 C18.5934618,7.43475954 18.5911847,6.74257073 18.2204597,6.31726515 C17.8497347,5.89195957 17.2509477,5.89459179 16.8830316,6.32314438 L10.004578,14.3352391 L7.13322158,10.821143 Z"></path>
-                                            </svg>
-                                        </span>
-                                        별점 낮은 순
-                                    </div>
-                                </button>
-                            </div>
                         </div>
                         <!-- 후기내용 -->
                 		<div class="review-list">
@@ -234,24 +181,32 @@
                             </button>
                         </section>
                         <section class="right-second-section">
-                            <h1 class="right-second-text">키즈쑥쑥 | C.S.I 과학수사대</h1>
+                            <h1 class="right-second-text">키즈쑥쑥 | ${fieldTripDetailDTO.fieldTripName}</h1>
                         </section>
                         <section class="right-third-section">
                             <div class="right-third">
                                 <div class="right-third-inside-price">
-                                    11,000원
+                                    ${fieldTripDetailDTO.fieldTripPrice}원
                                     <span class="right-third-inside-price-vat">(VAT 포함가)</span>
                                 </div>
-                                <div class="right-third-inside-1">최첨단 과학 수사로 사건의 진실을 밝혀라!</div>
-                                <div class="right-third-inside-2">과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다.</div>
+                                <div class="right-third-inside-1">${fieldTripDetailDTO.fieldTripContextDescription}</div>
+                                <!-- <div class="right-third-inside-2">과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다.</div> -->
                                 <div class="right-third-inside-list">
                                     <div class="right-third-inside-list-1">
                                         <span>과학IT</span>
-                                        <span>C.S.I 과학수사대</span>
+                                        <span>${fieldTripDetailDTO.fieldTripName}</span>
                                     </div>
                                     <div class="right-third-inside-list-1">
-                                        <span>이용시간</span>
-                                        <span>1 시간</span>
+                                        <span>장소</span>
+                                        <span>${fieldTripDetailDTO.fieldTripPlace}</span>
+                                    </div>
+                                    <div class="right-third-inside-list-1">
+                                        <span>체험일자</span>
+                                        <span>${fieldTripDetailDTO.fieldTripProgramDate}</span>
+                                    </div>
+                                    <div class="right-third-inside-list-1">
+                                        <span>신청 마감일</span>
+                                        <span>${fieldTripDetailDTO.fieldTripDeadlineDate}</span>
                                     </div>
                                 </div>
                             </div>
@@ -274,5 +229,6 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailePage.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}", fieldTripDetailDTO = `${fieldTripDetailDTO}`;</script>
+<script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailPage.js"></script>
 </html>
