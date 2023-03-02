@@ -22,4 +22,5 @@ public class FieldTripDAO {
 	public Long getTotal(Long categoryId) {
 		return sqlSession.selectOne("fieldTrip.getTotal", categoryId);
 	}
+	
 }

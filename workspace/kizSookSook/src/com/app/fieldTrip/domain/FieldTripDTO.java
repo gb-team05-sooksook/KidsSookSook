@@ -12,6 +12,9 @@ public class FieldTripDTO {
 	private int fieldTripPrice;
 	private String fieldTripContextDescription;
 	private String categoryName;
+	private String field_trip_filePath;
+	private String field_trip_system_name;
+	private String field_trip_org_name;
 	
 	public FieldTripDTO() {;}
 
@@ -103,6 +106,30 @@ public class FieldTripDTO {
 		this.categoryName = categoryName;
 	}
 
+	public String getField_trip_filePath() {
+		return field_trip_filePath;
+	}
+
+	public void setField_trip_filePath(String field_trip_filePath) {
+		this.field_trip_filePath = field_trip_filePath;
+	}
+
+	public String getField_trip_system_name() {
+		return field_trip_system_name;
+	}
+
+	public void setField_trip_system_name(String field_trip_system_name) {
+		this.field_trip_system_name = field_trip_system_name;
+	}
+
+	public String getField_trip_org_name() {
+		return field_trip_org_name;
+	}
+
+	public void setField_trip_org_name(String field_trip_org_name) {
+		this.field_trip_org_name = field_trip_org_name;
+	}
+
 	@Override
 	public String toString() {
 		return "FieldTripDTO [fieldTripId=" + fieldTripId + ", userId=" + userId + ", categoryId=" + categoryId
@@ -110,24 +137,15 @@ public class FieldTripDTO {
 				+ ", fieldTripDeadlineDate=" + fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate
 				+ ", fieldTripPlace=" + fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice
 				+ ", fieldTripContextDescription=" + fieldTripContextDescription + ", categoryName=" + categoryName
-				+ "]";
+				+ ", field_trip_filePath=" + field_trip_filePath + ", field_trip_system_name=" + field_trip_system_name
+				+ ", field_trip_org_name=" + field_trip_org_name + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((categoryId == null) ? 0 : categoryId.hashCode());
-		result = prime * result + ((categoryName == null) ? 0 : categoryName.hashCode());
-		result = prime * result + ((fieldTripContextDescription == null) ? 0 : fieldTripContextDescription.hashCode());
-		result = prime * result + ((fieldTripDeadlineDate == null) ? 0 : fieldTripDeadlineDate.hashCode());
 		result = prime * result + ((fieldTripId == null) ? 0 : fieldTripId.hashCode());
-		result = prime * result + ((fieldTripName == null) ? 0 : fieldTripName.hashCode());
-		result = prime * result + ((fieldTripPlace == null) ? 0 : fieldTripPlace.hashCode());
-		result = prime * result + fieldTripPrice;
-		result = prime * result + ((fieldTripProgramDate == null) ? 0 : fieldTripProgramDate.hashCode());
-		result = prime * result + ((fieldTripRegistationDate == null) ? 0 : fieldTripRegistationDate.hashCode());
-		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -140,60 +158,12 @@ public class FieldTripDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		FieldTripDTO other = (FieldTripDTO) obj;
-		if (categoryId == null) {
-			if (other.categoryId != null)
-				return false;
-		} else if (!categoryId.equals(other.categoryId))
-			return false;
-		if (categoryName == null) {
-			if (other.categoryName != null)
-				return false;
-		} else if (!categoryName.equals(other.categoryName))
-			return false;
-		if (fieldTripContextDescription == null) {
-			if (other.fieldTripContextDescription != null)
-				return false;
-		} else if (!fieldTripContextDescription.equals(other.fieldTripContextDescription))
-			return false;
-		if (fieldTripDeadlineDate == null) {
-			if (other.fieldTripDeadlineDate != null)
-				return false;
-		} else if (!fieldTripDeadlineDate.equals(other.fieldTripDeadlineDate))
-			return false;
 		if (fieldTripId == null) {
 			if (other.fieldTripId != null)
 				return false;
 		} else if (!fieldTripId.equals(other.fieldTripId))
 			return false;
-		if (fieldTripName == null) {
-			if (other.fieldTripName != null)
-				return false;
-		} else if (!fieldTripName.equals(other.fieldTripName))
-			return false;
-		if (fieldTripPlace == null) {
-			if (other.fieldTripPlace != null)
-				return false;
-		} else if (!fieldTripPlace.equals(other.fieldTripPlace))
-			return false;
-		if (fieldTripPrice != other.fieldTripPrice)
-			return false;
-		if (fieldTripProgramDate == null) {
-			if (other.fieldTripProgramDate != null)
-				return false;
-		} else if (!fieldTripProgramDate.equals(other.fieldTripProgramDate))
-			return false;
-		if (fieldTripRegistationDate == null) {
-			if (other.fieldTripRegistationDate != null)
-				return false;
-		} else if (!fieldTripRegistationDate.equals(other.fieldTripRegistationDate))
-			return false;
-		if (userId == null) {
-			if (other.userId != null)
-				return false;
-		} else if (!userId.equals(other.userId))
-			return false;
 		return true;
 	}
 
-	
 }
