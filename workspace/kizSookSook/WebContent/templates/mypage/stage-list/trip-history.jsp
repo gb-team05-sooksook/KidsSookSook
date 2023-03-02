@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <h2 class="stage-title">구매 관리</h2>
 <section class="trip-status">
     <ul class="status-list">
@@ -171,9 +174,9 @@
     <!-- <p id="noResult">주문 기간 내에 구매 내역이 없습니다.</p>
     주문 기간을 변경하여 확인해 보세요.<br />(기본 조회 기간: 1년) -->
     <div class="history-result-list">
-        <div class="history-result">
+	    <div class="history-result">
             <div class="h_result-info">
-                <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
+                <h4 class="h_title"><a href=""><!--체험학습 제목 1-->체험학습제목</a></h4>
                 <div class="h_details">
                     <span class="h_category">카테고리</span>
                     <span class="h_date">2022.01.01</span>
@@ -186,49 +189,6 @@
                     href="javascript:functionsObj.modal.activateReviewModalService.excute()"
                     >리뷰 쓰기</a
                 >
-            </div>
-        </div>
-        <div class="history-result">
-            <div class="h_result-info">
-                <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-                <div class="h_details">
-                    <span class="h_category">카테고리</span>
-                    <span class="h_date">2022.01.01</span>
-                    <span class="h_institution">업체명</span>
-                </div>
-            </div>
-            <div class="h_result-content">
-                <div>체험학습 내용의 요약본 한 줄</div>
-                <a
-                    href="javascript:functionsObj.modal.activateReviewModalService.excute()"
-                    >리뷰 쓰기</a
-                >
-            </div>
-        </div>
-        <div class="history-result">
-            <div class="h_result-info">
-                <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-                <div class="h_details">
-                    <span class="h_category">카테고리</span>
-                    <span class="h_date">2022.01.01</span>
-                    <span class="h_institution">업체명</span>
-                </div>
-            </div>
-            <div class="h_result-content">
-                <div>체험학습 내용의 요약본 한 줄</div>
-                <a
-                    href="javascript:functionsObj.modal.activateReviewModalService.excute()"
-                    >리뷰 쓰기</a
-                >
-            </div>
-        </div>
-        <div class="h_result-pagenation-wrapper">
-            <div class="h_result-pagenation">
-                <span><a href="">1</a></span>
-                <span><a href="">2</a></span>
-                <span><a href="">3</a></span>
-                <span><a href="">4</a></span>
-                <span><a href="">5</a></span>
             </div>
         </div>
     </div>

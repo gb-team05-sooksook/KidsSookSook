@@ -3,12 +3,7 @@
 
 <mapper namespace="mypage">
 	<select id="findPurchaseList" parameterType="long" resultType="FieldTripDTO">
-		select p.field_trip_id  
-		from tbl_payment p inner join view_field_trip f on p.field_trip_id = f.field_trip_id and p.user_id = f.user_id;
-	</select>
-	
-	<select id="myInfoAllSelect" resultType="com.app.member.domain.MemberDTO">
-		SELECT user_id, member_name, member_nickname, member_gender, user_identification, user_password, user_email, user_phoneNumber, user_address, user_register_date
-		FROM kids.view_member_info;
+		select field_trip_id, field_trip_name, category_name, user_id, field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		from kids.view_field_trip;
 	</select>
 </mapper>

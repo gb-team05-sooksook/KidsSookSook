@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
         <title>마이페이지</title>
         <link
             rel="icon"
-            href="${pageContext.request.contextPath}/resources/img/logo/icon.png"
+            href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png"
         />
         <link
             rel="stylesheet"
@@ -82,7 +82,7 @@ pageEncoding="UTF-8"%>
                             <div class="member-identification">
                                 신중한여우6531
                             </div>
-                            <a href="" class="profile-a">
+                            <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice" class="profile-a">
                                 <span>문의하기 페이지로 이동</span>
                             </a>
                         </div>
@@ -116,6 +116,12 @@ pageEncoding="UTF-8"%>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+    	let pageNumber = `${pageNumber}`;
+    	let pageContext = '${pageContext.request.contextPath}';
+    	let fieldTrips = JSON.parse(`${fieldTrips}`);
+    	console.log(pageNumber);
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/mypage.js"></script>

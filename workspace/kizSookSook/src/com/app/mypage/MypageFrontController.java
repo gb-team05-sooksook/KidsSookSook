@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Result;
 
-public class MyPageFrontController extends HttpServlet {
+public class MypageFrontController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,6 +19,7 @@ public class MyPageFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		HttpSession session = req.getSession();
+		System.out.println(target);
 		
 		if(target.equals("/purchaseListAction")) {
 			result = new PurchaseListActionController().execute(req, resp);	
@@ -36,8 +37,8 @@ public class MyPageFrontController extends HttpServlet {
 			result = new EnquiryListCheckActionController().execute(req, resp);
 		}else if(target.equals("/deleteAccountAction")) {
 			result = new DeleteAccountActionController().execute(req, resp);
-		}else {
-			
+		}
+		else {
 		}
 		
 		if(result != null) {

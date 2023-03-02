@@ -1,11 +1,11 @@
 let arraysObj = {
     stageArr: new Array(
-        'stage-list/trip-history.html',
-        'stage-list/cash-history.html',
-        'stage-list/my-info.html',
-        'stage-list/my-review.html',
-        'stage-list/my-qna.html',
-        'stage-list/unregister.html'
+        pageContext + '/templates/mypage/stage-list/trip-history.jsp',
+        pageContext + '/templates/mypage/stage-list/cash-history.html',
+        pageContext + '/templates/mypage/stage-list/my-info.html',
+        pageContext + '/templates/mypage/stage-list/my-review.html',
+        pageContext + '/templates/mypage/stage-list/my-qna.html',
+        pageContext + '/templates/mypage/stage-list/unregister.html'
     ),
 };
 
@@ -420,3 +420,12 @@ $('.change-profile-btn').on('click', function () {
     console.log('클릭됨!');
     $('#file-input').trigger('click');
 });
+
+function showlist($stage, callback) {
+	$stage.append(callback());
+}
+
+
+
+
+
