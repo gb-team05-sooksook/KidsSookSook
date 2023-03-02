@@ -2,5 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="notice">
-
+	<insert id="enquiry" parameterType="customerEnquiryVO">
+	insert into tbl_customer_enquiry(user_email, enquiry_title, enquiry_content, user_id)
+	values(#{userEmail}, #{customerEnquiryTitle}, #{customerEnquiryContent}, #{userId})
+	</insert>
+	
+	<select id="getCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
 </mapper>
