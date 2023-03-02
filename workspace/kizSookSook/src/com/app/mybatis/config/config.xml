@@ -14,6 +14,7 @@
 		<typeAlias type="com.app.pay.domain.PaymentVO" alias="paymentVO"/>
 		<typeAlias type="com.app.pay.domain.PaymentDTO" alias="paymentDTO"/>
 		<typeAlias type="com.app.member.domain.InstitutionDTO" alias="institutionDTO"/>
+		<typeAlias type="com.app.notice.domain.NoticeVO" alias="noticeVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">

@@ -77,10 +77,7 @@
                         <div class="category-right-listNames">
                             <div class="category-right-listName-turn">
 								<div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item">인기순</p>
-                                </div>
-								<div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item">추천순</p>
+                                    <p id="item">최신순</p>
                                 </div>
                                 <div id="btn-item" class="category-right-listName-turn-name">
                                     <p id="item">후기 많은 순</p>

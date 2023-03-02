@@ -33,7 +33,7 @@ public class ConnectCategoryPageActionController implements Action {
 		
 		Long total = fieldTripDAO.getTotal(Long.valueOf(categoryId));
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 4;
+		int rowCount = 8;
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 1;
 		int startRow = (page - 1) * rowCount;
@@ -52,11 +52,6 @@ public class ConnectCategoryPageActionController implements Action {
 		pageMap.put("startRow", startRow);
 		
 		fieldTripDAO.selectCategoryAll(pageMap).stream().map(data -> new JSONObject(data)).forEach(jsons::put);
-		
-		System.out.println(total);
-		System.out.println(prev);
-		System.out.println(next);
-		System.out.println(realEndPage);
 
 		req.setAttribute("categoryAll", jsons.toString());
 		req.setAttribute("startPage", startPage);
