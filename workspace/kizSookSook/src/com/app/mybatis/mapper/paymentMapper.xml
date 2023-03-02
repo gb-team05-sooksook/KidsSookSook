@@ -40,4 +40,9 @@
 		select count(payment_id)
 		from tbl_payment
 	</select>
+	
+	<delete id="delete" parameterType="long">
+		delete from tbl_payment
+		where payment_id = #{paymentId}
+	</delete>
 </mapper>

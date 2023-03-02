@@ -27,14 +27,22 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png" />
           <span class="logoText">키즈쑥쑥</span>
         </a>
-        <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
-        <a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
+        <a href="javascript:location.href='${pageContext.request.contextPath}/memberInfo.admin'"
+          ><i class="bannerText"></i> 회원관리</a
+        >
+        <a href="javascript:location.href='${pageContext.request.contextPath}/payment.admin'"
+          ><i class="bannerText"></i> 결제</a
+        >
         <a href="javascript:location.href='fieldTripFind.jsp'"
           ><i class="bannerText"></i> 체험학습조회</a
         >
-        <a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
-        <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
-        <a href="javascript:location.href='bannerManage.jsp'"
+        <a href="javascript:location.href='${pageContext.request.contextPath}'"
+          ><i class="bannerText"></i> 공지사항</a
+        >
+        <a href="javascript:location.href='${pageContext.request.contextPath}'"
+          ><i class="bannerText"></i> 문의사항</a
+        >
+        <a href="javascript:location.href='${pageContext.request.contextPath}'"
           ><i class="bannerText"></i> 배너관리</a
         >
       </div>
@@ -49,7 +57,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             <div class="dataTable">
               <div class="inputBox">
                 <div class="filterButtonLayout">
-                  <div class="memberIdSearchText">
+                  <div id="paymentDeleteButton">
                     <input class="filterButton" type="button" value="환불" />
                   </div>
                   <form name="searchMember">
@@ -79,7 +87,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <div class="pagination">
                   <c:if test="${prev}">
                     <a
-                      href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${startPage - 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/payment.admin?page=${startPage - 1}&sort=${sort}'"
                       class="paging paging-move">
                       &laquo;
                     </a>
@@ -96,7 +104,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       </c:when>
                       <c:otherwise>
                         <a
-                          href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${i}&sort=${sort}'"
+                          href="javascript:location.href='${pageContext.request.contextPath}/payment.admin?page=${i}&sort=${sort}'"
                           class="paging"
                           ><c:out value="${i}"
                         /></a>
@@ -105,7 +113,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   </c:forEach>
                   <c:if test="${next}">
                     <a
-                      href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${endPage + 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/payment.admin?page=${endPage + 1}&sort=${sort}'"
                       class="paging paging-move">
                       &raquo;
                     </a>
