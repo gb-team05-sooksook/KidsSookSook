@@ -6,7 +6,7 @@ function app() {
       loadMember: (function () {
         function excute(members, stage) {
           var members = JSON.parse(members);
-          let dom = "";
+          let dom = '';
 
           members.forEach((member, i) => {
             dom += `
@@ -27,7 +27,7 @@ function app() {
           });
           stage.find("tr[name='member']").remove();
           stage.append(dom);
-          $checkboxes = $(".tableCheckbox");
+          $checkboxes = $('.tableCheckbox');
         }
 
         return { excute: excute };
@@ -36,16 +36,16 @@ function app() {
       reloadByUserType: (function () {
         function excute() {
           var memberObj = state.load().member;
-          var userType = memberObj.$userType.attr("userType");
+          var userType = memberObj.$userType.attr('userType');
           var uri;
           console.log(userType);
 
-          if (userType == "institution") {
-            memberObj.$userType.attr("userType", "member");
-            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
+          if (userType == 'institution') {
+            memberObj.$userType.attr('userType', 'member');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
           } else {
-            memberObj.$userType.attr("userType", "institution");
-            uri = pageContext + "/memberInfo.admin?userType=" + `${userType}`;
+            memberObj.$userType.attr('userType', 'institution');
+            uri = pageContext + '/memberInfo.admin?userType=' + `${userType}`;
           }
 
           return uri;
@@ -80,11 +80,42 @@ function app() {
         return { excute: excute };
       })(),
     },
+    payment: {
+      loadPayment: (function () {
+        function excute(payments, stage) {
+          var payments = JSON.parse(payments);
+          let dom = '';
+
+          console.log(stage);
+
+          payments.forEach((payment, i) => {
+            dom += `
+            <tr name='payment'>
+              <td style="width: 6%">
+                <form>
+                  <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
+                </form>
+              </td>
+              <td>${payment.paymentId}</td>
+              <td>${payment.userIdentification}</td>
+              <td>${payment.fieldTripId}</td>
+              <td>${payment.paymentAmount}</td>
+              <td>${payment.paymentDate}</td>
+            </tr>`;
+          });
+          stage.find("tr[name='payment']").remove();
+          stage.append(dom);
+          $checkboxes = $('.tableCheckbox');
+        }
+
+        return { excute: excute };
+      })(),
+    },
     ajaxService: (function () {
       function excute(url, data, callback) {
         $.ajax({
           url: url, //request 보낼 서버의 경로
-          type: "post", // 메소드(get, post, put 등)
+          type: 'post', // 메소드(get, post, put 등)
           data: data,
           success: function (result) {
             callback(result);
@@ -103,8 +134,8 @@ function app() {
        * @param {*} url ajax url 경로
        * @param {*} callback 콜백함수
        */
-      function excute($search, url, callback) {
-        $search.on("submit", function (e) {
+      function excute($search, url, stage, callback) {
+        $search.on('submit', function (e) {
           e.preventDefault();
           var keyword = $("input[name='userIdentification']").val();
           var data = {
@@ -112,7 +143,7 @@ function app() {
           };
 
           app().ajaxService.excute(url, data, (result) => {
-            app().user.loadMember.excute(result, state.load().$myInfoTable);
+            callback(result, stage);
           });
         });
       }
@@ -121,11 +152,11 @@ function app() {
     })(),
     selectChecked: (function () {
       /**
-       * 
+       *
        * @returns 선택된 열의 id값을 담은 JSON
        */
       function excute() {
-        var checked = $(".tableCheckbox").filter(":checked").parent().parent().next();
+        var checked = $('.tableCheckbox').filter(':checked').parent().parent().next();
         var userIds = new Array();
 
         console.log(checked);

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="payment">
+	<sql id="searchType">
+		<if test="types != null and keyword != null">
+			where
+			<trim prefixOverrides="or">
+				<foreach item="type" collection="types">
+					<trim prefix="or">
+						<choose>
+							<when test="type == 'userIdentification'.toString()">
+								user_identification like concat('%', #{keyword}, '%')
+							</when>
+							<!-- <when test="type == 'content'.toString()">
+								board_content like concat('%', #{keyword}, '%')
+							</when>
+							<when test="type == 'writer'.toString()">
+								member_name like concat('%', #{keyword}, '%')
+							</when> -->
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</if>
+	</sql>
+	<select id="selectAll" resultType="paymentDTO" parameterType="map">
+		select payment_id, user_id, user_identification, field_trip_id, payment_amount, payment_date
+		from view_user_payment 
+		<include refid="searchType"/>
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="select" parameterType="long"  resultType="paymentDTO">
+		select payment_id, user_id, field_trip_id, payment_amount, payment_date
+		from tbl_payment where user_id = #{userId}
+	</select>
+	
+	<select id="getTotal" resultType="long">
+		select count(payment_id)
+		from tbl_payment
+	</select>
+</mapper>
