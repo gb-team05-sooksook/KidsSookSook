@@ -116,6 +116,12 @@ pageEncoding="UTF-8"%>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+    	let pageNumber = `${pageNumber}`;
+    	let pageContext = '${pageContext.request.contextPath}';
+    	let fieldTrips = JSON.parse(`${fieldTrips}`);
+    	console.log(pageNumber);
+    </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/mypage.js"></script>
