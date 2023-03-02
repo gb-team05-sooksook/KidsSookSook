@@ -15,7 +15,6 @@ import com.app.Action;
 import com.app.PageDTO;
 import com.app.Result;
 import com.app.member.dao.MemberDAO;
-import com.app.member.domain.MemberVO;
 
 public class MemberInfoActionController implements Action {
 

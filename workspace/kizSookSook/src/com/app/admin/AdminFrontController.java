@@ -38,6 +38,13 @@ public class AdminFrontController extends HttpServlet {
 			result = new PaymentActionController().execute(req, resp);
 		} else if(target.equals("/searchPaymentAction")) {
 			result = new SearchPaymentActionController().execute(req, resp);
+		} else if(target.equals("/deletePaymentAction")) {
+			result = new DeletePaymentActionController().execute(req, resp);
+		} else if(target.equals("/fieldTrip")) {
+			result = new Result();
+			result.setPath(req.getContextPath() + "/fieldTripAction.admin");
+		} else if(target.equals("/fieldTripAction")) {
+			result = new FieldTripAction().execute(req, resp);
 		}
 		else {
 			

@@ -45,8 +45,6 @@ public class SearchPaymentActionController implements Action {
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
 		
-//		검색조건 중 유저타입 : member or intitution
-		
 		Long total = null;
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
