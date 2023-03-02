@@ -17,13 +17,12 @@ showCategoryList();
 
 function showCategoryList() {
 	categoryAll = JSON.parse(categoryAll);
-	console.log(categoryAll);
 	$appendDiv = $(".trip-list-containal");
 	let text = "";
 	categoryAll.forEach(category => {
 		text += `
 				<article class="top-list-wrappers">
-            		<a class="trip-list-wrapper">
+            		<a href="${contextPath}/getDetailPageAction.fieldTrip?fieldTripId=${category.fieldTripId}" class="trip-list-wrapper">
             			<div class="trip-image">
             				<div class="trip-image-wrapper">
             					<img src="${contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity1-1.jpg" class="trip-image-size">
