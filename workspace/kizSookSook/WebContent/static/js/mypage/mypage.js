@@ -19,7 +19,7 @@ function loadTrips(){
 	                <h4 class="h_title">${fieldTrip.fieldTripName}</h4>
 	                <div class="h_details">
 	                    <span class="h_category">${fieldTrip.categoryName}</span>
-	                    <span class="h_date">2022.01.01</span>
+	                    <span class="h_date">${fieldTrip.RegistrationDate}</span>
 	                    <span class="h_institution">업체명</span>
 	                </div>
 	            </div>

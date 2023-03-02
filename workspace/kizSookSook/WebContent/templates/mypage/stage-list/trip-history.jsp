@@ -176,7 +176,7 @@
     <div class="history-result-list">
 	    <div class="history-result">
             <div class="h_result-info">
-                <h4 class="h_title"><a href=""><!--체험학습 제목 1-->${param.categoryName}</a></h4>
+                <h4 class="h_title"><a href=""><!--체험학습 제목 1-->체험학습제목</a></h4>
                 <div class="h_details">
                     <span class="h_category">카테고리</span>
                     <span class="h_date">2022.01.01</span>
