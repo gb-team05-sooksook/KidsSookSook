@@ -61,16 +61,16 @@ function app() {
           var dom;
           members.forEach((member, i) => {
             dom += `
-      <tr name='member'>
-        <td><input type='text' name='userId' value='${member.userId}' readonly /></td>
-        <td>${member.userIdentification}</td>
-        <td>${member.userRegisterDate}</td>
-        <td><input type='text' name='userEmail' value='${member.userEmail}'/></td>
-        <td><input type='text' name='userAddress' value='${member.userAddress}'/></td>
-        <td><input type='text' name='userPhoneNumber' value='${member.userPhoneNumber}'/></td>
-        <td><input type='text' name='memberNickname' value='${member.memberNickname}'/></td>
-        <td><input type='text' name='memberGender' value='${member.memberGender}'/></td>
-      </tr>`;
+            <tr name='member'>
+              <td><input type='text' name='userId' value='${member.userId}' readonly /></td>
+              <td>${member.userIdentification}</td>
+              <td>${member.userRegisterDate}</td>
+              <td><input type='text' name='userEmail' value='${member.userEmail}'/></td>
+              <td><input type='text' name='userAddress' value='${member.userAddress}'/></td>
+              <td><input type='text' name='userPhoneNumber' value='${member.userPhoneNumber}'/></td>
+              <td><input type='text' name='memberNickname' value='${member.memberNickname}'/></td>
+              <td><input type='text' name='memberGender' value='${member.memberGender}'/></td>
+            </tr>`;
           });
           stage.find("tr[name='member']").remove();
           stage.append(dom);
@@ -103,6 +103,46 @@ function app() {
           stage.find("tr[name='payment']").remove();
           stage.append(dom);
           $checkboxes = $('.tableCheckbox');
+        }
+
+        return { excute: excute };
+      })(),
+    },
+    notice: {
+      loadNotice: (function () {
+        function excute(notices, stage) {
+          var notices = JSON.parse(notices);
+          let dom = '';
+
+          notices.forEach((notice, i) => {
+            dom += `
+            <tr name='notice'>
+              <td style="width: 6%">
+                  <input class="tableCheckbox" type="radio" name="deleteCheck" />
+              </td>
+              <td>${notice.noticeId}</td>
+              <td>${notice.noticeTitle}</td>
+              <td>${notice.noticeContext}</td>
+              <td>${notice.noticeDate}</td>
+              <td>${notice.noticeAlterDate}</td>
+            </tr>`;
+          });
+          stage.find("tr[name='notice']").remove();
+          stage.append(dom);
+          $checkboxes = $('.tableCheckbox');
+        }
+
+        return { excute: excute };
+      })(),
+      loadUpdateModal: (function () {
+        function excute(notice) {
+          var $title = state.load().notice.$noticeUpdate.find("input[name='title']");
+          var $content = state.load().notice.$noticeUpdate.find("textarea[name='content']");
+          var $noticeId = state.load().notice.$noticeUpdate.find("input[name='noticeId']");
+
+          $title.val(notice.noticeTitle);
+          $content.val(notice.noticeContext);
+          $noticeId.val(notice.noticeId);
         }
 
         return { excute: excute };
