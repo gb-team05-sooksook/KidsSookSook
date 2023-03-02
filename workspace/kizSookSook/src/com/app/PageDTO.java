@@ -21,7 +21,7 @@ public class PageDTO {
 		this.startRow = (page - 1) * rowCount;
 		this.endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		this.startPage = endPage - (pageCount - 1);
-		this.realEndPage = (int)Math.ceil(total / (double)pageCount);
+		this.realEndPage = (int)Math.ceil(total / (double)rowCount);
 		
 		this.prev = startPage > 1;
 		this.next = false;

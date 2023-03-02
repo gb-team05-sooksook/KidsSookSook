@@ -14,30 +14,24 @@ import org.json.JSONObject;
 import com.app.Action;
 import com.app.PageDTO;
 import com.app.Result;
-import com.app.member.dao.MemberDAO;
+import com.app.notice.dao.NoticeDAO;
 
-public class MemberInfoActionController implements Action {
+public class NoticeActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		MemberDAO	memberDAO = new MemberDAO();
-		PageDTO pageDTO = null;
 		Result result = new Result();
+		NoticeDAO noticeDAO = new NoticeDAO();
+		PageDTO pageDTO = null;
 		JSONArray jsons = new JSONArray();
-		
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 		
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
-		String userType = req.getParameter("userType");
-		searchMap.put("userType", userType);
-		
-		Long total = null;
-		
-		System.out.println(userType);
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		total = memberDAO.getTotal(searchMap);
+		Long total = noticeDAO.getTotal();
+		
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;
 //		한 페이지에서 나오는 페이지 버튼의 개수
@@ -51,13 +45,10 @@ public class MemberInfoActionController implements Action {
 		searchMap.put("startRow", pageDTO.getStartRow());
 		searchMap.put("sort", sort);
 		
-		if(userType == null || userType.equals("member")) {
-			memberDAO.selectMemberAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);
-		} else if(userType.equals("institution")) {
-			memberDAO.selectInstitutionAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);
-		}
+//		dao 부분 작성 필요
+		noticeDAO.selectAll(searchMap)	.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
 		
-		req.setAttribute("users", jsons.toString());
+		req.setAttribute("notices", jsons);
 		req.setAttribute("total", total);
 		req.setAttribute("startPage", pageDTO.getStartPage());
 		req.setAttribute("endPage", pageDTO.getEndPage());
@@ -66,8 +57,7 @@ public class MemberInfoActionController implements Action {
 		req.setAttribute("next", pageDTO.isNext());
 		req.setAttribute("sort", sort);
 		
-		result.setPath("/templates/adminPage/memberInfo.jsp");
-		
+		result.setPath("/templates/adminPage/notice.jsp");
 		return result;
 	}
 
