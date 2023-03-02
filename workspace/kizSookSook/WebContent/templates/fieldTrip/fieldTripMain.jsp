@@ -40,7 +40,7 @@
             <div class="categoryListAll">
                 <ul class="category-field">
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'" class="ByCategoryList">
                             <div class="category-img">
 								<img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/Science.png">
                             </div>
@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=2&categoryName=mike'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=2&categoryName=mike'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/mike.png">
                             </div>
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/study.png">
                             </div>
@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=4&categoryName=activity'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=4&categoryName=activity'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/Activity.png">
                             </div>
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=5&categoryName=history'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=5&categoryName=history'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/history.png">
                             </div>
@@ -80,7 +80,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/art.png">
                             </div>
@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=7&categoryName=cook'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=7&categoryName=cook'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/cook.png">
                             </div>
@@ -96,7 +96,7 @@
                         </a>
                     </li>
                     <li class="ByCategory">
-                        <a href="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=8&categoryName=medical'" class="ByCategoryList">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=8&categoryName=medical'" class="ByCategoryList">
                             <div class="category-img">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/category/medical.png">
                             </div>
