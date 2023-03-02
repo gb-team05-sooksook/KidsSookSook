@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -77,7 +79,11 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       class="filterButton"
                       type="button"
                       value="회원수정" />
-                    <input class="filterButton" type="button" value="회원삭제" />
+                    <input
+                      id="userDeleteButton"
+                      class="filterButton"
+                      type="button"
+                      value="회원삭제" />
                   </div>
                   <form name="searchMember">
                     <input
@@ -88,7 +94,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   </form>
                 </div>
               </div>
-              <table id="myTable">
+              <table class="myTable">
                 <tr class="trHeader">
                   <th style="width: 6%">
                     <form>
@@ -108,7 +114,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <div class="pagination">
                   <c:if test="${prev}">
                     <a
-                      href="javascript:location.href='/board/listOk.board?page=${startPage - 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${startPage - 1}&sort=${sort}'"
                       class="paging paging-move">
                       &laquo;
                     </a>
@@ -116,13 +122,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   <c:forEach var="i" begin="${startPage}" end="${endPage}">
                     <c:choose>
                       <c:when test="${i eq page}">
-                        <a href="javascript:void(0)" class="paging paging-checked"
+                        <a
+                          href="javascript:void(0)"
+                          style="cursor: default"
+                          class="paging paging-checked"
                           ><c:out value="${i}"
                         /></a>
                       </c:when>
                       <c:otherwise>
                         <a
-                          href="javascript:location.href='/board/listOk.board?page=${i}&sort=${sort}'"
+                          href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${i}&sort=${sort}'"
                           class="paging"
                           ><c:out value="${i}"
                         /></a>
@@ -131,7 +140,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                   </c:forEach>
                   <c:if test="${next}">
                     <a
-                      href="javascript:location.href='/board/listOk.board?page=${endPage + 1}&sort=${sort}'"
+                      href="javascript:location.href='${pageContext.request.contextPath}/memberInfoAction.admin?page=${endPage + 1}&sort=${sort}'"
                       class="paging paging-move">
                       &raquo;
                     </a>
@@ -149,7 +158,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <div>
       <div class="modal-bg">
         <section class="memberInfoModalContainer">
-          <table id="myTable">
+          <table id="userForm" class="myTable">
             <div class="xLayout">
               <svg
                 width="24"
@@ -172,30 +181,15 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
               <th style="width: 14%">이메일</th>
               <th style="width: 14%">주소</th>
               <th style="width: 14%">핸드폰번호</th>
+              <th style="width: 14%">닉네임</th>
               <th style="width: 14%">성별</th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userId" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="joinDate" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userEmail" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userAddress" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userphone" />
-              </td>
-              <td>
-                <input class="modalUpdateText" type="text" name="userGender" />
-              </td>
-            </tr>
           </table>
+          <div class="modal-submit">
+            <a name="submit" href="${pageContext.request.contextPath}/upadateMembersAction.admin"
+              >제출</a
+            >
+          </div>
         </section>
       </div>
     </div>

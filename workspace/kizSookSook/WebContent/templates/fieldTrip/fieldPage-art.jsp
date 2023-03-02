@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css"/>
 </head>
 <body>
-    <!-- 왼쪽 카테고리 창 -->
+    <%@ include file="/templates/main/header.jsp"%>
+        <!-- 왼쪽 카테고리 창 -->
     <div>
         <div class="category-container">
             <div class="category-wrapper">
@@ -66,25 +68,26 @@
                             </ul>
                         </section>
                     </nav>
-        <!-- 오른쪽 카테고리 목록 -->
+                    <!-- 오른쪽 카테고리 목록 -->
                     <div class="category-right">
                         <section class="category-right-name">
                             <div class="category-right-names"></div>
-                            <span class="category-right-listName">카테고리  >  예술</span>
+                            <span class="category-right-listName">카테고리  >  요리</span>
                         </section>
                         <div class="category-right-listNames">
                             <div class="category-right-listName-turn">
-                                <div class="category-right-listName-turn-name">
-                                    인기순
-                                    <span class="category-right-listName-turn-list">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                            <path xmlns="http://www.w3.org/2000/svg" d="M16.2207159,6.10870583 C16.5916812,5.74209279 16.5932964,5.14609072 16.2243236,4.77749794 C15.8553508,4.40890516 15.2555125,4.40730026 14.8845472,4.77391329 L7.77928409,11.9296701 C7.40827322,12.2963282 7.40670988,12.7039529 7.7757925,13.0725272 L14.8810556,20.2226181 C15.2500929,20.5911471 15.8499315,20.5926484 16.2208326,20.2259713 C16.5917338,19.8592942 16.5932448,19.2632919 16.2242075,18.8947628 L9.75,12.5010986 L16.2207159,6.10870583 Z" transform="translate(12.000000, 12.500000) scale(1, -1) rotate(-270.000000) translate(-12.000000, -12.500000) "></path>
-                                        </svg>
-                                    </span>
+								<div id="btn-item" class="category-right-listName-turn-name">
+                                    <p id="item">인기순</p>
+                                </div>
+								<div id="btn-item" class="category-right-listName-turn-name">
+                                    <p id="item">추천순</p>
+                                </div>
+                                <div id="btn-item" class="category-right-listName-turn-name">
+                                    <p id="item">후기 많은 순</p>
                                 </div>
                             </div>
                         </div>
-          <!-- 체험학습 리스트 -->
+                        <!-- 체험학습 리스트 -->
                         <div class="trip-list">
                             <div class="trip-list-containal">
                             	<%-- <article class="top-list-wrappers">
@@ -134,29 +137,35 @@
 							<!-- 하단 페이지 쪽 번호 -->
 							<div class="page-number-containel">
 								<ul class="page-number-wrapper">
-									<li class="page-left-arrow">
-										<button class="page-left-arrow-button-wrapper">
-											<span class="page-left-arrow-button">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
-													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
-												</svg>
-											</span>
-										</button>
-									</li>
-									<li class="page-middle-number-containel">
-										<button class="page-middle-number-button">
-											<span>1</span>
-										</button>
-									</li>
-									<li class="page-right-arrow">
-										<button class="page-right-arrow-button-wrapper">
-											<span class="page-right-arrow-button">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
-													<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
-												</svg>
-											</span>
-										</button>
-									</li>
+									<c:if test="${prev}">
+										<li class="page-left-arrow">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art&page=${startPage - 1}'" class="page-left-arrow-button-wrapper">
+												<span class="page-left-arrow-button">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
+														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
+													</svg>
+												</span>
+											</button>
+										</li>
+									</c:if>
+									<c:forEach var="i" begin="${startPage}" end="${endPage}">
+										<li class="page-middle-number-containel">
+											<button class="page-middle-number-button">
+												<span><c:out value="${i}"/></span>
+											</button>
+										</li>
+									</c:forEach>
+									<c:if test="${next}">
+										<li class="page-right-arrow">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/static/fieldTrip/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art&page=${endPage + 1}'" class="page-right-arrow-button-wrapper">
+												<span class="page-right-arrow-button">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
+														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
+													</svg>
+												</span>
+											</button>
+										</li>
+									</c:if>
 								</ul>
 							</div>
                         </div> <!-- 카테고리 4개 담은 div -->

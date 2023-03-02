@@ -1,188 +1,132 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>관리자페이지_결제</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <title>관리자페이지_결제</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-		<link rel="shortcut icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png">
-        <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png">
-		
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminPage/payment.css">
-		<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css" />
-    </head>
-    <body>
-        <section class="adminPage">
-            <div class="sidebar">
-                <a class="logo" href="${pageContext.request.contextPath}/templates/main/main.jsp">
-                    <img class="logoImg" src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png"/>
-                    <span class="logoText">키즈쑥쑥</span>
-                </a>
-                <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
-        		<a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
-        		<a href="javascript:location.href='fieldTripFind.jsp'"><i class="bannerText"></i> 체험학습조회</a>
-        		<a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
-        		<a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
-        		<a href="javascript:location.href='bannerManage.jsp'"><i class="bannerText"></i> 배너관리</a>
-            </div>
-		<div class="mainContentContainer">
-			<div class="sidebarNameLayout">
-				<div class="sidebarNameText">
-					<span> 결제 </span>
-				</div>
-			</div>
-			<div class="stageLayout">
-				<div class="dataTableLayout">
-					<div class="dataTable">
-						<div class="inputBox">
-							<div class="filterButtonLayout">
-								<div class="memberIdSearchText">
-									<input class="filterButton" type="button" value="환불" />
-								</div>
-									<input type="text" id="myInput" onkeyup="myFunction()" placeholder="회원 아이디 검색" />
-							</div>
-						</div>
-						<table id="myTable">
-							<tr class="trHeader">
-								<th style="width: 6%">
-									<form>
-										<input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</th>
-								<th style="width: 13%">결제번호</th>
-								<th style="width: 13%">회원아이디</th>
-								<th style="width: 13%">체험학습이름</th>
-								<th style="width: 13%">결제금액</th>
-								<th style="width: 13%">결제일</th>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>1</td>
-								<td>hds1234</td>
-								<td>체험학습이름</td>
-								<td>16,900</td>
-								<td>2023/02/21</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>2</td>
-								<td>hds1234</td>
-								<td>체험학습이름</td>
-								<td>16,900</td>
-								<td>2023/02/21</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>3</td>
-								<td>hds1234</td>
-								<td>체험학습이름</td>
-								<td>16,900</td>
-								<td>2023/02/21</td>
-							</tr>
-							<tr>
-								<td style="width: 6%">
-									<form>
-										<input class="tableCheckbox" type="checkbox" name="deleteCheck" value="">
-									</form>
-								</td>
-								<td>4</td>
-								<td>hds1234</td>
-								<td>체험학습이름</td>
-								<td>16,900</td>
-								<td>2023/02/21</td>
-							</tr>
-						</table>
-						<div class="paginationLayout">
-							<div class="pagination">
-								<a href="#">&laquo;</a>
-								<a class="active" href="#">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
-								<a href="#">6</a>
-								<a href="#">&raquo;</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-        <div id="root"></div>
-        <div id="layer"></div>
+    <link
+      rel="shortcut icon"
+      href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
+    <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/favicon.png" />
 
-        <!-- 나중에 모달창용 -->
-        <div style="display: none">
-            <table id="myTable">
-                <tr class="trHeader">
-                    <th style="width: 12.5%">사용자번호</th>
-                    <th style="width: 12.5%">회원아이디</th>
-                    <th style="width: 12.5%">가입일자</th>
-                    <th style="width: 12.5%">이메일</th>
-                    <th style="width: 12.5%">주소</th>
-                    <th style="width: 12.5%">핸드폰번호</th>
-                    <th style="width: 12.5%">성별</th>
-                    <th style="width: 12.5%">계정관리</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>hds1234</td>
-                    <td>2023/02/09</td>
-                    <td>이메일</td>
-                    <td>서울특별시</td>
-                    <td>010-0312-1234</td>
-                    <td>여</td>
-                    <td>...</td>
-                </tr>
-            </table>
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/static/css/adminPage/payment.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css" />
+  </head>
+  <body>
+    <section class="adminPage">
+      <div class="sidebar">
+        <a class="logo" href="${pageContext.request.contextPath}/templates/main/main.jsp">
+          <img
+            class="logoImg"
+            src="${pageContext.request.contextPath}/static/resources/img/logo/logo_main_02.png" />
+          <span class="logoText">키즈쑥쑥</span>
+        </a>
+        <a href="javascript:location.href='memberInfo.jsp'"><i class="bannerText"></i> 회원관리</a>
+        <a href="javascript:location.href='payment.jsp'"><i class="bannerText"></i> 결제</a>
+        <a href="javascript:location.href='fieldTripFind.jsp'"
+          ><i class="bannerText"></i> 체험학습조회</a
+        >
+        <a href="javascript:location.href='notice.jsp'"><i class="bannerText"></i> 공지사항</a>
+        <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
+        <a href="javascript:location.href='bannerManage.jsp'"
+          ><i class="bannerText"></i> 배너관리</a
+        >
+      </div>
+      <div class="mainContentContainer">
+        <div class="sidebarNameLayout">
+          <div class="sidebarNameText">
+            <span> 결제 </span>
+          </div>
         </div>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/adminPage/memberInfo.js"></script>
+        <div class="stageLayout">
+          <div class="dataTableLayout">
+            <div class="dataTable">
+              <div class="inputBox">
+                <div class="filterButtonLayout">
+                  <div class="memberIdSearchText">
+                    <input class="filterButton" type="button" value="환불" />
+                  </div>
+                  <form name="searchMember">
+                    <input
+                      type="text"
+                      id="myInput"
+                      name="userIdentification"
+                      placeholder="회원 아이디 검색" />
+                  </form>
+                </div>
+              </div>
+              <table class="myTable">
+                <tr class="trHeader">
+                  <th style="width: 6%">
+                    <form>
+                      <input class="tableCheckboxAll" type="checkbox" name="deleteCheck" value="" />
+                    </form>
+                  </th>
+                  <th style="width: 13%">결제번호</th>
+                  <th style="width: 13%">회원번호</th>
+                  <th style="width: 13%">체험학습번호</th>
+                  <th style="width: 13%">결제금액</th>
+                  <th style="width: 13%">결제일</th>
+                </tr>
+              </table>
+              <div class="paginationLayout">
+                <div class="pagination">
+                  <c:if test="${prev}">
+                    <a
+                      href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${startPage - 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &laquo;
+                    </a>
+                  </c:if>
+                  <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                    <c:choose>
+                      <c:when test="${i eq page}">
+                        <a
+                          href="javascript:void(0)"
+                          style="cursor: default"
+                          class="paging paging-checked"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:when>
+                      <c:otherwise>
+                        <a
+                          href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${i}&sort=${sort}'"
+                          class="paging"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:otherwise>
+                    </c:choose>
+                  </c:forEach>
+                  <c:if test="${next}">
+                    <a
+                      href="javascript:location.href='${pageContext.request.contextPath}/paymentAction.admin?page=${endPage + 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &raquo;
+                    </a>
+                  </c:if>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="root"></div>
+    <div id="layer"></div>
+    <!-- 나중에 모달창용 -->
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    let paymentsData = `${payments}`;
+    let pageContext = '${pageContext.request.contextPath}';
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/state.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/app.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/payment.js"></script>
 </html>

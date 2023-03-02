@@ -1,8 +1,10 @@
+/** @format */
+
 function app() {
   return {
     user: {
       loadMember: (function () {
-        function excute(members) {
+        function excute(members, stage) {
           var members = JSON.parse(members);
           let dom = '';
 
@@ -23,8 +25,8 @@ function app() {
               <td>${member.memberGender}</td>
             </tr>`;
           });
-          state.load().$myInfoTable.find("tr[name='member']").remove();
-          state.load().$myInfoTable.append(dom);
+          stage.find("tr[name='member']").remove();
+          stage.append(dom);
           $checkboxes = $('.tableCheckbox');
         }
 
@@ -51,15 +53,72 @@ function app() {
 
         return { excute: excute };
       })(),
+      loadMemberModal: (function () {
+        function excute(members, stage) {
+          var members = JSON.parse(members);
+
+          console.log(members);
+
+          var dom;
+          members.forEach((member, i) => {
+            dom += `
+      <tr name='member'>
+        <td><input type='text' name='userId' value='${member.userId}' readonly /></td>
+        <td>${member.userIdentification}</td>
+        <td>${member.userRegisterDate}</td>
+        <td><input type='text' name='userEmail' value='${member.userEmail}'/></td>
+        <td><input type='text' name='userAddress' value='${member.userAddress}'/></td>
+        <td><input type='text' name='userPhoneNumber' value='${member.userPhoneNumber}'/></td>
+        <td><input type='text' name='memberNickname' value='${member.memberNickname}'/></td>
+        <td><input type='text' name='memberGender' value='${member.memberGender}'/></td>
+      </tr>`;
+          });
+          stage.find("tr[name='member']").remove();
+          stage.append(dom);
+        }
+
+        return { excute: excute };
+      })(),
+    },
+    payment: {
+      loadPayment: (function () {
+        function excute(payments, stage) {
+          var payments = JSON.parse(payments);
+          let dom = '';
+
+          console.log(stage);
+
+          payments.forEach((payment, i) => {
+            dom += `
+            <tr name='payment'>
+              <td style="width: 6%">
+                <form>
+                  <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
+                </form>
+              </td>
+              <td>${payment.paymentId}</td>
+              <td>${payment.userIdentification}</td>
+              <td>${payment.fieldTripId}</td>
+              <td>${payment.paymentAmount}</td>
+              <td>${payment.paymentDate}</td>
+            </tr>`;
+          });
+          stage.find("tr[name='payment']").remove();
+          stage.append(dom);
+          $checkboxes = $('.tableCheckbox');
+        }
+
+        return { excute: excute };
+      })(),
     },
     ajaxService: (function () {
       function excute(url, data, callback) {
         $.ajax({
           url: url, //request 보낼 서버의 경로
-          type: 'get', // 메소드(get, post, put 등)
+          type: 'post', // 메소드(get, post, put 등)
           data: data,
-          success: function (data) {
-            app().user.loadMember.excute(data);
+          success: function (result) {
+            callback(result);
           },
           error: function (err) {},
         });
@@ -75,8 +134,7 @@ function app() {
        * @param {*} url ajax url 경로
        * @param {*} callback 콜백함수
        */
-
-      function excute($search, url, callback) {
+      function excute($search, url, stage, callback) {
         $search.on('submit', function (e) {
           e.preventDefault();
           var keyword = $("input[name='userIdentification']").val();
@@ -84,27 +142,36 @@ function app() {
             keyword: keyword,
           };
 
-          console.log(keyword);
-
-          app().ajaxService.excute(url, data);
+          app().ajaxService.excute(url, data, (result) => {
+            callback(result, stage);
+          });
         });
       }
 
       return { excute: excute };
     })(),
-    selectChecked : (function() {
-      function excute(){
-        var checked = $(".tableCheckbox").filter(":checked");
+    selectChecked: (function () {
+      /**
+       *
+       * @returns 선택된 열의 id값을 담은 JSON
+       */
+      function excute() {
+        var checked = $('.tableCheckbox').filter(':checked').parent().parent().next();
+        var userIds = new Array();
+
         console.log(checked);
+
+        checked.each((i, e) => {
+          userIds.push($(e).text());
+        });
+
+        // json 으로 변환해야 자바가 받을수 있음
+        userIds = JSON.stringify(userIds);
+
+        return { checkedIds: userIds };
       }
 
-      return {excute : excute};
+      return { excute: excute };
     })(),
   };
 }
-
-// app().ajaxService.excute(
-//   url,
-//   { type: "userIdentification", keyword: "inputValue" },
-//   app().user.loadMember.excute
-// );

@@ -2,6 +2,7 @@ package com.app.notice;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,13 +20,18 @@ public class NoticeFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
+		System.out.println(target);
 		
-		if(target.equals("/searchAction")) {
+		
+		 if(target.equals("/searchAction")) {
 			result = new SearchActionController().execute(req, resp);	
 		}else if(target.equals("/getNoticeAction")) {
 			result = new GetNoticeActionController().execute(req, resp);
 		}else if(target.equals("/getFAQAction")) {
 			result = new GetFAQActionController().execute(req, resp);
+		}else if(target.equals("/templates/customerCenter/enquiry")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/enquiry.jsp");
 		}else {
 			
 		}
@@ -42,7 +48,6 @@ public class NoticeFrontController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
 		doGet(req, resp);
 	}
 }

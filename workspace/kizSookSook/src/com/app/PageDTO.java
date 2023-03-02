@@ -55,4 +55,10 @@ public class PageDTO {
 	public boolean isNext() {
 		return next;
 	}
+
+	@Override
+	public String toString() {
+		return "PageDTO [startRow=" + startRow + ", endPage=" + endPage + ", startPage=" + startPage + ", realEndPage="
+				+ realEndPage + ", prev=" + prev + ", next=" + next + "]";
+	}
 }
