@@ -12,7 +12,9 @@ import org.json.JSONObject;
 import com.app.Action;
 import com.app.Result;
 import com.app.fieldTrip.dao.FieldTripDAO;
+import com.app.fieldTrip.domain.FieldTripDTO;
 import com.app.fieldTrip.domain.FieldTripDetailDTO;
+import com.app.fieldTrip.domain.FieldTripDetailVO;
 
 public class GetDetailPageActionController implements Action {
 
@@ -20,14 +22,16 @@ public class GetDetailPageActionController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		FieldTripDAO fieldTripDAO = new FieldTripDAO();
 		Result result = new Result();
-		JSONArray jsons = new JSONArray();
-		FieldTripDetailDTO fieldTripDetailDTO = new FieldTripDetailDTO();
+		FieldTripDTO fieldTripDTO = new FieldTripDTO();
+		FieldTripDetailVO fieldTripDetailVO = new FieldTripDetailVO();
 		
 		Long fieldTripId = Long.valueOf(req.getParameter("fieldTripId"));
 		
-		fieldTripDetailDTO = fieldTripDAO.fieldTripDetail(fieldTripId);
+		fieldTripDetailVO = fieldTripDAO.fieldTripDetail(fieldTripId);
+		fieldTripDTO = fieldTripDAO.getfieldTripDTO(fieldTripId);
 		
-		req.setAttribute("fieldTripDetailDTO", fieldTripDetailDTO);
+		req.setAttribute("fieldTripDetailVO", fieldTripDetailVO);
+		req.setAttribute("fieldTripDTO", fieldTripDTO);
 		
 		result.setPath("templates/fieldTrip/detailPage.jsp");
 		
