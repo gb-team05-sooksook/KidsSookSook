@@ -18,7 +18,7 @@
                 <main class="detaile-page-left">
                     <!--카테고리 경로-->	 
                     <section class="detaile-left-name">
-                        <div class="detaile-left-category">과학IT &gt; ${fieldTripDTO.fieldTripName}</div>
+                        <div class="detaile-left-category">${fieldTripDTO.categoryName} &gt; ${fieldTripDTO.fieldTripName}</div>
                     </section>
                     <!-- 이미지 -->
                     <section class="detaile-left-img">
@@ -66,7 +66,7 @@
                                 <div class="detaile-price-content-wrapper-content-next">과학 수사대원 체험</div>
                                 <div class="detaile-price-content-wrapper-content-wrapper">
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
-                                        <span>과학IT</span>
+                                        <span>${fieldTripDTO.categoryName}</span>
                                         <span>${fieldTripDTO.fieldTripName}</span>
                                     </div>
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
@@ -177,7 +177,7 @@
                                         </svg>
                                     </span>
                                 </span>
-                                <span>${fieldTripDTO.recommend_count}</span>
+                                <span>${fieldTripDTO.recommendCount}</span>
                             </button>
                         </section>
                         <section class="right-second-section">
@@ -193,7 +193,7 @@
                                 <!-- <div class="right-third-inside-2">과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다.</div> -->
                                 <div class="right-third-inside-list">
                                     <div class="right-third-inside-list-1">
-                                        <span>과학IT</span>
+                                        <span>${fieldTripDTO.categoryName}</span>
                                         <span>${fieldTripDTO.fieldTripName}</span>
                                     </div>
                                     <div class="right-third-inside-list-1">
