@@ -1,6 +1,10 @@
 package com.app.mypage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -12,23 +16,54 @@ import org.json.JSONObject;
 import com.app.Action;
 import com.app.Result;
 import com.app.fieldTrip.domain.FieldTripDTO;
-import com.app.member.domain.MemberDTO;
 import com.app.mypage.dao.MyPageDAO;
-import com.mysql.cj.xdevapi.JsonArray;
 
 public class PurchaseListActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		req.setCharacterEncoding("UTF-8");
+		
 		MyPageDAO myPageDAO = new MyPageDAO();
 		FieldTripDTO fieldTripDTO = new FieldTripDTO();
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
+		List<FieldTripDTO> fieldTripDTOs = null;
+		Map<String, Object> searchMap = new HashMap<String, Object>();
+		ArrayList<String> types = new ArrayList<String>();
 		
 //		(Long)req.getSession().getAttribute("userId"))
 //		나중에 위에껄로 수정해야함
-		myPageDAO.findPurchaseList(4L).stream().map(e -> new JSONObject(e)).forEach(jsons::put);
-		System.out.println(jsons);
+		
+//		categoryName=&date=&date=&fieldTripName=
+		
+		String categoryName = req.getParameter("categoryName");
+		String startDate = req.getParameterValues("date") == null ? null : req.getParameterValues("date")[0];
+		String endDate = req.getParameterValues("date") == null ? null :req.getParameterValues("date")[1];
+		String fieldTripName = req.getParameter("fieldTripName");
+		
+		System.out.println(fieldTripName);
+		System.out.println(startDate);
+		System.out.println(endDate);
+//		if(startDate == null || endDate == null) {
+//			searchMap.put("date", null);
+//		} else searchMap.put("date", "date");
+		
+		searchMap.put("date", null);
+		
+		searchMap.put("categoryName", categoryName);
+		searchMap.put("keyword", fieldTripName);
+		searchMap.put("startDate", startDate);
+		searchMap.put("endDate", endDate);
+		searchMap.put("userId", 4L);
+		
+		System.out.println(searchMap.get("keyword"));
+		
+		fieldTripDTOs = myPageDAO.findPurchaseList(searchMap);
+		fieldTripDTOs.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
+		
+		System.out.println("jsons: " + jsons);
+		
 		req.setAttribute("fieldTrips", jsons);
 		req.setAttribute("pageNumber", 0);
 		

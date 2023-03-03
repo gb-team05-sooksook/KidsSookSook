@@ -312,6 +312,7 @@ div.form-btn {
     background-color: #ffd400;
     border-color: #ffd400;
     color: #303441;
+	width: 96px !important;
 }
 
 #submitBtn span {

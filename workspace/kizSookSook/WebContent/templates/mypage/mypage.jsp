@@ -120,9 +120,10 @@ pageEncoding="UTF-8"%>
     	let pageNumber = `${pageNumber}`;
     	let pageContext = '${pageContext.request.contextPath}';
     	let fieldTrips = JSON.parse(`${fieldTrips}`);
-    	console.log(pageNumber);
+    	console.log(fieldTrips);
     </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/mypage/events.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/mypage.js"></script>
 </html>
