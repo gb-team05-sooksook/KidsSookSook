@@ -23,7 +23,7 @@ public class ConnectCategoryPageActionController implements Action {
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
 		
-		Map<String, Object> pageMap = new HashMap<String, Object>();
+		Map<String, Object> searchMap = new HashMap<String, Object>();
 		
 		String categoryId = req.getParameter("categoryId");
 		String categoryName = req.getParameter("categoryName");
@@ -47,11 +47,11 @@ public class ConnectCategoryPageActionController implements Action {
 		endPage = endPage > realEndPage ? realEndPage : endPage;
 		next = endPage != realEndPage;
 		
-		pageMap.put("categoryId", categoryId);
-		pageMap.put("rowCount", rowCount);
-		pageMap.put("startRow", startRow);
+		searchMap.put("categoryId", categoryId);
+		searchMap.put("rowCount", rowCount);
+		searchMap.put("startRow", startRow);
 		
-		fieldTripDAO.selectCategoryAll(pageMap).stream().map(data -> new JSONObject(data)).forEach(jsons::put);
+		fieldTripDAO.selectCategoryAll(searchMap).stream().map(data -> new JSONObject(data)).forEach(jsons::put);
 
 		req.setAttribute("categoryAll", jsons.toString());
 		req.setAttribute("startPage", startPage);
