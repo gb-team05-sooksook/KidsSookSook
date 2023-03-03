@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-body, html {
-  font-family: "Metro Sans", sans-serif;
+body,
+html {
+  font-family: 'Metro Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -160,7 +161,7 @@ body, html {
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('/static/resources/img/search.png');
+  background-image: url('../../resources/img/search.png');
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -311,7 +312,7 @@ div.details {
 }
 
 .det_title {
-  display:flex;
+  display: flex;
 }
 
 .det_title-wrapper {

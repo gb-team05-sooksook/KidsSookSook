@@ -30,8 +30,8 @@
 	<select id="selectAll" resultType="noticeVO" parameterType="map">
 		select notice_id, notice_title, notice_context, notice_date, notice_alter_date
 		from tbl_customer_notice
-		order by notice_id desc
 		<include refid="searchType"/>
+		order by notice_id desc
 		limit #{startRow}, #{rowCount}
 	</select>
 	
@@ -51,4 +51,10 @@
 		set notice_title=#{noticeTitle}, notice_context=#{noticeContext}, notice_alter_date=#{noticeAlterDate}
 		where notice_id=#{noticeId};
 	</update>
+	
+	<delete id="delete" parameterType="long">
+		delete 
+		from tbl_customer_notice
+		where notice_id = #{noticeId}
+	</delete>
 </mapper>

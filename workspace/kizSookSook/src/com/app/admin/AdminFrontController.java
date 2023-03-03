@@ -45,6 +45,10 @@ public class AdminFrontController extends HttpServlet {
 			result.setPath(req.getContextPath() + "/fieldTripAction.admin");
 		} else if(target.equals("/fieldTripAction")) {
 			result = new FieldTripAction().execute(req, resp);
+		} else if(target.equals("/fieldTripSearchAction")) {
+			result = new FieldTripSearchActionController().execute(req, resp);
+		} else if(target.equals("/fieldTripDeleteAction")) {
+			result = new FieldTripDeleteActionController().execute(req, resp);
 		} else if(target.equals("/notice")) {
 			result = new Result();
 			result.setPath(req.getContextPath() + "/noticeAction.admin");
@@ -52,8 +56,17 @@ public class AdminFrontController extends HttpServlet {
 			result = new NoticeActionController().execute(req, resp);
 		} else if(target.equals("/noticeAddAction")) {
 			result = new NoticeAddActionController().execute(req, resp);
+		} else if(target.equals("/noticeSearchAction")) {
+			result = new NoticeSearchActionController().execute(req, resp);
 		} else if(target.equals("/noticeUpdateAction")) {
 			result = new NoticeUpdateActionController().execute(req, resp);
+		} else if(target.equals("/noticeDeleteAction")) {
+			result = new NoticeDeleteActionController().execute(req, resp);
+		} else if(target.equals("/enquiry")) {
+			result = new Result();
+			result.setPath("/enquiryAction.admin");
+		} else if(target.equals("/enquiryAction")) {
+			result = new EnquiryActionController().execute(req, resp);
 		}
 		else {
 			

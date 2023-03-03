@@ -11,6 +11,9 @@
 		<if test="categoryId != null">
 			where category_id = #{categoryId} 
 		</if>
+		<if test="keyword != null">
+			where field_trip_name like concat('%', #{keyword}, '%')
+		</if>
 		<choose>
 			<when test="sort=='recent'.toString()">
 				order by field_trip_id 
@@ -27,9 +30,17 @@
 	</select>
 	
 	<select id="getTotal" parameterType="long" resultType="long">
-		select count(field_trip_id) from tbl_category tc join tbl_field_trip tft 
-		on tc.category_id = tft.category_id and tc.category_id = #{categoryId}
+		select count(field_trip_id)  
+		from tbl_field_trip 
+		<if test="categoryId != null">
+			where category_id = #{categoryId}
+		</if>
 	</select>
+	
+	<delete id="delete" parameterType="long">
+		delete from
+		tbl_field_trip where field_trip_id = #{fieldTripId}
+	</delete>
 	
 	<!-- <select id="selectCategoryReview" parameterType="long" resultType="fieldTripDTO">
 		select tft.field_trip_id, field_trip_registation_date, field_trip_deadline_date, field_trip_program_date,
@@ -54,4 +65,5 @@
 		from view_field_tripdto
 		where field_trip_id = #{fieldTripId}
 	</select>
+	
 </mapper>
