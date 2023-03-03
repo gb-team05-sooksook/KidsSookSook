@@ -6,7 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.fieldTrip.domain.FieldTripDTO;
-import com.app.fieldTrip.domain.FieldTripDetailDTO;
+import com.app.fieldTrip.domain.FieldTripDetailVO;
 import com.app.mybatis.config.MyBatisConfig;
 
 public class FieldTripDAO {
@@ -24,8 +24,15 @@ public class FieldTripDAO {
 		return sqlSession.selectOne("fieldTrip.getTotal", categoryId);
 	}
 	
-	public FieldTripDetailDTO fieldTripDetail(Long fieldTripId) {
+	public FieldTripDetailVO fieldTripDetail(Long fieldTripId) {
 		return sqlSession.selectOne("fieldTrip.fieldTripDetail", fieldTripId);
 	}
 	
+	public FieldTripDTO getfieldTripDTO(Long fieldTripId) {
+		return sqlSession.selectOne("fieldTrip.getfieldTripDTO", fieldTripId);
+	}
+	
+	public void delete(Long fieldTripId) {
+		sqlSession.delete("fieldTrip.delete", fieldTripId);
+	}
 }

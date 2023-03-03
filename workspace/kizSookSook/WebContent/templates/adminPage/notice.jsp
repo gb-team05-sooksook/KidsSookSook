@@ -32,14 +32,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <a href="javascript:location.href='${pageContext.request.contextPath}/payment.admin'"
           ><i class="bannerText"></i> 결제</a
         >
-        <a href="javascript:location.href='fieldTripFind.jsp'"
+        <a href="javascript:location.href='${pageContext.request.contextPath}/fieldTrip.admin'"
           ><i class="bannerText"></i> 체험학습조회</a
         >
         <a href="javascript:location.href='${pageContext.request.contextPath}/notice.admin'"
           ><i class="bannerText"></i> 공지사항</a
         >
-        <a href="javascript:location.href='enquiry.jsp'"><i class="bannerText"></i> 문의사항</a>
-        <a href="javascript:location.href='bannerManage.jsp'"
+        <a href="javascript:location.href='${pageContext.request.contextPath}/enquiry.admin'"
+          ><i class="bannerText"></i> 문의사항</a
+        >
+        <a href="javascript:location.href='${pageContext.request.contextPath}/bannerManage.admin'"
           ><i class="bannerText"></i> 배너관리</a
         >
       </div>
@@ -71,11 +73,11 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       type="button"
                       value="공지삭제" />
                   </div>
-                  <form name="searchMember">
+                  <form name="searchNotice">
                     <input
                       type="text"
                       id="myInput"
-                      name="userIdentification"
+                      name="searchNotice"
                       placeholder="회원 아이디 검색" />
                   </form>
                 </div>

@@ -1,13 +1,12 @@
 package com.app.member.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.app.member.domain.InstitutionDTO;
-import com.app.member.domain.MemberDTO;
 import com.app.member.domain.MemberVO;
 import com.app.mybatis.config.MyBatisConfig;
 
@@ -42,8 +41,8 @@ public class MemberDAO {
 		sqlSession.insert("member.insertMember", memberVO);
 	}
 	
-	public void insertInstitution() {
-		
+	public void insertInstitution(MemberVO memberVO) {
+		sqlSession.insert("member.insertInstitution", memberVO);
 	}
 	
 	public void updateUser(MemberVO memberVO) {
@@ -62,12 +61,16 @@ public class MemberDAO {
 		sqlSession.delete("member.deleteMember", userId);
 	}
 	
-	// 일반회원가입
-	public void insertJoinMember(MemberDTO memberDTO) {
-		sqlSession.insert("memberDTO.insertJoinMember", memberDTO);
+	// 중복검사
+	public boolean checkId(String memberIdentification) {
+		return sqlSession.selectOne("member.checkId", memberIdentification);
 	}
-	// 기관회원가입
-	public void insertJoinInstitution(InstitutionDTO institutionDTO) {
-		sqlSession.insert("institutionDTO.insertJoinInstitution", institutionDTO);
+	// 로그인
+	public Long login(String memberIdentification, String memberPassword) {
+		Map<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("memberIdentification", memberIdentification);
+		loginMap.put("memberPassword", memberPassword);
+		return sqlSession.selectOne("member.login", loginMap);
 	}
+	
 }

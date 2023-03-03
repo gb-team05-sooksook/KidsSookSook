@@ -64,8 +64,14 @@
 	
 	<insert id="insertMember" parameterType="memberVO">
 		insert into tbl_member
-		(member_name, member_nickname, member_gender)
-		values(#{memberName}, #{memberNickname}, #{memberGender});
+		(user_id, member_name, member_nickname, member_gender)
+		values(#{userId}, #{memberName}, #{memberNickname}, #{memberGender});
+	</insert>
+	
+	<insert id="insertIstitution" parameterType="memberVO">
+		insert into tbl_institution
+		(user_id, institution_name, institution_business_number)
+		values(#{userId}, #{institutionName}, #{institutionBusinessNumber});
 	</insert>
 	
 	<update id="updateUser" parameterType="memberVO">
@@ -89,21 +95,5 @@
 		delete from tbl_member
 		where user_id = #{userId}
 	</delete>
-	
-	<insert id="institutionJoin" parameterType="institutionDTO">
-		insert into view_institution_user
-		(user_identification, user_password, user_email, user_phoneNumber,  
-		user_address, institution_name, institution_business_number)
-		values(#{userIdentification}, #{userPassword}, #{userEmail}, #{userPhoneNumber}, 
-		#{userAddress}, #{institutionName}, #{institutionBusinessNumber})
-	</insert>
-	
-	<insert id="nomalJoin" parameterType="memberDTO">
-		insert into view_member_info
-		(user_identification, user_password, member_name, member_nickname, 
-		user_email, user_phoneNumber, user_address, member_gender)
-		values(#{userIdentification}, #{userPassword}, #{memberName}, #{memberNickname}, 
-		#{userEmail}, #{userPhoneNumber}, #{userAddress}, #{memberGender})
-	</insert>
 	
 </mapper>

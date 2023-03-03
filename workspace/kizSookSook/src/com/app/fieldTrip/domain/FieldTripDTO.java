@@ -2,19 +2,20 @@ package com.app.fieldTrip.domain;
 
 public class FieldTripDTO {
 	private Long fieldTripId;
-	private Long userId;
 	private Long categoryId;
-	private String fieldTripName;
-	private String fieldTripRegistationDate;
-	private String fieldTripDeadlineDate;
-	private String fieldTripProgramDate;
-	private String fieldTripPlace;
-	private int fieldTripPrice;
-	private String fieldTripContextDescription;
 	private String categoryName;
-	private String field_trip_filePath;
-	private String field_trip_system_name;
-	private String field_trip_org_name;
+	private Long userId;
+	private String fieldTripName;
+	private String fieldTripRegistationDate; 
+	private String fieldTripDeadlineDate;
+	private String fieldTripProgramDate; 
+	private String fieldTripPlace;
+	private String fieldTripPrice;
+	private String fieldTripContextDescription;
+	private int recommendCount;
+	private String fieldTripFilePath; 
+	private String fieldTripSystemName; 
+	private String fieldTripOrgName;
 	
 	public FieldTripDTO() {;}
 
@@ -26,20 +27,28 @@ public class FieldTripDTO {
 		this.fieldTripId = fieldTripId;
 	}
 
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
 	public Long getCategoryId() {
 		return categoryId;
 	}
 
 	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	public String getFieldTripName() {
@@ -82,11 +91,11 @@ public class FieldTripDTO {
 		this.fieldTripPlace = fieldTripPlace;
 	}
 
-	public int getFieldTripPrice() {
+	public String getFieldTripPrice() {
 		return fieldTripPrice;
 	}
 
-	public void setFieldTripPrice(int fieldTripPrice) {
+	public void setFieldTripPrice(String fieldTripPrice) {
 		this.fieldTripPrice = fieldTripPrice;
 	}
 
@@ -98,47 +107,48 @@ public class FieldTripDTO {
 		this.fieldTripContextDescription = fieldTripContextDescription;
 	}
 
-	public String getCategoryName() {
-		return categoryName;
+	public int getRecommendCount() {
+		return recommendCount;
 	}
 
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
+	public void setRecommendCount(int recommendCount) {
+		this.recommendCount = recommendCount;
 	}
 
-	public String getField_trip_filePath() {
-		return field_trip_filePath;
+	public String getFieldTripFilePath() {
+		return fieldTripFilePath;
 	}
 
-	public void setField_trip_filePath(String field_trip_filePath) {
-		this.field_trip_filePath = field_trip_filePath;
+	public void setFieldTripFilePath(String fieldTripFilePath) {
+		this.fieldTripFilePath = fieldTripFilePath;
 	}
 
-	public String getField_trip_system_name() {
-		return field_trip_system_name;
+	public String getFieldTripSystemName() {
+		return fieldTripSystemName;
 	}
 
-	public void setField_trip_system_name(String field_trip_system_name) {
-		this.field_trip_system_name = field_trip_system_name;
+	public void setFieldTripSystemName(String fieldTripSystemName) {
+		this.fieldTripSystemName = fieldTripSystemName;
 	}
 
-	public String getField_trip_org_name() {
-		return field_trip_org_name;
+	public String getFieldTripOrgName() {
+		return fieldTripOrgName;
 	}
 
-	public void setField_trip_org_name(String field_trip_org_name) {
-		this.field_trip_org_name = field_trip_org_name;
+	public void setFieldTripOrgName(String fieldTripOrgName) {
+		this.fieldTripOrgName = fieldTripOrgName;
 	}
 
 	@Override
 	public String toString() {
-		return "FieldTripDTO [fieldTripId=" + fieldTripId + ", userId=" + userId + ", categoryId=" + categoryId
-				+ ", fieldTripName=" + fieldTripName + ", fieldTripRegistationDate=" + fieldTripRegistationDate
-				+ ", fieldTripDeadlineDate=" + fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate
-				+ ", fieldTripPlace=" + fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice
-				+ ", fieldTripContextDescription=" + fieldTripContextDescription + ", categoryName=" + categoryName
-				+ ", field_trip_filePath=" + field_trip_filePath + ", field_trip_system_name=" + field_trip_system_name
-				+ ", field_trip_org_name=" + field_trip_org_name + "]";
+		return "FieldTripDTO [fieldTripId=" + fieldTripId + ", categoryId=" + categoryId + ", categoryName="
+				+ categoryName + ", userId=" + userId + ", fieldTripName=" + fieldTripName
+				+ ", fieldTripRegistationDate=" + fieldTripRegistationDate + ", fieldTripDeadlineDate="
+				+ fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate + ", fieldTripPlace="
+				+ fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice + ", fieldTripContextDescription="
+				+ fieldTripContextDescription + ", recommendCount=" + recommendCount + ", fieldTripFilePath="
+				+ fieldTripFilePath + ", fieldTripSystemName=" + fieldTripSystemName + ", fieldTripOrgName="
+				+ fieldTripOrgName + "]";
 	}
 
 	@Override

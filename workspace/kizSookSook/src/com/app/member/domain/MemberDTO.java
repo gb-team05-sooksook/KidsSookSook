@@ -10,6 +10,7 @@ public class MemberDTO {
 	private String userPhoneNumber;
 	private String userAddress;
 	private String userRegisterDate;
+	private String userPassword;
 	
 	public MemberDTO() {;}
 	
@@ -68,12 +69,21 @@ public class MemberDTO {
 		this.userRegisterDate = userRegisterDate;
 	}
 
+	public String getUserPassword() {
+		return userPassword;
+	}
+
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+
+
 	@Override
 	public String toString() {
 		return "MemberDTO [userId=" + userId + ", memberName=" + memberName + ", memberNickname=" + memberNickname
 				+ ", memberGender=" + memberGender + ", userIdentification=" + userIdentification + ", userEmail="
 				+ userEmail + ", userPhoneNumber=" + userPhoneNumber + ", userAddress=" + userAddress
-				+ ", userRegisterDate=" + userRegisterDate + "]";
+				+ ", userRegisterDate=" + userRegisterDate + ", userPassword=" + userPassword + "]";
 	}
 
 	@Override
