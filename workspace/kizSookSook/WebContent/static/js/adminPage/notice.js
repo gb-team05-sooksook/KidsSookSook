@@ -2,7 +2,7 @@
  * notice.jsp
  */
 
-const searchURL = pageContext + '/searchMemberAction.admin?type=userIdentification';
+const searchURL = pageContext + '/noticeSearchAction.admin?type=noticeTitle';
 
 /* 공지등록 변수 */
 const openRegister = document.querySelector('#noticeRegisterButton');
@@ -16,6 +16,7 @@ const closeUpdate = document.querySelector('.updateX');
 const updateModalBox = document.querySelector('.updateModal-bg');
 const updateSubmit = document.querySelector('.det_submitUpdateButton');
 const $noticeUpdate = $("form[name='noticeUpdate']");
+const $noticeDelete = $('#noticeDeleteButton');
 
 /* 한페이지 당 테이블 최대 갯수 */
 const size = 5;
@@ -33,7 +34,7 @@ app().searchService.excute(
   state.load().$searchNotice,
   searchURL,
   state.load().$myInfoTable,
-  app().user.loadMember.excute
+  app().notice.loadNotice.excute
 );
 
 /* 공지등록 버튼 클릭시 모달창 */
@@ -75,11 +76,11 @@ $update.on('click', function () {
   $checkboxes.each((i, e) => {
     index = $(e).is(':checked') ? i : null;
 
-    if (index) return false;
+    if (index || index == 0) return false;
   });
 
-  if (!index) {
-    alert('수정할 공지사항을 선택해주세요');
+  if (!index && index != 0) {
+    alert('수정할 문의사항을 선택해주세요');
     return;
   }
 
@@ -87,7 +88,31 @@ $update.on('click', function () {
 
   notice = JSON.parse(notices)[index];
 
-	console.log(notice);
+  console.log(notice);
 
   app().notice.loadUpdateModal.excute(notice);
+});
+
+$noticeDelete.on('click', function (e) {
+  e.preventDefault();
+
+  var index;
+  var notice;
+  $checkboxes.each((i, e) => {
+    index = $(e).is(':checked') ? i : null;
+    console.log(index);
+
+    if (index || index == 0) return false;
+  });
+
+  if (!index && index != 0) {
+    alert('삭제할 공지사항을 선택해주세요');
+    return;
+  }
+
+  notice = JSON.parse(notices)[index];
+
+  console.log(notice.noticeId);
+
+  location.href = pageContext + `/noticeDeleteAction.admin?noticeId=${notice.noticeId}`;
 });

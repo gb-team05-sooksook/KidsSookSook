@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-body, html {
-  font-family: "Metro Sans", sans-serif;
+body,
+html {
+  font-family: 'Metro Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -12,7 +13,6 @@ body, html {
   background-color: #eeeeee;
   margin-left: 142px;
 }
-
 
 .logoImg {
   width: 42px;
@@ -105,33 +105,32 @@ body, html {
 
 .stageLayout {
   min-width: 1280px;
-	/* margin-left: 40px; */
-	/* margin-top: 40px; */
+  /* margin-left: 40px; */
+  /* margin-top: 40px; */
 }
 
-
 .memberIdSearchText {
-    text-align: left;
+  text-align: left;
 }
 /* 데이터 테이블 */
 .filterButtonLayout {
-	width: 100%;
-  	display: flex;
-    float: left;
-    text-align: left;
-    /* letter-spacing: 20px; */
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  float: left;
+  text-align: left;
+  /* letter-spacing: 20px; */
+  justify-content: space-between;
 }
 
 .filterButton {
-	cursor: pointer;
-  	background-color: white;
-  	border: 1px solid #111;
-  	border-radius: 4px;
-  	width: 100px;
-  	height: 35px;
-  	text-align: center;
-  	color: #111;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #111;
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: #111;
 }
 
 .inputBox {
@@ -143,7 +142,7 @@ body, html {
   min-width: 1300px;
   background-color: white;
   display: inline-block;
-  //margin: 15px;
+  margin: 15px;
   margin: 30px;
 }
 
@@ -153,12 +152,10 @@ body, html {
   flex-direction: column;
 }
 
-
 .tableCheckbox {
   width: 16px;
   height: 16px;
 }
-
 
 .tableCheckboxAll {
   width: 16px;
@@ -166,69 +163,69 @@ body, html {
 }
 
 .permitStateWait {
-	color: #2caff8;
-    background-color: #f1faff;
+  color: #2caff8;
+  background-color: #f1faff;
 }
 
 .permitStateConfirm {
-	color: black;
-    background-color: #e3e0e1;
+  color: black;
+  background-color: #e3e0e1;
 }
 
 #myInput {
   background-color: #eeeeee;
-  background-image: url('/resources/img/search.png');
+  background-image: url('../../resources/img/search.png');
   background-size: 20px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 29%;
+  width: 100%;
   font-size: 14px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 30px;
 }
 
-#myTable {
+.myTable {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 14px;
 }
 
-#myTable th,
-#myTable td {
+.myTable th,
+.myTable td {
   text-align: center;
   padding: 12px;
 }
 
-#myTable td button {
-	background-color: white;
-	border: 1px solid #a6a6a6;
-    border-radius: 4px;
-    width: 50px;
-    height: 35px;
-    text-align: center;
-    color: #111;
+.myTable td button {
+  background-color: white;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  width: 50px;
+  height: 35px;
+  text-align: center;
+  color: #111;
 }
 
-#myTable td button:last-child {
-	color: coral;
+.myTable td button:last-child {
+  color: coral;
 }
 
-#myTable tr {
+.myTable tr {
   border-bottom: 1px solid #ddd;
 }
 
 .logo:hover {
-	background-color: #bcd4fa;
+  background-color: #bcd4fa;
 }
 
-#myTable tr.trHeader {
+.myTable tr.trHeader {
   background-color: #f1f1f1;
 }
 
-#myTable tbody tr:not(:first-child):hover {
-	background-color: #bcd4fa;
+.myTable tbody tr:not(:first-child):hover {
+  background-color: #bcd4fa;
 }
 
 /* Pagination */
