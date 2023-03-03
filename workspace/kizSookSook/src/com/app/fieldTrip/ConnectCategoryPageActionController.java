@@ -27,6 +27,7 @@ public class ConnectCategoryPageActionController implements Action {
 		
 		String categoryId = req.getParameter("categoryId");
 		String categoryName = req.getParameter("categoryName");
+		String sort = req.getParameter("sort");
 		String temp = req.getParameter("page");
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
@@ -48,6 +49,7 @@ public class ConnectCategoryPageActionController implements Action {
 		next = endPage != realEndPage;
 		
 		searchMap.put("categoryId", categoryId);
+		searchMap.put("sort", sort);
 		searchMap.put("rowCount", rowCount);
 		searchMap.put("startRow", startRow);
 		

@@ -77,10 +77,10 @@
                         <div class="category-right-listNames">
                             <div class="category-right-listName-turn">
 								<div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item">최신순</p>
+                                    <p id="item" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science&sort=recent'">최신순</p>
                                 </div>
                                 <div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item">후기 많은 순</p>
+                                    <p id="item" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science&sort=popular'">추천순</p>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
 								<ul class="page-number-wrapper">
 									<c:if test="${prev}">
 										<li class="page-left-arrow">
-											<button onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study&page=${startPage - 1}'" class="page-left-arrow-button-wrapper">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study&page=${startPage - 1}&sort=${param.sort}'" class="page-left-arrow-button-wrapper">
 												<span class="page-left-arrow-button">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-left-arrow-button-svg">
 														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z"></path>
@@ -154,7 +154,7 @@
 									</c:forEach>
 									<c:if test="${next}">
 										<li class="page-right-arrow">
-											<button onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study&page=${endPage + 1}'" class="page-right-arrow-button-wrapper">
+											<button onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study&page=${endPage + 1}&sort=${param.sort}'" class="page-right-arrow-button-wrapper">
 												<span class="page-right-arrow-button">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="page-right-arrow-svg">
 														<path xmlns="http://www.w3.org/2000/svg" d="M9.41421356,12 L15.7071068,5.70710678 C16.0976311,5.31658249 16.0976311,4.68341751 15.7071068,4.29289322 C15.3165825,3.90236893 14.6834175,3.90236893 14.2928932,4.29289322 L7.29289322,11.2928932 C6.90236893,11.6834175 6.90236893,12.3165825 7.29289322,12.7071068 L14.2928932,19.7071068 C14.6834175,20.0976311 15.3165825,20.0976311 15.7071068,19.7071068 C16.0976311,19.3165825 16.0976311,18.6834175 15.7071068,18.2928932 L9.41421356,12 Z" transform="translate(11.500000, 12.000000) scale(-1, 1) translate(-11.500000, -12.000000) "></path>
