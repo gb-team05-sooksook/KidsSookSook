@@ -17,6 +17,7 @@ public class MemberFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
+		
 		System.out.println(target);
 		
 		//일반회원가입으로 이동
@@ -34,40 +35,12 @@ public class MemberFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/secondJoin.jsp");
 		
-		//firstJoin으로 이동			 
+		//firstJoin으로 이동	
 		}else if(target.equals("/templates/joinLogin/join/firstJoin")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/firstJoin.jsp");
-					 
-		}else if(target.equals("/joinNormalAction")) {
-			result = new JoinNormalActionController().execute(req, resp);
-					 
-		}else if(target.equals("/joinNormal")) {
-			result = new Result();
-			result.setPath("/templates/joinLogin/join/secondJoin.jsp");
-					 
-		}else if(target.equals("/joinInstitutionAction")) {
-			result = new JoinInstitutionActionController().execute(req, resp); 
-			
-		}else if(target.equals("/checkIdAction")) {
-			new CheckIdActionController().execute(req, resp);
-			
-		}else if(target.equals("/login")) {
-			result = new LoginController().execute(req, resp);
-			
-		}else if(target.equals("/loginAction")) {
-			result = new LoginActionController().execute(req, resp);
-			
-		}else if(target.equals("/logout")) {
-			result = new LogoutController().execute(req, resp);
-			
-		}else if(target.equals("/sendEmailAction")) {
-			result = new SendEmailActionController().execute(req, resp);
-			
-		}else if(target.equals("/changePwAction")) {
-			result = new ChangePwActionController().execute(req, resp);
 		
-		// 아이디찾기로 이동
+		// 아이디찾기로 이동		 
 		}else if(target.equals("/templates/joinLogin/findIdPw/idFind")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/findIdPw/idFind.jsp");
@@ -77,14 +50,62 @@ public class MemberFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/joinLogin/findIdPw/passwordFind.jsp");
 			
+		
+			
+		//일반회원 가입
+		}else if(target.equals("/joinPage_normalAction")) {
+			result = new JoinNormalActionController().execute(req, resp);
+					 
+		//일반Join	
+		}else if(target.equals("/joinPage_normal")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/join/joinPage_normal.jsp");
+		
+		// 기관회원 가입
+		}else if(target.equals("/joinPage_institutionAction")) {
+			result = new JoinInstitutionActionController().execute(req, resp); 
+		
+		//기관Join
+		}else if(target.equals("/joinPage_institution")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/join/joinPage_institution.jsp");
+		
+		// 아이디 중복검사
+		}else if(target.equals("/checkIdAction")) {
+			new CheckIdActionController().execute(req, resp);
+		
+		//로그아웃
+		}else if(target.equals("/logout")) {
+			result = new LogoutController().execute(req, resp);
+		
+		//로그인Action	
+		}else if(target.equals("/loginAction")) {
+			result = new LoginActionController().execute(req, resp);
+		
+		//로그인
+		}else if(target.equals("/login")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/join/login.jsp");
+			
+		}else if(target.equals("/sendEmailAction")) {
+			result = new SendEmailActionController().execute(req, resp);
+			
+		}else if(target.equals("/changePwAction")) {
+			result = new ChangePwActionController().execute(req, resp);
+		
+		// 아이디찾기 action
 		}else if(target.equals("/findIdAction")) {
+			result = new FindIdActionController().execute(req, resp);
+		
+		// 아이디찾기	
+		}else if(target.equals("/findId")) {
 			result = new FindIdActionController().execute(req, resp);
 			
 		}else if(target.equals("/findPwAction")) {
 			result = new FindPwActionController().execute(req, resp);
 			
 		}else {
-			
+			System.out.println(target);
 		}
 		
 		

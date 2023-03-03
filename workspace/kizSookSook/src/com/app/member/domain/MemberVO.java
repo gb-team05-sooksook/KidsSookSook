@@ -13,6 +13,9 @@ public class MemberVO {
 	private String memberNickname;
 	private String memberGender;
 	
+	private String institutionName;
+	private String institutionBusinessNumber;
+	
 	public String getMemberGender() {
 		return memberGender;
 	}
@@ -95,6 +98,23 @@ public class MemberVO {
 		this.memberNickname = memberNickname;
 	}
 
+	public String getInstitutionName() {
+		return institutionName;
+	}
+
+	public void setInstitutionName(String institutionName) {
+		this.institutionName = institutionName;
+	}
+
+	public String getInstitutionBusinessNumber() {
+		return institutionBusinessNumber;
+	}
+
+	public void setInstitutionBusinessNumber(String institutionBusinessNumber) {
+		this.institutionBusinessNumber = institutionBusinessNumber;
+	}
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -125,7 +145,10 @@ public class MemberVO {
 		return "MemberVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
 				+ userPassword + ", userEmail=" + userEmail + ", userPhoneNumber=" + userPhoneNumber + ", userAddress="
 				+ userAddress + ", userRegisterDate=" + userRegisterDate + ", memberName=" + memberName
-				+ ", memberNickname=" + memberNickname + ", memberGender=" + memberGender + "]";
+				+ ", memberNickname=" + memberNickname + ", memberGender=" + memberGender + ", institutionName="
+				+ institutionName + ", institutionBusinessNumber=" + institutionBusinessNumber + "]";
 	}
+
+
 	
 }

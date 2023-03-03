@@ -3,18 +3,44 @@
 
 <mapper namespace="fieldTrip">
 	<select id="selectCategoryAll" parameterType="map" resultType="fieldTripDTO">
-		select tft.category_id, category_name, field_trip_id, user_id, field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, 
-		field_trip_place, field_trip_price, field_trip_context_description 
-		from tbl_category tc join tbl_field_trip tft 
-		on tc.category_id = tft.category_id and tc.category_id = #{categoryId} 
-		order by field_trip_id desc
+		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
+		field_trip_registation_date, field_trip_deadline_date,
+		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
+		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		from view_field_tripdto
+		<if test="categoryId != null">
+			where category_id = #{categoryId} 
+		</if>
+		<if test="keyword != null">
+			where field_trip_name like concat('%', #{keyword}, '%')
+		</if>
+		<choose>
+			<when test="sort=='recent'.toString()">
+				order by field_trip_id 
+			</when>
+			<when test="sort=='popular'.toString()">
+				order by recommend_count 
+			</when>
+			<otherwise>
+				order by field_trip_id 
+			</otherwise>
+		</choose>
+		desc 
 		limit #{startRow}, #{rowCount}
 	</select>
 	
 	<select id="getTotal" parameterType="long" resultType="long">
-		select count(field_trip_id) from tbl_category tc join tbl_field_trip tft 
-		on tc.category_id = tft.category_id and tc.category_id = #{categoryId}
+		select count(field_trip_id)  
+		from tbl_field_trip 
+		<if test="categoryId != null">
+			where category_id = #{categoryId}
+		</if>
 	</select>
+	
+	<delete id="delete" parameterType="long">
+		delete from
+		tbl_field_trip where field_trip_id = #{fieldTripId}
+	</delete>
 	
 	<!-- <select id="selectCategoryReview" parameterType="long" resultType="fieldTripDTO">
 		select tft.field_trip_id, field_trip_registation_date, field_trip_deadline_date, field_trip_program_date,
@@ -25,13 +51,20 @@
 		order by count(review_id) desc
 	</select> -->
 	
-	<select id="fieldTripDetail" parameterType="long" resultType="com.app.fieldTrip.domain.FieldTripDetailDTO">
-		select tft.field_trip_id, user_id, category_id, field_trip_name, 
-		field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, 
-		field_trip_place, field_trip_price, field_trip_context_description,
-		field_trip_detail_id, field_trip_detail_context, field_trip_detail_institution_info,
-		field_trip_detail_use_time, field_trip_detail_refund_policy
-		from tbl_field_trip tft join tbl_field_trip_detail tftd 
-		on tft.field_trip_id = tftd.field_trip_id and tft.field_trip_id = #{fieldTripId}
+	<select id="fieldTripDetail" parameterType="long" resultType="com.app.fieldTrip.domain.FieldTripDetailVO">
+		select field_trip_detail_id, field_trip_id, field_trip_detail_context,
+		field_trip_detail_institution_info, field_trip_detail_use_time, field_trip_detail_refund_policy
+		from tbl_field_trip_detail
+		where field_trip_id = #{fieldTripId}
 	</select>
+	
+	<select id="getfieldTripDTO" parameterType="long" resultType="fieldTripDTO">
+		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
+		field_trip_registation_date, field_trip_deadline_date,
+		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
+		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		from view_field_tripdto
+		where field_trip_id = #{fieldTripId}
+	</select>
+	
 </mapper>

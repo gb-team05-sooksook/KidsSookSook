@@ -30,4 +30,10 @@ public class NoticeDAO {
 	public void update(NoticeVO noticeVO) {
 		sqlSession.update("notice.update", noticeVO);
 	}
+	
+	public void delete(Long noticeId) {
+		sqlSession.delete("notice.delete", noticeId);
+	}
 }
+
+

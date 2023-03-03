@@ -1,7 +1,11 @@
 package com.app.admin;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -14,28 +18,36 @@ import org.json.JSONObject;
 import com.app.Action;
 import com.app.PageDTO;
 import com.app.Result;
-import com.app.member.dao.MemberDAO;
+import com.app.fieldTrip.dao.FieldTripDAO;
+import com.app.notice.dao.NoticeDAO;
 
-public class MemberInfoActionController implements Action {
+public class FieldTripSearchActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		MemberDAO	memberDAO = new MemberDAO();
-		PageDTO pageDTO = null;
-		Result result = new Result();
-		JSONArray jsons = new JSONArray();
+resp.setCharacterEncoding("UTF-8");
 		
+		req.setCharacterEncoding("UTF-8");
+
+		FieldTripDAO fieldTripDAO = new FieldTripDAO();
+		PageDTO pageDTO = null;
+		JSONArray jsons = new JSONArray();
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 		
+		PrintWriter out = resp.getWriter();
+		
+		String keyword = req.getParameter("keyword");
+		keyword = keyword == "" ? null : keyword;
+
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
-		String userType = req.getParameter("userType");
-		searchMap.put("userType", userType);
+		
+		System.out.println(keyword);
 		
 		Long total = null;
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		total = memberDAO.getTotal(searchMap);
+		total = fieldTripDAO.getTotal(null);
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;
 //		한 페이지에서 나오는 페이지 버튼의 개수
@@ -48,12 +60,12 @@ public class MemberInfoActionController implements Action {
 		searchMap.put("rowCount", rowCount);
 		searchMap.put("startRow", pageDTO.getStartRow());
 		searchMap.put("sort", sort);
+		searchMap.put("keyword", keyword);
 		
-		if(userType == null || userType.equals("member")) {
-			memberDAO.selectMemberAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);
-		} else if(userType.equals("institution")) {
-			memberDAO.selectInstitutionAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);
-		}
+		fieldTripDAO.selectCategoryAll(searchMap).stream().map(member -> new JSONObject(member)).forEach(jsons::put);
+		
+		out.append(jsons.toString());
+		out.close();
 		
 		req.setAttribute("users", jsons.toString());
 		req.setAttribute("total", total);
@@ -64,9 +76,7 @@ public class MemberInfoActionController implements Action {
 		req.setAttribute("next", pageDTO.isNext());
 		req.setAttribute("sort", sort);
 		
-		result.setPath("/templates/adminPage/memberInfo.jsp");
-		
-		return result;
+		return null;
 	}
 
 }

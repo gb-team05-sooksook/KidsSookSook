@@ -114,7 +114,7 @@ function app() {
           var notices = JSON.parse(notices);
           let dom = '';
 
-          notices.forEach((notice, i) => {
+          notices.forEach((trips, i) => {
             dom += `
             <tr name='notice'>
               <td style="width: 6%">
@@ -148,6 +148,39 @@ function app() {
         return { excute: excute };
       })(),
     },
+    trips: {
+      loadTrips: (function () {
+        function excute(fieldTrips, stage) {
+          var trips = JSON.parse(fieldTrips);
+          let dom = '';
+
+          trips.forEach((trip, i) => {
+            dom += `
+            <tr name='notice'>
+              <td style="width: 6%">
+                <form>
+                  <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
+                </form>
+              </td>
+              <td>${trip.fieldTripId}</td>
+              <td>${trip.fieldTripName}</td>
+              <td>${trip.categoryName}</td>
+              <td>${trip.fieldTripRegistationDate}</td>
+              <td>${trip.fieldTripDeadlineDate}</td>
+              <td>${trip.fieldTripProgramDate}</td>
+              <td>${trip.fieldTripPlace}</td>
+              <td>${trip.fieldTripPrice}</td>
+              <td>${trip.fieldTripContextDescription}</td>
+            </tr>`;
+          });
+          stage.find("tr[name='notice']").remove();
+          stage.append(dom);
+          $checkboxes = $('.tableCheckbox');
+        }
+
+        return { excute: excute };
+      })(),
+    },
     ajaxService: (function () {
       function excute(url, data, callback) {
         $.ajax({
@@ -174,10 +207,13 @@ function app() {
       function excute($search, url, stage, callback) {
         $search.on('submit', function (e) {
           e.preventDefault();
-          var keyword = $("input[name='userIdentification']").val();
+          var keyword = $search.find('input').val();
           var data = {
             keyword: keyword,
           };
+
+          console.log(url);
+          console.log(keyword);
 
           app().ajaxService.excute(url, data, (result) => {
             callback(result, stage);

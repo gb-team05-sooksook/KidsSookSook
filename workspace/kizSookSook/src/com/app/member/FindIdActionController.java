@@ -8,12 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.member.dao.MemberDAO;
 
 public class FindIdActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
+		MemberDAO memberDAO = new MemberDAO();
+		
 		return null;
 	}
 

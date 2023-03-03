@@ -18,7 +18,7 @@
                 <main class="detaile-page-left">
                     <!--카테고리 경로-->	 
                     <section class="detaile-left-name">
-                        <div class="detaile-left-category">과학IT &gt; ${fieldTripDetailDTO.fieldTripName}</div>
+                        <div class="detaile-left-category">${fieldTripDTO.categoryName} &gt; ${fieldTripDTO.fieldTripName}</div>
                     </section>
                     <!-- 이미지 -->
                     <section class="detaile-left-img">
@@ -40,7 +40,7 @@
                         <div id="book1" class="detaile-content">상세 내용</div>
                         <div class="detaile-content-writing">
                             <p style="margin:0px;">
-                            	${fieldTripDetailDTO.fieldTripDetailContext}
+                            	${fieldTripDetailVO.fieldTripDetailContext}
                             </p>
                         </div>
                     </section>
@@ -49,7 +49,7 @@
                         <div id="book2" class="detaile-content">기관 정보</div>
                         <div class="detaile-content-writing">
                             <p style="margin:0px;">
-                            	${fieldTripDetailDTO.fieldTripDetailInstitutionInfo}
+                            	${fieldTripDetailVO.fieldTripDetailInstitutionInfo}
                             </p>
                         </div>
                     </section>
@@ -59,27 +59,27 @@
                         <div class="detaile-price-content">
                             <div class="detaile-price-content-wrapper">
                                 <div class="detaile-price-content-wrapper-price">
-                                    "${fieldTripDetailDTO.fieldTripPrice}원"
+                                    "${fieldTripDTO.fieldTripPrice}원"
                                     <span class="detaile-price-content-wrapper-price-vat">(VAT 포함가)</span>
                                 </div>
-                                <div class="detaile-price-content-wrapper-content">${fieldTripDetailDTO.fieldTripName}</div>
+                                <div class="detaile-price-content-wrapper-content">${fieldTripDTO.fieldTripName}</div>
                                 <div class="detaile-price-content-wrapper-content-next">과학 수사대원 체험</div>
                                 <div class="detaile-price-content-wrapper-content-wrapper">
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
-                                        <span>과학IT</span>
-                                        <span>${fieldTripDetailDTO.fieldTripName}</span>
+                                        <span>${fieldTripDTO.categoryName}</span>
+                                        <span>${fieldTripDTO.fieldTripName}</span>
                                     </div>
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
                                         <span>장소</span>
-                                        <span>${fieldTripDetailDTO.fieldTripPlace}</span>
+                                        <span>${fieldTripDTO.fieldTripPlace}</span>
                                     </div>
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
                                         <span>체험일자</span>
-                                        <span>${fieldTripDetailDTO.fieldTripProgramDate}</span>
+                                        <span>${fieldTripDTO.fieldTripProgramDate}</span>
                                     </div>
                                     <div class="detaile-price-content-wrapper-content-wrapper-list">
                                         <span>신청 마감일</span>
-                                        <span>${fieldTripDetailDTO.fieldTripDeadlineDate}</span>
+                                        <span>${fieldTripDTO.fieldTripDeadlineDate}</span>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                     <!-- 취소.환불 -->
             		<section class="detaile-price-refund">
                         <div id="book4" class="detaile-content">취소 및 환불 규정</div>
-                        <div class="detaile-price-refund-content">${fieldTripDetailDTO.fieldTripDetailRefundPolicy}</div>
+                        <div class="detaile-price-refund-content">${fieldTripDetailVO.fieldTripDetailRefundPolicy}</div>
                     </section>
 
                     <!-- 체험 평가 -->
@@ -177,36 +177,36 @@
                                         </svg>
                                     </span>
                                 </span>
-                                <span>500</span>
+                                <span>${fieldTripDTO.recommendCount}</span>
                             </button>
                         </section>
                         <section class="right-second-section">
-                            <h1 class="right-second-text">키즈쑥쑥 | ${fieldTripDetailDTO.fieldTripName}</h1>
+                            <h1 class="right-second-text">키즈쑥쑥 | ${fieldTripDTO.fieldTripName}</h1>
                         </section>
                         <section class="right-third-section">
                             <div class="right-third">
                                 <div class="right-third-inside-price">
-                                    ${fieldTripDetailDTO.fieldTripPrice}원
+                                    ${fieldTripDTO.fieldTripPrice}원
                                     <span class="right-third-inside-price-vat">(VAT 포함가)</span>
                                 </div>
-                                <div class="right-third-inside-1">${fieldTripDetailDTO.fieldTripContextDescription}</div>
+                                <div class="right-third-inside-1">${fieldTripDTO.fieldTripContextDescription}</div>
                                 <!-- <div class="right-third-inside-2">과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다.</div> -->
                                 <div class="right-third-inside-list">
                                     <div class="right-third-inside-list-1">
-                                        <span>과학IT</span>
-                                        <span>${fieldTripDetailDTO.fieldTripName}</span>
+                                        <span>${fieldTripDTO.categoryName}</span>
+                                        <span>${fieldTripDTO.fieldTripName}</span>
                                     </div>
                                     <div class="right-third-inside-list-1">
                                         <span>장소</span>
-                                        <span>${fieldTripDetailDTO.fieldTripPlace}</span>
+                                        <span>${fieldTripDTO.fieldTripPlace}</span>
                                     </div>
                                     <div class="right-third-inside-list-1">
                                         <span>체험일자</span>
-                                        <span>${fieldTripDetailDTO.fieldTripProgramDate}</span>
+                                        <span>${fieldTripDTO.fieldTripProgramDate}</span>
                                     </div>
                                     <div class="right-third-inside-list-1">
                                         <span>신청 마감일</span>
-                                        <span>${fieldTripDetailDTO.fieldTripDeadlineDate}</span>
+                                        <span>${fieldTripDTO.fieldTripDeadlineDate}</span>
                                     </div>
                                 </div>
                             </div>
@@ -229,6 +229,6 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}", fieldTripDetailDTO = `${fieldTripDetailDTO}`;</script>
+<script>let contextPath = "${pageContext.request.contextPath}";</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailPage.js"></script>
 </html>
