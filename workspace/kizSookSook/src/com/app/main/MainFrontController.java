@@ -22,14 +22,19 @@ public class MainFrontController extends HttpServlet {
 		Result result = null;
 		
 		
-		if(target.equals("/searchAction")){
-			result = new SearchActionController().execute(req, resp);
-		}else if(target.equals("/connectLogin")) {
-			result = new ConnectLoginController().execute(req, resp);
-		}else if(target.equals("/connectJoin")) {
-			result = new ConnectJoinController().execute(req, resp);
-		}else if(target.equals("/connectNotice")) {
-			result = new ConnectNoticeController().execute(req, resp);
+//		메인페이지 이동
+		if(target.equals("/templates/main/main")){
+			result = new Result();
+			result.setPath("/templates/main/main.jsp");
+//		고객센터 이동
+		}else if(target.equals("/templates/customerCenter/customer-main")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/customer-main.jsp");
+		
+			
+			
+			
+		
 		}else if(target.equals("/rankListAction")) {
 			result = new RankListActionController().execute(req, resp);
 		}else {
