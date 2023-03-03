@@ -17,7 +17,7 @@
             	<img src="${pageContext.request.contextPath}/static/resources/img/logo/logo-2.png" style="width:180px;">
             </a>
             <div class="main-join-box">
-                <form novalidate="" class="join-form" id="joinForm">
+                <form novalidate="" class="join-form" id="joinForm" action="${pageContext.request.contextPath}/joinPage_institution.member">
                     <h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
@@ -64,7 +64,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">휴대폰번호</div>
                         <div class="join-item-input-div">
-                            <input type="tel" required placeholder="휴대폰번호를 입력해 주세요.(-미포함)" name="memberPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="text" required placeholder="휴대폰번호를 입력해 주세요.(-미포함)" name="userPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
                         </div>
                         <div>
                             <div class="error-div">
@@ -75,7 +75,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">주소</div>
                         <div class="join-item-input-div-address">
-                            <input type="text" required placeholder="주소를 찾아주세요." name="memberAddress" id="memberAddress" autocomplete="address" class="join-item-input" value="" readonly>
+                            <input type="text" required placeholder="주소를 찾아주세요." name="userAddress" id="memberAddress" autocomplete="address" class="join-item-input" value="" readonly>
                         </div>
                         <div class="join-item-find-address">
                             <button type="button" class="join-item-find-address-btn" onclick="sample6_execDaumPostcode()">주소찾기</button>
