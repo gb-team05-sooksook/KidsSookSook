@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 import com.app.member.dao.MemberDAO;
-import com.app.member.domain.MemberDTO;
+import com.app.member.domain.MemberVO;
 
 public class JoinNormalActionController implements Action {
 
@@ -17,18 +17,21 @@ public class JoinNormalActionController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		req.setCharacterEncoding("UTF-8");
 		MemberDAO memberDAO = new MemberDAO();
-		MemberDTO memberDTO = new MemberDTO();
+		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
 		
-		memberDTO.setUserIdentification(req.getParameter("userIdentification"));
-		memberDTO.setUserPassword(req.getParameter("userPassword"));
-		memberDTO.setMemberName(req.getParameter("memberName"));
-		memberDTO.setMemberNickname(req.getParameter("memberNickname"));
-		memberDTO.setUserEmail(req.getParameter("userEmail"));
-		memberDTO.setUserPhoneNumber(req.getParameter("userPhoneNumber"));
-		memberDTO.setUserAddress(req.getParameter("userAddress"));
+		memberVO.setUserIdentification(req.getParameter("userIdentification"));
+		memberVO.setUserPassword(req.getParameter("userPassword"));
+		memberVO.setMemberName(req.getParameter("memberName"));
+		memberVO.setMemberNickname(req.getParameter("memberNickname"));
+		memberVO.setUserEmail(req.getParameter("userEmail"));
+		memberVO.setUserPhoneNumber(req.getParameter("userPhoneNumber"));
+		memberVO.setUserAddress(req.getParameter("userAddress"));
+		memberVO.setMemberGender(req.getParameter("memberGender"));
 		
-		memberDAO.insertJoinMember(memberDTO);
+		memberDAO.insertUser(memberVO);
+		memberDAO.insertMember(memberVO);
+		
 		result.setPath(req.getContextPath() + "/login.member");
 		result.setRedirect(true);
 		
