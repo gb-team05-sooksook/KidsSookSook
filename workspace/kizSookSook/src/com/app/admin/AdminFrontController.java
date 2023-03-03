@@ -67,6 +67,9 @@ public class AdminFrontController extends HttpServlet {
 			result.setPath("/enquiryAction.admin");
 		} else if(target.equals("/enquiryAction")) {
 			result = new EnquiryActionController().execute(req, resp);
+		} else if(target.equals("/bannerManage")) {
+			result = new Result();
+			result.setPath("/templates/adminPage/bannerManage.jsp");
 		}
 		else {
 			
