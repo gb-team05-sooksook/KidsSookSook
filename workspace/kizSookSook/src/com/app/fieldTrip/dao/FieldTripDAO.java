@@ -28,4 +28,7 @@ public class FieldTripDAO {
 		return sqlSession.selectOne("fieldTrip.fieldTripDetail", fieldTripId);
 	}
 	
+	public void delete(Long fieldTripId) {
+		sqlSession.delete("fieldTrip.delete", fieldTripId);
+	}
 }

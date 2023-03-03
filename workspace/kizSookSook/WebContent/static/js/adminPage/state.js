@@ -10,6 +10,7 @@ let state = (function () {
       $modalOpen: $('#userUpdateButton'),
       $modalClose: $('.X'),
       $searchNotice: $("form[name='searchNotice']"),
+      $searchFieldTrip: $("form[name='searchFieldTrip']"),
       member: {
         $userType: $("input[name='userType']"),
         $searchMember: $("form[name='searchMember']"),
@@ -24,6 +25,9 @@ let state = (function () {
       notice: {
         $noticeForm: $("form[name='noticeForm']"),
         $noticeUpdate: $("form[name='noticeUpdate']"),
+      },
+      fieldTrip: {
+        $tripDeleteButton: $("input[name='tripDelete']"),
       },
     };
   }
