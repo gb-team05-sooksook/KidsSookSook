@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.notice.dao.EnquiryDAO;
 import com.app.notice.dao.EnquiryFileDAO;
-import com.app.notice.dao.NoticeDAO;
 import com.app.notice.domain.CustomerEnquiryVO;
 import com.app.notice.domain.EnquiryFileVO;
 import com.oreilly.servlet.MultipartRequest;
@@ -20,7 +20,7 @@ public class enquiryOkActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		NoticeDAO noticeDAO = new NoticeDAO();
+		EnquiryDAO enquiryDAO = new EnquiryDAO();
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
 		EnquiryFileVO enquiryFileVO = new EnquiryFileVO();
 		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
@@ -38,9 +38,9 @@ public class enquiryOkActionController implements Action {
 		
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
 		
-		noticeDAO.insert(customerEnquiryVO);
+		enquiryDAO.insert(customerEnquiryVO);
 		
-		noticeCurrentSequence = noticeDAO.getCurrentSequence();
+		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
 		
 		Enumeration<String> fileNames = multipartRequest.getFileNames();
 	
