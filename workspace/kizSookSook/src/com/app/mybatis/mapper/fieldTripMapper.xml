@@ -51,10 +51,11 @@
 		order by count(review_id) desc
 	</select> -->
 	
-	<select id="fieldTripDetail" parameterType="long" resultType="com.app.fieldTrip.domain.FieldTripVO">
+	<select id="fieldTripDetail" parameterType="long" resultType="com.app.fieldTrip.domain.FieldTripDetailVO">
 		select field_trip_detail_id, field_trip_id, field_trip_detail_context,
 		field_trip_detail_institution_info, field_trip_detail_use_time, field_trip_detail_refund_policy
 		from tbl_field_trip_detail
+		where field_trip_id = #{fieldTripId}
 	</select>
 	
 	<select id="getfieldTripDTO" parameterType="long" resultType="fieldTripDTO">
