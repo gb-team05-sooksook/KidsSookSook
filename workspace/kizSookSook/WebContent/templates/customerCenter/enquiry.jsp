@@ -62,21 +62,21 @@
 					<input name="utf8" type="hidden" value=""> <input
 						type="hidden" value="">
 					<div class="form-field required request_anonymous_requester_email">
-						<label for="request_anonymous_requester_email"> 이메일 주소 </label> <input
-							type="text" id="request_anonymous_requester_email" class="change">
+						<label for="request_anonymous_requester_email"> 이메일 주소 </label> 
+						<input type="text" id="request_anonymous_requester_email" class="change">
 						<div id="request_anonymous_requester_email_error"
 							class="notification notification-error notification-inline">
 							요청자 이메일: 액센트 부호가 있는 문자를 이메일 주소에 포함할 수 없습니다.</div>
 					</div>
 					<div class="form-field required request_custom_fields">
 						<label id="request_custom_fields_label"
-							for="request_custom_fields">상담유형</label> <input type="hidden"
-							id="request_custom_fields" value="">
+							for="request_custom_fields">상담유형</label> 
+							<input type="hidden" id="request_custom_fields" value="">
 						<div class="dropClick" tabindex="0" style="cursor: pointer;">
 							<p class="result_p" style="font-size: 14px;">-</p>
 							<div class="drop-content" style="display: none; font-size: 14px;"">
-								<p onclick=" selectType(this)"">이용문의</p>
-								<p onclick=" selectType(this)"">고객의 소리/제보</p>
+								<p onclick="selectType(this)">이용문의</p>
+								<p onclick="selectType(this)">고객의 소리/제보</p>
 							</div>
 						</div>
 						<div id="request_custom_fields_error"
