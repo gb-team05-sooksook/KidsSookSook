@@ -12,7 +12,7 @@ public class FieldTripDTO {
 	private String fieldTripPlace;
 	private String fieldTripPrice;
 	private String fieldTripContextDescription;
-	private int recommend_count;
+	private int recommendCount;
 	private String fieldTripFilePath; 
 	private String fieldTripSystemName; 
 	private String fieldTripOrgName;
@@ -107,12 +107,12 @@ public class FieldTripDTO {
 		this.fieldTripContextDescription = fieldTripContextDescription;
 	}
 
-	public int getRecommend_count() {
-		return recommend_count;
+	public int getRecommendCount() {
+		return recommendCount;
 	}
 
-	public void setRecommend_count(int recommend_count) {
-		this.recommend_count = recommend_count;
+	public void setRecommendCount(int recommendCount) {
+		this.recommendCount = recommendCount;
 	}
 
 	public String getFieldTripFilePath() {
@@ -146,7 +146,7 @@ public class FieldTripDTO {
 				+ ", fieldTripRegistationDate=" + fieldTripRegistationDate + ", fieldTripDeadlineDate="
 				+ fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate + ", fieldTripPlace="
 				+ fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice + ", fieldTripContextDescription="
-				+ fieldTripContextDescription + ", recommend_count=" + recommend_count + ", fieldTripFilePath="
+				+ fieldTripContextDescription + ", recommendCount=" + recommendCount + ", fieldTripFilePath="
 				+ fieldTripFilePath + ", fieldTripSystemName=" + fieldTripSystemName + ", fieldTripOrgName="
 				+ fieldTripOrgName + "]";
 	}
