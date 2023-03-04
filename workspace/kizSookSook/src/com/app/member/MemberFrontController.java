@@ -80,12 +80,13 @@ public class MemberFrontController extends HttpServlet {
 		
 		//로그인Action	
 		}else if(target.equals("/loginAction")) {
+			System.out.println("들왓나12");
 			result = new LoginActionController().execute(req, resp);
-		
+			System.out.println("들왓나13");
 		//로그인
 		}else if(target.equals("/login")) {
 			result = new Result();
-			result.setPath("/templates/joinLogin/join/login.jsp");
+			result.setPath("/templates/main/main.jsp");
 			
 		}else if(target.equals("/sendEmailAction")) {
 			result = new SendEmailActionController().execute(req, resp);

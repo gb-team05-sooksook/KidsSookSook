@@ -68,7 +68,7 @@
 		values(#{userId}, #{memberName}, #{memberNickname}, #{memberGender});
 	</insert>
 	
-	<insert id="insertIstitution" parameterType="memberVO">
+	<insert id="insertInstitution" parameterType="memberVO">
 		insert into tbl_institution
 		(user_id, institution_name, institution_business_number)
 		values(#{userId}, #{institutionName}, #{institutionBusinessNumber});
@@ -95,5 +95,10 @@
 		delete from tbl_member
 		where user_id = #{userId}
 	</delete>
+	
+	<select id="login">
+		select user_id from tbl_user
+		where user_identification = #{userIdentification} and user_password = #{userPassword}
+	</select>
 	
 </mapper>

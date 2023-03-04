@@ -66,10 +66,10 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.checkId", memberIdentification);
 	}
 	// 로그인
-	public Long login(String memberIdentification, String memberPassword) {
+	public Long login(String userIdentification, String userPassword) {
 		Map<String, String> loginMap = new HashMap<String, String>();
-		loginMap.put("memberIdentification", memberIdentification);
-		loginMap.put("memberPassword", memberPassword);
+		loginMap.put("userIdentification", userIdentification);
+		loginMap.put("userPassword", userPassword);
 		return sqlSession.selectOne("member.login", loginMap);
 	}
 	

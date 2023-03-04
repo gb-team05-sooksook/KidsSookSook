@@ -32,7 +32,7 @@ public class JoinNormalActionController implements Action {
 		memberDAO.insertUser(memberVO);
 		memberDAO.insertMember(memberVO);
 		
-		result.setPath(req.getContextPath() + "/login.member");
+		result.setPath(req.getContextPath() + "/main.main");
 		result.setRedirect(true);
 		
 		return result;
