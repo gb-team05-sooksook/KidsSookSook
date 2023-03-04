@@ -44,7 +44,7 @@
                             <form novalidate="" class="modal-login-form" action="${pageContext.request.contextPath}/loginAction.member">
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="email" required="" placeholder="이메일을 입력해 주세요." name="userEmail" autocomplete="username" class="modal-login-id" value="">
+                                        <input type="text" required="" placeholder="아이디를 입력해 주세요." name="userIdentification" autocomplete="username" class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>

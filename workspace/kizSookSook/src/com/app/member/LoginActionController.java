@@ -27,22 +27,26 @@ public class LoginActionController implements Action {
 		
 		
 		if(userId == null) {
+			System.out.println("들왓나LoginAction1");
 			userIdentification = String.valueOf(req.getParameter("userIdentification"));
 			userPassword = String.valueOf(req.getParameter("userPassword"));
 			userId = memberDAO.login(userIdentification, userPassword);
-			System.out.println("들왓나1");
+			
 		}
 		
 		if(userId != null) {
 			if(autoLogin) {
+				System.out.println("들왓나LoginAction2");
 				Cookie userIdentificationCookie = new Cookie("userIdentification", userIdentification);
 				Cookie userPasswordCookie = new Cookie("userPassword", userPassword);
 				resp.addCookie(userIdentificationCookie);
 				resp.addCookie(userPasswordCookie);
-				System.out.println("들왓나14");
 			}
+			System.out.println("들왓나LoginAction4");
 			session.setAttribute("userId", userId);
+			path = req.getContextPath() + "/login.member";
 		}else {
+			System.out.println("들왓나LoginAction3");
 			path = req.getContextPath() + "/login.member?login=false";
 		}
 		result.setPath(path);
