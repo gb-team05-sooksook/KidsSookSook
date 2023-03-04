@@ -36,10 +36,9 @@
         <section class="section hero">
             <div class="hero-inner">
                 <div class="hero-text"></div>
-                <form role="search" class="search search-full" accept-charset="UTF-8">
+             <!--    <form role="search" class="search search-full" accept-charset="UTF-8">
                     <input name="utf8" type="hidden" value="✓">
-                    <input type="search" name="query" id="query" placeholder="검색">
-                </form>
+                </form> -->
             </div>
         </section>
 
@@ -84,9 +83,9 @@
             </section>
             <section class="section knowledge-base">
                 <div class="home-list-title">기관 문의센터&nbsp;&nbsp;
-                    <h5 style="display:inline">
+                    <!-- <h5 style="display:inline">
                         <a href="">더보기</a>
-                    </h5>
+                    </h5> -->
                 </div>
                 <ul class="blocks-list">
 
