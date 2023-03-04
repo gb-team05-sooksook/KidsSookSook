@@ -13,7 +13,7 @@ import com.app.Result;
 import com.app.file.dao.FileDAO;
 import com.app.file.domain.FileVO;
 
-public class BannerManageActionController implements Action {
+public class BannerManageController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
