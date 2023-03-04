@@ -4,7 +4,7 @@
 
 body,
 html {
-  font-family: "Metro Sans", sans-serif;
+  font-family: 'Metro Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -275,14 +275,10 @@ a:hover {
   display: none;
 }
 
-.thumbnail {
-  background: no-repeat;
-  background-size: 70%;
+img.thumbnail {
   position: relative;
   width: 100%;
-  background-image: url("../../resources/img/no_image.png");
   cursor: pointer;
   height: 200px;
-  background-position-x: center;
-  background-position-y: center;
+  border: none;
 }

@@ -29,36 +29,25 @@ public class BannerUploadActionController implements Action {
 		JSONObject fileJson = new JSONObject();
 		PrintWriter out = resp.getWriter();
 		
+		String bannerId = req.getParameter("bannerId");
 		String uploadPath = req.getSession().getServletContext().getRealPath("/upload");
-		System.out.println(uploadPath);
 		int fileSize = 1024 * 1024 * 5; //5M
-		System.out.println("request getContentType : " + req.getContentType());
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
 		Enumeration<String> fileNames = multipartRequest.getFileNames();
 		
-		Enumeration<String> temp = multipartRequest.getParameterNames();
-		
-		while(temp.hasMoreElements()) {
-			System.out.println(temp.nextElement());
-		}
-		System.out.println(fileNames.hasMoreElements());
-		
-		while(fileNames.hasMoreElements()) {
+		if(fileNames.hasMoreElements()) {
 			String fileName = fileNames.nextElement();
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 			
-			System.out.println(fileOriginalName);
-			System.out.println(fileSystemName);
+//			if(fileOriginalName == null) {continue;}
 			
-			if(fileOriginalName == null) {continue;}
-			
+			fileVO.setTargetId(Long.valueOf(bannerId));
 			fileVO.setFileOriginalName(fileOriginalName);
 			fileVO.setFileSystemName(fileSystemName);
 			
-			System.out.println(fileVO);
-//			fileDAO.insert(fileVO);
+			fileDAO.updateBannerFile(fileVO);
 		}
 	
 		System.out.println("들어옴");

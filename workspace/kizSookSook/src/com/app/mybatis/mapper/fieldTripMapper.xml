@@ -6,7 +6,7 @@
 		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date,
 		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
-		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		recommend_count, field_trip_system_name, field_trip_org_name
 		from view_field_tripdto
 		<if test="categoryId != null">
 			where category_id = #{categoryId} 
@@ -62,7 +62,7 @@
 		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date,
 		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
-		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		recommend_count, field_trip_system_name, field_trip_org_name
 		from view_field_tripdto
 		where field_trip_id = #{fieldTripId}
 	</select>
