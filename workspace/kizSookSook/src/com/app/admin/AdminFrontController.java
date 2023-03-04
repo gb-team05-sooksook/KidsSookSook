@@ -68,10 +68,7 @@ public class AdminFrontController extends HttpServlet {
 		} else if(target.equals("/enquiryAction")) {
 			result = new EnquiryActionController().execute(req, resp);
 		} else if(target.equals("/bannerManage")) {
-			result = new Result();
-			result.setPath(req.getContextPath() + "/bannerManageAction.admin");
-		} else if(target.equals("/bannerManageAction")) {
-			result = new BannerManageActionController().execute(req, resp);
+			result = new BannerManageController().execute(req, resp);
 		} else if(target.equals("/bannerUploadAction")) {
 			result = new BannerUploadActionController().execute(req, resp);
 		} 
