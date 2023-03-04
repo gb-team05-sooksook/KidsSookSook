@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.enquiry.enquiryOkActionController;
 
 public class NoticeFrontController extends HttpServlet {
 

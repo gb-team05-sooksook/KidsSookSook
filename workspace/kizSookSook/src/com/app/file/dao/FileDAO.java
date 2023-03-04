@@ -26,4 +26,9 @@ public SqlSession sqlSession;
 	public void updateBannerFile(FileVO fileVO) {
 		sqlSession.update("file.updateBannerFile", fileVO);
 	}
+	
+	public void insertEnquiryFile(FileVO fileVO) {
+		System.out.println("들어감3");
+		sqlSession.insert("file.insertEnquiryFile", fileVO);
+	}
 }

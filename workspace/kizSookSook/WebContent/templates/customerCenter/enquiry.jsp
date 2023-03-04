@@ -106,7 +106,9 @@
 					<div class="form-field">
 						<label for="request-attachments"> 첨부 파일 </label>
 						<div id="upload-dropzone" class="upload-dropzone">
+						
 							<input type="file" multiple="true" id="request-attachments">
+							<img >
 							<span> <a>파일 추가</a> 또는 파일을 여기로 드래그
 							</span>
 						</div>
