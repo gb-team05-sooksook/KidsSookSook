@@ -25,9 +25,9 @@ public class NoticeFrontController extends HttpServlet {
 			System.out.println("2. " + target);
 			result = new enquiryOkActionController().execute(req, resp);
 			System.out.println("2323. " + target);
-		}else if(target.equals("/getFAQAction")) {
+		}else if(target.equals("/FAQlistOkAction")) {
 			System.out.println("2. " + target);
-			result = new GetFAQActionController().execute(req, resp);
+			result = new FAQlistOkActionController().execute(req, resp);
 		}else if(target.equals("/enquiry")) {
 			System.out.println("2. " + target);
 			result = new Result();
