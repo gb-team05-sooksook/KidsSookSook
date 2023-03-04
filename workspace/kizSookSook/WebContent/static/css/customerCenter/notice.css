@@ -625,10 +625,6 @@ ul {
     padding: 15px 0;
 }
 
-.icon-star::before {
-    color: #ffd400;
-    font-size: 18px;
-}
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before,
@@ -654,9 +650,6 @@ ul {
     -webkit-font-smoothing: antialiased;
 }
 
-.icon-star::before {
-    content: "\2605";
-}
 
 /***** Category pages *****/
 .category-container {
