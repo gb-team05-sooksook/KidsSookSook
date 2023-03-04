@@ -39,4 +39,12 @@ public class FieldTripDAO {
 	public List<FieldTripDTO> selectTop10() {
 		return sqlSession.selectList("fieldTrip.selectTop10");
 	}
+	
+	public void insertLike(Map<String, Long> likeMap) {
+		sqlSession.insert("fieldTrip.insertLike", likeMap);
+	}
+
+	public void deleteLike(Map<String, Long> likeMap) {
+		sqlSession.delete("fieldTrip.deleteLike", likeMap);
+	}
 }
