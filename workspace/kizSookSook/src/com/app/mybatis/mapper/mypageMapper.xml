@@ -2,46 +2,51 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mypage">	
-<!-- 	<sql id="searchType">
-		<trim prefixOverrides="and">
-			<if test="tyeps != null">
-				<foreach item="type" collection="types">
-					<trim prefix="and">
-						<choose>
-							<when test="type == 'categoryName'.toString()">
-								category_name = #{category_name}
-							</when>
-							<when test="type == 'date'.toString()">
-								field_trip_program_date between(#{startDate}, #{endDate})
-							</when>
-							<when test="type == 'fieldTripName'.toString()">
-								field_trip_name like concat('%', #{keyword}, '%')
-							</when>
-						</choose>
-					</trim>
-				</foreach>
-			</if>
-		</trim>
-	</sql> -->
+	<sql id="search">
+		<if test="categoryName != null">
+			and category_name = #{categoryName}
+		</if>
+		<if test="date != null">
+			and field_trip_program_date = #{startDate}
+		</if>
+		<if test="fieldTripName != null">
+			and field_trip_name like concat('%', #{fieldTripName}, '%')
+		</if>
+	</sql>
 	
-	
-	
-	<select id="findPurchaseList" parameterType="long" resultType="fieldTripDTO">
+	<select id="findPurchaseList" parameterType="map" resultType="fieldTripDTO">
 		select user_id, field_trip_id, category_name, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, 
 		field_trip_place, field_trip_price, field_trip_context_description, recommemd_count, 
 		field_trip_filePath, field_trip_system_name, field_trip_org_name 
-		from view_field_tripdto
-		where (select field_trip_id from kids.view_user_payment where user_id = #{userId})
+		from view_field_tripdto 
+		where (select field_trip_id from view_user_payment where user_id = #{userId}) 
 		<if test="categoryName != null">
-			or category_name = #{categoryName}
-		</if>
-		<if test="date != null">
-			or field_trip_program_date = #{fieldTripProgramDate}
+			and category_name = #{categoryName} 
 		</if>
 		<if test="fieldTripName != null">
-			or field_trip_name like concat('%', #{fieldTripName}, '%')
+			and field_trip_name like concat('%', #{fieldTripName}, '%') 
 		</if>
+		<!-- <if test="date != null">
+			and field_trip_program_date = #{startDate}
+		</if> -->
+		<!-- <include refid="search"/> -->
+		<!-- <if test="categoryName != null">
+			and category_name = #{categoryName}
+		</if>
+		<if test="date != null">
+			and field_trip_program_date = #{startDate}
+		</if> -->
+			
+		<!-- <if test="categoryName != null or categoryName != ''">
+			and category_name = #{categoryName}
+		</if>
+		<if test="date != null">
+			and field_trip_program_date = #{fieldTripProgramDate}
+		</if>
+		<if test="fieldTripName != null">
+			and field_trip_name like concat('%', #{fieldTripName}, '%')
+		</if> -->
 		order by field_trip_id desc
 	</select>
 	

@@ -39,22 +39,28 @@ public class PurchaseListActionController implements Action {
 //		categoryName=&date=&date=&fieldTripName=
 		
 		String categoryName = req.getParameter("categoryName");
+		categoryName = categoryName == null || categoryName.equals("") ? null : categoryName;
 		String startDate = req.getParameterValues("date") == null ? null : req.getParameterValues("date")[0];
 		String endDate = req.getParameterValues("date") == null ? null :req.getParameterValues("date")[1];
 		String fieldTripName = req.getParameter("fieldTripName");
+		fieldTripName = fieldTripName == null || fieldTripName.equals("") ? null : fieldTripName;
 		
+		
+		System.out.println("categoryName: " + categoryName);
 		System.out.println("fieldTripName: " + fieldTripName);
-		System.out.println("date: " + startDate);
-		System.out.println("date: " + endDate);
+//		System.out.println("date: " + startDate);
+//		System.out.println("date: " + endDate);
 //		if(startDate == null || endDate == null) {
 //			searchMap.put("date", null);
 //		} else searchMap.put("date", "date");
 		
-		/*
-		 * searchMap.put("date", null); searchMap.put("categoryName", categoryName);
-		 * searchMap.put("keyword", fieldTripName); searchMap.put("startDate",
-		 * startDate); searchMap.put("endDate", endDate); searchMap.put("userId", 4L);
-		 */
+		
+		searchMap.put("categoryName", categoryName);
+		searchMap.put("fieldTripName", fieldTripName);
+		searchMap.put("startDate", startDate);
+		searchMap.put("endDate", endDate);
+		searchMap.put("userId", 4L);
+		 
 		
 		/*
 		 * System.out.println("search Map categoryName: " +
@@ -67,7 +73,7 @@ public class PurchaseListActionController implements Action {
 		 */
 		
 		
-		fieldTripDTOs = myPageDAO.findPurchaseList(4L); 
+		fieldTripDTOs = myPageDAO.findPurchaseList(searchMap); 
 		System.out.println("fieldTripDTOs: " + fieldTripDTOs);
 		
 		fieldTripDTOs.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
