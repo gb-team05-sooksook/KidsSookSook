@@ -1,4 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- @format -->
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -53,73 +56,31 @@
         <div class="stageLayout">
           <div class="dataTableLayout">
             <div class="dataTable">
-              <div class="inputBox">
-                <div class="filterButtonLayout">
-                  <div class="memberIdSearchText">
-                    <label for="attach" class="filterButton">
-                      배너수정
-                      <input type="file" id="attach" />
-                    </label>
-                    <input
-                      id="bannerDeleteButton"
-                      class="filterButton"
-                      type="button"
-                      value="배너삭제" />
-                  </div>
-                  <a class="paddingA"></a>
-                </div>
-              </div>
               <div class="bannerLayout">
-                <div class="banner">
-                  <div class="bannerTopWrap">
-                    <span>1</span>
+                <c:forEach var="file" items="${files}" varStatus="status">
+                  <div class="banner">
+                    <form
+                      action="${pageContext.request.contextPath}/bannerUploadAction.admin?bannerId=${file.targetId}"
+                      class="upload"
+                      method="post"
+                      enctype="multipart/form-data">
+                      <div class="bannerTopWrap">
+                        <span>${file.targetId}</span>
+                      </div>
+                      <!-- 파일 입출력 썸네일 -->
+                      <label for="image1">
+                        <img class="thumbnail" src="${file.fileSystemName}" />
+                      </label>
+                      <input
+                        type="file"
+                        id="image1"
+                        style="display: none"
+                        class="img-file"
+                        name="image1" />
+                      <input class="upload-submit" type="submit" value="파일 수정" />
+                    </form>
                   </div>
-                  <!-- 파일 입출력 썸네일 -->
-                  <div class="image"></div>
-                  <div>
-                    <div class="banner-wrap">
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="banner">
-                  <div class="bannerTopWrap">
-                    <span>2</span>
-                  </div>
-                  <!-- 파일 입출력 썸네일 -->
-                  <div class="image"></div>
-                  <div>
-                    <div class="banner-wrap">
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="banner">
-                  <div class="bannerTopWrap">
-                    <span>3</span>
-                  </div>
-                  <!-- 파일 입출력 썸네일 -->
-                  <div class="image"></div>
-                  <div>
-                    <div class="banner-wrap">
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" />
-                    </div>
-                  </div>
-                </div>
-                <div class="banner">
-                  <div class="bannerTopWrap">
-                    <span>4</span>
-                  </div>
-                  <!-- 파일 입출력 썸네일 -->
-                  <div class="image"></div>
-                  <div>
-                    <div class="banner-wrap">
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" />
-                    </div>
-                  </div>
-                </div>
+                </c:forEach>
               </div>
             </div>
           </div>
@@ -130,5 +91,9 @@
     <div id="layer"></div>
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    let pageContext = `${pageContext.request.contextPath}`;
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/app.js"></script>
   <script src="${pageContext.request.contextPath}/static/js/adminPage/bannerManage.js"></script>
 </html>
