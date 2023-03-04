@@ -31,7 +31,7 @@ public class JoinInstitutionActionController implements Action {
 		memberDAO.insertUser(memberVO);
 		memberDAO.insertInstitution(memberVO);
 		
-		result.setPath(req.getContextPath() + "/login.member");
+		result.setPath(req.getContextPath() + "/main.main");
 		result.setRedirect(true);
 		
 		return result;

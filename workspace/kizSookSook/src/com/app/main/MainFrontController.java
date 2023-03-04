@@ -21,9 +21,13 @@ public class MainFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
+		System.out.println(target);
 		
-		if(target.equals("/searchAction")){
-			result = new SearchActionController().execute(req, resp);
+		if(target.equals("/templates/main/main")){
+			result = new Result();
+			result.setPath("/templates/main/main.jsp");
+		}else if(target.equals("/searchAction")) {
+			result = new ConnectLoginController().execute(req, resp);
 		}else if(target.equals("/connectLogin")) {
 			result = new ConnectLoginController().execute(req, resp);
 		}else if(target.equals("/connectJoin")) {
