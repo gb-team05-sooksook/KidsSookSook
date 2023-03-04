@@ -80,29 +80,6 @@
                                     <p class="sidenav-item-text">3월 키즈쑥쑥 테스트</p>
                                 </a>
                             </li>
-                            <li>
-                                <a href="" class="sidenav-item ">
-                                    <p class="sidenav-item-text">4월 키즈쑥쑥 테스트</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="sidenav-item ">
-                                    <p class="sidenav-item-text">5월 키즈쑥쑥 테스트</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="sidenav-item ">
-                                    <p class="sidenav-item-text">6월 키즈쑥쑥 테스트</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="sidenav-item ">
-                                    <p class="sidenav-item-text">7월 키즈쑥쑥 테스트</p>
-                                </a>
-                            </li>
-
-
-                        </ul>
                         <a href="" class="article-sidebar-item">더보기</a>
                     </section>
                 </section>
