@@ -86,6 +86,7 @@ public class MemberFrontController extends HttpServlet {
 		//로그인
 		}else if(target.equals("/login")) {
 			result = new Result();
+			System.out.println("들왓나16");
 			result.setPath("/templates/main/main.jsp");
 			
 		}else if(target.equals("/sendEmailAction")) {

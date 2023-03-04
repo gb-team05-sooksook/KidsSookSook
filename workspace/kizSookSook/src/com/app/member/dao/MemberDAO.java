@@ -67,9 +67,11 @@ public class MemberDAO {
 	}
 	// 로그인
 	public Long login(String userIdentification, String userPassword) {
+		System.out.println("memberDAO");
 		Map<String, String> loginMap = new HashMap<String, String>();
 		loginMap.put("userIdentification", userIdentification);
 		loginMap.put("userPassword", userPassword);
+		System.out.println("memberDAO");
 		return sqlSession.selectOne("member.login", loginMap);
 	}
 	

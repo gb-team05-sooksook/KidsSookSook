@@ -13,7 +13,6 @@
 <body>
 
 	<div id="wrap">
-	
 	<!--header -->
 		<header class="wrap-h">
 			<section class="wrap-s">
@@ -49,7 +48,7 @@
 
 				</div>
 			</section>
-<section class="categroyContainer">
+			<section class="categroyContainer">
                 <div class="categoryWrap">
                      <div class="category">
                         <div class="categoryContent">
