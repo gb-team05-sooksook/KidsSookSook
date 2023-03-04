@@ -14,8 +14,7 @@
 		<typeAlias type="com.app.pay.domain.PaymentVO" alias="paymentVO"/>
 		<typeAlias type="com.app.pay.domain.PaymentDTO" alias="paymentDTO"/>
 		<typeAlias type="com.app.notice.domain.NoticeVO" alias="noticeVO"/>
-		<typeAlias type="com.app.notice.domain.CustomerEnquiryVO" alias="CustomerEnquiryVO"/>
-		<typeAlias type="com.app.notice.domain.EnquiryFileVO" alias="EnquiryFileVO"/>
+		<typeAlias type="com.app.enquiry.domain.CustomerEnquiryVO" alias="CustomerEnquiryVO"/>
 		<typeAlias type="com.app.file.domain.FileVO" alias="fileVO"/>
 	</typeAliases>
 	
