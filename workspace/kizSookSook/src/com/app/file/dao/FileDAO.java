@@ -11,5 +11,4 @@ public SqlSession sqlSession;
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	
 }

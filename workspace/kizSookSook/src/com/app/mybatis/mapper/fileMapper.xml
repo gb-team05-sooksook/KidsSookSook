@@ -3,9 +3,8 @@
 
 <mapper namespace="file">
 	<insert id="insert" parameterType="enquiryFileVO">
-		insert into tbl_enquiry_file(enquiry_id, enquiry_filePath, enquiry_system_name, enquriry_org_name)
+		insert into tbl_enquiry_file(enquiry_id, enquiry_filePath, enquiry_system_name, enquiry_org_name)
 		values(#{enquiryId}, #{enquiryFilePath}, #{enquiryFileSystemName}, #{enquiryFileOrgName})
 	</insert>
-	
 	
 </mapper>
