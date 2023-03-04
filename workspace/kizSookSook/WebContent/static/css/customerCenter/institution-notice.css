@@ -373,10 +373,6 @@ a:visited {
     padding: 15px 0;
 }
 
-.icon-star::before {
-    color: #ffd400;
-    font-size: 18px;
-}
 
 .article-list-item a {
     color: rgba(102, 102, 102, 1);
@@ -530,7 +526,5 @@ a:hover, a:active, a:focus {
     -webkit-font-smoothing: antialiased;
 }
 
-.icon-star::before {
-    content: "\2605";
-}
+
 

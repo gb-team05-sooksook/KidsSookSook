@@ -22,12 +22,11 @@
                     <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
                 <a title="홈" href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp">
-                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png"
-                        class="cs">
+                    <img src="//theme.zdassets.com/theme_assets/9204604/db54bfa5d2ad14572afe57b4b5582b04a38aa9e1.png" class="cs">
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice" target="_parent">문의하기</a>
+                <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.jsp" target="_parent">문의하기</a>
                 <a class="login" role="button" title="대화 상자를 엽니다." href="">로그인</a>
             </div>
         </header>
@@ -42,6 +41,9 @@
                 <ol class="breadcrumbs">
                     <li title="키즈쑥쑥 고객센터">
                         <a href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp">키즈쑥쑥 고객센터</a>
+                    </li>
+                    <li title="FAQ">
+                        기관안내 센터
                     </li>
                     <li title="FAQ">
                         FAQ
@@ -60,20 +62,17 @@
                     <div class="section-tree">
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">이용방법</a>
+                                <a href="">기관 등록</a>
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[이용방법] 구매한 서비스는 어디에서 확인하나요?</a>
+                                    <a href="" class="article-list-link">[기관 등록] 기관 인증 정보는 어떻게 변경하나요?</a>
                                 </li>
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[이용방법] 키즈쑥쑥은 무엇이며, 어떻게 이용하나요?</a>
+                                    <a href="" class="article-list-link">[기관 등록] 기관회원으로 인증 받으려면 어떻게 해야하나요?</a>
                                 </li>
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[이용방법] 서비스 평가는 무엇이며, 어떻게 작성하나요?</a>
-                                </li>
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[이용방법] 작성한 서비스 평가는 어디에 노출되나요?</a>
+                                    <a href="" class="article-list-link">[기관 등록] 기관회원 프로필은 어떻게 등록하나요?</a>
                                 </li>
                             </ul>
                         </section>
@@ -83,22 +82,27 @@
 
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">구매 및 영수증</a>
+                                <a href="">서비스 등록</a>
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">
-                                    [구매 및 영수증] 현금영수증은 어떻게 발행받을 수 있나요?
+                                    [서비스 등록] 서비스는 어떻게 등록하나요?
                                     </a>
                                 </li>
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">
-                                    [구매 및 영수증] 키즈쑥쑥에서 사용할 수 있는 결제 수단은 무엇인가요?
+                                    [서비스 등록] 판매금액은 어떻게 설정하나요?
                                     </a>
                                 </li>
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">
-                                    [구매 및 영수증] 세금계산서는 누가 발행하며, 어떻게 신청하나요?
+                                    [서비스 등록] 판매 카테고리는 어떻게 변경하나요?
+                                    </a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">
+                                    [서비스 등록] 프로필·서비스 이미지와 제목은 어떻게 설정해야 하나요?
                                     </a>
                                 </li>
                             </ul>
@@ -109,20 +113,14 @@
 
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">가입/인증</a>
+                                <a href="">판매 및 영수증</a>
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[가입/인증] 회원가입은 어떻게 진행하나요?</a>
+                                    <a href="" class="article-list-link">[판매 및 영수증] 판매 건에 대한 세금계산서는 어떻게 발행하나요?</a>
                                 </li>
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[가입/인증] 휴대폰 인증이 안되는 이유와 해결 방법은 무엇인가요?</a>
-                                </li>
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[가입/인증] 휴대폰 재인증은 어떻게 하나요?</a>
-                                </li>
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[가입/인증] 이미 가입된 이메일이라고 표시되는 경우 어떻게 하나요?</a>
+                                    <a href="" class="article-list-link">[판매 및 영수증] 현금영수증을 의무적으로 발행해야 하나요?</a>
                                 </li>
                             </ul>
                         </section>
@@ -131,65 +129,27 @@
 
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">계정 정보/ 탈퇴</a>
+                                <a href="">신고·페널티</a>
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 회원 탈퇴는 어떻게 진행하나요?</a>
+                                    <a href="" class="article-list-link">[신고·페널티] 페널티란 무엇인가요?</a>
                                 </li>
                             </ul>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 아이디와 비밀번호는 어떻게 찾나요?</a>
+                                    <a href="" class="article-list-link">[신고·페널티] 부정 거래가 무엇이며, 어떤 사례가 있나요?</a>
                                 </li>
                             </ul>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 아이디와 비밀번호는 어떻게 변경하나요?</a>
-                                </li>
-                            </ul>
-                            <ul class="article-list">
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 닉네임은 어떻게 변경하나요?</a>
+                                    <a href="" class="article-list-link">[신고·페널티] 직접 결제란 무엇이며, 어떤 사례가 있나요?</a>
                                 </li>
                             </ul>
                         </section>
 
                         <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
                             id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-
-                        <section class="section">
-                            <h3 class="section-tree-title">
-                                <a href="">개인정보</a>
-                            </h3>
-                            <ul class="article-list">
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[개인정보] 개인정보는 안전하게 보호되나요?</a>
-                                </li>
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[개인정보] 회원 탈퇴 시 개인정보는 모두 삭제되나요?</a>
-                                </li>
-                            </ul>
-						</section>
-                            <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
-                                id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-                                
-                      	<section class="section">
-                            <h3 class="section-tree-title">
-                                <a href="">취소·환불</a>
-                            </h3>
-                            <ul class="article-list">
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[취소·환불] 취소 요청은 어떻게 하나요?</a>
-                                </li>
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[취소·환불] 서비스의 환불 기준은 무엇인가요?</a>
-                                </li>
-                            </ul>
-						</section>
-                            <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
-                                id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-
                     </div>
                 </div>
             </div>
