@@ -50,11 +50,7 @@
                         기관안내 센터
                     </li>
                 </ol>
-                <form role="search" class="search" data-search="" action="/hc/ko/search" accept-charset="UTF-8"
-                    method="get">
-                    <input name="utf8" type="hidden" value="✓" autocomplete="off">
-                    <input type="search" name="query" id="query" placeholder="검색" aria-label="검색">
-                </form>
+               
             </nav>
 
             <div class="category-container">

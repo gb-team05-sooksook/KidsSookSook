@@ -43,11 +43,11 @@
 					<li title="키즈쑥쑥 고객센터"><a href=""> 고객센터</a></li>
 					<li title="문의 등록">문의 등록</li>
 				</ol>
-				<form action="" role="search" class="search" accept-charset="UTF-8">
+				<!-- <form action="" role="search" class="search" accept-charset="UTF-8">
 					<input name="utf8" type="hidden" value="✓" autocomplete="off">
 					<input type="search" name="query" id="query" placeholder="검색"
 						aria-label="검색">
-				</form>
+				</form> -->
 			</nav>
 			<h1>
 				<div class="page-title">문의 등록</div>

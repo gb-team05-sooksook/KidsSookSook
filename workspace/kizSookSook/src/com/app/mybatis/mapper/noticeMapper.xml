@@ -5,6 +5,7 @@
 	<select id="getCurrentSequence" resultType="long">
 		select last_insert_id()
 	</select>
+	
 	<sql id="searchType">
 		<if test="types != null and keyword != null">
 			where
