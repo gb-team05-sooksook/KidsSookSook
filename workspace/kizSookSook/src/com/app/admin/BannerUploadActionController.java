@@ -30,7 +30,7 @@ public class BannerUploadActionController implements Action {
 		PrintWriter out = resp.getWriter();
 		
 		String bannerId = req.getParameter("bannerId");
-		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload";
+		String uploadPath = "C:/GB_0900_KMG/jsp_team_project/workspace/kizSookSook/WebContent/upload";
 		int fileSize = 1024 * 1024 * 5; //5M
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
@@ -41,6 +41,8 @@ public class BannerUploadActionController implements Action {
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 			
+			System.out.println(fileOriginalName);
+			System.out.println(fileSystemName);
 //			if(fileOriginalName == null) {continue;}
 			
 			fileVO.setTargetId(Long.valueOf(bannerId));

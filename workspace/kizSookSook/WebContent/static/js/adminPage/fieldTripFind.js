@@ -1,6 +1,11 @@
 /**
  * fieldTripFind.jsp
  */
+
+window.onload = function () {
+  location.reload();
+};
+
 const searchURL = pageContext + '/fieldTripSearchAction.admin';
 const size = 4;
 const $all = $('.tableCheckboxAll');
