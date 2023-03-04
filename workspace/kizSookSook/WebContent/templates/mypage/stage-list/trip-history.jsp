@@ -119,7 +119,7 @@
     </ul>
 </section>
 <section class="trip-history-container">
-    <form action="" name="fieldTripForm">
+    <form action="${pageContext.request.contextPath}/purchaseListAction.mypage" onsubmit="addtripFormEvent()" name="fieldTripForm">
         <div class="form-selecter">
             <div class="selecter" id="theme-selecter">
                 <div class="theme-names">
@@ -152,7 +152,7 @@
                     <div class="theme-name">카테고리6</div>
                 </div>
                 <!-- 카테고리 검색 인풋 -->
-                <input type="text" name="theme" style="display: none" />
+                <input type="text" name="categoryName" style="display: none" />
             </div>
         </div>
         <div class="date-selecter-wrapper">
@@ -164,9 +164,7 @@
             <input type="text" name="fieldTripName" placeholder="검색어 입력" />
         </div>
         <div class="form-btn">
-            <button id="submitBtn">
-                <span>조회</span>
-            </button>
+            <input id="submitBtn" type="submit" value="조회">
         </div>
     </form>
 </section>
