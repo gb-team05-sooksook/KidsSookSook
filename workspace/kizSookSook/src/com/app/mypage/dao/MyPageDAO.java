@@ -16,8 +16,8 @@ public class MyPageDAO {
 	}
 
 //	체험학습 구매 목록 조회
-	public List<FieldTripDTO> findPurchaseList(Map<String, Object> searchMap) {
-		return sqlSession.selectList("mypage.findPurchaseList", searchMap);
+	public List<FieldTripDTO> findPurchaseList(Long userId) {
+		return sqlSession.selectList("mypage.findPurchaseList", userId);
 	}
 	
 //	내정보 불러오기

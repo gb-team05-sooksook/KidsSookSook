@@ -26,7 +26,7 @@
 	
 	
 	
-	<select id="findPurchaseList" parameterType="map" resultType="fieldTripDTO">
+	<select id="findPurchaseList" parameterType="long" resultType="fieldTripDTO">
 		select user_id, field_trip_id, category_name, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, 
 		field_trip_place, field_trip_price, field_trip_context_description, recommemd_count, 
@@ -34,13 +34,13 @@
 		from view_field_tripdto
 		where (select field_trip_id from kids.view_user_payment where user_id = #{userId})
 		<if test="categoryName != null">
-			and category_name = #{category_name}
+			or category_name = #{categoryName}
 		</if>
 		<if test="date != null">
-			and field_trip_program_date between(#{startDate}, #{endDate})
+			or field_trip_program_date = #{fieldTripProgramDate}
 		</if>
-		<if test="keyword != null">
-			and field_trip_name like concat('%', #{keyword}, '%')
+		<if test="fieldTripName != null">
+			or field_trip_name like concat('%', #{fieldTripName}, '%')
 		</if>
 		order by field_trip_id desc
 	</select>

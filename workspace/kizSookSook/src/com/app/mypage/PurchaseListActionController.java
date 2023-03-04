@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -42,29 +43,39 @@ public class PurchaseListActionController implements Action {
 		String endDate = req.getParameterValues("date") == null ? null :req.getParameterValues("date")[1];
 		String fieldTripName = req.getParameter("fieldTripName");
 		
-		System.out.println(fieldTripName);
-		System.out.println(startDate);
-		System.out.println(endDate);
+		System.out.println("fieldTripName: " + fieldTripName);
+		System.out.println("date: " + startDate);
+		System.out.println("date: " + endDate);
 //		if(startDate == null || endDate == null) {
 //			searchMap.put("date", null);
 //		} else searchMap.put("date", "date");
 		
-		searchMap.put("date", null);
+		/*
+		 * searchMap.put("date", null); searchMap.put("categoryName", categoryName);
+		 * searchMap.put("keyword", fieldTripName); searchMap.put("startDate",
+		 * startDate); searchMap.put("endDate", endDate); searchMap.put("userId", 4L);
+		 */
 		
-		searchMap.put("categoryName", categoryName);
-		searchMap.put("keyword", fieldTripName);
-		searchMap.put("startDate", startDate);
-		searchMap.put("endDate", endDate);
-		searchMap.put("userId", 4L);
+		/*
+		 * System.out.println("search Map categoryName: " +
+		 * searchMap.get("categoryName"));
+		 * System.out.println("search Map fieldTripName: " + searchMap.get("keyword"));
+		 * System.out.println("search Map startDate: " + searchMap.get("startDate"));
+		 * System.out.println("search Map endDate: " + searchMap.get("endDate"));
+		 * System.out.println("search Map userId: " + searchMap.get("userId"));
+		 * System.out.println("searchMap: " + searchMap);
+		 */
 		
-		System.out.println(searchMap.get("keyword"));
 		
-		fieldTripDTOs = myPageDAO.findPurchaseList(searchMap);
+		fieldTripDTOs = myPageDAO.findPurchaseList(4L); 
+		System.out.println("fieldTripDTOs: " + fieldTripDTOs);
+		
 		fieldTripDTOs.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
 		
 		System.out.println("jsons: " + jsons);
 		
 		req.setAttribute("fieldTrips", jsons);
+		
 		req.setAttribute("pageNumber", 0);
 		
 		result.setPath("/templates/mypage/mypage.jsp");
