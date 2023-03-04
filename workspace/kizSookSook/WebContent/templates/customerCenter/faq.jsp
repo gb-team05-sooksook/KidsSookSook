@@ -61,52 +61,22 @@
                     <div class="section-tree">
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">엔터프라이즈</a>
-                            </h3>
-                            <ul class="article-list">
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[엔터프라이즈] 서비스 이용 시 의뢰 내용은 보호되나요?</a>
-                                </li>
-
-                            </ul>
-                            <a href="" class="see-all-articles">
-                                문서 9개 모두 보기
-                            </a>
-                        </section>
-                        <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
-                            id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-                        <section class="section">
-                            <h3 class="section-tree-title">
-                                <a href="">서비스 소개</a>
-                            </h3>
-                            <ul class="article-list">
-                                <li class="article-list-item">
-                                    <a href="" class="article-list-link">[서비스 소개] 크몽 마켓은 어떻게 이용하나요?</a>
-                                </li>
-
-                            </ul>
-                            <a href="" class="see-all-articles">
-                                문서 7개 모두 보기
-                            </a>
-                        </section>
-                        <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
-                            id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-                        <section class="section">
-                            <h3 class="section-tree-title">
                                 <a href="">이용방법</a>
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">[이용방법] 구매한 서비스는 어디에서 확인하나요?</a>
                                 </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[이용방법] 키즈쑥쑥은 무엇이며, 어떻게 이용하나요?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[이용방법] 서비스 평가는 무엇이며, 어떻게 작성하나요?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[이용방법] 작성한 서비스 평가는 어디에 노출되나요?</a>
+                                </li>
                             </ul>
-
-                            <a href="" class="see-all-articles">
-                                문서 18개 모두 보기
-                            </a>
-
-
-
                         </section>
 
                         <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
@@ -118,20 +88,23 @@
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[구매 및 영수증] IT 서비스 구매 시의 '고용보험 신고'는 무엇이며, 어떻게
-                                        하나요?</a>
+                                    <a href="" class="article-list-link">
+                                    [구매 및 영수증] 현금영수증은 어떻게 발행받을 수 있나요?
+                                    </a>
                                 </li>
-
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">
+                                    [구매 및 영수증] 키즈쑥쑥에서 사용할 수 있는 결제 수단은 무엇인가요?
+                                    </a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">
+                                    [구매 및 영수증] 세금계산서는 누가 발행하며, 어떻게 신청하나요?
+                                    </a>
+                                </li>
                             </ul>
 
-                            <a href="" class="see-all-articles">
-                                문서 9개 모두 보기
-                            </a>
-
-
-
                         </section>
-
                         <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
                             id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
 
@@ -143,15 +116,17 @@
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">[가입/인증] 회원가입은 어떻게 진행하나요?</a>
                                 </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[가입/인증] 휴대폰 인증이 안되는 이유와 해결 방법은 무엇인가요?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[가입/인증] 휴대폰 재인증은 어떻게 하나요?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[가입/인증] 이미 가입된 이메일이라고 표시되는 경우 어떻게 하나요?</a>
+                                </li>
                             </ul>
-                            <a href="" class="see-all-articles">
-                                문서 10개 모두 보기
-                            </a>
-
-
-
                         </section>
-
                         <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
                             id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
 
@@ -164,9 +139,21 @@
                                     <a href="" class="article-list-link">[계정 정보/탈퇴] 회원 탈퇴는 어떻게 진행하나요?</a>
                                 </li>
                             </ul>
-
-
-
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 아이디와 비밀번호는 어떻게 찾나요?</a>
+                                </li>
+                            </ul>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 아이디와 비밀번호는 어떻게 변경하나요?</a>
+                                </li>
+                            </ul>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[계정 정보/탈퇴] 닉네임은 어떻게 변경하나요?</a>
+                                </li>
+                            </ul>
                         </section>
 
                         <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
@@ -184,7 +171,23 @@
                                     <a href="" class="article-list-link">[개인정보] 회원 탈퇴 시 개인정보는 모두 삭제되나요?</a>
                                 </li>
                             </ul>
-
+						</section>
+                            <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
+                                id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
+                                
+                      	<section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="">취소·환불</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[취소·환불] 취소 요청은 어떻게 하나요?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a href="" class="article-list-link">[취소·환불] 서비스의 환불 기준은 무엇인가요?</a>
+                                </li>
+                            </ul>
+						</section>
                             <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
                                 id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
 
@@ -193,7 +196,6 @@
             </div>
         </div>
     </main>
-
 
 
 

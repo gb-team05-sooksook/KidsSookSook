@@ -10,8 +10,6 @@ function loadTrips(){
 	showlist($("div.history-result-list"), function(){
 	var text = "";
 	
-	console.log(fieldTrips);
-	
 	fieldTrips.forEach((fieldTrip, i) => {
 		text += `
 			<div class="history-result">
@@ -19,12 +17,11 @@ function loadTrips(){
 	                <h4 class="h_title">${fieldTrip.fieldTripName}</h4>
 	                <div class="h_details">
 	                    <span class="h_category">${fieldTrip.categoryName}</span>
-	                    <span class="h_date">${fieldTrip.RegistrationDate}</span>
-	                    <span class="h_institution">업체명</span>
+	                    <span class="h_date">${fieldTrip.fieldTripRegistationDate}</span>
 	                </div>
 	            </div>
 	            <div class="h_result-content">
-	                <div>체험학습 내용의 요약본 한 줄</div>
+	                <div>${fieldTrip.fieldTripContextDescription}</div>
 	                <a href="javascript:functionsObj.modal.activateReviewModalService.excute()">리뷰 쓰기</a>
 	            </div>
        		 </div>

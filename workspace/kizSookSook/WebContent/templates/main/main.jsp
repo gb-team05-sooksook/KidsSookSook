@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,13 @@
  <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
 <body>
+<c:out value="${sessionScope.userId}"/>
+<c:if test="${value != null}">
+	
+</c:if>
+<c:if test="${value == null}">
+	
+</c:if>
 
 	<div id="wrap">
 	<!--header -->

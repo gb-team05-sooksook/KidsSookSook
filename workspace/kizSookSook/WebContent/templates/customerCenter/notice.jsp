@@ -62,9 +62,6 @@
                     </header>
                     <div class="section-tree">
                         <section class="section">
-                            <h3 class="section-tree-title">
-                                <a href="">전체공지</a>
-                            </h3>
                             <ul class="article-list">
                                 <li class="article-list-item article-promoted">
                                     <span data-title="승격된 문서" class="icon-star"></span>
@@ -90,9 +87,53 @@
                                     <span data-title="승격된 문서" class="icon-star"></span>
                                     <a href="" class="article-list-link">크몽을 사칭하는 메시지, 키즈쑥쑥 TEST!!</a>
                                 </li>
+                                
+					            <li class="article-list-item ">
+						            <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2022.08.26)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					                <a href="" class="article-list-link">페널티 정책 안내 (2022.07.04)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2022.01.07)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2021.11.19)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2021.10.29)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">[업데이트] 모바일앱 기능 업데이트 (2021.07.26)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2021.06.01)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">서비스 이용약관 개정 안내 (2021.06.01)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">개인정보처리방침 변경 안내 (2020. 08. 03)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">적립 캐시의 유효기간 변경 안내 (2020.03.03)</a>
+					            </li>
+					            
+					            <li class="article-list-item ">
+					               <a href="" class="article-list-link">크몽을 통하지 않은 직접 결제에 대한 조치가 강화됩니다. </a>
+					            </li>
                             </ul>
                             <a href="" class="see-all-articles">
-                                문서 15개 모두 보기
+                                + 더보기
                             </a>
 
                         </section>
