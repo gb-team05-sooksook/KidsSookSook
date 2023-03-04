@@ -2,9 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="file">
-	<insert id="insert" parameterType="enquiryFileVO">
-		insert into tbl_enquiry_file(enquiry_id, enquiry_filePath, enquiry_system_name, enquiry_org_name)
-		values(#{enquiryId}, #{enquiryFilePath}, #{enquiryFileSystemName}, #{enquiryFileOrgName})
-	</insert>
+	<insert id="insertBannerFile" parameterType="fileVO">
+		insert into tbl_banner_file(banner_system_name, banner_org_name, banner_id) 
+		values(#{fileSystemName}, #{fileOriginalName}, #{targetId})	
+	</insert>	
+	
+	<select id="selectBannerFiles" resultType="fileVO">
+		select banner_id as target_id, banner_system_name as file_system_name, 
+		banner_org_name as file_original_name   
+		from tbl_banner_file
+		order by target_id
+	</select>
+	
+	<update id="updateBannerFile" parameterType="fileVO">
+		update tbl_banner_file
+		set banner_system_name = #{fileSystemName}, banner_org_name = #{fileOriginalName} 
+		where banner_id = #{targetId}
+	</update>
 	
 </mapper>
