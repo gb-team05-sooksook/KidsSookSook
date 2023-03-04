@@ -1,4 +1,4 @@
-package com.app.notice.dao;
+package com.app.enquiry.dao;
 
 import org.apache.ibatis.session.SqlSession;
 
