@@ -65,13 +65,13 @@
 	<insert id="insertMember" parameterType="memberVO">
 		insert into tbl_member
 		(user_id, member_name, member_nickname, member_gender)
-		values(#{userId}, #{memberName}, #{memberNickname}, #{memberGender});
+		values((select user_id from tbl_user where user_identification = #{userIdentification}), #{memberName}, #{memberNickname}, #{memberGender})
 	</insert>
 	
 	<insert id="insertInstitution" parameterType="memberVO">
 		insert into tbl_institution
 		(user_id, institution_name, institution_business_number)
-		values(#{userId}, #{institutionName}, #{institutionBusinessNumber});
+		values((select user_id from tbl_user where user_identification = #{userIdentification}), #{institutionName}, #{institutionBusinessNumber})
 	</insert>
 	
 	<update id="updateUser" parameterType="memberVO">
