@@ -1,7 +1,6 @@
-package com.app.notice;
+package com.app.enquiry;
 
 import java.io.IOException;
-import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,8 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.notice.dao.EnquiryDAO;
-import com.app.notice.dao.EnquiryFileDAO;
+import com.app.enquiry.dao.EnquiryDAO;
 import com.app.notice.domain.CustomerEnquiryVO;
 import com.app.notice.domain.EnquiryFileVO;
 import com.oreilly.servlet.MultipartRequest;
@@ -25,7 +23,7 @@ public class enquiryOkActionController implements Action {
 		EnquiryDAO enquiryDAO = new EnquiryDAO();
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
 		EnquiryFileVO enquiryFileVO = new EnquiryFileVO();
-		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
+//		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
 	
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 5; //5M
