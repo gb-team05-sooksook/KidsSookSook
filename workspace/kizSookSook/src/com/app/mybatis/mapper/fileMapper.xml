@@ -19,4 +19,5 @@
 		set banner_system_name = #{fileSystemName}, banner_org_name = #{fileOriginalName} 
 		where banner_id = #{targetId}
 	</update>
+	
 </mapper>

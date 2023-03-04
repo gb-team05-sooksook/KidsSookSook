@@ -43,7 +43,7 @@
 					<li title="키즈쑥쑥 고객센터"><a href=""> 고객센터</a></li>
 					<li title="문의 등록">문의 등록</li>
 				</ol>
-				<form role="search" class="search" accept-charset="UTF-8">
+				<form action="" role="search" class="search" accept-charset="UTF-8">
 					<input name="utf8" type="hidden" value="✓" autocomplete="off">
 					<input type="search" name="query" id="query" placeholder="검색"
 						aria-label="검색">
@@ -58,12 +58,12 @@
 				</div>
 			</h1>
 			<div class="form">
-				<form id="new_request" class="request-form" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
-					<input name="utf8" type="hidden" value=""> <input
-						type="hidden" value="">
+				<form id="new_request" class="request-form" action="${pageContext.request.contextPath}/enquiryOkAction.notice" method="post" enctype="multipart/form-data">
+					<input name="utf8" type="hidden" value=""> 
+					<input type="hidden" value="">
 					<div class="form-field required request_anonymous_requester_email">
-						<label for="request_anonymous_requester_email"> 이메일 주소 </label> <input
-							type="text" id="request_anonymous_requester_email" class="change">
+						<label for="request_anonymous_requester_email"> 이메일 주소 </label> 
+						<input type="text" id="request_anonymous_requester_email" class="change" name="userEmail">
 						<div id="request_anonymous_requester_email_error"
 							class="notification notification-error notification-inline">
 							요청자 이메일: 액센트 부호가 있는 문자를 이메일 주소에 포함할 수 없습니다.</div>
@@ -86,8 +86,7 @@
 					</div>
 					<div class="form-field required request_subject">
 						<label id="request_subject_label" for="request_subject">제목</label>
-						<input type="text" id="request_subject" maxlength="150" size="150"
-							class="change">
+						<input type="text" id="request_subject" maxlength="150" size="150" class="change" name="customerEnquiryTitle">
 						<div id="request_subject_error"
 							class="notification notification-error notification-inline">
 							제목: 반드시 입력해야 합니다.</div>
@@ -96,7 +95,7 @@
 					<div class="form-field text  required  request_description">
 						<label id="request_description_label" for="request_description">설명</label>
 						<textarea id="request_description" class="change"></textarea>
-						<input type="hidden" id="request_description_mimetype" value="">
+						<input type="hidden" id="request_description_mimetype" name="customerEnquiryContent">
 						<div id="request_description_error"
 							class="notification notification-error notification-inline">
 							설명: 반드시 입력해야 합니다.</div>
@@ -121,7 +120,7 @@
 							data-template="upload-template"></ul>
 					</div>
 					<footer>
-						<input type="submit" name="commit" value="제출" class="submitButton">
+						<input type="submit" value="제출" class="submitButton">
 					</footer>
 				</form>
 			</div>

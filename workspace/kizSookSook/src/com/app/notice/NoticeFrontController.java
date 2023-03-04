@@ -24,22 +24,30 @@ public class NoticeFrontController extends HttpServlet {
 		
 		
 		 if(target.equals("/searchAction")) {
+			 System.out.println("2. " + target);
 			result = new SearchActionController().execute(req, resp);	
 		}else if(target.equals("/enquiryOkAction")) {
+			System.out.println("2. " + target);
 			result = new enquiryOkActionController().execute(req, resp);
+			System.out.println("2323. " + target);
 		}else if(target.equals("/getFAQAction")) {
+			System.out.println("2. " + target);
 			result = new GetFAQActionController().execute(req, resp);
-		}else if(target.equals("/templates/customerCenter/enquiry")) {
+		}else if(target.equals("/enquiry")) {
+			System.out.println("2. " + target);
 			result = new Result();
 			result.setPath("/templates/customerCenter/enquiry.jsp");
 		}else {
-			
+			System.out.println("3. " + target);
+			System.err.println("cant find path");
 		}
 		
 		if(result != null) {
 			if(result.isRedirect()) {
+				System.out.println("Redirect");
 				resp.sendRedirect(result.getPath());
 			}else {
+				System.out.println("forward");
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}

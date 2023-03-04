@@ -20,21 +20,22 @@ public class enquiryOkActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		System.out.println("okaction L25");
+		req.setCharacterEncoding("UTF-8");
 		EnquiryDAO enquiryDAO = new EnquiryDAO();
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
 		EnquiryFileVO enquiryFileVO = new EnquiryFileVO();
 		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
-		Result result = new Result();
-		
+	
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 5; //5M
 		Long noticeCurrentSequence = 0L;
 		
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
-		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));
-		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
 		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("setUserEmail"));
+		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
+		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
 		
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
 		
@@ -42,26 +43,15 @@ public class enquiryOkActionController implements Action {
 		
 		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
 		
-		Enumeration<String> fileNames = multipartRequest.getFileNames();
-	
-		while(fileNames.hasMoreElements()) {
-			String fileName = fileNames.nextElement();
-			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
-			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 		
-			if(fileOriginalName == null) {continue;}
-			
-			enquiryFileVO.setEnquiryFileOrgName(fileOriginalName);
-			enquiryFileVO.setEnquiryFileSystemName(fileSystemName);
-			enquiryFileVO.setEnquiryId(noticeCurrentSequence);
-			
-			enquiryFileDAO.fileInsert(enquiryFileVO);
-		}
-		
-		result.setPath(req.getContextPath() + "/templates/customerCenter/enquiry.notice");
+		Result result = new Result();
+
+		result.setPath(req.getContextPath() + "/enquiry.notice");
 		result.setRedirect(true);
 		
 		return result;
 	}
+	
+
 
 }

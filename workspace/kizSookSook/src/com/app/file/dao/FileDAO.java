@@ -15,6 +15,7 @@ public SqlSession sqlSession;
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
+<<<<<<< HEAD
 	public void insertBannerFile(FileVO fileVO) {
 		System.out.println("들어감");
 		sqlSession.insert("file.insertBannerFile", fileVO);
@@ -27,4 +28,6 @@ public SqlSession sqlSession;
 	public void updateBannerFile(FileVO fileVO) {
 		sqlSession.update("file.updateBannerFile", fileVO);
 	}
+=======
+>>>>>>> master
 }
