@@ -555,7 +555,7 @@ img {
     position: relative;
 }
 
-.search::before {
+/* .search::before {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -565,7 +565,7 @@ img {
     font-size: 14px;
     position: absolute;
     left: 20px;
-}
+} */
 
 .search input[type="search"] {
     border: 1px solid #ddd;
@@ -970,7 +970,7 @@ a:visited {
 [class^="icon-"]::before,
 [class*=" icon-"]::before,
 .icon,
-.search::before,
+/* .search::before, */
 .recent-activity-item-comment span::before,
 .article-vote::before,
 .attachments .attachment-item::before,

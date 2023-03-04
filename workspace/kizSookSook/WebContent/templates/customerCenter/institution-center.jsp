@@ -255,25 +255,24 @@
     <footer class="footer">
         <div class="footer-inner">
             <ol style="width:40%">
-                <b>(주)크몽</b> | 서울시 서초구 사임당로 157, 3층 | 대표 : 박현호<br>
-                개인정보보호책임 : 송준이 | 사업자등록번호 : 613-81-65278<br>
-                통신판매업신고 : 2018-서울서초-2134 | 1544-6254<br>
-                help@kmong.com | 호스팅 사업자: Amazon Web Service(AWS)
+                <b>(주)키즈쑥쑥</b> | 서울시 서초구 테헤란로 145, 4층 | 대표 : HJH<br>
+                개인정보보호책임 : HJH | 사업자등록번호 : 111-777-33333<br>
+                통신판매업신고 : 2023-서울서초-2134 | 1111-2222<br>
+                help@kidsSookSook.com | 호스팅 사업자: Amazon Web Service(AWS)
             </ol>
-            <ol><a href="">공지사항</a></ol>
-            <ol><a href="">FAQ</a></ol>
+            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a></ol>
+            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a></ol>
             <ol><a href="">이용약관</a></ol>
             <ol><a href=""><b>개인정보처리방침</b></a></ol>
         </div>
         <div class="footer-mweb">
-            &nbsp;&nbsp; (주) 크몽 &nbsp;&nbsp;&nbsp;
-            <a href="">공지사항</a>&nbsp;
-            <a href="">FAQ</a>&nbsp;
+            &nbsp;&nbsp; (주) 키즈쑥쑥 &nbsp;&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a>&nbsp;
+            <a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a>&nbsp;
             <a href="">이용약관</a>&nbsp;
             <a href=""><b>개인정보처리방침</b></a>&nbsp;
-            <a href="">1:1 문의하기</a>&nbsp;&nbsp;
+            <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.jsp">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
-
     </footer>
     <!-- footer end -->
 </body>
