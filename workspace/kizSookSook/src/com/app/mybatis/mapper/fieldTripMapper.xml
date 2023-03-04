@@ -67,4 +67,12 @@
 		where field_trip_id = #{fieldTripId}
 	</select>
 	
+	<select id="selectTop10" resultType="fieldTripDTO">
+		select field_trip_id, user_id, vftt.category_id, category_name, field_trip_name, field_trip_registation_date,
+		field_trip_deadline_date, field_trip_program_date, field_trip_place, field_trip_price,
+		field_trip_context_description, field_trip_system_name, field_trip_org_name
+		from view_field_trip_top10 vftt join tbl_category tc
+		on vftt.category_id = tc.category_id;
+	</select>
+	
 </mapper>

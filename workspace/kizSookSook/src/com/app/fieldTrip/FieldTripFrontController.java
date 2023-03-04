@@ -20,8 +20,8 @@ public class FieldTripFrontController extends HttpServlet {
 
 		if(target.equals("/likeAction")) {
 			result = new LikeActionController().execute(req, resp);
-		}else if(target.equals("/rankingListAction")) {
-			result = new RankingListActionController().execute(req, resp);
+		}else if(target.equals("/fieldTripMainAction")) {
+			result = new FieldTripMainActionController().execute(req, resp);
 		}else if(target.equals("/bestListAction")) {
 			result = new BestListActionController().execute(req, resp);
 		}else if(target.equals("/connectCategoryPageAction")) {

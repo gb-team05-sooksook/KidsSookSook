@@ -35,4 +35,8 @@ public class FieldTripDAO {
 	public void delete(Long fieldTripId) {
 		sqlSession.delete("fieldTrip.delete", fieldTripId);
 	}
+	
+	public List<FieldTripDTO> selectTop10() {
+		return sqlSession.selectList("fieldTrip.selectTop10");
+	}
 }
