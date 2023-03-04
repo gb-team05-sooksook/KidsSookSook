@@ -2,15 +2,13 @@ package com.app.notice;
 
 import java.io.IOException;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.mypage.PurchaseListActionController;
-import com.app.mypage.ReviewController;
+import com.app.enquiry.enquiryOkActionController;
 
 public class NoticeFrontController extends HttpServlet {
 
@@ -23,16 +21,13 @@ public class NoticeFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		
-		 if(target.equals("/searchAction")) {
-			 System.out.println("2. " + target);
-			result = new SearchActionController().execute(req, resp);	
-		}else if(target.equals("/enquiryOkAction")) {
+		  if(target.equals("/enquiryOkAction")) {
 			System.out.println("2. " + target);
 			result = new enquiryOkActionController().execute(req, resp);
 			System.out.println("2323. " + target);
-		}else if(target.equals("/getFAQAction")) {
+		}else if(target.equals("/FAQlistOkAction")) {
 			System.out.println("2. " + target);
-			result = new GetFAQActionController().execute(req, resp);
+			result = new FAQlistOkActionController().execute(req, resp);
 		}else if(target.equals("/enquiry")) {
 			System.out.println("2. " + target);
 			result = new Result();

@@ -52,7 +52,7 @@
                 <form role="search" class="search" accept-charset="UTF-8" >
                     <input name="utf8" type="hidden" value="✓" >
                     <input type="hidden" name="category" id="category" value="360001764912" autocomplete="off">
-                    <input type="search" name="query" id="query" placeholder="검색">
+                  <!--   <input type="search" name="query" id="query" placeholder="검색"> -->
                 </form>
             </nav>
             <div class="article-container" id="article-container">
