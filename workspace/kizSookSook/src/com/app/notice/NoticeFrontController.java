@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.enquiry.enquiryOkActionController;
 
 public class NoticeFrontController extends HttpServlet {
 
@@ -22,7 +21,6 @@ public class NoticeFrontController extends HttpServlet {
 		
 		
 		  if(target.equals("/enquiryOkAction")) {
-			System.out.println("2. " + target);
 			result = new enquiryOkActionController().execute(req, resp);
 			System.out.println("2323. " + target);
 		}else if(target.equals("/FAQlistOkAction")) {

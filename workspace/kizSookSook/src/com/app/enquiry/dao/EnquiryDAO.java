@@ -13,7 +13,7 @@ public class EnquiryDAO {
 	}
 	// 문의 등록
 		public void insert(CustomerEnquiryVO customerEnquiryVO) {
-			sqlSession.insert("notice.insert", customerEnquiryVO);
+			sqlSession.insert("enquiry.insert", customerEnquiryVO);
 		}
 		
 		// 문의 등록번호 조회
