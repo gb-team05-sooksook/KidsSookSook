@@ -1,5 +1,6 @@
 const $price = $('.OrderGigInfo__option-table-cell-item').eq(3).text().replace(',', '').replace('원', '');
 const $rightPrice = $('.OrderSummary__price--total');
+const $headCount = $('.OrderTotalHeadCount');
 
 function count(type) {
 	const $result = $('.OrderGigInfo__option-table-count');
@@ -14,8 +15,9 @@ function count(type) {
 	
 	$resultPrice = parseInt($price) * $number;
 	$result.text($number);
-	$('.OrderGigInfo__option-table-cell-item').eq(3).text($resultPrice+' 원');
-	$rightPrice.text($resultPrice+' 원');
+	$('.OrderGigInfo__option-table-cell-item').eq(3).text($resultPrice + ' 원');
+	$rightPrice.text($resultPrice + ' 원');
+	$headCount.text($number + ' 명');
 	
 	totalPrice();
 }
@@ -43,6 +45,7 @@ $cashInput.on("blur", function() {
 	
 	totalPrice();
 });
+
 
 function totalPrice() {
 	$('.OrderTotalPrice').text(parseInt($rightPrice.text().replace('원', '')) - $cashInput.val() + '원');

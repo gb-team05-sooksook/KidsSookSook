@@ -128,64 +128,15 @@
                 <section class="OrderPaymentMethods">
                     <div class="OrderPaymentMethods__main">
                         <h3 class="OrderPaymentMethods__title">결제방법</h3>
-                        <ul class="OrderPaymentMethods__items OrderPaymentMethods__methods" style="margin-bottom: 20px; display: block;">
-                            <li class="OrderPaymentMethods__item payments-radio-button payments-radio-button--active" style="flex-direction: column; align-items: initial;">
-                                <div class="awesome-radio">
-                                    <label>
-                                        <input id="defaultPayMethod" type="radio" name="defaultPayMethodRadioButton" checked="">
-                                        <span class="awesome-radio-body"></span>
-                                        <div class="awesome-radio-text">일반결제</div>
-                                    </label>
-                                </div>
-                                <ul class="OrderPaymentMethods__methods" style="margin-top: 12px; padding: 16px; border: 1px solid rgb(228, 229, 237); border-radius: 4px; display: flex; column-gap: 40px;">
-                                    <li class="OrderPaymentMethods__item payments-radio-button payments-radio-button--active" key="SC0010">
-                                        <div class="awesome-radio">
-                                            <label>
-                                                <input type="radio" name="payMethodRadioButton" class="payments-radio-button payments-radio-button--active" id="payMethod_SC0010">
-                                                <span class="awesome-radio-body"></span>
-                                                <div class="awesome-radio-text">신용카드</div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li class="OrderPaymentMethods__item payments-radio-button" key="SC0030">
-                                        <div class="awesome-radio">
-                                            <label>
-                                                <input type="radio" name="payMethodRadioButton" class="payments-radio-button" id="payMethod_SC0030">
-                                                <span class="awesome-radio-body"></span>
-                                                <div class="awesome-radio-text">실시간 계좌이체</div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li class="OrderPaymentMethods__item payments-radio-button" key="SC0040">
-                                        <div class="awesome-radio">
-                                            <label>
-                                                <input type="radio" name="payMethodRadioButton" class="payments-radio-button" id="payMethod_SC0040">
-                                                <span class="awesome-radio-body"></span>
-                                                <div class="awesome-radio-text">무통장입금</div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li class="OrderPaymentMethods__item payments-radio-button" key="SC0060">
-                                        <div class="awesome-radio">
-                                            <label>
-                                                <input type="radio" name="payMethodRadioButton" class="payments-radio-button" id="payMethod_SC0060">
-                                                <span class="awesome-radio-body"></span>
-                                                <div class="awesome-radio-text">휴대폰</div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-    
                         <ul class="OrderPaymentMethods__items" style="row-gap: 20px; flex-direction: column;">
                             <li class="OrderPaymentMethods__item" key="TOSSPAY">
                                 <div class="awesome-radio">
                                     <label>
                                         <input class="position-absolute" type="radio" name="payMethodRadioButton" id="payMethod_TOSSPAY">
                                         <span class="awesome-radio-body"></span>
-                                        <div class="awesome-radio-text" style="position: relative;top: -2px;margin-left: 2px;">
-                                            <img height="16" alt="결제방법 이미지" width="54" src="https://s3-ap-northeast-1.amazonaws.com/kmong-static/assets/icon/logo_toss.png?v=1.1">
+                                        <div class="awesome-radio-text" style="position: relative;margin-left: 2px;">
+                                            <!-- <img height="16" alt="결제방법 이미지" width="54" src="https://s3-ap-northeast-1.amazonaws.com/kmong-static/assets/icon/logo_toss.png?v=1.1"> -->
+                                            부트페이 결제
                                         </div>
                                         <div class="OrderPaymentMethods__item-event-label">
                                             1만원 이상 첫 결제 시
@@ -200,7 +151,8 @@
                                     <label>
                                         <input class="position-absolute" type="radio" name="payMethodRadioButton" id="payMethod_KAKAOPAY">
                                         <span class="awesome-radio-body"></span>
-                                        <div class="awesome-radio-text" style="position: relative;top: -2px;margin-left: 2px;">
+                                        <div class="awesome-radio-text" style="position: relative;margin-left: 2px;">
+                                        	카카오페이 결제
                                             <img height="16" alt="결제방법 이미지" width="40" src="https://s3-ap-northeast-1.amazonaws.com/kmong-static/assets/icon/logo_kakao@3x.png">
                                         </div>
                                     </label>
@@ -231,8 +183,8 @@
                         <span class="OrderSummary__price OrderSummary__price--total">${fieldTripDTO.fieldTripPrice} 원</span>
                     </h5>
                     <h5 class="OrderSummary__price-wrapper">
-                        <span class="OrderSummary__price-label">쿠폰 할인</span>
-                        <span class="OrderSummary__price">0 원</span>
+                        <span class="OrderSummary__price-label">인원수</span>
+                        <span class="OrderSummary__price OrderTotalHeadCount">1 명</span>
                     </h5>
                     <h5 class="OrderSummary__price-wrapper">
                         <span class="OrderSummary__pice-label">캐시 사용</span>
