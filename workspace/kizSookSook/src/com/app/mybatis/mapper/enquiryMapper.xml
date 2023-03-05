@@ -26,18 +26,18 @@
 		</if>
 	</sql>
 
-
+<!-- 
 	<select id="selectAll" resultType="noticeVO" parameterType="map">
 		select notice_id, notice_title, notice_context, notice_date, notice_alter_date
 		from tbl_customer_notice
 		<include refid="searchType"/>
 		order by notice_id desc
 		limit #{startRow}, #{rowCount}
-	</select>
+	</select> -->
 
-	<insert id="enquiry" parameterType="customerEnquiryVO">
-	insert into tbl_customer_enquiry(user_email, enquiry_title, enquiry_content, user_id)
-	values(#{userEmail}, #{customerEnquiryTitle}, #{customerEnquiryContent}, #{userId})
+	<insert id="insert" parameterType="customerEnquiryVO">
+	insert into tbl_customer_enquiry(user_email, enquiry_title, enquiry_content, user_id, enquiry_date)
+	values(#{userEmail}, #{customerEnquiryTitle}, #{customerEnquiryContent}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
 	
 	<select id="getCurrentSequence" resultType="long">

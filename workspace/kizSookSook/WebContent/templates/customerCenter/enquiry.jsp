@@ -73,7 +73,7 @@
 							class="notification notification-error notification-inline">
 							요청자 이메일: 액센트 부호가 있는 문자를 이메일 주소에 포함할 수 없습니다.</div>
 					</div>
-					<div class="form-field required request_custom_fields">
+					<!-- <div class="form-field required request_custom_fields">
 						<label id="request_custom_fields_label"
 							for="request_custom_fields">상담유형</label> <input type="hidden"
 							id="request_custom_fields" value="">
@@ -88,7 +88,7 @@
 							class="notification notification-error notification-inline">
 							상담유형: 반드시 입력해야 합니다.</div>
 
-					</div>
+					</div> -->
 					<div class="form-field required request_subject">
 						<label id="request_subject_label" for="request_subject">제목</label>
 						<input type="text" id="request_subject" maxlength="150" size="150" class="change" name="customerEnquiryTitle">
@@ -99,8 +99,8 @@
 					<div class="suggestion-list"></div>
 					<div class="form-field text  required  request_description">
 						<label id="request_description_label" for="request_description">설명</label>
-						<textarea id="request_description" class="change"></textarea>
-						<input type="hidden" id="request_description_mimetype" name="customerEnquiryContent">
+						<textarea id="request_description" class="change" name="customerEnquiryContent"></textarea>
+						<input type="hidden" id="request_description_mimetype">
 						<div id="request_description_error"
 							class="notification notification-error notification-inline">
 							설명: 반드시 입력해야 합니다.</div>
@@ -109,9 +109,24 @@
 					</div>
 
 					<div class="form-field">
-						<label for="request-attachments"> 첨부 파일 </label>
+						<label for="request-attachments" class="attach"> 첨부 파일 </label>
+						<label for="request-attachments" class="attach">
+						 <img src="" class="thumbnail">
+						 </label>
+						<label for="request-attachments" class="attach"> 
+						 <img src="" class="thumbnail">
+						</label>
+						<label for="request-attachments" class="attach">
+						 <img src="" class="thumbnail">
+						</label>
 						<div id="upload-dropzone" class="upload-dropzone">
+<<<<<<< HEAD
+						
 							<input type="file" multiple="true" id="request-attachments">
+							<img >
+=======
+							<input type="file" multiple="multiple" id="request-attachments" class="upload">
+>>>>>>> eunseo
 							<span> <a>파일 추가</a> 또는 파일을 여기로 드래그
 							</span>
 						</div>
@@ -160,5 +175,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/enquiry.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/customerCenter/board.js"></script>
 
 </html>

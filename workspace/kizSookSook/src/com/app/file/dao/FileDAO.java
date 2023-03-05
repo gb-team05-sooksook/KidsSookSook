@@ -26,4 +26,12 @@ public SqlSession sqlSession;
 	public void updateBannerFile(FileVO fileVO) {
 		sqlSession.update("file.updateBannerFile", fileVO);
 	}
+	
+	public void insertEnquiryFile(FileVO fileVO) {
+<<<<<<< HEAD
+		System.out.println("들어감3");
+=======
+>>>>>>> eunseo
+		sqlSession.insert("file.insertEnquiryFile", fileVO);
+	}
 }
