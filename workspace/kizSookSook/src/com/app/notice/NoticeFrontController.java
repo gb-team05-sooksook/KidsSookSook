@@ -26,10 +26,10 @@ public class NoticeFrontController extends HttpServlet {
 		}else if(target.equals("/FAQlistOkAction")) {
 			System.out.println("2. " + target);
 			result = new FAQlistOkActionController().execute(req, resp);
-		}else if(target.equals("/enquiry")) {
+		}else if(target.equals("/customer-main")) {
 			System.out.println("2. " + target);
 			result = new Result();
-			result.setPath("/templates/customerCenter/enquiry.jsp");
+			result.setPath("/templates/customerCenter/customer-main.jsp");
 		}else {
 			System.out.println("3. " + target);
 			System.err.println("cant find path");
