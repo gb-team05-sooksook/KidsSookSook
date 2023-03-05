@@ -1,12 +1,16 @@
-package com.app.notice.dao;
+package com.app.enquiry.dao;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.app.notice.domain.CustomerEnquiryVO;
+import com.app.enquiry.domain.CustomerEnquiryVO;
+import com.app.mybatis.config.MyBatisConfig;
 
 public class EnquiryDAO {
 	public SqlSession sqlSession;
 	
+	public EnquiryDAO() {
+		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+	}
 	// 문의 등록
 		public void insert(CustomerEnquiryVO customerEnquiryVO) {
 			sqlSession.insert("notice.insert", customerEnquiryVO);

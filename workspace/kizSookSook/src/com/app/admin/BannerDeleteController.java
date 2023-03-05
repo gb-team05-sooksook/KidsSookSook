@@ -1,4 +1,4 @@
-package com.app.fieldTrip;
+package com.app.admin;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class LikeActionController implements Action {
+public class BannerDeleteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

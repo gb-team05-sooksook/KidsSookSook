@@ -6,7 +6,7 @@
 		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date,
 		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
-		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		recommend_count, field_trip_system_name, field_trip_org_name
 		from view_field_tripdto
 		<if test="categoryId != null">
 			where category_id = #{categoryId} 
@@ -62,9 +62,27 @@
 		select field_trip_id, category_id, category_name, user_id, field_trip_name, 
 		field_trip_registation_date, field_trip_deadline_date,
 		field_trip_program_date, field_trip_place, field_trip_price, field_trip_context_description,
-		recommend_count, field_trip_filePath, field_trip_system_name, field_trip_org_name
+		recommend_count, field_trip_system_name, field_trip_org_name
 		from view_field_tripdto
 		where field_trip_id = #{fieldTripId}
 	</select>
 	
+	<select id="selectTop10" resultType="fieldTripDTO">
+		select field_trip_id, user_id, vftt.category_id, category_name, field_trip_name, field_trip_registation_date,
+		field_trip_deadline_date, field_trip_program_date, field_trip_place, field_trip_price,
+		field_trip_context_description, field_trip_system_name, field_trip_org_name
+		from view_field_trip_top10 vftt join tbl_category tc
+		on vftt.category_id = tc.category_id
+	</select>
+	
+	<insert id="insertLike" parameterType="map">
+		insert into kids.tbl_field_trip_recommend
+		(user_id, field_trip_id)
+		values(#{userId}, #{fieldTripId});
+	</insert>
+	
+	<delete id="deleteLike" parameterType="map">
+		delete from kids.tbl_field_trip_recommend
+		where user_id = #{userId} and field_trip_id = #{fieldTripId}
+	</delete>
 </mapper>

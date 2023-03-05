@@ -10,7 +10,7 @@ let arraysObj = {
 };
 
 let modalURI = {
-    reviewModal: 'review-modal.html',
+    reviewModal: 'field-signUp-modal.html',
 };
 
 let globalObj = {

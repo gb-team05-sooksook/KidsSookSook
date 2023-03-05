@@ -447,6 +447,7 @@ div.top-list-wrapper{
 .topListF{
     display: flex;
     height: 160px;
+    cursor: pointer;
 }
 .topListG{
     position: absolute;
@@ -495,6 +496,7 @@ div.top-list-wrapper{
 .topListK{
     padding-top: 16px;
     color: rgb(48, 52, 65);
+    cursor: pointer;
 }
 .topListL{
     display: flex;

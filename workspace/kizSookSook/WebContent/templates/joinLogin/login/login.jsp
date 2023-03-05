@@ -32,7 +32,7 @@
                     <div class="modal-inner">
                         <div class="modal-background-img">
                             <img alt="로그인모달 배경이미지" src="1661922248128.jpg" width="600" height="656" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
-                            <p class="modal-background-introduce eyci4q02">
+                            <p class="modal-background-introduce">
                                 <span>현재 2,544,436명의 회원이 크몽에서 활동하고 있습니다.</span>
                                 <br>
                                 <span style="font-weight: 500;">2,544,437</span>
@@ -41,16 +41,16 @@
                         </div>
                         <div class="modal-login">
                             <h2 class="modal-login-title">로그인</h2>
-                            <form novalidate="" class="modal-login-form">
+                            <form novalidate="" class="modal-login-form" action="${pageContext.request.contextPath}/loginAction.member">
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="email" required="" placeholder="이메일을 입력해 주세요." name="email" autocomplete="username" class="modal-login-id" value="">
+                                        <input type="text" required="" placeholder="아이디를 입력해 주세요." name="userIdentification" autocomplete="username" class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="password" autocomplete="current-password" class="modal-login-id" value="">
+                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="userPassword"  class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="modal-sns-login">
                                 <p class="modal-sns-login-text">SNS계정으로 간편하게 로그인하세요.</p>
                                 <div class="SnsLoginBtn">
-                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(99, 195, 61);">
+                                    <a class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(99, 195, 61);">
                                         <div class="flex-left-center">
                                             <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_naver.png" alt="sns아이콘" class="width-30px margin-right-5">
                                             <span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">네이버 간편 가입 하기</span>
@@ -81,7 +81,7 @@
                                     </a>
                                 </div>
                                 <div class="SnsLoginBtn">
-                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(252, 232, 77);">
+                                    <a class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(252, 232, 77);">
                                         <div class="flex-left-center">
                                             <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_kakao.png" alt="sns아이콘" class="width-30px margin-right-5">
                                             <span style="font-size: 15px; color: rgb(51, 51, 51); border-color: rgb(51, 51, 51);">카카오톡 간편 가입 하기</span>
@@ -89,9 +89,9 @@
                                     </a>
                                 </div>
                                 <div class="SnsLoginBtn">
-                                    <a data-ga-category="" data-ga-label="" data-ga-action="" class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(208, 83, 63);">
+                                    <a class="flex-center-center btn btn-default width-100 btn-sns-signup NGM border-none" style="background-color: rgb(208, 83, 63);">
                                         <div class="flex-left-center">
-                                            <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_google.png" alt="sns아이콘" class="width-30px margin-right-5">
+                                            <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_google.png" class="width-30px margin-right-5">
                                             <span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">구글 간편 가입 하기</span>
                                         </div>
                                     </a>
@@ -105,7 +105,7 @@
                                     <b>10만원 할인혜택</b>
                                     을 드립니다.
                                 </p>
-                                <a role="link" color="denim" href="/signup?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-join">
+                                <a role="link" color="denim" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member" class="modal-join">
                                     <span>크몽 회원가입 하기</span>
                                 </a>
                             </div>

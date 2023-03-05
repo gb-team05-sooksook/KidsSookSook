@@ -434,7 +434,7 @@ img {
     position: relative;
 }
 
-.search::before {
+/* .search::before {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -444,7 +444,7 @@ img {
     font-size: 14px;
     position: absolute;
     left: 20px;
-}
+} */
 
 button,
 input,
@@ -625,15 +625,11 @@ ul {
     padding: 15px 0;
 }
 
-.icon-star::before {
-    color: #ffd400;
-    font-size: 18px;
-}
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before,
 .icon,
-.search::before,
+/* .search::before, */
 .recent-activity-item-comment span::before,
 .article-vote::before,
 .attachments .attachment-item::before,
@@ -654,9 +650,6 @@ ul {
     -webkit-font-smoothing: antialiased;
 }
 
-.icon-star::before {
-    content: "\2605";
-}
 
 /***** Category pages *****/
 .category-container {

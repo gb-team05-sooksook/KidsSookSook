@@ -17,7 +17,7 @@
             	<img src="${pageContext.request.contextPath}/static/resources/img/logo/logo-2.png" style="width:180px;">
             </a>
             <div class="main-join-box">
-                <form novalidate="" class="join-form" id="joinForm" action="${pageContext.request.contextPath}/joinPage_institution.member">
+                <form novalidate="" class="join-form" id="joinForm" action="${pageContext.request.contextPath}/joinPage_institutionAction.member">
                     <h1 class="join-title">딱 이것만 체크하면 가입완료!</h1>
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
@@ -92,7 +92,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">기관명</div>
                         <div class="join-item-input-div">
-                            <input type="phoneNumber" required placeholder="기관명을 입력해 주세요." name="institutionName" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="text" required placeholder="기관명을 입력해 주세요." name="institutionName" class="join-item-input" value="">
                         </div>
                         <div data-testid="email-error">
                             <div class="error-div">
@@ -103,7 +103,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">사업자등록번호</div>
                         <div class="join-item-input-div">
-                            <input type="phoneNumber" required placeholder="사업자등록번호를 입력해 주세요." name="institutionBusinessNumber" class="join-item-input" value="">
+                            <input type="text" required placeholder="사업자등록번호를 입력해 주세요." name="institutionBusinessNumber" class="join-item-input" value="">
                         </div>
                         <div>
                             <div class="error-div">

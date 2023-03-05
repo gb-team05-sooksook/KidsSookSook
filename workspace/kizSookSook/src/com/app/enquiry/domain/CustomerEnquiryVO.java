@@ -1,4 +1,4 @@
-package com.app.notice.domain;
+package com.app.enquiry.domain;
 
 public class CustomerEnquiryVO {
 	private Long customerEnquiryId;
