@@ -99,6 +99,6 @@
 	<servlet-mapping>
 		<servlet-name>pay</servlet-name>
 		<url-pattern>*.pay</url-pattern>
-	</servlet-mapping> --> -->
+	</servlet-mapping> -->
 
 </web-app>
