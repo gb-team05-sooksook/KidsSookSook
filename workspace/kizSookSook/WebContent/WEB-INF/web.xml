@@ -90,15 +90,4 @@
 		<url-pattern>*.pay</url-pattern>
 	</servlet-mapping>
 
-<!-- 문의사항 -->
-	<!-- <servlet>
-		<servlet-name>enquiry</servlet-name>
-		<servlet-class>com.app.notice.NoticeFrontController</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>pay</servlet-name>
-		<url-pattern>*.pay</url-pattern>
-	</servlet-mapping> --> -->
-
 </web-app>

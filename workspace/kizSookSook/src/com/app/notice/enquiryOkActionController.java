@@ -20,7 +20,6 @@ public class enquiryOkActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("okaction L25");
 		req.setCharacterEncoding("UTF-8");
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
 		FileVO fileVO = new FileVO();
