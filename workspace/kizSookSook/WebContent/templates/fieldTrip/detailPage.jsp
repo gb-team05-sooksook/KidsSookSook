@@ -211,7 +211,7 @@
                                 </div>
                             </div>
                             <div class="right-third-inside-button-containel">
-                                <button class="right-third-inside-button">
+                                <button class="right-third-inside-button" onclick="javascript:location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}'">
                                     <span>구매하기</span>
                                 </button>
                             </div>

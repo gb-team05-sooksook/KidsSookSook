@@ -16,6 +16,7 @@
 		<typeAlias type="com.app.notice.domain.NoticeVO" alias="noticeVO"/>
 		<typeAlias type="com.app.enquiry.domain.CustomerEnquiryVO" alias="CustomerEnquiryVO"/>
 		<typeAlias type="com.app.file.domain.FileVO" alias="fileVO"/>
+		<typeAlias type="com.app.member.domain.CashVO" alias="cashVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">

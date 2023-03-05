@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.mypage.PurchaseListActionController;
 import com.app.mypage.ReviewController;
-import com.app.pay.PayController;
+import com.app.pay.PayActionController;
 
 public class MainFrontController extends HttpServlet {
 

@@ -18,10 +18,10 @@ public class PayFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
-		if(target.equals("/pay")){
-			result = new PayController().execute(req, resp);
+		if(target.equals("/payAction")){
+			result = new PayActionController().execute(req, resp);
 		}else {
-			
+			System.out.println(target);
 		}
 		
 		

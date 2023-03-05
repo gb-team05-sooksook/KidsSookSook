@@ -45,4 +45,15 @@
 		delete from tbl_payment
 		where payment_id = #{paymentId}
 	</delete>
+
+	<select id="getCash" parameterType="long" resultType="cashVO">
+		select cash_id, user_id, payment_cash, review_cash, cash_save_date, review_save_date
+		from tbl_cash where user_id = #{userId}
+	</select>
+	
+	<insert id="insert" parameterType="map">
+		insert into kids.tbl_payment
+		(user_id, field_trip_id, payment_headcount, payment_amount)
+		values(#{userId}, #{fieldTripId}, 0, 0)
+	</insert>
 </mapper>

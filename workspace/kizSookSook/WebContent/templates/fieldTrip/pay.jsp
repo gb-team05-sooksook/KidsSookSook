@@ -34,7 +34,7 @@
 			                </div>
 			    
 			                <div class="OrderGigInfo__description-wrapper">
-			                    <h4 class="OrderGigInfo__gig-title">최첨단 과학 수사로 사건의 진실을 밝혀라!</h4>
+			                    <h4 class="OrderGigInfo__gig-title">${fieldTripDTO.fieldTripName}</h4>
 			                    <div class="OrderGigInfo__seller-info">
 			                        <span class="OrderGigInfo__seller-name">과학수사대 C.S.I는 다양한 증거를 분석 해 사건의 진실을 밝히는 수사를 합니다.</span>
 			                    </div>
@@ -61,12 +61,12 @@
                             <tr class="OrderGigInfo__option-table-row" data-type="2-1">
                                 <td class="OrderGigInfo__option-table-cell">
                                     <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-title  first-row">
-                                        <div>C.S.I 과학수사대 </div>
+                                        <div>${fieldTripDTO.fieldTripName} </div>
                                     </div>
                                     <ul class="OrderGigInfo__option-table-options">
                                         <li class="OrderGigInfo__option-table-option-list-item" key="2803">
                                             <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_check.svg" alt="check-mark" width="13px" style="margin-right: 12px;">
-                                            <span> 과학IT</span>
+                                            <span> ${fieldTripDTO.categoryName}</span>
                                             <div class="icon-wrapper">
                                                 <img width="24px" aria-hidden="true" data-toggle="tooltip" data-placement="right" src="https://d2v80xjmx68n4w.cloudfront.net/assets/order/info.png" alt="info-mark" data-title="해당 패키지의 최대 포함 페이지 수입니다." data-original-title="" title="">
                                             </div>
@@ -75,11 +75,11 @@
                                 </td>
                                 <td class="OrderGigInfo__option-table-cell">
                                     <div class="OrderGigInfo__option-table-cell-item first-row">
-                                        <button class="order-btn-brand-gray margin-right-5">
+                                        <button class="order-btn-brand-gray margin-right-5" onclick="count('minus')">
                                             <span>-</span>
                                         </button>
                                         <span class="OrderGigInfo__option-table-count">1</span>
-                                        <button class="order-btn-brand-gray margin-left-5">
+                                        <button class="order-btn-brand-gray margin-left-5" onclick="count('plus')">
                                             <span>+</span>
                                         </button>
                                     </div>
@@ -88,7 +88,7 @@
                                     <div class="OrderGigInfo__option-table-cell-item first-row">1 시간</div>
                                 </td>
                                 <td class="OrderGigInfo__option-table-cell">
-                                    <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-price-item first-row">9,000원</div>
+                                    <div class="OrderGigInfo__option-table-cell-item OrderGigInfo__option-table-price-item first-row">${fieldTripDTO.fieldTripPrice}원</div>
                                 </td>
                             </tr>
                         </tbody>
@@ -117,12 +117,12 @@
                         <h3 class="OrderPaymentAmount__cash-label">캐시 사용</h3>
                         <div class="OrderPaymentAmount__cash-input-wrapper">
                             <input id="usedFundsInput" type="number" class="OrderPaymentAmount__cash-input" placeholder="0원" max="0">
-                            <button class="OrderPaymentAmount__cash-all-button">
+                            <button class="OrderPaymentAmount__cash-all-button" onclick="cashAll();">
                                 전액사용
                             </button>
                         </div>
                     </div>
-                    <p class="OrderPaymentAmount__cash-assets"> 보유 키즈쑥쑥 캐시 : 0 원 </p>
+                    <p class="OrderPaymentAmount__cash-assets"> 보유 키즈쑥쑥 캐시 : <span>${cashVO.paymentCash + cashVO.reviewCash}</span> 원 </p>
                 </section>
                 <!-- 결제방법 선택  -->
                 <section class="OrderPaymentMethods">
@@ -227,8 +227,8 @@
             <div class="OrderSummary">
                 <div class="OrderSummary__main">
                     <h5 class="OrderSummary__price-wrapper">
-                        <span class="OrderSummary__price-label">총 서비스 금액</span>
-                        <span class="OrderSummary__price OrderSummary__price--total">9,000 원</span>
+                        <span class="OrderSummary__price-label">서비스 금액</span>
+                        <span class="OrderSummary__price OrderSummary__price--total">${fieldTripDTO.fieldTripPrice} 원</span>
                     </h5>
                     <h5 class="OrderSummary__price-wrapper">
                         <span class="OrderSummary__price-label">쿠폰 할인</span>
@@ -236,13 +236,13 @@
                     </h5>
                     <h5 class="OrderSummary__price-wrapper">
                         <span class="OrderSummary__pice-label">캐시 사용</span>
-                        <span class="OrderSummary__price">0 원</span>
+                        <span class="OrderSummary__price OrderCash">0 원</span>
                     </h5>
                     <!-- divider -->
                     <div class="OrderSummary__divider"></div>
                     <h5 class="OrderSummary__total-price-wrapper">
                         <span class="OrderSummary__price-label">총 결제금액</span>
-                        <span class="OrderSummary__price">9,000원</span>
+                        <span class="OrderSummary__price OrderTotalPrice">${fieldTripDTO.fieldTripPrice}원</span>
                     </h5>
                     <div class="OrderSummary__agreement-wrapper">
                         <div class="OrderSummary__agreement-checkbox-wrapper">
@@ -272,5 +272,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/fieldTrip/pay.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/fieldTrip/pay.js"></script>
 </html>
