@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.member.domain.CashVO;
 import com.app.mybatis.config.MyBatisConfig;
 import com.app.pay.domain.PaymentDTO;
 
@@ -29,6 +30,10 @@ public class PayDAO {
 
 	public void delete(Long paymentId) {
 		sqlSession.delete("payment.delete", paymentId);
+	}
+	
+	public CashVO getCash(Long userId) {
+		return sqlSession.selectOne("payment.getCash", userId);
 	}
 	
 }
