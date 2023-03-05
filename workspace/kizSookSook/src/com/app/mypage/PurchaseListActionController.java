@@ -45,11 +45,10 @@ public class PurchaseListActionController implements Action {
 		String fieldTripName = req.getParameter("fieldTripName");
 		fieldTripName = fieldTripName == null || fieldTripName.equals("") ? null : fieldTripName;
 		
-		
 		System.out.println("categoryName: " + categoryName);
 		System.out.println("fieldTripName: " + fieldTripName);
-//		System.out.println("date: " + startDate);
-//		System.out.println("date: " + endDate);
+		System.out.println("date: " + startDate);
+		System.out.println("date: " + endDate);
 //		if(startDate == null || endDate == null) {
 //			searchMap.put("date", null);
 //		} else searchMap.put("date", "date");

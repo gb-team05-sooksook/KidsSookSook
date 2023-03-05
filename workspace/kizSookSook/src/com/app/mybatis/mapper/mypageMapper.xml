@@ -27,26 +27,9 @@
 		<if test="fieldTripName != null">
 			and field_trip_name like concat('%', #{fieldTripName}, '%') 
 		</if>
-		<!-- <if test="date != null">
-			and field_trip_program_date = #{startDate}
-		</if> -->
-		<!-- <include refid="search"/> -->
-		<!-- <if test="categoryName != null">
-			and category_name = #{categoryName}
-		</if>
 		<if test="date != null">
-			and field_trip_program_date = #{startDate}
-		</if> -->
-			
-		<!-- <if test="categoryName != null or categoryName != ''">
-			and category_name = #{categoryName}
+			and field_trip_program_date between #{startDate} and #{endDate}
 		</if>
-		<if test="date != null">
-			and field_trip_program_date = #{fieldTripProgramDate}
-		</if>
-		<if test="fieldTripName != null">
-			and field_trip_name like concat('%', #{fieldTripName}, '%')
-		</if> -->
 		order by field_trip_id desc
 	</select>
 </mapper>
