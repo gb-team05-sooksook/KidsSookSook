@@ -54,6 +54,7 @@
 						aria-label="검색">
 				</form> -->
 			</nav>
+			<div>
 			<h1>
 				<div class="page-title">문의 등록</div>
 				<div class="custom-breadcrumbs" style="margin-bottom: 10px;">
@@ -120,13 +121,11 @@
 						 <img src="" class="thumbnail">
 						</label>
 						<div id="upload-dropzone" class="upload-dropzone">
-<<<<<<< HEAD
+
 						
 							<input type="file" multiple="true" id="request-attachments">
 							<img >
-=======
 							<input type="file" multiple="multiple" id="request-attachments" class="upload">
->>>>>>> eunseo
 							<span> <a>파일 추가</a> 또는 파일을 여기로 드래그
 							</span>
 						</div>

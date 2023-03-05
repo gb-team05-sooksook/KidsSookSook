@@ -28,10 +28,7 @@ public SqlSession sqlSession;
 	}
 	
 	public void insertEnquiryFile(FileVO fileVO) {
-<<<<<<< HEAD
 		System.out.println("들어감3");
-=======
->>>>>>> eunseo
 		sqlSession.insert("file.insertEnquiryFile", fileVO);
 	}
 }
