@@ -18,10 +18,12 @@ public class FieldTripFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 
-		if(target.equals("/likeAction")) {
-			result = new LikeActionController().execute(req, resp);
-		}else if(target.equals("/rankingListAction")) {
-			result = new RankingListActionController().execute(req, resp);
+		if(target.equals("/likeInsertAction")) {
+			result = new LikeInsertActionController().execute(req, resp);
+		}else if(target.equals("/likeDeleteAction")) {
+			result = new LikeDeleteActionController().execute(req, resp);
+		}else if(target.equals("/fieldTripMainAction")) {
+			result = new FieldTripMainActionController().execute(req, resp);
 		}else if(target.equals("/bestListAction")) {
 			result = new BestListActionController().execute(req, resp);
 		}else if(target.equals("/connectCategoryPageAction")) {

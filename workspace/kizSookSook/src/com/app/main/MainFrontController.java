@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Result;
 import com.app.mypage.PurchaseListActionController;
 import com.app.mypage.ReviewController;
-import com.app.pay.PayController;
+import com.app.pay.PayActionController;
 
 public class MainFrontController extends HttpServlet {
 
@@ -21,7 +21,9 @@ public class MainFrontController extends HttpServlet {
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
+		System.out.println(target);
 		
+<<<<<<< HEAD
 //		메인페이지 이동
 		if(target.equals("/templates/main/main")){
 			result = new Result();
@@ -35,6 +37,19 @@ public class MainFrontController extends HttpServlet {
 			
 			
 		
+=======
+		if(target.equals("/templates/main/main")){
+			result = new Result();
+			result.setPath("/templates/main/main.jsp");
+		}else if(target.equals("/searchAction")) {
+			result = new ConnectLoginController().execute(req, resp);
+		}else if(target.equals("/connectLogin")) {
+			result = new ConnectLoginController().execute(req, resp);
+		}else if(target.equals("/connectJoin")) {
+			result = new ConnectJoinController().execute(req, resp);
+		}else if(target.equals("/connectNotice")) {
+			result = new ConnectNoticeController().execute(req, resp);
+>>>>>>> fb4c00e718516e4bf9fd4aa05264d98764340446
 		}else if(target.equals("/rankListAction")) {
 			result = new RankListActionController().execute(req, resp);
 		}else {

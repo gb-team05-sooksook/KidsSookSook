@@ -137,6 +137,7 @@
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    cursor: pointer;
 }
 .trip-image-wrapper{
 	display: flex;
@@ -182,6 +183,7 @@
 .topListK{
     padding-top: 16px;
     color: rgb(48, 52, 65);
+    cursor: pointer;
 }
 .topListL{
     display: flex;

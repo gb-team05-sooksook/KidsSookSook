@@ -16,28 +16,24 @@ click.addEventListener('blur', (e) => {
 
 $(document).ready(function () {
     $('#request_anonymous_requester_email').focus(function () {
-        console.log($(this));
         $(this).css("border", "1px solid #FAE269");
     });
     $('#request_subject').focus(function () {
-        console.log($(this));
         $(this).css("border", "1px solid #FAE269");
     });
     $('#request_description').focus(function () {
-        console.log($(this));
         $(this).css("border", "1px solid #FAE269");
     });
 
     $('#request_anonymous_requester_email').blur(function () {
-        console.log($(this));
+     /*   console.log($(this));*/
         $(this).css("border", "1px solid #ececec");
     });
     $('#request_subject').blur(function () {
-        console.log($(this));
         $(this).css("border", "1px solid #ececec");
     });
     $('#request_description').blur(function () {
-        console.log($(this));
+       /* console.log($(this));*/
         $(this).css("border", "1px solid #ececec");
     });
 });
@@ -52,12 +48,13 @@ const $change = $('.change');
 const $button = $('.submitButton');
 const $error = $('.notification-error');
 const $test = $('#request_description');
+const $form = $('#new_request');
 
-console.log($error);
+/*console.log($error);*/
 
 $button.click(function (event) {
     event.preventDefault();
-
+	console.log("들어옴 L56")
     $change.each((i, e) => {
         var check;
         switch (i) {
@@ -105,6 +102,9 @@ $button.click(function (event) {
     } else {
         $($error[3]).css("display", "none");
     }
+	console.log("서브밋 전 L96");
+	$form.submit();
+
 })
 
 
@@ -125,7 +125,6 @@ $dropClick.click(function (event) {
 function selectType(e) {
     $('.result_p').text($(e).text());
     $hidden.val($(e).text());
-    console.log("왔나?");
     console.log($dropContent);
     // $('.drop-content').css("display", "none");
     console.log($dropContent.css('display'))

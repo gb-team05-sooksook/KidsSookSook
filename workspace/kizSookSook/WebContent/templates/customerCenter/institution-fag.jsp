@@ -52,10 +52,10 @@
                         <a href="">FAQ</a>
                     </li>
                 </ol>
-                <form role="search" class="search" accept-charset="UTF-8">
+                <!-- <form role="search" class="search" accept-charset="UTF-8">
                     <input name="utf8" type="hidden" value="✓" autocomplete="off">
                     <input type="search" name="query" id="query" placeholder="검색">
-                </form>
+                </form> -->
             </nav>
             <div class="section-container">
                 <section class="section-content">

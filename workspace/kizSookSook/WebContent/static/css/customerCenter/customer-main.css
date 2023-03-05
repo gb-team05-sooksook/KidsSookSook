@@ -427,12 +427,10 @@ img {
 
 /* 2. main 시작 */
 .hero {
-    background-image: url("https://theme.zdassets.com/theme_assets/9204604/01927ef0d4e06d8459e2cefe21d5b3b64dac3781.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+  
     background-color: #FAE57C;
-    background-size: auto;
-    height: 230px;
+    /* background-size: auto; */
+    height: 10px;
     padding: 0 20px;
     text-align: center;
     width: 100%;
