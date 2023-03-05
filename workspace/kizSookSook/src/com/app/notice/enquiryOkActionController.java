@@ -34,10 +34,11 @@ public class enquiryOkActionController implements Action {
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		/* String enquiryId = req.getParameter("enquiryId"); */
 		
-		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("setUserEmail"));
+		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
 		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
 		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
+		
 		
 		enquiryDAO.insert(customerEnquiryVO);
 		
@@ -62,7 +63,7 @@ public class enquiryOkActionController implements Action {
 		
 		Result result = new Result();
 
-		result.setPath(req.getContextPath() + "/enquiry.notice");
+		result.setPath(req.getContextPath() + "/customer-main.notice");
 		result.setRedirect(true);
 		
 		return result;

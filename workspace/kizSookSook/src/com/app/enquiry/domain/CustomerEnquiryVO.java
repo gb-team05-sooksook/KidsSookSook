@@ -9,6 +9,16 @@ public class CustomerEnquiryVO {
 	private String customerEnquiryDate;
 	private boolean customerEnquiryConfirm;
 	
+	private String userIdentification;
+	
+	public String getUserIdentification() {
+		return userIdentification;
+	}
+
+	public void setUserIdentification(String userIdentification) {
+		this.userIdentification = userIdentification;
+	}
+
 	public CustomerEnquiryVO() {;}
 
 	public Long getCustomerEnquiryId() {

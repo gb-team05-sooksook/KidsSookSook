@@ -54,6 +54,7 @@
 						aria-label="검색">
 				</form> -->
 			</nav>
+			<div>
 			<h1>
 				<div class="page-title">문의 등록</div>
 				<div class="custom-breadcrumbs" style="margin-bottom: 10px;">
