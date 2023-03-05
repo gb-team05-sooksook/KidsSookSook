@@ -49,7 +49,7 @@ public class enquiryOkActionController implements Action {
 		/* String enquiryId = req.getParameter("enquiryId"); */
 >>>>>>> eunseo
 		
-		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("setUserEmail"));
+		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
 		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
 		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
 <<<<<<< HEAD
@@ -58,6 +58,7 @@ public class enquiryOkActionController implements Action {
 =======
 >>>>>>> eunseo
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
+		
 		
 		enquiryDAO.insert(customerEnquiryVO);
 		
@@ -85,7 +86,7 @@ public class enquiryOkActionController implements Action {
 		
 		Result result = new Result();
 
-		result.setPath(req.getContextPath() + "/enquiry.notice");
+		result.setPath(req.getContextPath() + "/customer-main.notice");
 		result.setRedirect(true);
 		
 		return result;
