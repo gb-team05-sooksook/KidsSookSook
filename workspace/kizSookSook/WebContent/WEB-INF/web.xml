@@ -90,6 +90,8 @@
 		<url-pattern>*.pay</url-pattern>
 	</servlet-mapping>
 
+<<<<<<< HEAD
+=======
 <!-- 문의사항 -->
 	<!-- <servlet>
 		<servlet-name>enquiry</servlet-name>
@@ -101,4 +103,5 @@
 		<url-pattern>*.pay</url-pattern>
 	</servlet-mapping> -->
 
+>>>>>>> 7820ceed79dde5d1c3bca35552fec191c78ac023
 </web-app>
