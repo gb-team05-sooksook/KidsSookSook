@@ -71,7 +71,7 @@
     font-size: 13px;
 }
 .category-right-listName{
-    padding: 0px 14px;
+    padding: 0px 5px;
     color: rgb(154, 155, 167);
     font-size: 13px;
 }
@@ -89,7 +89,7 @@
     flex-direction: row;
     -webkit-box-align: center;
     align-items: center;
-    margin-left: 806px;
+    margin-left: -42px;
     left: 32px;
 }
 .category-right-listName-turn-name{
