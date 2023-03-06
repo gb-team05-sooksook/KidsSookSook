@@ -77,10 +77,10 @@
                         <div class="category-right-listNames">
                             <div class="category-right-listName-turn">
 								<div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science&sort=recent'">최신순</p>
+                                    <p id="item1" class="selectBold" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art&sort=recent'">최신순</p>
                                 </div>
                                 <div id="btn-item" class="category-right-listName-turn-name">
-                                    <p id="item" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science&sort=popular'">추천순</p>
+                                    <p id="item2" onclick="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art&sort=popular'">추천순</p>
                                 </div>
                             </div>
                         </div>
@@ -174,6 +174,6 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}", categoryAll = `${categoryAll}`;</script>
+<script>let contextPath = "${pageContext.request.contextPath}", categoryAll = `${categoryAll}`, sort = `${sort}`;</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/fieldPage.js"></script>
 </html>

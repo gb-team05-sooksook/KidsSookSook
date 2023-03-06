@@ -61,6 +61,7 @@ public class ConnectCategoryPageActionController implements Action {
 		req.setAttribute("page", page);
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
+		req.setAttribute("sort", sort);
 		
 		result.setPath("/templates/fieldTrip/fieldPage-" + categoryName + ".jsp");
 		

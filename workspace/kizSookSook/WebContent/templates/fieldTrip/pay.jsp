@@ -30,7 +30,7 @@
     
 			            <div class="OrderGigInfo__gig-summary">
 			                <div class="OrderGigInfo__thumnail-wrapper">
-			                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="${pageContext.request.contextPath}/resources/img/fieldTrip/pay/Science1-1.jpg">
+			                    <img data-type="1-1" width="120px" height="auto" class="border-radius" src="${pageContext.request.contextPath}/upload/${fieldTripDTO.fieldTripSystemName}">
 			                </div>
 			    
 			                <div class="OrderGigInfo__description-wrapper">
@@ -68,7 +68,6 @@
                                             <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/ic_check.svg" alt="check-mark" width="13px" style="margin-right: 12px;">
                                             <span> ${fieldTripDTO.categoryName}</span>
                                             <div class="icon-wrapper">
-                                                <img width="24px" aria-hidden="true" data-toggle="tooltip" data-placement="right" src="https://d2v80xjmx68n4w.cloudfront.net/assets/order/info.png" alt="info-mark" data-title="해당 패키지의 최대 포함 페이지 수입니다." data-original-title="" title="">
                                             </div>
                                         </li>
                                     </ul>
@@ -126,53 +125,6 @@
                 </section>
                 <!-- 결제방법 선택  -->
                 <section class="OrderPaymentMethods">
-                    <div class="OrderPaymentMethods__main">
-                        <h3 class="OrderPaymentMethods__title">결제방법</h3>
-                        <ul class="OrderPaymentMethods__items" style="row-gap: 20px; flex-direction: column;">
-                            <li class="OrderPaymentMethods__item" key="TOSSPAY">
-                                <div class="awesome-radio">
-                                    <label>
-                                        <input class="position-absolute" type="radio" name="payMethodRadioButton" id="payMethod_TOSSPAY">
-                                        <span class="awesome-radio-body"></span>
-                                        <div class="awesome-radio-text" style="position: relative;margin-left: 2px;">
-                                            <!-- <img height="16" alt="결제방법 이미지" width="54" src="https://s3-ap-northeast-1.amazonaws.com/kmong-static/assets/icon/logo_toss.png?v=1.1"> -->
-                                            부트페이 결제
-                                        </div>
-                                        <div class="OrderPaymentMethods__item-event-label">
-                                            1만원 이상 첫 결제 시
-                                            <span>3천원</span>
-                                            캐시백
-                                        </div>
-                                    </label>
-                                </div>
-                            </li>
-                            <li class="OrderPaymentMethods__item" key="KAKAOPAY">
-                                <div class="awesome-radio">
-                                    <label>
-                                        <input class="position-absolute" type="radio" name="payMethodRadioButton" id="payMethod_KAKAOPAY">
-                                        <span class="awesome-radio-body"></span>
-                                        <div class="awesome-radio-text" style="position: relative;margin-left: 2px;">
-                                        	카카오페이 결제
-                                            <img height="16" alt="결제방법 이미지" width="40" src="https://s3-ap-northeast-1.amazonaws.com/kmong-static/assets/icon/logo_kakao@3x.png">
-                                        </div>
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="display: none;">
-                        <div class="OrderPaymentMethods__virtual-accounts">
-                            ∙ 가상계좌(무통장)는 간편송금 서비스를 이용하여 입금하실 경우, 송금이 원활하지 않을 수 있습니다. <br>
-                            이 경우 이용하시는 은행 서비스에서 입금을 진행해 주세요.
-                        </div>
-                    </div>
-                    <div style="display: none;">
-                        <ul class="OrderPaymentMethods__payco-descriptions">
-                            <li>PAYCO는 온/오프라인 쇼핑은 물론 송금, 멤버십 적립까지 가능한 통합 서비스입니다.</li>
-                            <li>휴대폰과 카드 명의자가 동일해야 결제 가능하며, 결제금액 제한은 없습니다. - 지원카드: 모든 국내 신용/체크카드</li>
-                            <li>현금영수증은 세액공제용으로는 사용이 불가능합니다.</li>
-                        </ul>
-                    </div>
                 </section>
             </div>
             <!-- summary -->
