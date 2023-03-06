@@ -7,7 +7,7 @@ public class CustomerEnquiryVO {
 	private String customerEnquiryTitle;
 	private String customerEnquiryContent;
 	private String customerEnquiryDate;
-	private boolean customerEnquiryConfirm;
+	private int customerEnquiryConfirm;
 	
 	private String userIdentification;
 	
@@ -69,11 +69,11 @@ public class CustomerEnquiryVO {
 		this.customerEnquiryDate = customerEnquiryDate;
 	}
 
-	public boolean isCustomerEnquiryConfirm() {
+	public int getCustomerEnquiryConfirm() {
 		return customerEnquiryConfirm;
 	}
 
-	public void setCustomerEnquiryConfirm(boolean customerEnquiryConfirm) {
+	public void setCustomerEnquiryConfirm(int customerEnquiryConfirm) {
 		this.customerEnquiryConfirm = customerEnquiryConfirm;
 	}
 

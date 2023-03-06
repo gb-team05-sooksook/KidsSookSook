@@ -1,10 +1,7 @@
 package com.app.notice;
 
 import java.io.IOException;
-<<<<<<< HEAD
-=======
 import java.util.Enumeration;
->>>>>>> eunseo
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -26,37 +23,19 @@ public class enquiryOkActionController implements Action {
 		System.out.println("okaction L25");
 		req.setCharacterEncoding("UTF-8");
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
-<<<<<<< HEAD
-		FileVO FileVO = new FileVO();
-		FileDAO FileDAO = new FileDAO(); 
-		EnquiryDAO enquiryDAO = new EnquiryDAO();
-//		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
-	
-		String uploadPath = "C:/gb_0900_mes/JSP_project/kidsSookSook/workspace/kizSookSook/WebContent/upload";
-=======
 		FileVO fileVO = new FileVO();
 		FileDAO FileDAO = new FileDAO(); 
 		EnquiryDAO enquiryDAO = new EnquiryDAO();
 	
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
->>>>>>> eunseo
 		int fileSize = 1024 * 1024 * 5; //5M
 		Long noticeCurrentSequence = 0L;
 		
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-<<<<<<< HEAD
-=======
-		/* String enquiryId = req.getParameter("enquiryId"); */
->>>>>>> eunseo
 		
 		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
 		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
 		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
-<<<<<<< HEAD
-		
-		
-=======
->>>>>>> eunseo
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
 		
 		
@@ -64,9 +43,7 @@ public class enquiryOkActionController implements Action {
 		
 		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
 		
-<<<<<<< HEAD
-=======
-	Enumeration<String> fileNames = multipartRequest.getFileNames();
+		Enumeration<String> fileNames = multipartRequest.getFileNames();
 		
 		while(fileNames.hasMoreElements()) {
 //			파일의 전체 속성
@@ -82,7 +59,6 @@ public class enquiryOkActionController implements Action {
 			
 			FileDAO.insertEnquiryFile(fileVO);
 		}
->>>>>>> eunseo
 		
 		Result result = new Result();
 

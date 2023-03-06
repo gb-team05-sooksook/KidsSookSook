@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,16 +57,15 @@
               <div class="inputBox">
                 <div class="filterButtonLayout">
                   <div class="memberIdSearchText">
-                    <a href="javascript:location.href='enquiry.jsp'">
-                      <input class="filterButton" type="button" value="전체보기" />
-                    </a>
+                    <input class="filterButton" type="button" value="전체보기" />
                     <input class="filterButton" type="button" value="대기문의보기" />
-                    <input class="filterButton" type="button" value="답변하기" />
                   </div>
-                  <input type="text" id="myInput" placeholder="회원 아이디 검색" />
+                  <form class="searchEnquiry">
+                    <input type="text" id="myInput"placeholder="문의 제목 검색" />
+                  </form>
                 </div>
               </div>
-              <table id="myTable">
+              <table class="myTable">
                 <tr class="trHeader">
                   <th style="width: 6%">
                     <form>
@@ -80,45 +80,42 @@
                   <th style="width: 12.5%">문의날짜</th>
                   <th style="width: 12.5%">답변완료여부</th>
                 </tr>
-                <tr class="trData">
-                  <td style="width: 6%">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>1</td>
-                  <td>kjy1234</td>
-                  <td>kjy1234@google.com</td>
-                  <td>가운데정렬이 안먹어요</td>
-                  <td>div div div 너무 많아서 못찾겠어요 어떻게하나요?</td>
-                  <td>2023/02/09</td>
-                  <td class="trDataOK">답변완료</td>
-                </tr>
-                <tr class="trData">
-                  <td style="width: 6%">
-                    <form>
-                      <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
-                    </form>
-                  </td>
-                  <td>2</td>
-                  <td>kjy1234</td>
-                  <td>kjy1234@google.com</td>
-                  <td>last-child 함수 이상해요</td>
-                  <td>자꾸 안먹어요</td>
-                  <td>2023/02/09</td>
-                  <td class="trDataNO">답변대기</td>
-                </tr>
               </table>
               <div class="paginationLayout">
                 <div class="pagination">
-                  <a href="#">&laquo;</a>
-                  <a class="active" href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#">6</a>
-                  <a href="#">&raquo;</a>
+                  <c:if test="${prev}">
+                    <a
+                      href="javascript:location.href='${pageContext.request.contextPath}/enquiry.admin?page=${startPage - 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &laquo;
+                    </a>
+                  </c:if>
+                  <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                    <c:choose>
+                      <c:when test="${i eq page}">
+                        <a
+                          href="javascript:void(0)"
+                          style="cursor: default"
+                          class="paging paging-checked"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:when>
+                      <c:otherwise>
+                        <a
+                          href="javascript:location.href='${pageContext.request.contextPath}/enquiry.admin?page=${i}&sort=${sort}'"
+                          class="paging"
+                          ><c:out value="${i}"
+                        /></a>
+                      </c:otherwise>
+                    </c:choose>
+                  </c:forEach>
+                  <c:if test="${next}">
+                    <a
+                      href="javascript:location.href='${pageContext.request.contextPath}/enquiry.admin?page=${endPage + 1}&sort=${sort}'"
+                      class="paging paging-move">
+                      &raquo;
+                    </a>
+                  </c:if>
                 </div>
               </div>
             </div>
@@ -129,52 +126,13 @@
     <div id="root"></div>
     <div id="layer"></div>
     <!-- 모달 -->
-    <div>
-      <div class="modal-bg">
-        <section class="container">
-          <form action="">
-            <div class="title-wrapper">
-              <div class="titleAndX">
-                <h2 class="title">문의사항 답변</h2>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  focusable="false"
-                  preserveAspectRatio="xMidYMid meet"
-                  class="X">
-                  <path
-                    xmlns="http://www.w3.org/2000/svg"
-                    d="M6.34314575,4.92893219 L12.000039,10.585039 L17.6568542,4.92893219 C18.0473785,4.5384079 18.6805435,4.5384079 19.0710678,4.92893219 C19.4615921,5.31945648 19.4615921,5.95262146 19.0710678,6.34314575 L13.415039,12.000039 L19.0710678,17.6568542 C19.4615921,18.0473785 19.4615921,18.6805435 19.0710678,19.0710678 C18.6805435,19.4615921 18.0473785,19.4615921 17.6568542,19.0710678 L12.000039,13.415039 L6.34314575,19.0710678 C5.95262146,19.4615921 5.31945648,19.4615921 4.92893219,19.0710678 C4.5384079,18.6805435 4.5384079,18.0473785 4.92893219,17.6568542 L10.585039,12.000039 L4.92893219,6.34314575 C4.5384079,5.95262146 4.5384079,5.31945648 4.92893219,4.92893219 C5.31945648,4.5384079 5.95262146,4.5384079 6.34314575,4.92893219 Z"></path>
-                </svg>
-              </div>
-              <div class="details">
-                <div class="det_title-wrapper">
-                  <div class="det_title">
-                    <span>제목</span>
-                    <input type="text" name="title" />
-                  </div>
-                  <div class="det_title">
-                    <span>아이디</span>
-                    <input type="text" name="title" />
-                  </div>
-                </div>
-                <div class="det_submit">
-                  <input class="det_submitButton" type="button" value="답변등록하기" />
-                </div>
-              </div>
-            </div>
-            <div class="contentQuestion"></div>
-            <div class="contentAnswer">
-              <textarea name="content" id="contentA" cols="20" rows="10"></textarea>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script>
+    let enquiries = `${enquiries}`;
+    let contextPath = `${pageContext.request.contextPath}`;
+  </script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/state.js"></script>
+  <script src="${pageContext.request.contextPath}/static/js/adminPage/app.js"></script>
   <script src="${pageContext.request.contextPath}/static/js/adminPage/enquiry.js"></script>
 </html>

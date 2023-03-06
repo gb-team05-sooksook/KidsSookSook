@@ -1,5 +1,8 @@
 package com.app.enquiry.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.enquiry.domain.CustomerEnquiryVO;
@@ -22,4 +25,11 @@ public class EnquiryDAO {
 			
 		}
 
+		public List<CustomerEnquiryVO> selectAll(Map<String, Object>searchMap){
+			return sqlSession.selectList("enquiry.selectAll", searchMap);
+		}
+		
+		public Long getTotal() {
+			return sqlSession.selectOne("enquiry.getTotal");
+		}
 }
