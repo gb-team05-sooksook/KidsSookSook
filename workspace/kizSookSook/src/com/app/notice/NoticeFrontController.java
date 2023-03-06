@@ -43,7 +43,10 @@ public class NoticeFrontController extends HttpServlet {
 		}else if(target.equals("/FAQlistOkAction")) {
 			System.out.println("2. " + target);
 			result = new FAQlistOkActionController().execute(req, resp);
-			
+		
+		}else if(target.equals("/NoticelistOkAction")) {
+			result = new NoticelistOkActionController().execute(req, resp);
+			System.out.println("7. " + target);
 		}else {
 			System.out.println("3. " + target);
 			System.err.println("cant find path");
