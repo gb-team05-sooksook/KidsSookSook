@@ -34,7 +34,7 @@ public class EnquiryListCheckActionController implements Action {
 		
 		searchMap.put("userId", 4L);
 		
-		enquiries = myPageDAO.enquiryList(searchMap);
+		enquiries = myPageDAO.selectEnquiryList(searchMap);
 		
 		enquiries.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
 		
