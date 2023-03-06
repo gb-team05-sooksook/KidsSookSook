@@ -101,8 +101,10 @@ public class MemberFrontController extends HttpServlet {
 		
 		// 아이디찾기	
 		}else if(target.equals("/findId")) {
-			result = new FindIdActionController().execute(req, resp);
-			
+			result = new Result();
+			result.setPath("/templates/main/main.jsp");
+		
+		// 비밀번호찾기 
 		}else if(target.equals("/findPwAction")) {
 			result = new FindPwActionController().execute(req, resp);
 			
