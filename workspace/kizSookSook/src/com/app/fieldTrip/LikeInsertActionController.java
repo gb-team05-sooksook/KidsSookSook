@@ -23,7 +23,7 @@ public class LikeInsertActionController implements Action {
 		FieldTripDAO fieldTripDAO = new FieldTripDAO();
 		HttpSession session = req.getSession();
 		Map<String, Long> likeMap = new HashMap<String, Long>();
-		session.setAttribute("userId", 4L);
+
 		Long fieldTripId = Long.valueOf(req.getParameter("fieldTripId"));
 		Long userId = (Long)session.getAttribute("userId");
 		
