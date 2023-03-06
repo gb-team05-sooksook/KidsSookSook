@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>키즈쑥쑥 | 아이들의 체험나라 키즈쑥쑥에 오신걸 환영합니다.</title>
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/main.css">
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/dropdown.css">
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
@@ -24,7 +24,7 @@
 	<!--header -->
 		<header class="wrap-h">
 			<section class="wrap-s">
-				<a class="logo" href="#">
+				<a class="logo" href="${pageContext.request.contextPath}/templates/main/main.jsp">
                     <!-- logo 이미지 -->
                    <img src="${pageContext.request.contextPath}/static/resources/img/kids-logo.png">
 				</a>
@@ -44,13 +44,13 @@
 					</div>
 				</form>
 				<div class="wrap-btn">
-					<button color="default" class="btn-1">
+					<a color="default" class="btn-1" href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp">
 					    <span>고객센터</span>
-					</button>
-					<button color="default" class="btn-2">
+					</a>
+					<a color="default" class="btn-2" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member">
 					    <span>로그인</span>
-					</button>
-                    <a color="yellow" href="#" class="join">
+					</a>
+                    <a color="yellow" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member" class="join">
                         <span>무료 회원가입</span>
                     </a>
 
@@ -103,7 +103,7 @@
             <section class="colorChange">
                 <div class="layout">
                     <section class="search-s">
-                        <h1 class="title">프리랜서 마켓 No.1 크몽에서<br>원하는 전문가를 찾아보세요!</h1>
+                        <h1 class="title">아이들의 직업체험 키즈쑥쑥!<br>아이들이 원하는 직업체험을 찾아보세요!</h1>
                             
                             <form class="search-f">
                                 <div class="search-Wrap">
@@ -130,31 +130,31 @@
                                 <div class="tag-wrap">
                                     <a class="tag-a" href="#">
                                         #
-                                        로고
+                                        과학IT
                                     </a>
                                 </div>
                                 <div class="tag-wrap">
                                     <a class="tag-a" href="#">
                                         #
-                                        블로그
+                                        엑티비티
                                     </a>
                                 </div>
                                 <div class="tag-wrap">
                                     <a class="tag-a" href="#">
                                         #
-                                        상세페이지
+                                        의료
                                     </a>
                                 </div>
                                 <div class="tag-wrap">
                                     <a class="tag-a" href="#">
                                         #
-                                        명함
+                                        예술
                                     </a>
                                 </div> 
                                 <div class="tag-wrap">
                                     <a class="tag-a" href="#">
                                         #
-                                        스마트스토어
+                                        사회
                                     </a>
                                 </div>
                             </div>
@@ -230,15 +230,15 @@
                                 360
                                 만 건
                                 <br>
-                                500여 개의 카테고리, 3만여개의 서비스에서
+                                8개의 카테고리, 수십 개의 다양한 직업체험에서
                                 <br>
-                                여러분에게 필요한 모든 전문가를 만나보세요.
+                                아이들에게 필요한 분야를 만나보세요.
                             </h2>
                         </div>
                         <!-- video -->
                         <div class="video-Container">
                             <div class="video-box">
-                                <iframe width="692" height="390"  src="https://www.youtube.com/embed/jwysq-KGOgA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="692" height="390"  src="https://www.youtube.com/embed/JiRDWA_vP8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -246,21 +246,21 @@
                     <div class="boardTitleWrap">
                         <article class="boardTitle">
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
-                            <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
+                            <h4 class="boardTitle-2">생생한 직업체험으로<br>아이들의 잠재력을 펼쳐보세요!</h4>
                             <div class="imgWrap">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/main/01.png" width="28" height="28">
                             </div>
                         </article>
                         <article class="boardTitle">
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
-                            <h4 class="boardTitle-2">실시간 채팅으로<br>빠르게 문의하고 거래해보세요!</h4>
+                            <h4 class="boardTitle-2">부모동반 참여를 통해<br>아이와 여러 추억, 유대감을 쌓아보세요</h4>
                             <div class="imgWrap">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/main/02.png" width="28" height="28">
                             </div>
                         </article>
                         <article class="boardTitle">
                             <h3 class="boardTitle-1">빠른 커뮤니케이션</h3>
-                            <h4 class="boardTitle-2">평균 만족도 98.9점<br>분야별 전문가가<br>만족스러운 결과물을 제공합니다.</h4>
+                            <h4 class="boardTitle-2">평균 만족도 98.9점<br>체험별 전문가가<br>만족스러운 직업체험을 제공합니다.</h4>
                             <div class="imgWrap">
                                 <img src="${pageContext.request.contextPath}/static/resources/img/main/03.png" width="28" height="28">
                             </div>
@@ -274,42 +274,42 @@
                 <section class="reviewTitle-container">
                     <div class="reviewTitle-wrap">
                         <h1 class="reviewContext-Title">키즈쑥쑥을 이용한 고객들의 생생한 후기!</h1>
-                        <h2 class="review">211만명의 의뢰인이 98.6% 만족했습니다.</h2>
+                        <h2 class="review">211만명의 체험자들이 98.6% 만족했습니다.</h2>
                         <section class="reviewVideo-container">
                             <article class="reviewVideo-wrap">
                                 <div class="reviewVideo-Review">
                                     <div class="reviewVideo-content">
-                                        <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                        <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?disablekb=0&autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&enablejsapi=1&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=3ㅍ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                                     </div>
                                 </div>
                                 <div class="reviewText-wrap">
-                                    <div class="reviewText-title">IT</div>
+                                    <div class="reviewText-title">방송</div>
                                     |
-                                    <div class="reviewText-job">웹개발자</div>
+                                    <div class="reviewText-job">라디오DJ</div>
                             </div>
                         </article>
                         <article class="reviewVideo-wrap">
                             <div class="reviewVideo-Review">
                                 <div class="reviewVideo-content">
-                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/qqAwgUTx-Iw?disablekb=0&autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&enablejsapi=1&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="reviewText-wrap">
-                                <div class="reviewText-title">IT</div>
+                                <div class="reviewText-title">사회</div>
                                 |
-                                <div class="reviewText-job"> 웹개발자</div>
+                                <div class="reviewText-job"> 경찰관</div>
                             </div>
                         </article>
                         <article class="reviewVideo-wrap">
                             <div class="reviewVideo-Review">
                                 <div class="reviewVideo-content">
-                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/r7HULhEb0PA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/s28tW_gVL64?disablekb=0&autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&enablejsapi=1&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="reviewText-wrap">
-                                <div class="reviewText-title">IT</div>
+                                <div class="reviewText-title">요리</div>
                                 |
-                                <div class="reviewText-job">웹개발자</div>
+                                <div class="reviewText-job">시리얼마스터</div>
                             </div>
                         </article>
                     </div>
@@ -326,7 +326,7 @@
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
-                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                    <div class="guideText-context">아이의 성향과 적성을 모르신다면 키즈쑥쑥으로!</div>
                                 </div>
                             </article>
                             <article class="guideContent-box">
@@ -335,7 +335,7 @@
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
-                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                    <div class="guideText-context">스스로 결졍하고 체험하며 성장하는 아이들!</div>
                                 </div>
                             </article>
                             <article class="guideContent-box">
@@ -344,7 +344,7 @@
                                 </div>
                                 <div class="guideText-wrap">
                                     <div class="guideText-title">키즈쑥쑥 체험 가이드</div>
-                                    <div class="guideText-context">전문가 인증부터 정산까지 키즈쑥쑥 체험기관 등록의 모든 것</div>
+                                    <div class="guideText-context">사회성, 리더쉽 등을 배워 더 나은 어른이 되자!</div>
                                 </div>
                             </article>
                         </section>
@@ -354,11 +354,11 @@
                 <!-- Ranking-Top -->
                 <section class="ranking-container">
                     <div class="ranking-wrap">
-                        <h1 class="ranking-title">TOP 카테고리 전문가 랭킹</h1>
+                        <h1 class="ranking-title">TOP 카테고리 체험 랭킹</h1>
                         <h2 class="ranking-small-title">키즈쑥쑥에서 가장 많이 판매한 인기 체험학습 랭킹 입니다.</h2>
                         <div class="ranking-box">
                             <div class="ranking-0">
-                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-T">인기순</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
@@ -444,7 +444,7 @@
                             </div>
 
                             <div class="ranking-0">
-                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-T">추천순</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
@@ -530,7 +530,7 @@
                             </div>
                                 
                                 <div class="ranking-0">
-                                <div class="ranking-T">컴퓨터</div>
+                                <div class="ranking-T">후기 많은 순</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">

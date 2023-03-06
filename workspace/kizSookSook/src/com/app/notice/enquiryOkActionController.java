@@ -20,54 +20,71 @@ public class enquiryOkActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("okaction L25");
-		req.setCharacterEncoding("UTF-8");
-		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
-		FileVO fileVO = new FileVO();
-		FileDAO FileDAO = new FileDAO(); 
-		EnquiryDAO enquiryDAO = new EnquiryDAO();
-	
-		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
-		int fileSize = 1024 * 1024 * 5; //5M
-		Long noticeCurrentSequence = 0L;
-		
-		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-		
-		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
-		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
-		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
-		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
-		
-		
-		enquiryDAO.insert(customerEnquiryVO);
-		
-		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
-		
-		Enumeration<String> fileNames = multipartRequest.getFileNames();
-		
-		while(fileNames.hasMoreElements()) {
-//			파일의 전체 속성
-			String fileName = fileNames.nextElement();
-			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
-			String fileSystemName = multipartRequest.getFilesystemName(fileName);
-			
-			if(fileOriginalName == null) {continue;}
-			
-			fileVO.setFileOriginalName(fileOriginalName);
-			fileVO.setFileSystemName(fileSystemName);
-//			fileVO.setTargetId(Long.valueOf(enquiryId));
-			
-			FileDAO.insertEnquiryFile(fileVO);
-		}
-		
-		Result result = new Result();
-
-		result.setPath(req.getContextPath() + "/customer-main.notice");
-		result.setRedirect(true);
-		
-		return result;
+//		req.setCharacterEncoding("UTF-8");
+//		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
+//<<<<<<< HEAD
+//=======
+//		FileVO FileVO = new FileVO();
+//		FileDAO FileDAO = new FileDAO(); 
+////		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
+//	
+//		String uploadPath = "C:/gb_0900_mes/JSP_project/kidsSookSook/workspace/kizSookSook/WebContent/upload";
+//>>>>>>> 80e1d5f55a3e166584aa98b3da68a0d534ffbfe7
+//		FileVO fileVO = new FileVO();
+//		FileDAO fileDAO = new FileDAO(); 
+//		EnquiryDAO enquiryDAO = new EnquiryDAO();
+//	
+//<<<<<<< HEAD
+//		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
+//=======
+////		String  = req.getSession().getServletContext().getRealPath("/") + "upload/";
+//>>>>>>> 80e1d5f55a3e166584aa98b3da68a0d534ffbfe7
+//		int fileSize = 1024 * 1024 * 5; //5M
+//		Long noticeCurrentSequence = 0L;
+//		
+//		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
+//<<<<<<< HEAD
+//=======
+//		/* String enquiryId = req.getParameter("enquiryId"); */
+//>>>>>>> 80e1d5f55a3e166584aa98b3da68a0d534ffbfe7
+//		
+//		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
+//		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
+//		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
+//		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
+//		
+//		
+//		enquiryDAO.insert(customerEnquiryVO);
+//		
+//		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
+//		
+//<<<<<<< HEAD
+//		Enumeration<String> fileNames = multipartRequest.getFileNames();
+//=======
+//	Enumeration<String> fileNames = multipartRequest.getFileNames();
+//>>>>>>> 80e1d5f55a3e166584aa98b3da68a0d534ffbfe7
+//		
+//		while(fileNames.hasMoreElements()) {
+////			파일의 전체 속성
+//			String fileName = fileNames.nextElement();
+//			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
+//			String fileSystemName = multipartRequest.getFilesystemName(fileName);
+//			
+//			if(fileOriginalName == null) {continue;}
+//			
+//			fileVO.setFileOriginalName(fileOriginalName);
+//			fileVO.setFileSystemName(fileSystemName);
+////			fileVO.setTargetId(Long.valueOf(enquiryId));
+//			
+//			FileDAO.insertEnquiryFile(fileVO);
+//		}
+//		
+//		Result result = new Result();
+//
+//		result.setPath(req.getContextPath() + "/customer-main.notice");
+//		result.setRedirect(true);
+//		
+//		return result;
 	}
 	
-
-
 }
