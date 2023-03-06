@@ -32,7 +32,6 @@ public class PayActionController implements Action {
 		JSONObject json = null;
 		Result result = new Result();
 		
-		session.setAttribute("userId", 4L);
 		Long fieldTripId = Long.valueOf(req.getParameter("fieldTripId"));
 		Long userId = (Long)session.getAttribute("userId");
 		
