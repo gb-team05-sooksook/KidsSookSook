@@ -13,8 +13,14 @@ public class DeleteAccountActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		req.setCharacterEncoding("UTF-8");
+		
+		Result result = new Result();
+		req.setAttribute("pageNumber", 5);
+		
+		result.setPath("/templates/mypage/mypage.jsp");
+		
+		return result;
 	}
 
 }

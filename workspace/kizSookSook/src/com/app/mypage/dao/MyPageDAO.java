@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.enquiry.domain.CustomerEnquiryVO;
 import com.app.fieldTrip.domain.FieldTripDTO;
 import com.app.mybatis.config.MyBatisConfig;
 
@@ -29,4 +30,13 @@ public class MyPageDAO {
 	 * public BoardDTO select(Long boardId) { return
 	 * sqlSession.selectOne("board.select", boardId); }
 	 */
+	
+//	문의사항목록조회
+	public List<CustomerEnquiryVO> enquiryList(Map<String, Object> searchMap) {
+		return sqlSession.selectList("mypage.enquiryList", searchMap);
+	}
+	
+	
+//	내 후기 조회
+	
 }
