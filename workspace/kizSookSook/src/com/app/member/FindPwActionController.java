@@ -34,12 +34,13 @@ public class FindPwActionController implements Action {
 		userEmail = req.getParameter("userEmail");
 		
 		userPassword = memberDAO.findPw("userEmail");
+		
 		if(userEmail != null) {
 	         // 메일 인코딩
 	           final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
 	           
 	           //원하는 메일 제목 작성
-	           String subject = "KidsSookSook 아이디 찾기 이메일 발송";
+	           String subject = "KidsSookSook 비밀번호 찾기 이메일 발송";
 	           
 	           //****************건들지 마세요********************
 	           String fromEmail = "jh940412@gmail.com";
@@ -50,7 +51,7 @@ public class FindPwActionController implements Action {
 	           
 	         //****************건들지 마세요********************
 	           final String username = "jh940412@gmail.com";         
-	           final String password = "msoulgstclzdqnnw";
+	           final String password = "uojepatlgtfmpvfg";
 	           //*********************************************
 	           
 	           // 메일에 출력할 텍스트
@@ -106,14 +107,14 @@ public class FindPwActionController implements Action {
 	             e.printStackTrace();
 	           }
 	          
-	           result.setPath("/login.member");
+	           result.setPath("/main.main");
 	           result.setRedirect(true);
 	           
 	      } else {
-	         result.setPath("/findPw.member");
+	         result.setPath("/main.main");
 	         result.setRedirect(true);
 	      }
-		return null;
+		return result;
 	}
 
 }

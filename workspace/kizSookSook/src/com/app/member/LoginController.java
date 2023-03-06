@@ -36,7 +36,7 @@ public class LoginController implements Action {
 			req.setAttribute("userPassword", userPassword);
 			result.setPath("/loginAction.member");
 		}else {
-			result.setPath("/templates/login/login.jsp");
+			result.setPath("/login.jsp");
 		}
 		return result;
 	}
