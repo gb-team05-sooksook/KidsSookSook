@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.app.Action;
 import com.app.Result;
 import com.app.fieldTrip.dao.FieldTripDAO;
@@ -26,6 +29,7 @@ public class PayActionController implements Action {
 		FieldTripDTO fieldTripDTO = new FieldTripDTO();
 		HttpSession session = req.getSession();
 		Map<String, Long> payMap = new HashMap<String, Long>();
+		JSONObject json = null;
 		Result result = new Result();
 		
 		session.setAttribute("userId", 4L);
@@ -36,9 +40,11 @@ public class PayActionController implements Action {
 		payMap.put("userId", userId);
 		
 		fieldTripDTO = fieldTripDAO.getfieldTripDTO(fieldTripId);
+		json = new JSONObject(fieldTripDTO);
 		cashVO = payDAO.getCash(userId);
 		
 		req.setAttribute("fieldTripDTO", fieldTripDTO);
+		req.setAttribute("fieldTripJSON", json.toString());
 		req.setAttribute("cashVO", cashVO);
 		
 		result.setPath("/templates/fieldTrip/pay.jsp");

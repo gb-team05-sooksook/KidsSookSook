@@ -76,11 +76,9 @@ function showCategoryList() {
 	});
 
 	if(sort == 'popular') {
-		console.log('파퓰려')
 		$('#item1').removeClass('selectBold');
 		$('#item2').attr('class', 'selectBold');
 	} else if(sort == 'recent') {
-		console.log('왔는가')
 		$('#item2').removeClass('selectBold');
 		$('#item1').attr('class', 'selectBold');
 	}
