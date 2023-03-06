@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.app.enquiry.domain.CustomerEnquiryVO;
 import com.app.fieldTrip.domain.FieldTripDTO;
+import com.app.member.domain.CashVO;
 import com.app.mybatis.config.MyBatisConfig;
 
 public class MyPageDAO {
@@ -38,8 +39,8 @@ public class MyPageDAO {
 	
 	
 //	내 캐쉬 조회
-	/*
-	 * public void selectMyCash() { return
-	 * sqlSession.selectList("mypage.selectMyCash", searchMap); }
-	 */
+	 public List<CashVO> selectMyCash(Map<String, Object> searchMap) {
+		 return sqlSession.selectList("mypage.selectMyCash", searchMap);
+	}
+	 
 }
