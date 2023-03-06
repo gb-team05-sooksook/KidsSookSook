@@ -22,7 +22,7 @@ public class CheckIdActionController implements Action {
 		JSONObject json = new JSONObject();
 		
 		try {
-			json.put("check", memberDAO.checkId(req.getParameter("memberIdentification")));
+			json.put("check", memberDAO.checkId(req.getParameter("userIdentification")));
 			out.print(json.toString());
 		} catch (JSONException e) {
 			e.printStackTrace();

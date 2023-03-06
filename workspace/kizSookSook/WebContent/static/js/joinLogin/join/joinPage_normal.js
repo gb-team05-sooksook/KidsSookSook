@@ -1,10 +1,45 @@
 /**
  * 
  */
+let $joinInputs = $(".test");
+const $checkText = $(".checkText");
+let joinCheck;
+let joinCheckAll =[false, false, false];
+console.log($joinInputs);
+console.log($checkText);
 
+//중복검사
+$joinInputs.on("blur", function(){
+	let i = $joinInputs.index($(this));
+	let value = $(this).val();
+    $(this).next().hide();
+    $(this).next().fadeIn(500);
+	
+	$.ajax({
+			url: contextPath + "/checkIdAction.member",
+			data: {data: value},
+			success: function(result){
+				let message;
+				result = JSON.parse(result);
+				if(result.check){
+					message = "중복되었습니다.";
+					$checkText.eq(i).css('color', 'red')
+				}else{
+					message = "사용가능합니다.";
+					$checkText.eq(i).css('color', '#2bb673')
+				}
+				$checkText.eq(i).text(message);
+				joinCheckAll[i] = !result.check;
+
+			}
+		});
+	
+});
     // 유효성 검사
     $btnModal.click(function(event) {
         event.preventDefault();
+        /*비밀번호 암호화*/
+	
         var reg;
         var check;
         const regAr = [
@@ -50,5 +85,10 @@
                 return;
             }
         }
+        $("input[name='userPassword']").val(btoa($("input[name='userPassword']").val()));
+	    $("input[name='passwordConfirm']").val(btoa($("input[name='passwordConfirm']").val()));
+        
         joinForm.submit();
     });
+
+

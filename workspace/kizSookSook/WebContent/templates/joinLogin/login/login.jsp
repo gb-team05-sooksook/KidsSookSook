@@ -50,11 +50,11 @@
                                 </div>
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="userPassword"  class="modal-login-id" value="">
+                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." id="password" name="userPassword"  class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>
-                                <button role="button" color="yellow" type="submit" class="modal-login-btn">
+                                <button role="button" color="yellow" class="modal-login-btn">
                                     <span>로그인</span>
                                 </button>
                                 <div class="modal-login-addition">
