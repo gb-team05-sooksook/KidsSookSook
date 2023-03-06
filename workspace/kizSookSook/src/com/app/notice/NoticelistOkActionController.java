@@ -56,7 +56,8 @@ public class NoticelistOkActionController implements Action {
 		pageMap.put("startRow", startRow);
 		
 		
-		noticeList = noticeDAO.selectAll(pageMap);
+		
+		req.setAttribute("notices", noticeDAO.selectAll());
 		
 		noticeList.stream().map(noticelist -> new JSONObject(noticelist)).forEach(noticeJsons::put);
 		

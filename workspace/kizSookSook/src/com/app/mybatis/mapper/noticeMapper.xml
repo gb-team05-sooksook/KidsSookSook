@@ -48,10 +48,9 @@
 		values(#{noticeTitle}, #{noticeContext}, #{noticeDate})
 	</insert>
 	
-	<select id="select" parameterType="long" resultType="noticeVO">
-		select notice_title, notice_context notice_date
+	<select id="selectAll" resultType="noticeVO">
+		select notice_title
 		from tbl_customer_notice
-		where notice_id = #{noticeId}
 	</select>
 	
 	<select id="getTotal" resultType="long">
