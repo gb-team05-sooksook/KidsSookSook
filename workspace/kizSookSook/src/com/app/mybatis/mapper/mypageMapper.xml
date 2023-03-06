@@ -41,5 +41,9 @@
 	</select>
 	
 	<!-- 내 캐쉬 조회 -->
-	
+	<select id="selectMyCash" parameterType="map" resultType="cashVO">
+		select cash_id, user_id, payment_cash, review_cash, cash_save_date, review_save_date
+		from kids.tbl_cash
+		where user_id = #{userId}
+	</select>
 </mapper>

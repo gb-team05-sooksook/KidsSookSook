@@ -129,10 +129,18 @@ pageEncoding="UTF-8"%>
 				console.log(checkText);
 			}
 		} */
-    	/* let fieldTrips = JSON.parse(`${fieldTrips}`);
-    	console.log(fieldTrips); */
-    	let enquiries = JSON.parse(`${enquiries}`);
+		
+		let fieldTrips = `${fieldTrips}`;
+    	/* let fieldTrips = JSON.parse(`${fieldTrips}`); */
+    	console.log(fieldTrips);
+    	
+    	let enquiries = `${enquiries}`;
+    	/* let enquiries = JSON.parse(`${enquiries}`); */
     	console.log(enquiries);
+    	
+    	let cashes = `${cashes}`;
+    	/* let cashes = JSON.parse(`${cashes}`); */
+    	console.log(cashes);
     </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>
