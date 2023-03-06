@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +61,9 @@
                             <div class="page-title">공지사항</div>
                         </h1>
                     </header>
-                    	<ul class="article-list"></ul>
+                    	<ul class="article-list">
+                    		
+                    	</ul>
                     		<c:if test="${prev}">
                     			<a href="javascript:location.href='/customerCenter/institution-noticeOk.notice?page=${startPage - 1}"></a>
                     		</c:if>
@@ -205,5 +208,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/clickChangeBorder.js"></script>
-
+<script> let notices = "${notices}";</script>
 </html>

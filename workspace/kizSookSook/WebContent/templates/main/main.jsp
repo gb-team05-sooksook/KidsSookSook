@@ -166,6 +166,7 @@
                                 <div class="mySlideDiv fade active">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong1.jpg"> 
                                 </div>
+<<<<<<< HEAD
                                 
                                 <div class="mySlideDiv fade active" style = "display :none">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
@@ -176,6 +177,15 @@
                                 </div>
                                 
                                 <div class="mySlideDiv fade active" style = "display :none">
+=======
+                                 <div class="mySlideDiv">
+                                    <img  src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
+                                </div>
+                                 <div class="mySlideDiv">
+                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong3.jpg"> 
+                                </div>
+                                 <div class="mySlideDiv">
+>>>>>>> eunseo
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong4.jpg"> 
                                 </div>
                         	

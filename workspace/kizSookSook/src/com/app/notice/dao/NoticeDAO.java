@@ -36,8 +36,8 @@ public class NoticeDAO {
 	}
 	
 	// 공지사항 조회
-	public List<NoticeVO> select(Long noticeId) {
-		 return sqlSession.selectList("notice.select", noticeId);
+	public List<NoticeVO> selectAll() {
+		 return sqlSession.selectList("notice.selectAll");
 	}
 	
 	//
