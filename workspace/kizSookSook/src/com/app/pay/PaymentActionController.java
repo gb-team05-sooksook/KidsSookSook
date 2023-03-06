@@ -1,4 +1,4 @@
-package com.app.mypage;
+package com.app.pay;
 
 import java.io.IOException;
 
@@ -9,18 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class DeleteAccountActionController implements Action {
+public class PaymentActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		req.setCharacterEncoding("UTF-8");
 		
-		Result result = new Result();
-		req.setAttribute("pageNumber", 5);
-		
-		result.setPath("/templates/mypage/mypage.jsp");
-		
-		return result;
+		return null;
 	}
-
 }

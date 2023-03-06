@@ -82,29 +82,29 @@ pageEncoding="UTF-8"%>
                             <div class="member-identification">
                                 신중한여우6531
                             </div>
-                            <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice" class="profile-a">
+                            <a href="${pageContext.request.contextPath}/enquiry.notice" class="profile-a">
                                 <span>문의하기 페이지로 이동</span>
                             </a>
                         </div>
                         <div class="aside-menu-wrapper">
                             <div class="menu-mypage-title">마이크몽</div>
                             <hr class="menu-hr" />
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/purchaseListAction.mypage" class="menu-item">
                                 <div class="item-name">체험학습 내역</div>
                             </a>
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/cashCheckAction.mypage" class="menu-item">
                                 <div class="item-name">크몽 캐시</div>
                             </a>
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/changeInfoAction.mypage" class="menu-item">
                                 <div class="item-name">나의 정보</div>
                             </a>
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/reviewListCheckAction.mypage" class="menu-item">
                                 <div class="item-name">내 후기</div>
                             </a>
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/enquiryListCheckAction.mypage" class="menu-item">
                                 <div class="item-name">내 문의사항</div>
                             </a>
-                            <a href="" class="menu-item">
+                            <a href="${pageContext.request.contextPath}/deleteAccountAction.mypage" class="menu-item">
                                 <div class="item-name">회원 탈퇴</div>
                             </a>
                         </div>
@@ -119,8 +119,20 @@ pageEncoding="UTF-8"%>
     <script>
     	let pageNumber = `${pageNumber}`;
     	let pageContext = '${pageContext.request.contextPath}';
-    	let fieldTrips = JSON.parse(`${fieldTrips}`);
-    	console.log(fieldTrips);
+    	/* let textNull = new Array(
+    		    		textNull = JSON.parse(`${fieldTrips}`);
+    		    		textNull = JSON.parse(`${enquiries}`);
+    		    		);
+    	
+    	for (let checkText of textNull) {
+			if(checkText != null) {
+				console.log(checkText);
+			}
+		} */
+    	/* let fieldTrips = JSON.parse(`${fieldTrips}`);
+    	console.log(fieldTrips); */
+    	let enquiries = JSON.parse(`${enquiries}`);
+    	console.log(enquiries);
     </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>

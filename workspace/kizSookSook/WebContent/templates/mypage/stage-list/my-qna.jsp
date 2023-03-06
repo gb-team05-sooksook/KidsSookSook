@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <h2 class="stage-title">나의 문의</h2>
 <div class="filters-wrapper" style="padding-top: 0">
     <div class="form-selecter">
@@ -48,14 +51,18 @@
     </ul>
 </div>
 <div class="cash-history-list">
-    <div>
-        <div class="_no-content">
-            <img
-                src="https://kmong.com/img/seller/nothing.png"
-                title="내역없음"
-                class="width-50px"
-            />
-            <h5>내역이 없습니다.</h5>
+    <div class="history-result-list">
+	    <div class="history-result">
+            <div class="h_result-info">
+                <h4 class="h_title"><a href=""><!--문의사항 제목 1-->문의사항제목</a></h4>
+                <div class="h_details">
+                    <span class="h_category">문의사항확인여부</span>
+                    <span class="h_date">2022.01.01</span>
+                </div>
+            </div>
+            <div class="h_result-content">
+                <div>문의사항 컨텐츠 요약본 한 줄</div>
+            </div>
         </div>
     </div>
 </div>
