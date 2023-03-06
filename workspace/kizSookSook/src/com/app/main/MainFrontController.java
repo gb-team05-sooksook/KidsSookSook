@@ -22,7 +22,9 @@ public class MainFrontController extends HttpServlet {
 		Result result = null;
 		
 		System.out.println(target);
-		if(target.equals("/templates/main/main")){
+		
+//		메인페이지 이동
+		if(target.equals("/main")){
 			result = new Result();
 			result.setPath("/templates/main/main.jsp");
 		}else if(target.equals("/searchAction")) {

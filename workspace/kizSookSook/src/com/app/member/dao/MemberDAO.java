@@ -74,5 +74,17 @@ public class MemberDAO {
 		System.out.println("memberDAO");
 		return sqlSession.selectOne("member.login", loginMap);
 	}
+	//아이디 찾기
+	public String findId(String userEmail, String userPhoneNumber) {
+		System.out.println("findId by memberDAO");
+		Map<String, String> findIdMap = new HashMap<String, String>();
+		findIdMap.put("userPhoneNumber", userPhoneNumber);
+		findIdMap.put("userEmail", userEmail);
+		return sqlSession.selectOne("member.findId", findIdMap);
+	}
+	//비밀번호 찾기
+	public String findPw(String userEmail) {
+		return sqlSession.selectOne("member.findPw", userEmail);
+	}
 	
 }
