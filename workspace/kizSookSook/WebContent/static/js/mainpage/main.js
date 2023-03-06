@@ -46,7 +46,7 @@ function typeText() {
         remove();
     };
 
-    // 글자 지우는 효과
+// 글자 지우는 효과
     const remove = async () => {
         // 기존코드에서 개행치환코드 추가
         const letter = changeLineBreak(letters[i].split(''));
