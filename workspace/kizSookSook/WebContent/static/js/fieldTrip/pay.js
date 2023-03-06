@@ -51,9 +51,21 @@ function totalPrice() {
 	$('.OrderTotalPrice').text(parseInt($rightPrice.text().replace('원', '')) - $cashInput.val() + '원');
 }
 
+let agree = false;
+$('.awesome-checkbox-body').on('click', function(){
+	if(agree == false) {
+		agree = true;
+	} else {
+		agree = false;
+	}
+});
 
 fieldTripJSON = JSON.parse(fieldTripJSON);
 $('#payBtn').on('click', function() {
+	if(!agree){
+		alert('결제를 동의해주세요!');
+		return false;
+	}
 	const headCount = $headCount.text().replace(' 명', '');
 	const totalPrice = $('.OrderTotalPrice').text().replace('원', '');
 	const cash = $('.OrderCash').text().replace(' 원', '');
