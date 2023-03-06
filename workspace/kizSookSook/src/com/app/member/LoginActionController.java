@@ -42,12 +42,12 @@ public class LoginActionController implements Action {
 				resp.addCookie(userIdentificationCookie);
 				resp.addCookie(userPasswordCookie);
 			}
-			System.out.println("들왓나LoginAction4");
-			session.setAttribute("userId", userId);
-			path = req.getContextPath() + "/login.member";
-		}else {
 			System.out.println("들왓나LoginAction3");
-			path = req.getContextPath() + "/login.member?login=false";
+			session.setAttribute("userId", userId);
+			path = req.getContextPath() + "/main.main";
+		}else {
+			System.out.println("들왓나LoginAction4");
+			path = req.getContextPath() + "/main.main?login=false";
 		}
 		result.setPath(path);
 		result.setRedirect(true);

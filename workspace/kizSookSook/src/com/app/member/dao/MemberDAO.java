@@ -76,7 +76,6 @@ public class MemberDAO {
 	}
 	//아이디 찾기
 	public String findId(String userEmail, String userPhoneNumber) {
-		System.out.println("findId by memberDAO");
 		Map<String, String> findIdMap = new HashMap<String, String>();
 		findIdMap.put("userPhoneNumber", userPhoneNumber);
 		findIdMap.put("userEmail", userEmail);
@@ -84,6 +83,7 @@ public class MemberDAO {
 	}
 	//비밀번호 찾기
 	public String findPw(String userEmail) {
+		System.out.println("findPw by memberDAO");
 		return sqlSession.selectOne("member.findPw", userEmail);
 	}
 	
