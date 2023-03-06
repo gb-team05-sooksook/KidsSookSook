@@ -86,48 +86,21 @@
     </ul>
 </div>
 <div class="cash-history-list">
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
+	<div class="history-result-list">
+	    <div class="history-result">
+            <div class="h_result-info">
+                <h4 class="h_title"><a href=""><!--문의사항 제목 1-->문의사항제목</a></h4>
+                <div class="h_details">
+                    <span class="h_category">문의사항확인여부</span>
+                    <span class="h_date">2022.01.01</span>
+                </div>
+            </div>
+            <div class="h_result-content">
+                <div>문의사항 컨텐츠 요약본 한 줄</div>
             </div>
         </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
     </div>
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
-            </div>
-        </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
-    </div>
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
-            </div>
-        </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
-    </div>
+    
 </div>
 <div class="cash-history-infomation-container">
     <p>

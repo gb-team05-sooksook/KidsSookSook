@@ -58,7 +58,7 @@ public class PurchaseListActionController implements Action {
 		searchMap.put("fieldTripName", fieldTripName);
 		searchMap.put("startDate", startDate);
 		searchMap.put("endDate", endDate);
-		searchMap.put("userId", 4L);
+		searchMap.put("userId", 1L);
 		 
 		
 		/*

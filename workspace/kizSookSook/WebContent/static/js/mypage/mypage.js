@@ -8,6 +8,7 @@
 /* 체험학습 목록 */
 function loadTrips(){
 	showlist($("div.history-result-list"), function(){
+		fieldTrips = JSON.parse(fieldTrips);
 		var text = "";
 	
 		fieldTrips.forEach((fieldTrip) => {
@@ -35,6 +36,8 @@ function loadTrips(){
 /* 내 문의 목록 조회*/
 function loadEnquiries(){
 	showlist($("div.history-result-list"), function(){
+		enquiries = JSON.parse(enquiries);
+		
 		var text = "";
 	
 		enquiries.forEach((enquiry) => {
@@ -60,6 +63,33 @@ function loadEnquiries(){
 	});
 }
 
+/* 내 캐시 목록 조회*/
+function loadMyCash(){
+	showlist($("div.history-result-list"), function(){
+		cashes = JSON.parse(cashes);
+		var text = "";
+		cashes.forEach(cash => {
+			text += `
+				<div class="history-result-list">
+		    		<div class="history-result">
+	            		<div class="h_result-info">
+			                <h4 class="h_title"><a href="">${cash.cashId}</a></h4>
+			                <div class="h_details">
+			                    <span class="h_category">${cash.cashSaveDate}</span>
+	                		</div>
+	            		</div>
+	            	<div class="h_result-content">
+	                <div>적립타입</div>
+	                <span>${cash.paymentCash}</span>
+	            </div>
+	        </div>
+	    </div>
+			`
+		});
+		
+	return text;
+	});
+}
 
 function selectPages(index){
 	jqueryDomObj.load().$stage.load(arraysObj.stageArr[index], () => {
@@ -71,6 +101,7 @@ function selectPages(index){
 				break;
 			case 1:
 				console.log('케이스 1들어옴');
+				loadMyCash();
 				functionsObj.modal.service.excute();
 				break;
 			case 2:
