@@ -22,11 +22,11 @@
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
                         <div class="join-item-input-div">
-                            <input type="text" required placeholder="아이디를 입력해 주세요." name="userIdentification" class="join-item-input" value="">
+                            <input type="text" required placeholder="아이디를 입력해 주세요." name="userIdentification" class="join-item-input test" value="">
                         </div>
                         <div >
                             <div class="error-div">
-                                <p class="error-text error-id" style="display: none;">아이디를 입력해 주세요.</p>
+                                <p class="error-text error-id checkText" style="display: none;">아이디를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -64,22 +64,22 @@
                     <div class="join-item-div">
                         <div class="join-item-title">닉네임</div>
                         <div class="join-item-input-div">
-                            <input type="text" required placeholder="닉네임을 입력해 주세요." name="memberNickname" autocomplete="nickName" class="join-item-input" value="">
+                            <input type="text" required placeholder="닉네임을 입력해 주세요." name="memberNickname" autocomplete="nickName" class="join-item-input test" value="">
                         </div>
                         <div >
                             <div class="error-div">
-                                <p class="error-text" style="display: none;">닉네임을 입력해 주세요.</p>
+                                <p class="error-text checkText" style="display: none;">닉네임을 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
                     <div class="join-item-div">
                         <div class="join-item-title">이메일</div>
                         <div class="join-item-input-div">
-                            <input type="email" required placeholder="이메일을 입력해 주세요." name="userEmail" autocomplete="email" class="join-item-input" value="">
+                            <input type="email" required placeholder="이메일을 입력해 주세요." name="userEmail" autocomplete="email" class="join-item-input test" value="">
                         </div>
                         <div >
                             <div class="error-div">
-                                <p class="error-text" style="display: none;">이메일을 입력해 주세요.</p>
+                                <p class="error-text checkText" style="display: none;">이메일을 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
