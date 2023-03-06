@@ -33,7 +33,7 @@ function showCategoryList() {
             		<div class="trip-list-wrapper">
             			<div onclick="javascript:location.href='${contextPath}/getDetailPageAction.fieldTrip?fieldTripId=${category.fieldTripId}'" class="trip-image">
             				<div class="trip-image-wrapper">
-            					<img src="${contextPath}/static/resources/img/fieldTrip/fieldPage/activity/activity1-1.jpg" class="trip-image-size">
+            					<img src="${contextPath}/upload/${category.fieldTripSystemName}" class="trip-image-size">
             				</div>
             			</div>
             			<div class="trip-img-heart">
@@ -75,5 +75,15 @@ function showCategoryList() {
   				`;	
 	});
 
+	if(sort == 'popular') {
+		console.log('파퓰려')
+		$('#item1').removeClass('selectBold');
+		$('#item2').attr('class', 'selectBold');
+	} else if(sort == 'recent') {
+		console.log('왔는가')
+		$('#item2').removeClass('selectBold');
+		$('#item1').attr('class', 'selectBold');
+	}
 	$appendDiv.append(text);
 }
+
