@@ -3,22 +3,21 @@
 
 <mapper namespace="enquiry">
 	<sql id="searchType">
-		<if test="types != null and keyword != null">
+		<if test="types != null">
 			where
-			<trim prefixOverrides="or">
+			<trim prefixOverrides="and">
 				<foreach item="type" collection="types">
-					<trim prefix="or">
+					<trim prefix="and">
 						<choose>
-							<when test="type == 'noticeTitle'.toString()">
-								notice_title like concat('%', #{keyword}, '%')
+							<when test="type == 'enquiryTitle'.toString()">
+								enquiry_title like concat('%', #{enquiryTitle}, '%')
 							</when>
-							
-							<!-- <when test="type == 'content'.toString()">
-								board_content like concat('%', #{keyword}, '%')
+							<when test="type == 'userId'.toString()">
+								user_id = #{userId}
 							</when>
-							<when test="type == 'writer'.toString()">
-								member_name like concat('%', #{keyword}, '%')
-							</when> -->
+							<when test="type == 'confirm'.toString()">
+								enquiry_confirm = #{confirm}
+							</when>
 						</choose>
 					</trim>
 				</foreach>
@@ -26,14 +25,21 @@
 		</if>
 	</sql>
 
-<!-- 
-	<select id="selectAll" resultType="noticeVO" parameterType="map">
-		select notice_id, notice_title, notice_context, notice_date, notice_alter_date
-		from tbl_customer_notice
+	<select id="selectAll" resultType="customerEnquiryVO" parameterType="map">
+		select enquiry_id as customer_enquiry_id, user_id, 
+		user_email, enquiry_title as customer_enquiry_title, enquiry_content as customer_enquiry_content, 
+		enquiry_date as customer_enquiry_date, enquiry_confirm as customer_enquiry_confirm
+		from tbl_customer_enquiry
 		<include refid="searchType"/>
-		order by notice_id desc
+		<!-- where enquiry_confirm = 0 -->
+		order by enquiry_id desc
 		limit #{startRow}, #{rowCount}
-	</select> -->
+	</select>
+	
+	<select id="getTotal" resultType="long">
+		select count(enquiry_id) 
+		from tbl_customer_enquiry
+	</select>
 
 	<insert id="insert" parameterType="customerEnquiryVO">
 	insert into tbl_customer_enquiry(user_email, enquiry_title, enquiry_content, user_id, enquiry_date)

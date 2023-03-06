@@ -28,7 +28,6 @@ public SqlSession sqlSession;
 	}
 	
 	public void insertEnquiryFile(FileVO fileVO) {
-		System.out.println("들어감3");
 		sqlSession.insert("file.insertEnquiryFile", fileVO);
 	}
 }
