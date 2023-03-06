@@ -170,14 +170,12 @@
             <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a></ol>
             <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a></ol>
             <ol><a href="">이용약관</a></ol>
-            <ol><a href=""><b>개인정보처리방침</b></a></ol>
         </div>
         <div class="footer-mweb">
             &nbsp;&nbsp; (주) 키즈쑥쑥 &nbsp;&nbsp;&nbsp;
             <a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a>&nbsp;
             <a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a>&nbsp;
-            <a href="">이용약관</a>&nbsp;
-            <a href=""><b>개인정보처리방침</b></a>&nbsp;
+            <a href="javascript:location.href='${pageContext.request.contextPath}/termsOfService.notice'">이용약관</a>&nbsp;
             <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.jsp">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
     </footer>

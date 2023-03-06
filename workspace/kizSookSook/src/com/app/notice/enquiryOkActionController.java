@@ -39,8 +39,8 @@ public class enquiryOkActionController implements Action {
 		/* String enquiryId = req.getParameter("enquiryId"); */
 		
 		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
-		customerEnquiryVO.setCustomerEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
-		customerEnquiryVO.setCustomerEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
+		customerEnquiryVO.setEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
+		customerEnquiryVO.setEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
 		
 		

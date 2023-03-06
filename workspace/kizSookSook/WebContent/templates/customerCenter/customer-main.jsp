@@ -24,7 +24,7 @@
                 </a>
             </div>
             <div class="nav-wrapper">
-                <a title="문의등록하기" href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice">문의하기</a>
+                <a title="문의등록하기" href="javascript:location.href='${pageContext.request.contextPath}/enquiry.notice'">문의하기</a>
                 <a class="login" role="button" title="대화 상자를 엽니다." href="${pageContext.request.contextPath}/templates/joinLogin/login.member">로그인</a>
             </div>
         </header>
@@ -35,10 +35,6 @@
     <main role="main">
         <section class="section hero">
             <div class="hero-inner">
-                <div class="hero-text"></div>
-             <!--    <form role="search" class="search search-full" accept-charset="UTF-8">
-                    <input name="utf8" type="hidden" value="✓">
-                </form> -->
             </div>
         </section>
 
@@ -96,7 +92,7 @@
                     </div>
 
                     <div class="blocks-item">
-                        <a href="${pageContext.request.contextPath}/templates/customerCenter/institutionFAQ.jsp" class="blocks-item-link">
+                        <a href="javascript:location.href='${pageContext.request.contextPath}/institutionFAQ.notice'" class="blocks-item-link">
                             <h4 class="blocks-item-title">FAQ</h4>
                         </a>
                     </div>
@@ -115,17 +111,15 @@
                 통신판매업신고 : 2023-서울서초-2134 | 1111-2222<br>
                 help@kidsSookSook.com | 호스팅 사업자: Amazon Web Service(AWS)
             </ol>
-            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a></ol>
-            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a></ol>
-            <ol><a href="">이용약관</a></ol>
-            <ol><a href=""><b>개인정보처리방침</b></a></ol>
+            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/notice.notice">공지사항</a></ol>
+            <ol><a href="${pageContext.request.contextPath}/templates/customerCenter/faq.notice">FAQ</a></ol>
+            <ol><a href="javascript:location.href='${pageContext.request.contextPath}/termsOfService.notice'">이용약관</a></ol>
         </div>
         <div class="footer-mweb">
             &nbsp;&nbsp; (주) 키즈쑥쑥 &nbsp;&nbsp;&nbsp;
-            <a href="${pageContext.request.contextPath}/templates/customerCenter/notice.jsp">공지사항</a>&nbsp;
-            <a href="${pageContext.request.contextPath}/templates/customerCenter/faq.jsp">FAQ</a>&nbsp;
-            <a href="">이용약관</a>&nbsp;
-            <a href=""><b>개인정보처리방침</b></a>&nbsp;
+            <a href="${pageContext.request.contextPath}/templates/customerCenter/notice.notice">공지사항</a>&nbsp;
+            <a href="${pageContext.request.contextPath}/templates/customerCenter/faq.notice">FAQ</a>&nbsp;
+            <a href="javascript:location.href='${pageContext.request.contextPath}/termsOfService.notice'">이용약관</a>&nbsp;
             <a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.notice">1:1 문의하기</a>&nbsp;&nbsp;
         </div>
     </footer>
