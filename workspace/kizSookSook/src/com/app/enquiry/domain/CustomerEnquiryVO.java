@@ -3,17 +3,10 @@ public class CustomerEnquiryVO {
 	private Long enquiryId;
 	private Long userId;
 	private String userEmail;
-<<<<<<< HEAD
-	private String customerEnquiryTitle;
-	private String customerEnquiryContent;
-	private String customerEnquiryDate;
-	private int customerEnquiryConfirm;
-=======
 	private String enquiryTitle;
 	private String enquiryContent;
 	private String enquiryDate;
 	private int enquiryConfirm;
->>>>>>> eunseo
 	
 	public CustomerEnquiryVO() {
 	}
@@ -53,21 +46,12 @@ public class CustomerEnquiryVO {
 	public void setEnquiryDate(String enquiryDate) {
 		this.enquiryDate = enquiryDate;
 	}
-<<<<<<< HEAD
 
-	public int getCustomerEnquiryConfirm() {
-		return customerEnquiryConfirm;
-	}
-
-	public void setCustomerEnquiryConfirm(int customerEnquiryConfirm) {
-		this.customerEnquiryConfirm = customerEnquiryConfirm;
-=======
 	public int getEnquiryConfirm() {
 		return enquiryConfirm;
 	}
 	public void setEnquiryConfirm(int enquiryConfirm) {
 		this.enquiryConfirm = enquiryConfirm;
->>>>>>> eunseo
 	}
 	@Override
 	public String toString() {
