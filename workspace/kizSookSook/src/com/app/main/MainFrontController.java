@@ -23,6 +23,21 @@ public class MainFrontController extends HttpServlet {
 		
 		System.out.println(target);
 		
+<<<<<<< HEAD
+//		메인페이지 이동
+		if(target.equals("/templates/main/main")){
+			result = new Result();
+			result.setPath("/templates/main/main.jsp");
+//		고객센터 이동
+		}else if(target.equals("/templates/customerCenter/customer-main")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/customer-main.jsp");
+		
+			
+			
+			
+		
+=======
 		if(target.equals("/templates/main/main")){
 			result = new Result();
 			result.setPath("/templates/main/main.jsp");
@@ -34,6 +49,7 @@ public class MainFrontController extends HttpServlet {
 			result = new ConnectJoinController().execute(req, resp);
 		}else if(target.equals("/connectNotice")) {
 			result = new ConnectNoticeController().execute(req, resp);
+>>>>>>> fb4c00e718516e4bf9fd4aa05264d98764340446
 		}else if(target.equals("/rankListAction")) {
 			result = new RankListActionController().execute(req, resp);
 		}else {
