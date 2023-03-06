@@ -86,5 +86,9 @@ public class MemberDAO {
 		System.out.println("findPw by memberDAO");
 		return sqlSession.selectOne("member.findPw", userEmail);
 	}
+	//비밀번호 변경
+	public String changePw(String userEmail) {
+		return sqlSession.selectOne("member.changePw", userEmail);
+	}
 	
 }
