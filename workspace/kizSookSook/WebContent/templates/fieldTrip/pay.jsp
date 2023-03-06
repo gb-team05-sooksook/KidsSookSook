@@ -176,5 +176,7 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdn.bootpay.co.kr/js/bootpay-3.3.1.min.js" type="application/javascript"></script>
+<script>let contextPath = ${pageContext.request.contextPath}, fieldTripJSON = `${fieldTripJSON}`;</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/pay.js"></script>
 </html>

@@ -25,7 +25,6 @@ showFieldTripMain();
 
 function showFieldTripMain() {
 	fieldTripTop10 = JSON.parse(fieldTripTop10);
-	console.log(fieldTripTop10);
 	$appendDiv = $(".top-list-container");
 	let text = "";
 	fieldTripTop10.forEach(fieldTripTop10 => {
