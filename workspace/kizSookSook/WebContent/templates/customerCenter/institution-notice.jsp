@@ -51,10 +51,7 @@
                         <a href="">공지사항</a>
                     </li>
                 </ol>
-               <!--  <form role="search" class="search" accept-charset="UTF-8">
-                    <input name="utf8" type="hidden" value="✓">
-                    <input type="search" name="query" id="query" placeholder="검색">
-                </form> -->
+              
             </nav>
             <div class="section-container">
                 <section class="section-content">
@@ -63,7 +60,13 @@
                             <div class="page-title">공지사항</div>
                         </h1>
                     </header>
-                    <ul class="article-list">
+                    	<ul class="article-list"></ul>
+                    		<c:if test="${prev}">
+                    			<a href="javascript:location.href='/customerCenter/institution-noticeOk.notice?page=${startPage - 1}"></a>
+                    		</c:if>
+                    
+                    
+                   <!--  <ul class="article-list">
                         <li class="article-list-item  article-promoted">
                             <span data-title="승격된 문서"></span>
                             <a href="" class="article-list-link">[공지] 키즈쑥쑥 TEST1</a>
@@ -139,10 +142,7 @@
 			            </li>
 			            <li class="article-list-item ">
 			            	<a href="" class="article-list-link">[디자인] 디자인 용역 표준 계약서 작성 가이드 </a>
-			            </li>
-			            <li class="article-list-item ">
-			            	<a href="" class="article-list-link">대용량 파일 공유 방법 안내</a>
-			            </li>
+			            
 			            <li class="article-list-item ">
 			            	<a href="" class="article-list-link">[업데이트] 휴가모드 기능 변경 안내 (2021.10.22)</a>
 			            </li>
@@ -168,7 +168,7 @@
                                 <a href="" rel="nofollow">»</a>
                             </li>
 
-                        </ul>
+                        </ul> -->
                     </nav>
                 </section>
             </div>
@@ -203,6 +203,7 @@
     </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/clickChangeBorder.js"></script>
 
 </html>
