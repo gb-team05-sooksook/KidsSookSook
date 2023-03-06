@@ -8130,17 +8130,26 @@ select.bs-select-hidden,select.selectpicker {
 }
 
 .awesome-checkbox input[type="checkbox"]:checked+.awesome-checkbox-body::after,.awesome-checkbox input[type="radio"]:checked+.awesome-checkbox-body::after {
-    content: '';
-    background-image: url("/img/checked/ic_kmong_check.png");
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 8px;
-    height: 8px;
+        opacity: 1;
+    transform: rotate(45deg);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-56%, -35%)
+    top: 2px;
+    left: 6px;
+    display: table;
+    width: 6px;
+    height: 10px;
+    border-width: 0px 2px 2px 0px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-top-style: initial;
+    border-top-color: initial;
+    border-left-style: initial;
+    border-left-color: initial;
+    content: " ";
+    transition: opacity 0.3s ease 0s;
 }
 
 .awesome-checkbox input[type="checkbox"]:checked+.awesome-checkbox-body,.awesome-checkbox input[type="radio"]:checked+.awesome-checkbox-body {
