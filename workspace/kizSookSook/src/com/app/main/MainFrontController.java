@@ -26,6 +26,7 @@ public class MainFrontController extends HttpServlet {
 //		메인페이지 이동
 		if(target.equals("/main")){
 			result = new Result();
+//			result = new RankListActionController().execute(req, resp);
 			result.setPath("/templates/main/main.jsp");
 		
 			
@@ -38,8 +39,6 @@ public class MainFrontController extends HttpServlet {
 			result = new ConnectJoinController().execute(req, resp);
 		}else if(target.equals("/connectNotice")) {
 			result = new ConnectNoticeController().execute(req, resp);
-		}else if(target.equals("/rankListAction")) {
-			result = new RankListActionController().execute(req, resp);
 		}else {
 			
 		}

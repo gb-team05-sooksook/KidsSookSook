@@ -51,7 +51,7 @@
 					<a color="default" class="btn-2 btn-login-modal">
 					    <span>로그인</span>
 					</a>
-                    <a color="yellow" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member" class="join">
+                    <a color="yellow" href="${pageContext.request.contextPath}/firstJoin.member" class="join">
                         <span>무료 회원가입</span>
                     </a>
 
@@ -169,15 +169,15 @@
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong1.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active">
+                                <div class="mySlideDiv fade active" style = "display :none">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active">
+                                <div class="mySlideDiv fade active" style = "display :none">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong3.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active">
+                                <div class="mySlideDiv fade active" style = "display :none">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong4.jpg"> 
                                 </div>
                         	
@@ -239,7 +239,7 @@
                         <!-- video -->
                         <div class="video-Container">
                             <div class="video-box">
-                                <iframe width="692" height="390"  src="https://www.youtube.com/embed/JiRDWA_vP8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?autoplay=1&mute=1&loop=1&playlist=3lpaFnEo9AA&modestbranding=1&iv_load_policy=3&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=3ㅍ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -280,7 +280,7 @@
                             <article class="reviewVideo-wrap">
                                 <div class="reviewVideo-Review">
                                     <div class="reviewVideo-content">
-                                        <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?disablekb=0&autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&enablejsapi=1&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=3ㅍ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    	<iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?autoplay=1&mute=1&loop=1&playlist=3lpaFnEo9AA&modestbranding=1&iv_load_policy=3&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=v" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="reviewText-wrap">
@@ -704,12 +704,12 @@
                     </div>
                     <div class="modal-inner">
                         <div class="modal-background-img">
-                            <img alt="로그인모달 배경이미지" src="1661922248128.jpg" width="600" height="656" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
+                            <img alt="로그인모달 배경이미지" src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" width="600" height="656" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
                             <p class="modal-background-introduce">
-                                <span>현재 2,544,436명의 회원이 크몽에서 활동하고 있습니다.</span>
+                                <!-- <span>현재 2,544,436명의 회원이 크몽에서 활동하고 있습니다.</span>
                                 <br>
                                 <span style="font-weight: 500;">2,544,437</span>
-                                번째 크몽회원이 되어보세요 :)
+                                번째 크몽회원이 되어보세요 :) -->
                             </p>
                         </div>
                         <div class="modal-login">
@@ -739,7 +739,7 @@
                                         </span>
                                     </label>
                                     <div class="modal-keep-find">
-                                        <a href="/forgot-pwd?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-keep-find-text">아이디•비밀번호 찾기</a>
+                                        <a href="${pageContext.request.contextPath}/findId.member" class="modal-keep-find-text">아이디•비밀번호 찾기</a>
                                     </div>
                                 </div>
                             </form>
@@ -773,13 +773,10 @@
                             <hr orientation="horizontal" class="modal-line">
                             <div>
                                 <p class="modal-adver">
-                                    크몽의 회원이 되시면
-                                    <br>
-                                    <b>10만원 할인혜택</b>
-                                    을 드립니다.
+                                    
                                 </p>
-                                <a role="link" color="denim" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member" class="modal-join">
-                                    <span>크몽 회원가입 하기</span>
+                                <a role="link" color="denim" href="${pageContext.request.contextPath}/firstJoin.member" class="modal-join">
+                                    <span>키즈쑥쑥 회원가입 하기</span>
                                 </a>
                             </div>
                         </div>
