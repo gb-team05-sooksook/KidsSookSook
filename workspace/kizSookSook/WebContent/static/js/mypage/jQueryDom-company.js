@@ -1,16 +1,14 @@
 let arraysObj = {
     stageArr: new Array(
-        pageContext + '/templates/mypage/stage-list/trip-history.jsp',
-        pageContext + '/templates/mypage/stage-list/cash-history.html',
-        pageContext + '/templates/mypage/stage-list/my-info.html',
-        pageContext + '/templates/mypage/stage-list/my-review.html',
-        pageContext + '/templates/mypage/stage-list/my-qna.html',
-        pageContext + '/templates/mypage/stage-list/unregister.html'
+        pageContext + '/templates/mypage/stage-list/trip-history-company.jsp',
+        pageContext + '/templates/mypage/stage-list/my-info-company.html',
+        pageContext + '/templates/mypage/stage-list/my-qna-company.html',
+        pageContext + '/templates/mypage/stage-list/unregister-company.html'
     ),
 };
 
 let modalURI = {
-    reviewModal: 'review-modal.html',
+    reviewModal: 'field-signUp-modal.html',
 };
 
 let globalObj = {
