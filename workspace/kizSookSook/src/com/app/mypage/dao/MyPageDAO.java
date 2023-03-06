@@ -17,8 +17,8 @@ public class MyPageDAO {
 	}
 
 //	체험학습 구매 목록 조회
-	public List<FieldTripDTO> findPurchaseList(Map<String, Object> searchMap) {
-		return sqlSession.selectList("mypage.findPurchaseList", searchMap);
+	public List<FieldTripDTO> selectPurchaseList(Map<String, Object> searchMap) {
+		return sqlSession.selectList("mypage.selectPurchaseList", searchMap);
 	}
 	
 //	내정보 불러오기
@@ -32,11 +32,14 @@ public class MyPageDAO {
 	 */
 	
 //	문의사항목록조회
-	public List<CustomerEnquiryVO> enquiryList(Map<String, Object> searchMap) {
-		return sqlSession.selectList("mypage.enquiryList", searchMap);
+	public List<CustomerEnquiryVO> selectEnquiryList(Map<String, Object> searchMap) {
+		return sqlSession.selectList("mypage.selectEnquiryList", searchMap);
 	}
 	
 	
-//	내 후기 조회
-	
+//	내 캐쉬 조회
+	/*
+	 * public void selectMyCash() { return
+	 * sqlSession.selectList("mypage.selectMyCash", searchMap); }
+	 */
 }

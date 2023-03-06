@@ -58,7 +58,8 @@ public class FindPwActionController implements Action {
 	           String html = null;
 	           StringBuffer sb = new StringBuffer();
 	           sb.append("<h3>KidsSookSook 비밀번호 찾기</h3>\n");
-	           sb.append("회원님의 비밀번호는" + userPassword + "입니다");    
+	           sb.append("비밀번호를 다시 설정해주세요.<br><br>");
+	           sb.append("링크: http://localhost:8090/changePassword.member?userEmail="+ userEmail);    
 	           html = sb.toString();
 	           
 	           // 메일 옵션 설정

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
+import com.app.member.domain.CashVO;
+import com.app.pay.dao.PayDAO;
 
 public class CashCheckActionController implements Action {
 
@@ -16,6 +18,9 @@ public class CashCheckActionController implements Action {
 		req.setCharacterEncoding("UTF-8");
 		
 		Result result = new Result();
+		PayDAO payDAO = new PayDAO();
+		CashVO cashVO = new CashVO();
+		
 		req.setAttribute("pageNumber", 1);
 		
 		result.setPath("/templates/mypage/mypage.jsp");

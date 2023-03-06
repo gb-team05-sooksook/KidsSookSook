@@ -40,5 +40,12 @@
                 return;
             }
         }
+	 	 /*비밀번호 암호화*/
+	    $("input[name='userPassword']").val(btoa($("input[name='userPassword']").val()));
+	    $("input[name='passwordConfirm']").val(btoa($("input[name='passwordConfirm']").val()));
         joinForm.submit();
     });
+    
+  
+    
+    

@@ -32,10 +32,11 @@ function cashAll() {
 }
 
 $cashInput.on("blur", function() {
-	if($cashInput.val() < $nowCash) {
+	if(parseInt($cashInput.val()) < $nowCash) {
 		$('.OrderCash').text($cashInput.val()+' 원');
 	} else {
 		$cashInput.val($nowCash);
+		console.log('여기냐 네이놈')
 		$('.OrderCash').text($nowCash+' 원');
 	}
 	
@@ -50,9 +51,25 @@ function totalPrice() {
 	$('.OrderTotalPrice').text(parseInt($rightPrice.text().replace('원', '')) - $cashInput.val() + '원');
 }
 
+let agree = false;
+$('.awesome-checkbox-body').on('click', function(){
+	if(agree == false) {
+		agree = true;
+	} else {
+		agree = false;
+	}
+});
 
 fieldTripJSON = JSON.parse(fieldTripJSON);
 $('#payBtn').on('click', function() {
+	if(!agree){
+		alert('결제를 동의해주세요!');
+		return false;
+	}
+	const headCount = $headCount.text().replace(' 명', '');
+	const totalPrice = $('.OrderTotalPrice').text().replace('원', '');
+	const cash = $('.OrderCash').text().replace(' 원', '');
+	
 	BootPay.request({
       price: parseInt($('.OrderTotalPrice').text()), //실제 결제되는 가격
  
@@ -73,7 +90,8 @@ $('#payBtn').on('click', function() {
       ],
       order_id: '고유order_id_1234', //고유 주문번호로, 생성하신 값을 보내주셔야 합니다.
       
-      location.href = '${contextPath}/';
+      
+      
   }).error(function (data) {
       //결제 진행시 에러가 발생하면 수행됩니다.
       console.log(data);
@@ -86,6 +104,7 @@ $('#payBtn').on('click', function() {
   }).done(function (data) {
       //결제가 정상적으로 완료되면 수행됩니다
       //비즈니스 로직을 수행하기 전에 결제 유효성 검증을 하시길 추천합니다.
+	location.href = `${contextPath}/paymentAction.pay?fieldTripId=${fieldTripJSON.fieldTripId}&headCount=${headCount}&amount=${totalPrice}&cash=${cash}`;
       console.log(data);
   });
 });

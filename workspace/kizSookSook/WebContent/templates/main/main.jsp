@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>키즈쑥쑥 | 아이들의 체험나라 키즈쑥쑥에 오신걸 환영합니다.</title>
+ <script src="https://www.youtube.com/iframe_api"></script>
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/main.css">
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/dropdown.css">
  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
@@ -160,9 +161,6 @@
                                 </div>
                             </div>
                 </section>
-
-                 
-                    
                             <div class="slideshow-container">
                                     <!-- banner -->
                                 <div class="mySlideDiv fade active">
@@ -239,7 +237,7 @@
                         <!-- video -->
                         <div class="video-Container">
                             <div class="video-box">
-                                <iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?autoplay=1&mute=1&loop=1&playlist=3lpaFnEo9AA&modestbranding=1&iv_load_policy=3&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=3ㅍ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="692" height="390" src="https://www.youtube.com/embed/s2mvyG_2trM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -280,7 +278,7 @@
                             <article class="reviewVideo-wrap">
                                 <div class="reviewVideo-Review">
                                     <div class="reviewVideo-content">
-                                    	<iframe title="IT-웹개발자님의 생생한 후기" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?autoplay=1&mute=1&loop=1&playlist=3lpaFnEo9AA&modestbranding=1&iv_load_policy=3&origin=http%3A%2F%2Fwww.kidzania.co.kr&widgetid=v" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    	<iframe id="my-video" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?enablejsapi=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="reviewText-wrap">
@@ -723,11 +721,11 @@
                                 </div>
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="userPassword"  class="modal-login-id" value="">
+                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." id="password" name="userPassword"  class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>
-                                <button role="button" color="yellow" type="submit" class="modal-login-btn">
+                                <button role="button" color="yellow" class="modal-login-btn">
                                     <span>로그인</span>
                                 </button>
                                 <div class="modal-login-addition">
