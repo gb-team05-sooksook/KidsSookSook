@@ -101,4 +101,14 @@
 		where user_identification = #{userIdentification} and user_password = #{userPassword}
 	</select>
 	
+	<select id="findId" parameterType="map" resultType="string">
+		select user_identification from tbl_user 
+		where user_email = #{userEmail} and user_phonenumber = #{userPhoneNumber}
+	</select>
+	
+	<select id="findPw" parameterType="string" resultType="string">
+		select user_password from tbl_user 
+		where user_email = #{userEmail}
+	</select>
+	
 </mapper>
