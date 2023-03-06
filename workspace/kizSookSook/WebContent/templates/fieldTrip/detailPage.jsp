@@ -22,7 +22,7 @@
                     </section>
                     <!-- 이미지 -->
                     <section class="detaile-left-img">
-                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/fieldPage/science/Science1-1.jpg" width="100%">
+                        <img src="${pageContext.request.contextPath}/upload/${fieldTripDTO.fieldTripSystemName}" width="100%">
                     </section>
 
                     <!-- 목차항목별 -->
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="detaile-price-button-wrapper">
-                            <button class="detaile-price-button">
+                            <button class="detaile-price-button" onclick="javascript:location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}'">
                                 <span>
                                     <span>구매</span>
                                 </span>

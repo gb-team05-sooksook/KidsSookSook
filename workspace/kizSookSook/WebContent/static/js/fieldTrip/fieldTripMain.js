@@ -25,6 +25,7 @@ showFieldTripMain();
 
 function showFieldTripMain() {
 	fieldTripTop10 = JSON.parse(fieldTripTop10);
+	console.log(fieldTripTop10);
 	$appendDiv = $(".top-list-container");
 	let text = "";
 	fieldTripTop10.forEach(fieldTripTop10 => {
@@ -34,7 +35,7 @@ function showFieldTripMain() {
                     <div class="topListE">
                         <div onclick="javascript:location.href='${contextPath}/getDetailPageAction.fieldTrip?fieldTripId=${fieldTripTop10.fieldTripId}'" class="topListF">
                             <div class="topListG">
-                                <img src="${contextPath}/static/resources/img/fieldTrip/fieldTripMain/history5-1.jpg" class="topListH">
+                                <img src="${contextPath}/upload/${fieldTripTop10.fieldTripSystemName}" class="topListH">
                             </div>
                         </div>
                     </div>
