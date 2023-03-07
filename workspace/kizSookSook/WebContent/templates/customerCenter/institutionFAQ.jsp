@@ -164,7 +164,7 @@
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
-                                    <a href="" class="article-list-link">[기관 등록] 기관 인증 정보는 어떻게 변경하나요?</a>
+                                    <a href="${pageContext.request.contextPath}/templates/customerCenter/institution-detail-page.jsp" class="article-list-link">[기관 등록] 기관 인증 정보는 어떻게 변경하나요?</a>
                                 </li>
                                 <li class="article-list-item">
                                     <a href="" class="article-list-link">[기관 등록] 기관회원으로 인증 받으려면 어떻게 해야하나요?</a>

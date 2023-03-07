@@ -41,7 +41,7 @@
 
 	<insert id="insert" parameterType="customerEnquiryVO">
 	insert into tbl_customer_enquiry(user_email, enquiry_title, enquiry_content, user_id, enquiry_date)
-	values(#{userEmail}, #{customerEnquiryTitle}, #{customerEnquiryContent}, #{userId}, CURRENT_TIMESTAMP)
+	values(#{userEmail}, #{enquiryTitle}, #{enquiryContent}, #{userId}, CURRENT_TIMESTAMP)
 	</insert>
 	
 	<select id="getCurrentSequence" resultType="long">
