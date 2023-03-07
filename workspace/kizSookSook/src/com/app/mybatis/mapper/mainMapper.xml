@@ -2,5 +2,46 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="main">
-	<select id=""></select>
+	<select id="fieldTripRecTop4" resultType="fieldTripDTO">
+		select f.institution_system_name, field_trip_name, recommend_count
+		from tbl_institution_file f join view_field_tripdto v
+		on f.user_id = v.user_id
+		order by recommend_count;
+	</select>
+	
+	<select id="reviewRecTop4" resultType="fieldTripDTO">
+		select d2.field_trip_name, i.institution_system_name, review_count
+		from
+			(
+			select user_id, f.field_trip_name, review_count
+			from 
+				(
+				select field_trip_id, count(user_id) as review_count
+				from tbl_review
+				group by field_trip_id
+				order by review_count desc
+				limit 0, 4
+				) d1 join tbl_field_trip f
+			on d1.field_trip_id = f.field_trip_id
+			) d2 left outer join tbl_institution_file i 
+		on d2.user_id = i.user_id;
+	</select>
+	
+	<select id="payRecTop4" resultType="fieldTripDTO">
+		select d2.field_trip_name, i.institution_system_name, payment_count
+		from
+			(
+			select user_id, f.field_trip_name, payment_count
+			from 
+				(
+				select field_trip_id, count(user_id) as payment_count
+				from tbl_payment
+				group by field_trip_id
+				order by payment_count desc
+				limit 0, 4
+				) d1 join tbl_field_trip f
+			on d1.field_trip_id = f.field_trip_id
+			) d2 left outer join tbl_institution_file i 
+		on d2.user_id = i.user_id;
+	</select>
 </mapper>
