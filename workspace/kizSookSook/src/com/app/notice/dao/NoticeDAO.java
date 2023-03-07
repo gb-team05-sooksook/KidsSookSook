@@ -34,16 +34,6 @@ public class NoticeDAO {
 	public void delete(Long noticeId) {
 		sqlSession.delete("notice.delete", noticeId);
 	}
-	
-	// 공지사항 조회
-	public List<NoticeVO> selectAll() {
-		 return sqlSession.selectList("notice.selectAll");
-	}
-	
-	//
-	public Long getTotalPage(Map<String, Object> searchMap) {
-		return sqlSession.selectOne("notice.getTotalPage", searchMap);
-	}
 }
 
 
