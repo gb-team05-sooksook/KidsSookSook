@@ -176,8 +176,15 @@
                                 </div>
                                 
                                 <div class="mySlideDiv fade active" style = "display :none">
+<<<<<<< HEAD
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong4.jpg"> 
                                 </div>
+=======
+                                 <div class="mySlideDiv">
+                                    <img  src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
+                                </div>
+                             </div>
+>>>>>>> 0bf47694d892142791d830b6db9457e6c058aceb
                         	
                                     <!-- 이전 버튼 -->
                                     <div class="bannerPrev">
