@@ -23,7 +23,6 @@ public class BannerManageController implements Action {
 		
 		files = fileDAO.selectBannerFiles();
 
-		System.out.println(files);
 		req.setAttribute("files", files);
 		
 		result.setPath("/templates/adminPage/bannerManage.jsp");

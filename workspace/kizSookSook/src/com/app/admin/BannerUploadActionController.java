@@ -1,5 +1,6 @@
 package com.app.admin;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
@@ -8,7 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.app.Action;
@@ -30,20 +30,24 @@ public class BannerUploadActionController implements Action {
 		PrintWriter out = resp.getWriter();
 		
 		String bannerId = req.getParameter("bannerId");
-		String uploadPath = "C:/GB_0900_KMG/jsp_team_project/workspace/kizSookSook/WebContent/upload";
+		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 5; //5M
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
 		Enumeration<String> fileNames = multipartRequest.getFileNames();
 		
+		fileDAO.selectBannerFiles().stream().filter(file -> file.getTargetId() == Long.valueOf(bannerId)).forEach(e -> {
+			File oldFile = new File(uploadPath + e.getFileSystemName());
+			
+			if(oldFile.exists()) {
+				oldFile.delete();
+			}
+		});
+		
 		if(fileNames.hasMoreElements()) {
 			String fileName = fileNames.nextElement();
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
-			
-			System.out.println(fileOriginalName);
-			System.out.println(fileSystemName);
-//			if(fileOriginalName == null) {continue;}
 			
 			fileVO.setTargetId(Long.valueOf(bannerId));
 			fileVO.setFileOriginalName(fileOriginalName);
@@ -52,7 +56,6 @@ public class BannerUploadActionController implements Action {
 			fileDAO.updateBannerFile(fileVO);
 		}
 	
-		System.out.println("들어옴");
 		result.setPath(req.getContextPath() + "/bannerManage.admin");
 		result.setRedirect(true);
 		
