@@ -183,6 +183,9 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}", fieldTripReviews = `${fieldTripReviews}`;</script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+	let fieldTripId = "${fieldTripDTO.fieldTripId}";
+</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailPage.js"></script>
 </html>
