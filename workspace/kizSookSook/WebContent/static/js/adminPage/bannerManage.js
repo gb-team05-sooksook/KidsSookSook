@@ -11,6 +11,7 @@ const $checkboxes = $('.tableCheckbox');
 const closeSpan = document.querySelector('#bannerDeleteButton');
 const $uploadForm = $('.upload');
 const $imgFile = $('input.img-file');
+const $uploadSubmit = $('input.upload-submit');
 const $thumbnail = $('img.thumbnail');
 const bannerURL = pageContext + '/bannerUploadAction.admin';
 
@@ -22,6 +23,8 @@ $imgFile.on('change', function (e) {
   reader.onload = function (e) {
     let url = e.target.result;
     if (url.includes('image')) {
+      $uploadSubmit.eq(i).attr('disabled', false);
+      $uploadSubmit.eq(i).css('cursor', 'pointer');
       $thumbnail.eq(i).attr('src', `${url}`);
     } else {
       alert('이미지 파일만 등록 가능합니다.');

@@ -15,7 +15,6 @@ public SqlSession sqlSession;
 	}
 	
 	public void insertBannerFile(FileVO fileVO) {
-		System.out.println("들어감");
 		sqlSession.insert("file.insertBannerFile", fileVO);
 	}
 	

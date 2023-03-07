@@ -11,6 +11,8 @@
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripVO" alias="fieldTripVO"/>
 		<typeAlias type="com.app.member.domain.MemberDTO" alias="memberDTO"/>
 		<typeAlias type="com.app.fieldTrip.domain.FieldTripDTO" alias="fieldTripDTO"/>
+		<typeAlias type="com.app.fieldTrip.domain.FieldTripBestCategoryDTO" alias="fieldTripBestCategoryDTO"/>
+		<typeAlias type="com.app.fieldTrip.domain.FieldTripReviewDTO" alias="fieldTripReviewDTO"/>
 		<typeAlias type="com.app.pay.domain.PaymentVO" alias="paymentVO"/>
 		<typeAlias type="com.app.pay.domain.PaymentDTO" alias="paymentDTO"/>
 		<typeAlias type="com.app.notice.domain.NoticeVO" alias="noticeVO"/>

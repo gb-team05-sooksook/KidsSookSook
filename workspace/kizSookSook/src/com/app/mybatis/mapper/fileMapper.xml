@@ -21,7 +21,7 @@
 	</update>
 	
 	<insert id="insertEnquiryFile" parameterType="fileVO">
-		insert into tbl_enquiry_file(enquiry_system_name, enquiry_org_name, banner_id) 
+		insert into tbl_enquiry_file(enquiry_system_name, enquiry_org_name, enquiry_id) 
 		values(#{fileSystemName}, #{fileOriginalName}, #{targetId})	
 	</insert>
 </mapper>

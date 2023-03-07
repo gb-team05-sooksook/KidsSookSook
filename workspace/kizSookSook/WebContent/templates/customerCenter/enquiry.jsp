@@ -18,7 +18,7 @@
 	<div style="background-color: #FAE57C">
 		<header class="header" style="background-color: #FAE57C">
 			<div class="logo">
-				<a href="${pageContext.request.contextPath}/templates/main/main.main"> 
+				<a href="${pageContext.request.contextPath}/main.main"> 
 					<img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" class="logo-kidsSookSook">
 				</a> 
 				<a title="홈" href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp"> 
@@ -40,7 +40,7 @@
 			<nav class="sub-nav">
 				<ol class="breadcrumbs">
 					<li title="키즈쑥쑥 고객센터">
-						<a href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp"> 
+						<a href=""> 
 							고객센터
 						</a>
 					</li>
@@ -92,7 +92,7 @@
 					</div> -->
 					<div class="form-field required request_subject">
 						<label id="request_subject_label" for="request_subject">제목</label>
-						<input type="text" id="request_subject" maxlength="150" size="150" class="change" name="customerEnquiryTitle">
+						<input type="text" id="request_subject" maxlength="150" size="150" class="change" name="enquiryTitle">
 						<div id="request_subject_error"
 							class="notification notification-error notification-inline">
 							제목: 반드시 입력해야 합니다.</div>
@@ -100,7 +100,7 @@
 					<div class="suggestion-list"></div>
 					<div class="form-field text  required  request_description">
 						<label id="request_description_label" for="request_description">설명</label>
-						<textarea id="request_description" class="change" name="customerEnquiryContent"></textarea>
+						<textarea id="request_description" class="change" name="enquiryContent"></textarea>
 						<input type="hidden" id="request_description_mimetype">
 						<div id="request_description_error"
 							class="notification notification-error notification-inline">

@@ -78,7 +78,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       style="display: none"
                       class="img-file"
                       name="image1" />
-                    <input class="upload-submit" type="submit" value="파일 수정" />
+                    <input class="upload-submit" type="submit" value="파일 수정" disabled="true" />
                   </form>
                 </div>
                 <div class="banner">
@@ -102,7 +102,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       style="display: none"
                       class="img-file"
                       name="image2" />
-                    <input class="upload-submit" type="submit" value="파일 수정" />
+                    <input class="upload-submit" type="submit" value="파일 수정" disabled="true" />
                   </form>
                 </div>
                 <div class="banner">
@@ -126,7 +126,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       style="display: none"
                       class="img-file"
                       name="image3" />
-                    <input class="upload-submit" type="submit" value="파일 수정" />
+                    <input class="upload-submit" type="submit" value="파일 수정" disabled="true" />
                   </form>
                 </div>
                 <div class="banner">
@@ -150,7 +150,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                       style="display: none"
                       class="img-file"
                       name="image4" />
-                    <input class="upload-submit" type="submit" value="파일 수정" />
+                    <input class="upload-submit" type="submit" value="파일 수정" disabled="true" />
                   </form>
                 </div>
               </div>

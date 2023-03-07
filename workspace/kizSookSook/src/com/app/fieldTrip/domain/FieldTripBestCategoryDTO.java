@@ -1,6 +1,6 @@
 package com.app.fieldTrip.domain;
 
-public class FieldTripDTO {
+public class FieldTripBestCategoryDTO {
 	private Long fieldTripId;
 	private Long categoryId;
 	private String categoryName;
@@ -12,11 +12,11 @@ public class FieldTripDTO {
 	private String fieldTripPlace;
 	private String fieldTripPrice;
 	private String fieldTripContextDescription;
-	private int recommendCount;
+	private int sumHeadCount;
 	private String fieldTripSystemName; 
 	private String fieldTripOrgName;
 	
-	public FieldTripDTO() {;}
+	public FieldTripBestCategoryDTO() {;}
 
 	public Long getFieldTripId() {
 		return fieldTripId;
@@ -106,12 +106,12 @@ public class FieldTripDTO {
 		this.fieldTripContextDescription = fieldTripContextDescription;
 	}
 
-	public int getRecommendCount() {
-		return recommendCount;
+	public int getSumHeadCount() {
+		return sumHeadCount;
 	}
 
-	public void setRecommendCount(int recommendCount) {
-		this.recommendCount = recommendCount;
+	public void setSumHeadCount(int sumHeadCount) {
+		this.sumHeadCount = sumHeadCount;
 	}
 
 	public String getFieldTripSystemName() {
@@ -132,12 +132,12 @@ public class FieldTripDTO {
 
 	@Override
 	public String toString() {
-		return "FieldTripDTO [fieldTripId=" + fieldTripId + ", categoryId=" + categoryId + ", categoryName="
+		return "FieldTripBestCategoryDTO [fieldTripId=" + fieldTripId + ", categoryId=" + categoryId + ", categoryName="
 				+ categoryName + ", userId=" + userId + ", fieldTripName=" + fieldTripName
 				+ ", fieldTripRegistationDate=" + fieldTripRegistationDate + ", fieldTripDeadlineDate="
 				+ fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate + ", fieldTripPlace="
 				+ fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice + ", fieldTripContextDescription="
-				+ fieldTripContextDescription + ", recommendCount=" + recommendCount + ", fieldTripSystemName="
+				+ fieldTripContextDescription + ", sumHeadCount=" + sumHeadCount + ", fieldTripSystemName="
 				+ fieldTripSystemName + ", fieldTripOrgName=" + fieldTripOrgName + "]";
 	}
 
@@ -157,7 +157,7 @@ public class FieldTripDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FieldTripDTO other = (FieldTripDTO) obj;
+		FieldTripBestCategoryDTO other = (FieldTripBestCategoryDTO) obj;
 		if (fieldTripId == null) {
 			if (other.fieldTripId != null)
 				return false;
@@ -165,5 +165,5 @@ public class FieldTripDTO {
 			return false;
 		return true;
 	}
-
+	
 }

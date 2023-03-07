@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>프리랜서 마켓 크몽! 샬라샬라</title>
+	<title>키즈쑥쑥</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/font/font.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/joinLogin/join/firstJoin.css">
 </head>
@@ -18,8 +18,8 @@
 							<div class="AuthHeader">
 								<div class="NavLogo nav-logo-wrapper" logo-size="108">
 									<a href="/" class="sendGATriggerClz cursor" style="height: 26px;">
-										<img src="https://d2v80xjmx68n4w.cloudfront.net/assets/desktop/pages/main/kmong_wordmark.svg"
-											title="프리랜서 마켓 No.1 크몽" alt="프리랜서 마켓 No.1 크몽" class="NavLogo__img" style="width: 85px; height: 26px;">
+										<img src="${pageContext.request.contextPath}/static/resources/img/logo/logo-2.png"
+											class="NavLogo__img" style="width: 175px;">
 									</a>
 								</div>
 							</div>

@@ -21,7 +21,37 @@ function change(e, fieldTripId) {
     }
 }
 
+showBestCategoryList();
 showFieldTripMain();
+
+function showBestCategoryList() {
+	bestCategoryList = JSON.parse(bestCategoryList);
+	let text = "";
+	bestCategoryList.forEach(bestCategory => {
+		text += `
+			<div data-index="-4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+                <div>
+                    <article class="bestBannerG">
+                        <a href="${contextPath}/getDetailPageAction.fieldTrip?fieldTripId=${bestCategory.fieldTripId}" class="bestBannerH">
+                            <div class="bestBannerI">
+                                <img src="${contextPath}/upload/${bestCategory.fieldTripSystemName}" class="bestBannerJ">
+                            </div>
+                            <div class="bestBannerK">
+                                <h3>${bestCategory.fieldTripName}</h3>
+                                <div class="bestBannerL">
+                                    <div class="bestBannerM">${bestCategory.sumHeadCount}명 체험!</div>
+                                    <div class="bestBannerM">${bestCategory.fieldTripPlace}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+		`;
+	});
+	$('.slick-track').append(text);
+}
+
 
 function showFieldTripMain() {
 	fieldTripTop10 = JSON.parse(fieldTripTop10);

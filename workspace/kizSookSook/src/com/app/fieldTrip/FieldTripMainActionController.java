@@ -19,11 +19,14 @@ public class FieldTripMainActionController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		FieldTripDAO fieldTripDAO = new FieldTripDAO();
 		Result result = new Result();
-		JSONArray jsons = new JSONArray();
+		JSONArray jsonsTop10 = new JSONArray();
+		JSONArray jsonsBest = new JSONArray();
 		
-		fieldTripDAO.selectTop10().stream().map(data -> new JSONObject(data)).forEach(jsons::put);
+		fieldTripDAO.selectTop10().stream().map(data -> new JSONObject(data)).forEach(jsonsTop10::put);
+		fieldTripDAO.selectBestCategoryList().stream().map(data -> new JSONObject(data)).forEach(jsonsBest::put);
 		
-		req.setAttribute("fieldTripTop10", jsons);
+		req.setAttribute("fieldTripTop10", jsonsTop10);
+		req.setAttribute("bestCategoryList", jsonsBest);
 		
 		result.setPath("/templates/fieldTrip/fieldTripMain.jsp");
 		

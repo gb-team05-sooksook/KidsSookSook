@@ -1,11 +1,14 @@
 package com.app.notice;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONObject;
 
 import com.app.Action;
 import com.app.Result;
@@ -22,9 +25,10 @@ public class enquiryOkActionController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		req.setCharacterEncoding("UTF-8");
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
+		Result result = new Result();
 		FileVO FileVO = new FileVO();
 		FileDAO FileDAO = new FileDAO(); 
-//		EnquiryFileDAO enquiryFileDAO = new EnquiryFileDAO(); 
+		
 	
 		String uploadPath = "C:/gb_0900_mes/JSP_project/kidsSookSook/workspace/kizSookSook/WebContent/upload";
 		FileVO fileVO = new FileVO();
@@ -39,38 +43,43 @@ public class enquiryOkActionController implements Action {
 		/* String enquiryId = req.getParameter("enquiryId"); */
 		
 		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
-		customerEnquiryVO.setEnquiryTitle(multipartRequest.getParameter("customerEnquiryTitle"));		
-		customerEnquiryVO.setEnquiryContent(multipartRequest.getParameter("customerEnquiryContent"));
+		customerEnquiryVO.setEnquiryTitle(multipartRequest.getParameter("enquiryTitle"));		
+		customerEnquiryVO.setEnquiryContent(multipartRequest.getParameter("enquiryContent"));
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
-		
 		
 		enquiryDAO.insert(customerEnquiryVO);
 		
 		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
 		
-	Enumeration<String> fileNames = multipartRequest.getFileNames();
 		
-		while(fileNames.hasMoreElements()) {
-//			파일의 전체 속성
+		JSONObject fileJson = new JSONObject();
+		PrintWriter out = resp.getWriter();
+		
+		String enquiryId = req.getParameter("enquiryId");
+		
+		Enumeration<String> fileNames = multipartRequest.getFileNames();
+		
+		if(fileNames.hasMoreElements()) {
 			String fileName = fileNames.nextElement();
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 			
-			if(fileOriginalName == null) {continue;}
+			System.out.println(fileOriginalName);
+			System.out.println(fileSystemName);
+//			if(fileOriginalName == null) {continue;}
 			
+			fileVO.setTargetId(Long.valueOf(enquiryId));
 			fileVO.setFileOriginalName(fileOriginalName);
 			fileVO.setFileSystemName(fileSystemName);
-//			fileVO.setTargetId(Long.valueOf(enquiryId));
 			
-			FileDAO.insertEnquiryFile(fileVO);
+			fileDAO.insertEnquiryFile(fileVO);
 		}
+	
 		
-		Result result = new Result();
-
+		System.out.println("들어옴");
 		result.setPath(req.getContextPath() + "/customer-main.notice");
 		result.setRedirect(true);
-		
 		return result;
 	}
-	
+
 }
