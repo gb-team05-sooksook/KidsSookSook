@@ -26,9 +26,7 @@
 	</sql>
 
 	<select id="selectAll" resultType="customerEnquiryVO" parameterType="map">
-		select enquiry_id as customer_enquiry_id, user_id, 
-		user_email, enquiry_title as customer_enquiry_title, enquiry_content as customer_enquiry_content, 
-		enquiry_date as customer_enquiry_date, enquiry_confirm as customer_enquiry_confirm
+		select enquiry_id, user_id, user_email, enquiry_title, enquiry_content, enquiry_date, enquiry_confirm
 		from tbl_customer_enquiry
 		<include refid="searchType"/>
 		<!-- where enquiry_confirm = 0 -->
