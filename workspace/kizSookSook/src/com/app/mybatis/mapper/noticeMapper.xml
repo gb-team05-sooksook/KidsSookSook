@@ -36,10 +36,9 @@
 		limit #{startRow}, #{rowCount}
 	</select>
 	
-	<select id="getTotal" parameterType="map" resultType="long">
+	<select id="getTotal" resultType="long">
 		select count(notice_id) 
 		from tbl_customer_notice
-		<include refid="search"/>
 	</select>
 	
 	<insert id="insert" parameterType="noticeVO">
@@ -47,16 +46,6 @@
 		(notice_title, notice_context, notice_date) 
 		values(#{noticeTitle}, #{noticeContext}, #{noticeDate})
 	</insert>
-	
-	<select id="selectAll" resultType="noticeVO">
-		select notice_title
-		from tbl_customer_notice
-	</select>
-	
-	<select id="getTotal" resultType="long">
-		select count(notice_id) 
-		from tbl_customer_notice
-	</select>
 	
 	<update id="update" parameterType="noticeVO">
 		update kids.tbl_customer_notice
