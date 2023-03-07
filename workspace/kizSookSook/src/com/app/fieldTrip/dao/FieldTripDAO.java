@@ -5,8 +5,11 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.app.fieldTrip.domain.FieldTripBestCategoryDTO;
 import com.app.fieldTrip.domain.FieldTripDTO;
 import com.app.fieldTrip.domain.FieldTripDetailVO;
+import com.app.fieldTrip.domain.FieldTripReviewDTO;
+import com.app.fieldTrip.domain.ReviewVO;
 import com.app.mybatis.config.MyBatisConfig;
 
 public class FieldTripDAO {
@@ -46,5 +49,17 @@ public class FieldTripDAO {
 
 	public void deleteLike(Map<String, Long> likeMap) {
 		sqlSession.delete("fieldTrip.deleteLike", likeMap);
+	}
+
+	public List<FieldTripBestCategoryDTO> selectBestCategoryList() {
+		return sqlSession.selectList("fieldTrip.selectBestCategory");
+	}
+	
+	public Long countReview(Long fieldTripId) {
+		return sqlSession.selectOne("fieldTrip.countReview", fieldTripId);
+	}
+	
+	public List<FieldTripReviewDTO> fieldTripReview(Long fieldTripId) {
+		return sqlSession.selectList("fieldTrip.fieldTripReview", fieldTripId);
 	}
 }

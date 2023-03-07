@@ -42,15 +42,6 @@
 		tbl_field_trip where field_trip_id = #{fieldTripId}
 	</delete>
 	
-	<!-- <select id="selectCategoryReview" parameterType="long" resultType="fieldTripDTO">
-		select tft.field_trip_id, field_trip_registation_date, field_trip_deadline_date, field_trip_program_date,
-		field_trip_place, field_trip_price, field_trip_context_description, count(review_id)
-		from tbl_field_trip tft join tbl_review tr
-		on tft.field_trip_id = tr.field_trip_id and category_id = #{categoryId}
-		group by tft.field_trip_id
-		order by count(review_id) desc
-	</select> -->
-	
 	<select id="fieldTripDetail" parameterType="long" resultType="com.app.fieldTrip.domain.FieldTripDetailVO">
 		select field_trip_detail_id, field_trip_id, field_trip_detail_context,
 		field_trip_detail_institution_info, field_trip_detail_use_time, field_trip_detail_refund_policy
@@ -85,4 +76,26 @@
 		delete from kids.tbl_field_trip_recommend
 		where user_id = #{userId} and field_trip_id = #{fieldTripId}
 	</delete>
+	
+	<select id="selectBestCategory" resultType="fieldTripBestCategoryDTO">
+		select tp.field_trip_id, vft.user_id, category_id, field_trip_name, field_trip_registation_date,
+		field_trip_deadline_date, field_trip_program_date, field_trip_place, field_trip_price,
+		field_trip_context_description, field_trip_system_name, field_trip_org_name,
+		sum(payment_headcount) as sumHeadCount
+		from view_field_trip vft join tbl_payment tp
+		on vft.field_trip_id = tp.field_trip_id
+		group by tp.field_trip_id, field_trip_system_name, field_trip_org_name
+		order by sum(payment_headcount) desc
+		limit 3
+	</select>
+	
+	<select id="countReview" parameterType="long" resultType="long">
+		select count(review_id) from tbl_review where field_trip_id = #{fieldTripId}
+	</select>
+	
+	<select id="fieldTripReview" parameterType="long" resultType="fieldTripReviewDTO">
+		select review_id, user_id, field_trip_id, review_write_date, review_alter_date, review_context,
+		member_name, member_nickname, member_gender, file_id, system_name, org_name
+		from view_field_trip_review where field_trip_id = #{fieldTripId}
+	</select>
 </mapper>
