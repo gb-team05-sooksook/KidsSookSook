@@ -46,7 +46,7 @@
 					</div>
 				</form>
 				<div class="wrap-btn">
-					<a color="default" class="btn-1" href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.notice">
+					<a color="default" class="btn-1" href="${pageContext.request.contextPath}/customer-main.notice">
 					    <span>고객센터</span>
 					</a>
 					<a color="default" class="btn-2 btn-login-modal">
@@ -161,24 +161,26 @@
                                 </div>
                             </div>
                 </section>
+                 
+                    
                             <div class="slideshow-container">
                                     <!-- banner -->
                                 <div class="mySlideDiv fade active">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong1.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active" style = "display :none">
+                                <div class="mySlideDiv fade active" style= "display:none";>
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong2.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active" style = "display :none">
+                                <div class="mySlideDiv fade active" style= "display:none";>
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong3.jpg"> 
                                 </div>
                                 
-                                <div class="mySlideDiv fade active" style = "display :none">
+                                <div class="mySlideDiv fade active" style= "display:none";>
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/kmong4.jpg"> 
                                 </div>
-                        	
+                            
                                     <!-- 이전 버튼 -->
                                     <div class="bannerPrev">
                                         <div class="bannerPrev-wrap">
@@ -205,8 +207,7 @@
                                         </div>
                                     </div>
                                 </div> 
-							</div>
-
+                            </div>
                     
                         <!-- 배너의 카운트 -->
                         <span id="banner-count"></span>
@@ -278,7 +279,7 @@
                             <article class="reviewVideo-wrap">
                                 <div class="reviewVideo-Review">
                                     <div class="reviewVideo-content">
-                                    	<iframe id="my-video" width="375" height="210" src="https://www.youtube.com/embed/3lpaFnEo9AA?enablejsapi=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    	<iframe width="375" height="210" src="https://www.youtube.com/embed/BejGF7DfrG0?autoplay=1&muted=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="reviewText-wrap">
@@ -357,24 +358,24 @@
                         <h2 class="ranking-small-title">키즈쑥쑥에서 가장 많이 판매한 인기 체험학습 랭킹 입니다.</h2>
                         <div class="ranking-box">
                             <div class="ranking-0">
-                                <div class="ranking-T">인기순</div>
+                                <div class="ranking-T">구매 많은 순</div>
                                 <div class="ranking-1box">
                                     <article class="ranking-gold">
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
-                                                11,500,000
-                                                원
+                                               음료수 공장장
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    코리아IT아카데미
+                                                5,000,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="gold-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/korea.png" class="gold-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/company/cider.jpg" class="gold-img">
                                             </div>                                           
                                         </a>     
                                     </article>
@@ -384,18 +385,18 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                11,100,000
-                                                원
+                                                소방관
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    지구컴즈
+                                                3,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
                                         <a href="#" class="gold-a">
                                             <div class="sliver-img-wrap">
-                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
+                                                <img src="${pageContext.request.contextPath}/static/resources/img/main/company/Fire-agency.jpg" class="sliver-img">
                                             </div>
                                         </a>
                                     </article>
@@ -404,18 +405,18 @@
                                             <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                             <div class="context-box">
                                                 <span class="sliver-context">
-                                                    9,100,000
-                                                    원
+                                                판사
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                2,800,000
+                                                원
                                                 </span>
-                                                <a href="#" class="gold-a">
-                                                    <span class="gold-first">
-                                                        SBS
-                                                    </span>
-                                                </a>
+                                            </a>
                                             </div>
                                             <a href="#" class="gold-a">
                                                 <div class="sliver-img-wrap">
-                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
+                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/company/court.jpg" class="sliver-img">
                                                 </div>
                                             </a>
                                         </article>
@@ -424,18 +425,18 @@
                                             <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                             <div class="context-box">
                                                 <span class="sliver-context">
-                                                    7,100,000
-                                                    원
+                                                햄버거 요리사
+                                            </span>
+                                            <a href="#" class="gold-a">
+                                                <span class="gold-first">
+                                                1,100,000
+                                                원
                                                 </span>
-                                                <a href="#" class="gold-a">
-                                                    <span class="gold-first">
-                                                        미술
-                                                    </span>
-                                                </a>
+                                            </a>
                                             </div>
                                             <a href="#" class="gold-a">
                                                 <div class="sliver-img-wrap">
-                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/earth.jpg" class="sliver-img">
+                                                    <img src="${pageContext.request.contextPath}/static/resources/img/main/company/hamburger.jpg" class="sliver-img">
                                                 </div>
                                             </a>
                                         </article>
@@ -449,12 +450,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
-                                                11,500,000
-                                                원
+                                                코리아IT아카데미
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    코리아IT아카데미
+                                                11,500,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -470,12 +471,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                11,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    지구컴즈
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -490,12 +491,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                9,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    SBS
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -510,12 +511,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                7,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    미술
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -535,12 +536,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/gold.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="gold-context">
-                                                11,500,000
-                                                원
+                                                코리아IT아카데미
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    코리아IT아카데미
+                                                11,500,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -556,12 +557,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/sliver.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                11,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    지구컴즈
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -576,12 +577,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/bronze.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                9,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    SBS
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>
@@ -596,12 +597,12 @@
                                         <img src="${pageContext.request.contextPath}/static/resources/img/main/four.png" width="40" height="40">
                                         <div class="context-box">
                                             <span class="sliver-context">
-                                                9,100,000
-                                                원
+                                                지구컴즈
                                             </span>
                                             <a href="#" class="gold-a">
                                                 <span class="gold-first">
-                                                    SBS
+                                                11,100,000
+                                                원
                                                 </span>
                                             </a>
                                         </div>

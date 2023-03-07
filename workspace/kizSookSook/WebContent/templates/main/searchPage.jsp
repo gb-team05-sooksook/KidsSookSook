@@ -68,7 +68,7 @@
                     </nav>
                     <!-- 오른쪽 카테고리 목록 -->
                     <div class="category-right">
-	                    <section class="search-service-container">
+	                    <section class="search-service-container" style="margin-top: -20px;">
 	                    	<h1 class="search-service-wrapper">
 	                    		<strong class="search-service">'안녕'</strong>에 대한 서비스 검색결과입니다.
 	                    	</h1>
@@ -78,7 +78,7 @@
                             <span class="category-right-listName">카테고리  >  엑티비티</span>
                         </section>
                         <div class="category-right-listNames">
-                            <div class="category-right-listName-turn">
+                            <div class="category-right-listName-turn" style="margin-left: -890px;">
                             	<div class="search-result-wrapper">
                         			<p class="search-result">0개의 서비스 검색 결과</p>
                         		</div>
