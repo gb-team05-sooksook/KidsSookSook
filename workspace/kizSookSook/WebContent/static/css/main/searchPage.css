@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.search-service-container{
+	display: flex;
+    color: rgb(48, 52, 65);
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+.search-service-wrapper{
+	margin: 0px;
+    font-size: inherit;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+.search-service{
+	font-weight: 500;
+}
+.search-result-wrapper{
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 0px;
+    font-size: 14px;
+    color: rgb(48, 52, 65);
+    margin-left: -840px;
+}
+.search-result{
+	margin: 0px;
+}
