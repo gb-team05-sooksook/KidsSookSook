@@ -85,14 +85,13 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/login")) {
 			result = new LoginController().execute(req, resp);
 			
-		
-		}else if(target.equals("/changePassword")) {
-			result = new Result();
-			result.setPath("/templates/joinLogin/findIdPw/changePassword.jsp");
-		
 		//비밀번호 변경
 		}else if(target.equals("/changePwAction")) {
 			result = new ChangePwActionController().execute(req, resp);
+			
+		}else if(target.equals("/changePassword")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/findIdPw/changePassword.jsp");
 		
 		// 아이디찾기 action
 		}else if(target.equals("/findIdAction")) {

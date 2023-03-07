@@ -111,10 +111,14 @@
 		where user_email = #{userEmail}
 	</select>
 	
-	<update id="changePw" parameterType="string">
-		update set tbl_user
+	<update id="changePw" parameterType="map">
+		update tbl_user
 		set user_password = #{userPassword}
 		where user_email = #{userEmail}
 	</update>
+	
+	<select id="checkId" parameterType="string" resultType="long">
+		select user_id from tbl_user where user_identification = #{userIdentification}
+	</select>
 	
 </mapper>

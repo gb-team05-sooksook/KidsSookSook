@@ -86,7 +86,7 @@
                     <div class="join-item-div">
                         <div class="join-item-title">휴대폰번호</div>
                         <div class="join-item-input-div">
-                            <input type="tel" required placeholder="휴대폰번호를 입력해 주세요.(-미포함)" name="userPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
+                            <input type="text" required placeholder="휴대폰번호를 입력해 주세요.(-미포함)" name="userPhoneNumber" autocomplete="phoneNumber" class="join-item-input" value="">
                         </div>
                         <div >
                             <div class="error-div">
