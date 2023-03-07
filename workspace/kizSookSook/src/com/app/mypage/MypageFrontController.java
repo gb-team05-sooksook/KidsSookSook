@@ -37,6 +37,9 @@ public class MypageFrontController extends HttpServlet {
 			result = new EnquiryListCheckActionController().execute(req, resp);
 		}else if(target.equals("/deleteAccountAction")) {
 			result = new DeleteAccountActionController().execute(req, resp);
+		}else if(target.equals("/mypage")) {
+			result = new Result();
+			result.setPath("/templates/mypage/mypage.jsp");
 		}
 		else {
 		}

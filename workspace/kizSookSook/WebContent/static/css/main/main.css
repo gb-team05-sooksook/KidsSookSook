@@ -304,7 +304,6 @@ li {
     width: 100%;
     padding-bottom: 50px;
     padding-top: 50px;
-
     flex-direction: column;
 }
 
@@ -473,7 +472,6 @@ li {
     color: #303441;
     background-color: rgba(255,255,255,0.76);
     z-index: 1;
-
 }
 
 .prev {
@@ -888,14 +886,14 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 80px;
+    margin: 0px;
 }
 
 .ranking-wrap {
     width: 1200px;
     display: grid;
-    margin: 0 auto;
-    padding: 0px 16px;
+    margin: 30px auto;
+    padding: 16px 16px;
 }
 
 .ranking-title {

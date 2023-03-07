@@ -37,15 +37,15 @@
 					</div>
 				</form>
 				<div class="wrap-btn">
-					<button color="default" class="btn-1">
-					    <span>메시지</span>
-					</button>
-					<button color="default" class="btn-2">
+					<a color="default" class="btn-1" href="${pageContext.request.contextPath}/customer-main.notice">
+					    <span>고객센터</span>
+					</a>
+					<a color="default" class="btn-2" href="${pageContext.request.contextPath}/mypage.mypage">
 					    <span>마이크몽</span>
-					</button>
+					</a>
                     <!-- 마이페이지 이동 -->
                     <div>
-                        <a class="mypage">
+                        <a class="mypage" href="${pageContext.request.contextPath}/mypage.mypage">
                             <span>
                                 <div class="default-profile">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/profile.png" class="profile-img">
