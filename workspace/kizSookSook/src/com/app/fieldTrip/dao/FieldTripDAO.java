@@ -59,7 +59,11 @@ public class FieldTripDAO {
 		return sqlSession.selectOne("fieldTrip.countReview", fieldTripId);
 	}
 	
-	public List<FieldTripReviewDTO> fieldTripReview(Long fieldTripId) {
-		return sqlSession.selectList("fieldTrip.fieldTripReview", fieldTripId);
+	public List<FieldTripReviewDTO> fieldTripReview(Map<String, Object> pageMap) {
+		return sqlSession.selectList("fieldTrip.fieldTripReview", pageMap);
+	}
+
+	public boolean isNextPage(Map<String, Object> pageMap) {
+		return sqlSession.selectList("fieldTrip.isNextPage", pageMap).size() != 0;
 	}
 }
