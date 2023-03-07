@@ -93,9 +93,18 @@
 		select count(review_id) from tbl_review where field_trip_id = #{fieldTripId}
 	</select>
 	
-	<select id="fieldTripReview" parameterType="long" resultType="fieldTripReviewDTO">
+	<select id="fieldTripReview" parameterType="map" resultType="fieldTripReviewDTO">
 		select review_id, user_id, field_trip_id, review_write_date, review_alter_date, review_context,
 		member_name, member_nickname, member_gender, file_id, system_name, org_name
 		from view_field_trip_review where field_trip_id = #{fieldTripId}
+		order by review_id desc
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="isNextPage" parameterType="map" resultType="com.app.fieldTrip.domain.ReviewVO">
+		select field_trip_id
+		from tbl_review
+		where field_trip_id = #{fieldTripId}
+		limit #{nextStartRow}, #{rowCount}
 	</select>
 </mapper>
