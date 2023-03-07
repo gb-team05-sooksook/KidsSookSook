@@ -51,9 +51,30 @@
 		from tbl_cash where user_id = #{userId}
 	</select>
 	
-	<insert id="insert" parameterType="map">
-		insert into kids.tbl_payment
+	<insert id="insertPayment" parameterType="map">
+		insert into tbl_payment
 		(user_id, field_trip_id, payment_headcount, payment_amount)
-		values(#{userId}, #{fieldTripId}, 0, 0)
+		values(#{userId}, #{fieldTripId}, #{headCount}, #{amount})
 	</insert>
+	
+	<update id="updateCash" parameterType="map">
+		update tbl_cash
+		<choose>
+			<when test="way == 'payment'">
+				set payment_cash = payment_cash - #{cash}
+			</when>
+			<when test="way == 'review'">
+				set review_cash = review_cash - #{cash}
+			</when>
+			<when test="way == 'else'">
+				set payment_cash = 0, review_cash = review_cash - #{cash}
+			</when>
+		</choose>
+		where user_id = #{userId}
+	</update>
+	
+	<update id="updatePaymentCash" parameterType="map">
+		update tbl_cash set payment_cash = payment_cash + #{cashSave}, cash_save_date = now()
+		where user_id = #{userId}
+	</update>
 </mapper>
