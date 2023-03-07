@@ -20,7 +20,7 @@
    	<div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
-                <a href="">
+                <a href="${pageContext.request.contextPath}/main.main">
                     <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png"
                         class="logo-kidsSookSook">
                 </a>
