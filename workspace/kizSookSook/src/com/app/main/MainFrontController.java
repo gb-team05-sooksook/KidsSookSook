@@ -28,9 +28,6 @@ public class MainFrontController extends HttpServlet {
 			result = new Result();
 //			result = new RankListActionController().execute(req, resp);
 			result.setPath("/templates/main/main.jsp");
-		
-			
-	
 		}else if(target.equals("/searchAction")) {
 			result = new ConnectLoginController().execute(req, resp);
 		}else if(target.equals("/connectLogin")) {
