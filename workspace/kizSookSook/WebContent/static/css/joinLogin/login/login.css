@@ -445,16 +445,6 @@ hr {
     background-color: rgba(0, 0, 0, 0.12);
 }
 
-.modal-adver {
-    margin: 24px 0px;
-    color: rgb(48, 52, 65);
-    font-weight: 400;
-}
-
-.modal-adver b {
-    font-weight: 500;
-}
-
 .modal-join {
     outline: none;
     border-width: 1px;

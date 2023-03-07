@@ -17,19 +17,33 @@ public class NoticeFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
-		System.out.println(target);
+		/* System.out.println(target); */
 		
-		
-		  if(target.equals("/enquiryOkAction")) {
+		if(target.equals("/enquiry")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/enquiry.jsp");
+			System.out.println(target);
+			
+		}else if(target.equals("/customer-main")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/customer-main.jsp");
+			
+		}else if(target.equals("/termsOfService")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/termsOfService.jsp");
+			
+		}else if(target.equals("/institutionFAQ")) {
+			result = new Result();
+			result.setPath("/templates/customerCenter/institutionFAQ.jsp");
+			
+		}else if(target.equals("/enquiryOkAction")) {
 			result = new enquiryOkActionController().execute(req, resp);
-			System.out.println("2323. " + target);
+			System.out.println("23. " + target);
+			
 		}else if(target.equals("/FAQlistOkAction")) {
 			System.out.println("2. " + target);
 			result = new FAQlistOkActionController().execute(req, resp);
-		}else if(target.equals("/templates/customerCenter/customer-main")) {
-			System.out.println("2. " + target);
-			result = new Result();
-			result.setPath("/templates/customerCenter/customer-main.jsp");
+			
 		}else {
 			System.out.println("3. " + target);
 			System.err.println("cant find path");

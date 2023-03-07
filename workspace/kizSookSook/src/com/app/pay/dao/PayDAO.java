@@ -36,4 +36,16 @@ public class PayDAO {
 		return sqlSession.selectOne("payment.getCash", userId);
 	}
 	
+	public void insertPayment(Map<String, Object> payMap) {
+		sqlSession.insert("payment.insertPayment", payMap);
+	}
+
+	public void updateCash(Map<String, Object> payMap) {
+		sqlSession.update("payment.updateCash", payMap);
+	}
+
+	public void updatePaymentCash(Map<String, Object> cashInsertMap) {
+		sqlSession.update("payment.updatePaymentCash", cashInsertMap);
+	}
+	
 }

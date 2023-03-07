@@ -1,98 +1,71 @@
 package com.app.enquiry.domain;
-
 public class CustomerEnquiryVO {
-	private Long customerEnquiryId;
+	private Long enquiryId;
 	private Long userId;
 	private String userEmail;
-	private String customerEnquiryTitle;
-	private String customerEnquiryContent;
-	private String customerEnquiryDate;
-	private int customerEnquiryConfirm;
+	private String enquiryTitle;
+	private String enquiryContent;
+	private String enquiryDate;
+	private int enquiryConfirm;
 	
-	private String userIdentification;
-	
-	public String getUserIdentification() {
-		return userIdentification;
+	public CustomerEnquiryVO() {
 	}
-
-	public void setUserIdentification(String userIdentification) {
-		this.userIdentification = userIdentification;
+	public Long getEnquiryId() {
+		return enquiryId;
 	}
-
-	public CustomerEnquiryVO() {;}
-
-	public Long getCustomerEnquiryId() {
-		return customerEnquiryId;
+	public void setEnquiryId(Long enquiryId) {
+		this.enquiryId = enquiryId;
 	}
-
-	public void setCustomerEnquiryId(Long customerEnquiryId) {
-		this.customerEnquiryId = customerEnquiryId;
-	}
-
 	public Long getUserId() {
 		return userId;
 	}
-
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-
 	public String getUserEmail() {
 		return userEmail;
 	}
-
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
-
-	public String getCustomerEnquiryTitle() {
-		return customerEnquiryTitle;
+	public String getEnquiryTitle() {
+		return enquiryTitle;
+	}
+	public void setEnquiryTitle(String enquiryTitle) {
+		this.enquiryTitle = enquiryTitle;
+	}
+	public String getEnquiryContent() {
+		return enquiryContent;
+	}
+	public void setEnquiryContent(String enquiryContent) {
+		this.enquiryContent = enquiryContent;
+	}
+	public String getEnquiryDate() {
+		return enquiryDate;
+	}
+	public void setEnquiryDate(String enquiryDate) {
+		this.enquiryDate = enquiryDate;
 	}
 
-	public void setCustomerEnquiryTitle(String customerEnquiryTitle) {
-		this.customerEnquiryTitle = customerEnquiryTitle;
+	public int getEnquiryConfirm() {
+		return enquiryConfirm;
 	}
-
-	public String getCustomerEnquiryContent() {
-		return customerEnquiryContent;
+	public void setEnquiryConfirm(int enquiryConfirm) {
+		this.enquiryConfirm = enquiryConfirm;
 	}
-
-	public void setCustomerEnquiryContent(String customerEnquiryContent) {
-		this.customerEnquiryContent = customerEnquiryContent;
-	}
-
-	public String getCustomerEnquiryDate() {
-		return customerEnquiryDate;
-	}
-
-	public void setCustomerEnquiryDate(String customerEnquiryDate) {
-		this.customerEnquiryDate = customerEnquiryDate;
-	}
-
-	public int getCustomerEnquiryConfirm() {
-		return customerEnquiryConfirm;
-	}
-
-	public void setCustomerEnquiryConfirm(int customerEnquiryConfirm) {
-		this.customerEnquiryConfirm = customerEnquiryConfirm;
-	}
-
 	@Override
 	public String toString() {
-		return "CustomerEnquiryVO [customerEnquiryId=" + customerEnquiryId + ", userId=" + userId + ", userEmail="
-				+ userEmail + ", customerEnquiryTitle=" + customerEnquiryTitle + ", customerEnquiryContent="
-				+ customerEnquiryContent + ", customerEnquiryDate=" + customerEnquiryDate + ", customerEnquiryConfirm="
-				+ customerEnquiryConfirm + "]";
+		return "copy [enquiryId=" + enquiryId + ", userId=" + userId + ", userEmail=" + userEmail + ", enquiryTitle="
+				+ enquiryTitle + ", enquiryContent=" + enquiryContent + ", enquiryDate=" + enquiryDate
+				+ ", enquiryConfirm=" + enquiryConfirm + "]";
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((customerEnquiryId == null) ? 0 : customerEnquiryId.hashCode());
+		result = prime * result + ((enquiryId == null) ? 0 : enquiryId.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -102,12 +75,14 @@ public class CustomerEnquiryVO {
 		if (getClass() != obj.getClass())
 			return false;
 		CustomerEnquiryVO other = (CustomerEnquiryVO) obj;
-		if (customerEnquiryId == null) {
-			if (other.customerEnquiryId != null)
+		if (enquiryId == null) {
+			if (other.enquiryId != null)
 				return false;
-		} else if (!customerEnquiryId.equals(other.customerEnquiryId))
+		} else if (!enquiryId.equals(other.enquiryId))
 			return false;
 		return true;
 	}
+	
+	
 	
 }

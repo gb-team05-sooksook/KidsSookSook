@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div>
     <div class="cash-title">크몽 캐시</div>
     <div data-v-8a97d7d8="" class="cash-info-panel-wrapper">
@@ -12,13 +15,13 @@
             </div>
         </div>
         <div data-v-8a97d7d8="" class="cash-info-panel">
-            <div data-v-8a97d7d8="" class="title">적립 캐시</div>
+            <div data-v-8a97d7d8="" class="title">결제 적립 캐시</div>
             <div data-v-8a97d7d8="" class="amount-wrapper">
                 <span data-v-8a97d7d8="" class="tahoma">0</span>원
             </div>
         </div>
         <div data-v-8a97d7d8="" class="cash-info-panel">
-            <div data-v-8a97d7d8="" class="title">충전 캐시</div>
+            <div data-v-8a97d7d8="" class="title">후기 적립 캐시</div>
             <div data-v-8a97d7d8="" class="cash-refunds-wrapper">
                 <div
                     data-v-8a97d7d8=""
@@ -26,15 +29,6 @@
                     style="margin-right: 4px"
                 >
                     <span data-v-8a97d7d8="" class="tahoma">0</span>원
-                </div>
-                <div data-v-8a97d7d8="" class="cash-refund-button-wrapper">
-                    <button
-                        data-v-8a97d7d8=""
-                        type="button"
-                        class="cash-refund-button"
-                    >
-                        충전
-                    </button>
                 </div>
             </div>
         </div>
@@ -92,48 +86,21 @@
     </ul>
 </div>
 <div class="cash-history-list">
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
+	<div class="history-result-list">
+	    <div class="history-result">
+            <div class="h_result-info">
+                <h4 class="h_title"><a href=""><!--문의사항 제목 1-->문의사항제목</a></h4>
+                <div class="h_details">
+                    <span class="h_category">문의사항확인여부</span>
+                    <span class="h_date">2022.01.01</span>
+                </div>
+            </div>
+            <div class="h_result-content">
+                <div>문의사항 컨텐츠 요약본 한 줄</div>
             </div>
         </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
     </div>
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
-            </div>
-        </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
-    </div>
-    <div class="history-result">
-        <div class="h_result-info">
-            <h4 class="h_title"><a href="">체험학습 제목 1</a></h4>
-            <div class="h_details">
-                <span class="h_category">카테고리</span>
-                <span class="h_date">2022.01.01</span>
-                <span class="h_institution">업체명</span>
-            </div>
-        </div>
-        <div class="h_result-content">
-            <div>체험학습 내용의 요약본 한 줄</div>
-            <span>금액란10000</span>
-        </div>
-    </div>
+    
 </div>
 <div class="cash-history-infomation-container">
     <p>

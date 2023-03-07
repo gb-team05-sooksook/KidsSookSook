@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.admin.ModifyNoticeActionController;
 
 public class PayFrontController extends HttpServlet {
 
@@ -20,6 +19,8 @@ public class PayFrontController extends HttpServlet {
 		Result result = null;
 		if(target.equals("/payAction")){
 			result = new PayActionController().execute(req, resp);
+		}else if(target.equals("/paymentAction")) {
+			result = new PaymentActionController().execute(req, resp);
 		}else {
 			System.out.println(target);
 		}

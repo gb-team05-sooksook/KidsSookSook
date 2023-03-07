@@ -31,12 +31,12 @@
                     </div>
                     <div class="modal-inner">
                         <div class="modal-background-img">
-                            <img alt="로그인모달 배경이미지" src="1661922248128.jpg" width="600" height="656" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
+                            <img alt="로그인모달 배경이미지" src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" width="600" height="656" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
                             <p class="modal-background-introduce">
-                                <span>현재 2,544,436명의 회원이 크몽에서 활동하고 있습니다.</span>
+                                <!-- <span>현재 2,544,436명의 회원이 크몽에서 활동하고 있습니다.</span>
                                 <br>
                                 <span style="font-weight: 500;">2,544,437</span>
-                                번째 크몽회원이 되어보세요 :)
+                                번째 크몽회원이 되어보세요 :) -->
                             </p>
                         </div>
                         <div class="modal-login">
@@ -50,11 +50,11 @@
                                 </div>
                                 <div class="modal-login-div-outer">
                                     <div class="modal-login-div-inner">
-                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." name="userPassword"  class="modal-login-id" value="">
+                                        <input type="password" required="" placeholder="비밀번호를 입력해 주세요." id="password" name="userPassword"  class="modal-login-id" value="">
                                     </div>
                                     <div class="modal-login-between"></div>
                                 </div>
-                                <button role="button" color="yellow" type="submit" class="modal-login-btn">
+                                <button role="button" color="yellow" class="modal-login-btn">
                                     <span>로그인</span>
                                 </button>
                                 <div class="modal-login-addition">
@@ -66,7 +66,7 @@
                                         </span>
                                     </label>
                                     <div class="modal-keep-find">
-                                        <a href="/forgot-pwd?next_page=%2F%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D0%26utm_content%3Dmarket%26utm_group%3D0%26utm_term%3D%25ED%2581%25AC%25EB%25AA%25BD%26gclid%3DCj0KCQiA6LyfBhC3ARIsAG4gkF-zawIWEWRoAWVfgwwObzjxlp6RN9Z1EYPO6-Winq19vJL16UBB6c8aAteGEALw_wcB" class="modal-keep-find-text">아이디•비밀번호 찾기</a>
+                                        <a href="${pageContext.request.contextPath}/findId.member" class="modal-keep-find-text">아이디•비밀번호 찾기</a>
                                     </div>
                                 </div>
                             </form>
@@ -100,13 +100,10 @@
                             <hr orientation="horizontal" class="modal-line">
                             <div>
                                 <p class="modal-adver">
-                                    크몽의 회원이 되시면
-                                    <br>
-                                    <b>10만원 할인혜택</b>
-                                    을 드립니다.
+                                    
                                 </p>
-                                <a role="link" color="denim" href="${pageContext.request.contextPath}/templates/joinLogin/join/firstJoin.member" class="modal-join">
-                                    <span>크몽 회원가입 하기</span>
+                                <a role="link" color="denim" href="${pageContext.request.contextPath}/firstJoin.member" class="modal-join">
+                                    <span>키즈쑥쑥 회원가입 하기</span>
                                 </a>
                             </div>
                         </div>

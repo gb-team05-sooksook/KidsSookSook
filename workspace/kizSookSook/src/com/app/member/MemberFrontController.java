@@ -21,36 +21,34 @@ public class MemberFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		//일반회원가입으로 이동
-		if(target.equals("/templates/joinLogin/join/joinPage_normal")) {
+		if(target.equals("/joinPage_normal")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/joinPage_normal.jsp");
 		
 		//기관회원가입으로 이동	
-		}else if(target.equals("/templates/joinLogin/join/joinPage_institution")) {
+		}else if(target.equals("/joinPage_institution")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/joinPage_institution.jsp");
 		
 		//secondJoin으로 이동
-		}else if(target.equals("/templates/joinLogin/join/secondJoin")) {
+		}else if(target.equals("/secondJoin")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/secondJoin.jsp");
 		
 		//firstJoin으로 이동	
-		}else if(target.equals("/templates/joinLogin/join/firstJoin")) {
+		}else if(target.equals("/firstJoin")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/join/firstJoin.jsp");
 		
 		// 아이디찾기로 이동		 
-		}else if(target.equals("/templates/joinLogin/findIdPw/idFind")) {
+		}else if(target.equals("/idFind")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/findIdPw/idFind.jsp");
 		
 		// 비밀번호찾기로 이동	
-		}else if(target.equals("/templates/joinLogin/findIdPw/passwordFind")) {
+		}else if(target.equals("/passwordFind")) {
 			result = new Result();
 			result.setPath("/templates/joinLogin/findIdPw/passwordFind.jsp");
-			
-		
 			
 		//일반회원 가입
 		}else if(target.equals("/joinPage_normalAction")) {
@@ -85,31 +83,38 @@ public class MemberFrontController extends HttpServlet {
 			System.out.println("들왓나13");
 		//로그인
 		}else if(target.equals("/login")) {
+			result = new LoginController().execute(req, resp);
+			
+		
+		}else if(target.equals("/changePassword")) {
 			result = new Result();
-			System.out.println("들왓나16");
-			result.setPath("/templates/main/main.jsp");
-			
-		}else if(target.equals("/sendEmailAction")) {
-			result = new SendEmailActionController().execute(req, resp);
-			
+			result.setPath("/templates/joinLogin/findIdPw/changePassword.jsp");
+		
+		//비밀번호 변경
 		}else if(target.equals("/changePwAction")) {
 			result = new ChangePwActionController().execute(req, resp);
 		
 		// 아이디찾기 action
 		}else if(target.equals("/findIdAction")) {
+			System.out.println("findId");
 			result = new FindIdActionController().execute(req, resp);
 		
 		// 아이디찾기	
 		}else if(target.equals("/findId")) {
 			result = new Result();
-			result.setPath("/templates/main/main.jsp");
+			result.setPath("/templates/joinLogin/findIdPw/idFind.jsp");
 		
 		// 비밀번호찾기 
 		}else if(target.equals("/findPwAction")) {
 			result = new FindPwActionController().execute(req, resp);
 			
+		}else if(target.equals("/findPw")) {
+			result = new Result();
+			result.setPath("/templates/joinLogin/findIdPw/passwordFind.jsp");
+		
 		}else {
 			System.out.println(target);
+			System.out.println("안됌?");
 		}
 		
 		

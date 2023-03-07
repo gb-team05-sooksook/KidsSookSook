@@ -55,14 +55,14 @@ public class FindIdActionController implements Action {
 	           
 	         //****************건들지 마세요********************
 	           final String username = "jh940412@gmail.com";         
-	           final String password = "msoulgstclzdqnnw";
+	           final String password = "uojepatlgtfmpvfg";
 	           //*********************************************
 	           
 	           // 메일에 출력할 텍스트
 	           String html = null;
 	           StringBuffer sb = new StringBuffer();
 	           sb.append("<h3>KidsSookSook 아이디 찾기</h3>\n");
-	           sb.append("회원님의 아이디는" + userIdentification + "입니다");    
+	           sb.append("회원님의 아이디는 " + userIdentification + " 입니다");    
 	           html = sb.toString();
 	           
 	           // 메일 옵션 설정
@@ -111,14 +111,14 @@ public class FindIdActionController implements Action {
 	             e.printStackTrace();
 	           }
 	          
-	           result.setPath("/login.member");
+	           result.setPath("/main.main");
 	           result.setRedirect(true);
 	           
 	      } else {
-	         result.setPath("/findId.member");
+	         result.setPath("/main.main");
 	         result.setRedirect(true);
 	      }
-		return null;
+		return result;
 	}
 
 }

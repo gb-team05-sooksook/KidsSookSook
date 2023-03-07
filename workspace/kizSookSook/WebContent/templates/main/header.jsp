@@ -16,7 +16,7 @@
 	<!--header -->
 		<header class="wrap-h">
 			<section class="wrap-s">
-				<a class="logo" href="#">
+				<a class="logo" href="${pageContext.request.contextPath}/main.main">
                     <!-- 크몽 logo 이미지 -->
 				<img src="${pageContext.request.contextPath}/static/resources/img/kids-logo.png">
 				</a>
@@ -45,7 +45,7 @@
 					</button>
                     <!-- 마이페이지 이동 -->
                     <div>
-                        <a  href="#" class="mypage">
+                        <a class="mypage">
                             <span>
                                 <div class="default-profile">
                                     <img src="${pageContext.request.contextPath}/static/resources/img/main/profile.png" class="profile-img">
@@ -73,14 +73,14 @@
                         <div class="dropdown-container">
                             <button type="button" class="category-s" onclick="dp_menu()">전체 카테고리</button>
                             <div style="display: none;" id="drop-content">
-                                    <a href='#'>과학IT</a>
-                                    <a href='#'>방송</a>
-                                    <a href='#'>사회</a>
-                                    <a href='#'>엑티비티</a>
-                                    <a href='#'>역사</a>
-                                    <a href='#'>예술</a>
-                                    <a href='#'>요리</a>
-                                    <a href='#'>의료</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=1&categoryName=science'">과학IT</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=2&categoryName=mike'">방송</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=3&categoryName=study'">사회</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=4&categoryName=activity'">엑티비티</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=5&categoryName=history'">역사</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=6&categoryName=art'">예술</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=7&categoryName=cook'">요리</a>
+                                    <a href="javascript:location.href='${pageContext.request.contextPath}/connectCategoryPageAction.fieldTrip?categoryId=8&categoryName=medical'">의료</a>
                              </div>
                         </div>
                             <span class="categoryImg">

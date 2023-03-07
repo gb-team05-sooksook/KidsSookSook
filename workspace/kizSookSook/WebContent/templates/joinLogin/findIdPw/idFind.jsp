@@ -22,14 +22,14 @@
         <main class="page-main">
             <h1 class="page-main-title">아이디 비밀번호 찾기</h1>
             <section class="main-id-pw-select">
-                <div class="main-id-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/findIdPw/idFind.member'">아이디</div>
-                <div class="main-pw-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/templates/joinLogin/findIdPw/passwordFind.member'">비밀번호</div>
+                <div class="main-id-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/idFind.member'">아이디</div>
+                <div class="main-pw-page" style="cursor: pointer" onclick="location.href='${pageContext.request.contextPath}/passwordFind.member'">비밀번호</div>
             </section>
             <section>
                 <section>
                     <h2 class="main-id-find-title">아이디 찾기</h2>
                     <p class="main-id-find-explain">본인인증 받으신 정보를 입력해 주세요. 휴대폰 번호로 아이디(이메일 주소)를 보내드립니다.</p>
-                    <form class="main-id-find-form" action="${pageContext.request.contextPath}/findId.member" >
+                    <form class="main-id-find-form" action="${pageContext.request.contextPath}/findIdAction.member" >
                         <section>
                             <label class="main-id-find-input-text">이메일 주소</label>
                             <div class="main-id-find-input-div">

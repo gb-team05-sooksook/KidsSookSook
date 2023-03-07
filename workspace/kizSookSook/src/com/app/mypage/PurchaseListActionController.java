@@ -58,7 +58,7 @@ public class PurchaseListActionController implements Action {
 		searchMap.put("fieldTripName", fieldTripName);
 		searchMap.put("startDate", startDate);
 		searchMap.put("endDate", endDate);
-		searchMap.put("userId", 4L);
+		searchMap.put("userId", 1L);
 		 
 		
 		/*
@@ -72,7 +72,7 @@ public class PurchaseListActionController implements Action {
 		 */
 		
 		
-		fieldTripDTOs = myPageDAO.findPurchaseList(searchMap); 
+		fieldTripDTOs = myPageDAO.selectPurchaseList(searchMap); 
 		System.out.println("fieldTripDTOs: " + fieldTripDTOs);
 		
 		fieldTripDTOs.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
