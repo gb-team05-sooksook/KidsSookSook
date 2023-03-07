@@ -122,17 +122,15 @@ function app() {
                   <input class="tableCheckbox" type="checkbox" name="deleteCheck" value="" />
                 </form>
               </td>
-              <td>${enquiry.customerEnquiryId}</td>
+              <td>${enquiry.enquiryId}</td>
               <td>${enquiry.userId}</td>
               <td>${enquiry.userEmail}</td>
-              <td>${enquiry.customerEnquiryTitle}</td>
-              <td>${enquiry.customerEnquiryContent}</td>
-              <td>${enquiry.customerEnquiryDate}</td>
-              <td class=${
-                enquiry.customerEnquiryConfirm == 0 ?
-                "trDataNO" : "trDataOK"
-              }>${enquiry.customerEnquiryConfirm == 0 ?
-                "답변대기" : "답변완료"}</td>
+              <td>${enquiry.enquiryTitle}</td>
+              <td>${enquiry.enquiryContent}</td>
+              <td>${enquiry.enquiryDate}</td>
+              <td class=${enquiry.enquiryConfirm == 0 ? 'trDataNO' : 'trDataOK'}>${
+              enquiry.enquiryConfirm == 0 ? '답변대기' : '답변완료'
+            }</td>
             </tr>`;
           });
           stage.find("tr[name='notice']").remove();
