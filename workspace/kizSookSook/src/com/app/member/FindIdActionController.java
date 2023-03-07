@@ -62,7 +62,7 @@ public class FindIdActionController implements Action {
 	           String html = null;
 	           StringBuffer sb = new StringBuffer();
 	           sb.append("<h3>KidsSookSook 아이디 찾기</h3>\n");
-	           sb.append("회원님의 아이디는 " + userIdentification + " 입니다");    
+	           sb.append("키즈쑥쑥 회원님의 아이디는 " + userIdentification + " 입니다");    
 	           html = sb.toString();
 	           
 	           // 메일 옵션 설정

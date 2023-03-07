@@ -62,8 +62,8 @@ public class MemberDAO {
 	}
 	
 	// 중복검사
-	public boolean checkId(String memberIdentification) {
-		return sqlSession.selectOne("member.checkId", memberIdentification);
+	public boolean checkId(String userIdentification) {
+		return sqlSession.selectOne("member.checkId", userIdentification);
 	}
 	// 로그인
 	public Long login(String userIdentification, String userPassword) {
@@ -87,8 +87,11 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.findPw", userEmail);
 	}
 	//비밀번호 변경
-	public String changePw(String userEmail) {
-		return sqlSession.selectOne("member.changePw", userEmail);
+	public String changePw(String userEmail, String userPassword) {
+		Map<String, String> changePwMap = new HashMap<String, String>();
+		changePwMap.put("userEmail", userEmail);
+		changePwMap.put("userPassword", userPassword);
+		return sqlSession.selectOne("member.changePw", changePwMap);
 	}
 	
 }

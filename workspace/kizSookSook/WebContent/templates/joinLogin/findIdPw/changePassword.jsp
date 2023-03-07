@@ -23,7 +23,7 @@
             <section class="page-main">
                 <div class="page-main-div">
                     <h1 class="page-main-title">비밀번호 변경</h1>
-                    <form class="page-main-form" action="">
+                    <form class="page-main-form" action="${pageContext.request.contextPath}/changePwAction.member">
                         <section>
                             <label class="page-main-change-label">변경할 비밀번호</label>
                             <div class="page-main-change-div">
