@@ -103,63 +103,17 @@
                     <div class="field-evaluation-containal">
                         <div id="book5" class="detaile-content">체험 평가</div>
                         <div class="field-evaluation-wrapper">
-                            <div class="field-evaluation-star-score-text">113개의 평가</div>
+                            <div class="field-evaluation-star-score-text">${countReview}개의 평가</div>
                         </div>
                         <div class="field-evaluation-text">실제 키즈쑥쑥을 통해 구매한 이용자들이 남긴 평가입니다.</div>
                     </div>
                     <!-- 체험후기글 -->
             	    <section>
                         <div class="field-review-latter-containal">
-                            <div>체험 후기 113개</div>
+                            <div>체험 후기 ${countReview}개</div>
                         </div>
                         <!-- 후기내용 -->
-                		<div class="review-list">
-                            <div class="review-list-containal">
-                                <div class="review-list-person">
-                                    <div class="review-list-person-profile">
-                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
-                                    </div>
-                                    <div class="review-list-person-profile-next">
-                                        <div class="review-list-person-profile-nikename">hds****</div>
-                                        <div class="review-list-person-profile-star-containal">
-                                            
-                                            
-                                            
-                                            <div class="review-list-person-score-next-date">23.02.22 16:02</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="person-review-containel">
-                                <div class="person-review-wrapper">
-                                    <p class="person-review-write">
-                                        첫 아이의 재능 및 정서 체험을 하기 위해 여러 사이트를 찾던 중 발견한 키즈쑥쑥! 아이가 과학을 좋아해 첫 체험으로 C.S.I체험을 해보았는데 부모인 저도 그렇고 아이도 100% 200% 만족했습니다. 체험구성도 좋고 앞으로도 잘 이용하겠습니다.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-list">
-                            <div class="review-list-containal">
-                                <div class="review-list-person">
-                                    <div class="review-list-person-profile">
-                                        <img src="${pageContext.request.contextPath}/static/resources/img/fieldTrip/detailePage/techer.png" class="review-list-person-profile-img">
-                                    </div>
-                                    <div class="review-list-person-profile-next">
-                                        <div class="review-list-person-profile-nikename">hds****</div>
-                                        <div class="review-list-person-profile-star-containal">
-                                            <div class="review-list-person-score-next-date">23.02.22 16:02</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="person-review-containel">
-                                <div class="person-review-wrapper">
-                                    <p class="person-review-write">
-                                        한번 더 왔습니다.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="review-div"></div>
                         <button class="review-more-button">
                             <span>더 보기</span>
                         </button>
@@ -229,6 +183,6 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}";</script>
+<script>let contextPath = "${pageContext.request.contextPath}", fieldTripReviews = `${fieldTripReviews}`;</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailPage.js"></script>
 </html>

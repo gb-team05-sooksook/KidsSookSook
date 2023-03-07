@@ -6,8 +6,6 @@ public class ReviewVO {
 	Long fieldTripId;
 	String reviewWriteDate;
 	String reviewAlterDate;
-	int reviewGood;
-	String reviewTitle;
 	String reviewContext;
 	
 	public ReviewVO() {;}
@@ -52,22 +50,6 @@ public class ReviewVO {
 		this.reviewAlterDate = reviewAlterDate;
 	}
 
-	public int getReviewGood() {
-		return reviewGood;
-	}
-
-	public void setReviewGood(int reviewGood) {
-		this.reviewGood = reviewGood;
-	}
-
-	public String getReviewTitle() {
-		return reviewTitle;
-	}
-
-	public void setReviewTitle(String reviewTitle) {
-		this.reviewTitle = reviewTitle;
-	}
-
 	public String getReviewContext() {
 		return reviewContext;
 	}
@@ -79,8 +61,8 @@ public class ReviewVO {
 	@Override
 	public String toString() {
 		return "ReviewVO [reviewId=" + reviewId + ", userId=" + userId + ", fieldTripId=" + fieldTripId
-				+ ", reviewWriteDate=" + reviewWriteDate + ", reviewAlterDate=" + reviewAlterDate + ", reviewGood="
-				+ reviewGood + ", reviewTitle=" + reviewTitle + ", reviewContext=" + reviewContext + "]";
+				+ ", reviewWriteDate=" + reviewWriteDate + ", reviewAlterDate=" + reviewAlterDate + ", reviewContext="
+				+ reviewContext + "]";
 	}
 
 	@Override
