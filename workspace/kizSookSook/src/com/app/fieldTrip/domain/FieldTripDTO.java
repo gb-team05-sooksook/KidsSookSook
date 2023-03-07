@@ -14,27 +14,17 @@ public class FieldTripDTO {
 	private int recommendCount;
 	private String fieldTripSystemName; 
 	private String fieldTripOrgName;
+	private String institutionpSystemName;
 	private int reviewCount;
+	private int paymentCount;
+	private Long fieldTripId;
 	
 	public FieldTripDTO() {;}
-
 	
-
-	public Long getFieldTripId() {
-		return fieldTripId;
-	}
-
-
-
-	public void setFieldTripId(Long fieldTripId) {
-		this.fieldTripId = fieldTripId;
-	}
-
-
-
 	public Long getCategoryId() {
 		return categoryId;
 	}
+
 
 
 
@@ -44,9 +34,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getCategoryName() {
 		return categoryName;
 	}
+
 
 
 
@@ -56,9 +48,11 @@ public class FieldTripDTO {
 
 
 
+
 	public Long getUserId() {
 		return userId;
 	}
+
 
 
 
@@ -68,9 +62,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripName() {
 		return fieldTripName;
 	}
+
 
 
 
@@ -80,9 +76,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripRegistationDate() {
 		return fieldTripRegistationDate;
 	}
+
 
 
 
@@ -92,9 +90,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripDeadlineDate() {
 		return fieldTripDeadlineDate;
 	}
+
 
 
 
@@ -104,9 +104,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripProgramDate() {
 		return fieldTripProgramDate;
 	}
+
 
 
 
@@ -116,9 +118,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripPlace() {
 		return fieldTripPlace;
 	}
+
 
 
 
@@ -128,9 +132,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripPrice() {
 		return fieldTripPrice;
 	}
+
 
 
 
@@ -140,9 +146,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripContextDescription() {
 		return fieldTripContextDescription;
 	}
+
 
 
 
@@ -152,9 +160,11 @@ public class FieldTripDTO {
 
 
 
+
 	public int getRecommendCount() {
 		return recommendCount;
 	}
+
 
 
 
@@ -163,9 +173,12 @@ public class FieldTripDTO {
 	}
 
 
+
+
 	public String getFieldTripSystemName() {
 		return fieldTripSystemName;
 	}
+
 
 
 
@@ -175,9 +188,11 @@ public class FieldTripDTO {
 
 
 
+
 	public String getFieldTripOrgName() {
 		return fieldTripOrgName;
 	}
+
 
 
 
@@ -187,9 +202,25 @@ public class FieldTripDTO {
 
 
 
+
+	public String getInstitutionpSystemName() {
+		return institutionpSystemName;
+	}
+
+
+
+
+	public void setInstitutionpSystemName(String institutionpSystemName) {
+		this.institutionpSystemName = institutionpSystemName;
+	}
+
+
+
+
 	public int getReviewCount() {
 		return reviewCount;
 	}
+
 
 
 
@@ -198,18 +229,48 @@ public class FieldTripDTO {
 	}
 
 
-	private Long fieldTripId;
-	@Override
-	public String toString() {
-		return "FieldTripDTO [fieldTripId=" + fieldTripId + ", categoryId=" + categoryId + ", categoryName="
-				+ categoryName + ", userId=" + userId + ", fieldTripName=" + fieldTripName
-				+ ", fieldTripRegistationDate=" + fieldTripRegistationDate + ", fieldTripDeadlineDate="
-				+ fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate + ", fieldTripPlace="
-				+ fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice + ", fieldTripContextDescription="
-				+ fieldTripContextDescription + ", recommendCount=" + recommendCount + ", fieldTripSystemName="
-				+ fieldTripSystemName + ", fieldTripOrgName=" + fieldTripOrgName + ", reviewCount=" + reviewCount + "]";
+
+
+	public int getPaymentCount() {
+		return paymentCount;
 	}
 
+
+
+
+	public void setPaymentCount(int paymentCount) {
+		this.paymentCount = paymentCount;
+	}
+
+
+
+
+	public Long getFieldTripId() {
+		return fieldTripId;
+	}
+
+
+
+
+	public void setFieldTripId(Long fieldTripId) {
+		this.fieldTripId = fieldTripId;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "FieldTripDTO [categoryId=" + categoryId + ", categoryName=" + categoryName + ", userId=" + userId
+				+ ", fieldTripName=" + fieldTripName + ", fieldTripRegistationDate=" + fieldTripRegistationDate
+				+ ", fieldTripDeadlineDate=" + fieldTripDeadlineDate + ", fieldTripProgramDate=" + fieldTripProgramDate
+				+ ", fieldTripPlace=" + fieldTripPlace + ", fieldTripPrice=" + fieldTripPrice
+				+ ", fieldTripContextDescription=" + fieldTripContextDescription + ", recommendCount=" + recommendCount
+				+ ", fieldTripSystemName=" + fieldTripSystemName + ", fieldTripOrgName=" + fieldTripOrgName
+				+ ", institutionpSystemName=" + institutionpSystemName + ", reviewCount=" + reviewCount
+				+ ", paymentCount=" + paymentCount + ", fieldTripId=" + fieldTripId + "]";
+	}
+	
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
