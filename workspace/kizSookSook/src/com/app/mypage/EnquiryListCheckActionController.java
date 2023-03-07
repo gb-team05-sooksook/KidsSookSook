@@ -32,7 +32,7 @@ public class EnquiryListCheckActionController implements Action {
 		JSONArray jsons = new JSONArray();
 		List<CustomerEnquiryVO> enquiries = null;
 		
-		searchMap.put("userId", 4L);
+		searchMap.put("userId", 1L);
 		
 		enquiries = myPageDAO.selectEnquiryList(searchMap);
 		
