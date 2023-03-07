@@ -47,7 +47,7 @@
 	</delete>
 
 	<select id="getCash" parameterType="long" resultType="cashVO">
-		select cash_id, user_id, payment_cash, review_cash, cash_save_date, review_save_date
+		select cash_id, user_id, payment_cash, review_cash
 		from tbl_cash where user_id = #{userId}
 	</select>
 	
@@ -74,7 +74,7 @@
 	</update>
 	
 	<update id="updatePaymentCash" parameterType="map">
-		update tbl_cash set payment_cash = payment_cash + #{cashSave}, cash_save_date = now()
+		update tbl_cash set payment_cash = payment_cash + #{cashSave}
 		where user_id = #{userId}
 	</update>
 </mapper>
