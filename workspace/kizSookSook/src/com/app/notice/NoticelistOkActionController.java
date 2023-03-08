@@ -34,7 +34,7 @@ public class NoticelistOkActionController implements Action {
 		
 		int page =  temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
 		
-		Long total = noticeDAO.getTotalPage(searchMap);
+		Long total = noticeDAO.getTotal();
 		
 		// 한 페이지에 출력되는 공지글 개수
 		int rowCount = 10;
@@ -55,10 +55,7 @@ public class NoticelistOkActionController implements Action {
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
 		
-		
-		
-		req.setAttribute("notices", noticeDAO.selectAll());
-		
+		noticeList = noticeDAO.selectAll(pageMap);
 		noticeList.stream().map(noticelist -> new JSONObject(noticelist)).forEach(noticeJsons::put);
 		
 		req.setAttribute("notices", noticeJsons.toString());
@@ -69,10 +66,10 @@ public class NoticelistOkActionController implements Action {
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
 		
-		result.setPath("/templates/customerCenter/institution-notice.jsp");
+		result.setPath( "/institution-notice.jsp");
+		
 		
 		return result;
-		
 	}
 
 }

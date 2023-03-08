@@ -34,6 +34,9 @@ public class NoticeDAO {
 	public void delete(Long noticeId) {
 		sqlSession.delete("notice.delete", noticeId);
 	}
+	public NoticeVO select(Long noticeId) {
+		return sqlSession.selectOne("notice.select", noticeId);
+	}
 }
 
 

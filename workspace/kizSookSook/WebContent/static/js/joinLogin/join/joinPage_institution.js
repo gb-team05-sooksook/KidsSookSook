@@ -1,7 +1,40 @@
 /**
  * 
  */
+const $input = $('#inputId');
+const $error = $('#error-id');
+console.log($input);
+console.log($error);
 
+$input.on("blur", function() {
+	let i = $input.index($(this));
+	let value = $(this).val();
+
+	if (i != 0) {
+		$error.text("");
+	} else {
+		$.ajax({
+			url: contextPath + "/checkIdAction.member",
+			data: { userIdentification: value},
+			success: function(result) {
+			console.log(result);
+				let message;
+				console.log(result);
+				result = JSON.parse(result);
+				console.log(result);
+				if (result.check) {
+					message = "중복 아이디 입니다.";
+					$error.css('color', 'red')
+				} else {
+					message = "사용가능한 아이디입니다.";
+					$error.css('color', '#2bb673')
+				}
+				$error.text(message);
+
+			}
+		});
+	}
+});
 	// 유효성 검사
     $btnModal.click(function(event) {
         event.preventDefault();

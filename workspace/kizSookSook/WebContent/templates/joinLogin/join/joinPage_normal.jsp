@@ -22,11 +22,11 @@
                     <div class="join-item-div">
                         <div class="join-item-title">아이디</div>
                         <div class="join-item-input-div">
-                            <input type="text" required placeholder="아이디를 입력해 주세요." name="userIdentification" class="join-item-input test" value="">
+                            <input type="text" required placeholder="아이디를 입력해 주세요." id="inputId" name="userIdentification" class="join-item-input" value="">
                         </div>
                         <div >
                             <div class="error-div">
-                                <p class="error-text error-id checkText" style="display: none;">아이디를 입력해 주세요.</p>
+                                <p class="error-text" id="error-id" style="display: none;">아이디를 입력해 주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -251,5 +251,6 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/joinLogin/join/joinPage.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/joinLogin/join/joinPage_normal.js"></script>
 </html>

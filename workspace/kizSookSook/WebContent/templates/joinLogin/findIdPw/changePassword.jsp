@@ -28,6 +28,7 @@
                             <label class="page-main-change-label">변경할 비밀번호</label>
                             <div class="page-main-change-div">
                                 <input type="password" placeholder="비밀번호를 입력해 주세요. (8자리 이상)" name="newPassword" class="page-main-change-input" value="" aria-autocomplete="list">
+                            	<input type="password" value = "${param.userEmail}" name = "userEmail" style="display:none;">   
                             </div>
                             <div data-testid="newPassword">
                                 <div class="error-div">

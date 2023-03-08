@@ -56,11 +56,11 @@
                             <div class="page-title">FAQ</div>
                         </h1>
                     </header>
-
+<!-- 
                     <div class="section-tree">
                         <section class="section">
                             <h3 class="section-tree-title">
-                                <a href="">이용방법</a>
+                                이용방법
                             </h3>
                             <ul class="article-list">
                                 <li class="article-list-item">
@@ -189,7 +189,7 @@
 						</section>
                             <a tabindex="0" class="see-all-sections-trigger" aria-hidden="true"
                                 id="see-all-sections-trigger" title="모든 섹션 보기…">모든 섹션 보기… </a>
-
+ -->
                     </div>
                 </div>
             </div>
@@ -223,7 +223,13 @@
     </footer>
     <!-- footer end -->
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/clickChangeBorder.js"></script>
-
+<script src="${pageContext.request.contextPath}/static/js/customerCenter/list.js"></script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+	let page = `${page}`
+	let notices =${notices};
+</script>
 
 </html>

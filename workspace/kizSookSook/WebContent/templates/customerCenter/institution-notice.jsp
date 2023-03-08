@@ -50,11 +50,6 @@
                     <li title="공지사항">
                         <a href="">공지사항</a>
                     </li>
-                </ol>
-               <!--  <form role="search" class="search" accept-charset="UTF-8">
-                    <input name="utf8" type="hidden" value="✓">
-                    <input type="search" name="query" id="query" placeholder="검색">
-                </form> -->
             </nav>
             <div class="section-container">
                 <section class="section-content">
@@ -63,7 +58,18 @@
                             <div class="page-title">공지사항</div>
                         </h1>
                     </header>
-                    <ul class="article-list">
+                    	<c:if test="${prev}">
+                    		<a href="javascript:location.href='/notice/NoticelistOk.notice?page=${startPage - 1}'"></a>
+                    	</c:if>
+                    	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+                    		<c:choose>
+                    			<c:when test="${i eq page }">
+                    	        </c:when>
+                    		</c:choose>
+                    	</c:forEach>
+                    	
+                    	
+                    <!-- <ul class="article-list">
                         <li class="article-list-item  article-promoted">
                             <span data-title="승격된 문서"></span>
                             <a href="" class="article-list-link">[공지] 키즈쑥쑥 TEST1</a>
@@ -153,7 +159,7 @@
 			            	<a href="" class="article-list-link">간이과세 대상 확대 및 세금계산서 발행 의무 변경 안내</a>
 			            </li>
 		        	</ul>
-                    <nav class="pagination">
+ -->                    <nav class="pagination">
                         <ul>
                             <li class="pagination-current">
                                 <span>1</span>
@@ -203,6 +209,7 @@
     </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/clickChangeBorder.js"></script>
-
+<script src="${pageContext.request.contextPath}/static/js/customerCenter/list.js"></script>
 </html>

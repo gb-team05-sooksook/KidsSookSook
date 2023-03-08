@@ -72,7 +72,7 @@
                     <div class="category-right">
                         <section class="category-right-name">
                             <div class="category-right-names"></div>
-                            <span class="category-right-listName">카테고리  >  요리</span>
+                            <span class="category-right-listName">카테고리  >  예술</span>
                         </section>
                         <div class="category-right-listNames">
                             <div class="category-right-listName-turn">
