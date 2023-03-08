@@ -4,7 +4,9 @@
 	<insert id="insert">
 		insert into tbl_cash_history
 		<choose>
-			<when test=""></when>
+			<when test="">
+			
+			</when>
 		</choose>
 	</insert>
 </mapper>
