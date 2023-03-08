@@ -2,37 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="enquiry">
-	<sql id="searchType">
-		<if test="types != null">
-			where
-			<trim prefixOverrides="and">
-				<foreach item="type" collection="types">
-					<trim prefix="and">
-						<choose>
-							<when test="type == 'enquiryTitle'.toString()">
-								enquiry_title like concat('%', #{enquiryTitle}, '%')
-							</when>
-							<when test="type == 'userId'.toString()">
-								user_id = #{userId}
-							</when>
-							<when test="type == 'confirm'.toString()">
-								enquiry_confirm = #{confirm}
-							</when>
-						</choose>
-					</trim>
-				</foreach>
-			</trim>
-		</if>
-	</sql>
-
-	<select id="selectAll" resultType="customerEnquiryVO" parameterType="map">
-		select enquiry_id, user_id, user_email, enquiry_title, enquiry_content, enquiry_date, enquiry_confirm
-		from tbl_customer_enquiry
-		<include refid="searchType"/>
-		<!-- where enquiry_confirm = 0 -->
-		order by enquiry_id desc
-		limit #{startRow}, #{rowCount}
-	</select>
+	
 	
 	<select id="getTotal" resultType="long">
 		select count(enquiry_id) 

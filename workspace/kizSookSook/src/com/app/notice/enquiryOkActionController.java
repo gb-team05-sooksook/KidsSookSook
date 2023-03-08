@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import com.app.file.dao.FileDAO;
 import com.app.file.domain.FileVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.oreilly.servlet.multipart.Part;
 
 public class enquiryOkActionController implements Action {
 
@@ -26,18 +28,16 @@ public class enquiryOkActionController implements Action {
 		req.setCharacterEncoding("UTF-8");
 		CustomerEnquiryVO customerEnquiryVO = new CustomerEnquiryVO();
 		Result result = new Result();
-		FileVO FileVO = new FileVO();
-		FileDAO FileDAO = new FileDAO(); 
-		
-	
-		String uploadPath = "C:/gb_0900_mes/JSP_project/kidsSookSook/workspace/kizSookSook/WebContent/upload";
 		FileVO fileVO = new FileVO();
 		FileDAO fileDAO = new FileDAO(); 
 		EnquiryDAO enquiryDAO = new EnquiryDAO();
-	
+		
+		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
+	 System.out.println(uploadPath);
 //		String  = req.getSession().getServletContext().getRealPath("/") + "upload/";
+		// 실제 서블릿이 동작하는 서버 경로
+	
 		int fileSize = 1024 * 1024 * 5; //5M
-		Long noticeCurrentSequence = 0L;
 		
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		/* String enquiryId = req.getParameter("enquiryId"); */
@@ -45,30 +45,28 @@ public class enquiryOkActionController implements Action {
 		customerEnquiryVO.setUserEmail(multipartRequest.getParameter("userEmail"));
 		customerEnquiryVO.setEnquiryTitle(multipartRequest.getParameter("enquiryTitle"));		
 		customerEnquiryVO.setEnquiryContent(multipartRequest.getParameter("enquiryContent"));
+		
+//		String enquiryId = multipartRequest.getParameter("enquiryId");
+		// userid 실험대상
+		
+		req.setAttribute("userId", 3L);
+		customerEnquiryVO.setEnquiryId((Long)req.getSession().getAttribute("enquiryId"));
 		customerEnquiryVO.setUserId((Long)req.getSession().getAttribute("userId"));
 		
-		enquiryDAO.insert(customerEnquiryVO);
 		
-		noticeCurrentSequence = enquiryDAO.getCurrentSequence();
+	Enumeration<String> fileNames = multipartRequest.getFileNames();
 		
-		
-		JSONObject fileJson = new JSONObject();
-		PrintWriter out = resp.getWriter();
-		
-		String enquiryId = req.getParameter("enquiryId");
-		
-		Enumeration<String> fileNames = multipartRequest.getFileNames();
-		
-		if(fileNames.hasMoreElements()) {
+		while(fileNames.hasMoreElements()) {
+//			파일의 전체 속성
 			String fileName = fileNames.nextElement();
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 			
+			System.out.println(fileName);
 			System.out.println(fileOriginalName);
 			System.out.println(fileSystemName);
-//			if(fileOriginalName == null) {continue;}
+			if(fileOriginalName == null) {continue;}
 			
-			fileVO.setTargetId(Long.valueOf(enquiryId));
 			fileVO.setFileOriginalName(fileOriginalName);
 			fileVO.setFileSystemName(fileSystemName);
 			
