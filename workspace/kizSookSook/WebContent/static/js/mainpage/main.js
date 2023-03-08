@@ -73,6 +73,26 @@ function typeText() {
 };
 
 
+showRanking();
+
+function showRanking(){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -25,9 +25,7 @@ public class MainFrontController extends HttpServlet {
 		
 //		메인페이지 이동
 		if(target.equals("/main")){
-			result = new Result();
-//			result = new RankListActionController().execute(req, resp);
-			result.setPath("/templates/main/main.jsp");
+			result = new MainController().execute(req, resp);
 		}else {
 			
 		}
