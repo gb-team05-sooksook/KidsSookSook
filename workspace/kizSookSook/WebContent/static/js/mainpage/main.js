@@ -73,16 +73,5 @@ function typeText() {
 };
 
 
-/*----------------------- 검색 엔진 -----------------------*/
-
-
-const $map = $(".search-svg");
-
-$map.on("click", function(){
-	document.searchForm.submit();
-});
-
-
-
 
 
