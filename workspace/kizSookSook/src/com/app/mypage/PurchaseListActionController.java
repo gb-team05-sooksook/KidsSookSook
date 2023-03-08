@@ -26,12 +26,10 @@ public class PurchaseListActionController implements Action {
 		req.setCharacterEncoding("UTF-8");
 		
 		MyPageDAO myPageDAO = new MyPageDAO();
-		FieldTripDTO fieldTripDTO = new FieldTripDTO();
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
 		List<FieldTripDTO> fieldTripDTOs = null;
 		Map<String, Object> searchMap = new HashMap<String, Object>();
-		ArrayList<String> types = new ArrayList<String>();
 		
 //		(Long)req.getSession().getAttribute("userId"))
 //		나중에 위에껄로 수정해야함
@@ -74,6 +72,9 @@ public class PurchaseListActionController implements Action {
 		
 		fieldTripDTOs = myPageDAO.selectPurchaseList(searchMap); 
 		System.out.println("fieldTripDTOs: " + fieldTripDTOs);
+		
+		req.setAttribute("scheduleFieldTripCount", myPageDAO.countScheduleFieldTrip(1L));
+		req.setAttribute("completeFieldTripCount", myPageDAO.countCompleteFieldTrip(1L));
 		
 		fieldTripDTOs.stream().map(e -> new JSONObject(e)).forEach(jsons::put);
 		

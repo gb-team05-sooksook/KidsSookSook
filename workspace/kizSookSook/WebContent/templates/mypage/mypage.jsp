@@ -132,15 +132,24 @@ pageEncoding="UTF-8"%>
 		
 		let fieldTrips = `${fieldTrips}`;
     	/* let fieldTrips = JSON.parse(`${fieldTrips}`); */
-    	console.log(fieldTrips);
+    	console.log("fieldTrips: " + fieldTrips);
     	
     	let enquiries = `${enquiries}`;
     	/* let enquiries = JSON.parse(`${enquiries}`); */
-    	console.log(enquiries);
+    	console.log("enquires: " + enquiries);
     	
     	let cashes = `${cashes}`;
     	/* let cashes = JSON.parse(`${cashes}`); */
-    	console.log(cashes);
+    	console.log("cashes: " + cashes);
+    	
+    	let reviews = `${reviews}`;
+    	console.log("reveiws: " + reviews);
+    	
+    	let scheduleFieldTripCount = `${scheduleFieldTripCount}`;
+    	let completeFieldTripCount = `${completeFieldTripCount}`;
+    	
+    	let MemberDTOs = `${MemberDTOs}`;
+    	
     </script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/jQueryDom.js"></script>
     <script src="${pageContext.request.contextPath}/static/js/mypage/unregister-check.js"></script>

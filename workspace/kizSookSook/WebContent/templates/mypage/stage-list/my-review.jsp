@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <h2 class="stage-title">나의 후기</h2>
 <div class="filters-wrapper" style="padding-top: 0">
     <div class="form-selecter">
@@ -48,7 +51,8 @@
     </ul>
 </div>
 <div class="cash-history-list">
-    <div>
+	<div class="history-result-list">
+    <!-- <div>
         <div class="_no-content">
             <img
                 src="https://kmong.com/img/seller/nothing.png"
@@ -57,6 +61,7 @@
             />
             <h5>내역이 없습니다.</h5>
         </div>
+    </div> -->
     </div>
 </div>
 <div class="my-review-info-conainer">

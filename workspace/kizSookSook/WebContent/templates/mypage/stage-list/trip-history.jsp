@@ -13,45 +13,20 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <rect width="36" height="36" rx="12" fill="#EBF4FF"></rect>
-                    <rect
-                        x="18.375"
-                        y="13.2422"
-                        width="6"
-                        height="6"
-                        rx="1"
-                        transform="rotate(-45 18.375 13.2422)"
-                        fill="#116AD4"
-                    ></rect>
-                    <rect
-                        x="9.75"
-                        y="19.7197"
-                        width="6.75"
-                        height="6.75"
-                        rx="3.375"
-                        fill="#116AD4"
-                    ></rect>
-                    <rect
-                        x="19.5"
-                        y="19.7197"
-                        width="6.75"
-                        height="6.75"
-                        rx="1"
-                        fill="#116AD4"
-                    ></rect>
-                    <rect
-                        x="9.75"
-                        y="9.96973"
-                        width="6.75"
-                        height="6.75"
-                        rx="1"
-                        fill="#116AD4"
-                    ></rect>
+                    <rect width="36" height="36" rx="12" fill="#EDFEE0"></rect>
+                    <path
+                        d="M9.75 12.75H24.25C25.3546 12.75 26.25 13.6454 26.25 14.75V24.25C26.25 25.3546 25.3546 26.25 24.25 26.25H11.75C10.6454 26.25 9.75 25.3546 9.75 24.25V12.75Z"
+                        fill="#11CA2D"
+                    ></path>
+                    <path
+                        d="M9.75 12.5C9.75 11.3954 10.6454 10.5 11.75 10.5H16.125L18 12.75H9.75V12.5Z"
+                        fill="#11CA2D"
+                    ></path>
                 </svg>
                 <div class="status-item-name">체험 예정</div>
             </div>
             <div class="status-item-count">
-                <a href="">0</a>
+                <a href=""></a>
             </div>
         </li>
         <li class="status-list-item">
@@ -87,33 +62,31 @@
                             <div>
                                 <span>
                                     <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        preserveAspectRatio="xMidYMid meet"
-                                        class="css-7kp13n e181xm9y0"
-                                    >
-                                        <g
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill-rule="nonzero"
-                                        >
-                                            <path
-                                                d="M12.5085,16.2335 C13.2055,16.2335 13.7665,16.7945 13.7665,17.4915 C13.7665,18.1885 13.2055,18.7665 12.5085,18.7665 C11.8115,18.7665 11.2335,18.1885 11.2335,17.4915 C11.2335,16.7945 11.8115,16.2335 12.5085,16.2335 Z M12.5,5.5 C13.2615898,5.5 14,6 13.9916659,7.16150442 L13.5106618,13.2256637 C13.4505363,13.6438053 13.0697413,14 12.5085699,14 C11.9473985,14 11.5666035,13.6438053 11.506478,13.2256637 L11.0054321,7.16150442 C11,6 11.7384102,5.5 12.5,5.5 Z"
-                                            ></path>
-                                        </g>
-                                    </svg>
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="36" height="36" rx="12" fill="#EDFEE0"></rect>
+                    <path
+                        d="M9.75 12.75H24.25C25.3546 12.75 26.25 13.6454 26.25 14.75V24.25C26.25 25.3546 25.3546 26.25 24.25 26.25H11.75C10.6454 26.25 9.75 25.3546 9.75 24.25V12.75Z"
+                        fill="#11CA2D"
+                    ></path>
+                    <path
+                        d="M9.75 12.5C9.75 11.3954 10.6454 10.5 11.75 10.5H16.125L18 12.75H9.75V12.5Z"
+                        fill="#11CA2D"
+                    ></path>
+                </svg>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="status-item-name">취소·환불</div>
+                <div class="status-item-name">체험 총 개수</div>
             </div>
             <div class="status-item-count">
-                <a href="">0</a>
+                <a href=""></a>
             </div>
         </li>
     </ul>
@@ -171,25 +144,7 @@
 <section class="history-result-container">
     <!-- <p id="noResult">주문 기간 내에 구매 내역이 없습니다.</p>
     주문 기간을 변경하여 확인해 보세요.<br />(기본 조회 기간: 1년) -->
-    <div class="history-result-list">
-	    <div class="history-result">
-            <div class="h_result-info">
-                <h4 class="h_title"><a href=""><!--체험학습 제목 1-->체험학습제목</a></h4>
-                <div class="h_details">
-                    <span class="h_category">카테고리</span>
-                    <span class="h_date">2022.01.01</span>
-                    <span class="h_institution">업체명</span>
-                </div>
-            </div>
-            <div class="h_result-content">
-                <div>체험학습 내용의 요약본 한 줄</div>
-                <a
-                    href="javascript:functionsObj.modal.activateReviewModalService.excute()"
-                    >리뷰 쓰기</a
-                >
-            </div>
-        </div>
-    </div>
+    <div class="history-result-list"></div>
 </section>
 <section class="history-warnings">
     <h2>꼭 확인해 주세요!</h2>
