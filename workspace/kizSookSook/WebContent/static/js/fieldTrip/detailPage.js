@@ -77,3 +77,19 @@ function showList(fieldTripReviewMoreDTO){
 	}
 	$('.review-div').append(text);
 }
+
+$('.right-third-inside-button').on('click', function(){
+	if(!`${userIdSession}`) {
+		alert('로그인 안하나');
+		return false;
+	}
+	location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}';
+});
+
+$('.detaile-price-button').on('click', function(){
+	if(!`${userIdSession}`) {
+		alert('로그인 안하나');
+		return false;
+	}
+	location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}';
+});

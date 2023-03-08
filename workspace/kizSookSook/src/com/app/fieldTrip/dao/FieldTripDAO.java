@@ -66,4 +66,8 @@ public class FieldTripDAO {
 	public boolean isNextPage(Map<String, Object> pageMap) {
 		return sqlSession.selectList("fieldTrip.isNextPage", pageMap).size() != 0;
 	}
+
+	public boolean selectLike(Map<String, Long> likeMap) {
+		return sqlSession.selectList("fieldTrip.selectLike", likeMap).size() != 0;
+	}
 }

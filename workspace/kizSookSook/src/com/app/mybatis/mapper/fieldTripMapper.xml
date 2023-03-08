@@ -107,4 +107,9 @@
 		where field_trip_id = #{fieldTripId}
 		limit #{nextStartRow}, #{rowCount}
 	</select>
+	
+	<select id="selectLike" parameterType="map" resultType="com.app.fieldTrip.domain.FieldTripRecommendVO">
+		select field_trip_recommend_id, user_id, field_trip_id
+		from tbl_field_trip_recommend where user_id = #{userId} and field_trip_id = #{fieldTripId};
+	</select>
 </mapper>
