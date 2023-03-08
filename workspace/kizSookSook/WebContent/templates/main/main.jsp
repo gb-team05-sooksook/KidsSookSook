@@ -786,6 +786,12 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+	let pamentTop = "${pamentTop}";
+	let recommendTop = "${recommendTop}";
+	let reviewTop = "${reviewTop}";
+</script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage/main.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage/banner.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
