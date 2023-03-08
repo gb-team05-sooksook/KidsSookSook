@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +12,10 @@
 
 </head>
 <body>
+	<c:out value="${sessionScope.userId}"/>
 	<div id="wrap">
 	
+	<c:if test="${sessionScope.userId != null}">
 	<!--header -->
 		<header class="wrap-h">
 			<section class="wrap-s">
@@ -95,6 +98,7 @@
             </div>
     </section>
 </header>
+</c:if>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
