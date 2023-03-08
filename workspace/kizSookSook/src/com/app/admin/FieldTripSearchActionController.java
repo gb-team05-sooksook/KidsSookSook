@@ -25,7 +25,7 @@ public class FieldTripSearchActionController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-resp.setCharacterEncoding("UTF-8");
+		resp.setCharacterEncoding("UTF-8");
 		
 		req.setCharacterEncoding("UTF-8");
 

@@ -99,5 +99,4 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
-
 </html>
