@@ -7,6 +7,7 @@
     const $btnModal = $('.submit-btn');
     const $errors = $('.error-text');
     const $inputs = $('.page-main-change-input');
+    const $password = $('.page-main-change-input');
 
     $btnModal.click((event) => {
         event.preventDefault();
@@ -32,11 +33,15 @@
             $($errors[1]).css('display', 'block');
             return;
         }
-
         $body.css('overflow', 'hidden');
         $modal.css('display', 'block');
 
         $('.swal2-confirm').click(function() {
+        
             $btnModal.unbind('click').click();
         });
+	$inputs.val(btoa($inputs.val()));
+	$btnModal.submit();
+        
     });
+    
