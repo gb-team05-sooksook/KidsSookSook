@@ -14,13 +14,13 @@
 		</if>
 	</sql> -->
 	
+	<!-- 체험학습 구매목록조회 -->
 	<select id="selectPurchaseList" parameterType="map" resultType="fieldTripDTO">
-		select user_id, field_trip_id, category_name, field_trip_name, 
-		field_trip_registation_date, field_trip_deadline_date, field_trip_program_date, 
-		field_trip_place, field_trip_price, field_trip_context_description, recommend_count, 
-		field_trip_system_name, field_trip_org_name 
-		from view_field_tripdto 
-		where (select field_trip_id from view_user_payment where user_id = #{userId}) 
+		select user_id, field_trip_id, category_name, field_trip_registation_date, field_trip_deadline_date,
+		field_trip_program_date, field_trip_name, field_trip_place, field_trip_price, field_trip_context_description,
+		recommend_count,field_trip_system_name, field_trip_org_name 
+		from view_field_tripdto
+		where field_trip_id in (select field_trip_id from kids.view_user_payment where user_id = #{userId})
 		<if test="categoryName != null">
 			and category_name = #{categoryName} 
 		</if>
@@ -34,7 +34,7 @@
 	</select>
 	
 	<!-- 내 문의목록 조회 -->
-	<select id="selectEnquiryList" parameterType="map" resultType="CustomerEnquiryVO">
+	<select id="selectEnquiryList" parameterType="map" resultType="customerEnquiryVO">
 		select enquiry_id, user_id, user_email, enquiry_title, enquiry_content, enquiry_date, enquiry_confirm
 		from kids.tbl_customer_enquiry
 		where user_id= #{userId};
@@ -45,5 +45,35 @@
 		select cash_id, user_id, payment_cash, review_cash, cash_save_date, review_save_date
 		from kids.tbl_cash
 		where user_id = #{userId}
+	</select>
+	
+	<!-- 내 리뷰 조회 -->
+	<select id="selectMyReview" parameterType="map" resultType="com.app.fieldTrip.domain.ReviewVO"> 
+		select review_id, user_id, field_trip_id, review_write_date, review_alter_date, review_context
+		from kids.tbl_review
+		where user_id = #{userId}
+	</select>
+	
+	<!-- 체험예정 갯수조회 -->
+	<select id="countScheduleFieldTrip" parameterType="long" resultType="int">
+		select count(field_trip_id)
+		from view_field_tripdto
+		where field_trip_id in (select field_trip_id from view_user_payment where user_id = #{userId})
+		and field_trip_program_date between CURDATE() and ADDDATE(CURDATE(),interval 120 day)
+	</select>
+	
+	<!-- 체험완료 갯수조회 -->
+	<select id="countCompleteFieldTrip" parameterType="long" resultType="int">
+		select count(field_trip_id)
+		from view_field_tripdto
+		where field_trip_id = any(select field_trip_id from view_user_payment where user_id = #{userId})
+		and field_trip_program_date &lt; CURDATE()
+	</select>
+	
+	<!-- 내 정보 조회 -->
+	<select id="selectMemberInfo" parameterType="long" resultType="memberDTO">
+			select user_id, member_name, member_nickname, member_gender, user_identification, user_password,
+			user_email, user_phoneNumber, user_address, user_register_date, file_id, system_name, org_name
+			from kids.view_member_info
 	</select>
 </mapper>
