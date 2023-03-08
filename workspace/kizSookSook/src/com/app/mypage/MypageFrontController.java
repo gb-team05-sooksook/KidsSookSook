@@ -29,8 +29,10 @@ public class MypageFrontController extends HttpServlet {
 			result = new ConnectCategoryController().execute(req, resp);
 		}else if(target.equals("/cashCheckAction")) {
 			result = new CashCheckActionController().execute(req, resp);
+		}else if(target.equals("/changeInfo")) {
+			result = new ChangeInfoController().execute(req, resp);
 		}else if(target.equals("/changeInfoAction")) {
-			result = new ChangeInfoActionController().execute(req, resp);
+//			result = new ChangeInfoActionController().execute(req, resp);
 		}else if(target.equals("/reviewListCheckAction")) {
 			result = new ReviewListCheckActionController().execute(req, resp);
 		}else if(target.equals("/enquiryListCheckAction")) {

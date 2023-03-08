@@ -9,6 +9,7 @@ public class MemberDTO {
 	private String userEmail;
 	private String userPhoneNumber;
 	private String userAddress;
+	private String userAddressDetail;
 	private String userRegisterDate;
 	private String userPassword;
 	
@@ -62,6 +63,15 @@ public class MemberDTO {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
+	
+	public String getUserAddressDetail() {
+		return userAddressDetail;
+	}
+
+	public void setUserAddressDetail(String userAddressDetail) {
+		this.userAddressDetail = userAddressDetail;
+	}
+
 	public String getUserRegisterDate() {
 		return userRegisterDate;
 	}
