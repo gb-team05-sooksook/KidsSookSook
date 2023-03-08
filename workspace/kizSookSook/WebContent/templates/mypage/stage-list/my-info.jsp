@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <h2 class="stage-title">나의 정보</h2>
 <section class="my-info-container">
     <section class="my-info-profile">
@@ -22,7 +25,7 @@
                     <span>닉네임</span>
                 </div>
                 <div class="form-input">
-                    <input type="text" placeholder="닉네임 입력" />
+                    <input type="text" value="${MemberDTOs.memberNickname}"/>
                 </div>
                 <p class="info-form-warning">
                     * 올바른 아이디 형식이 아닙니다.
