@@ -61,7 +61,7 @@ public class MyPageDAO {
 	}
 	
 //	내 정보 조회
-	public List<MemberDTO> selectMemberInfo(Long userId) {
-		return sqlSession.selectList("mypage.selectMemberInfo", userId);
+	public MemberDTO selectMemberInfo(Long userId) {
+		return sqlSession.selectOne("mypage.selectMemberInfo", userId);
 	}
 }
