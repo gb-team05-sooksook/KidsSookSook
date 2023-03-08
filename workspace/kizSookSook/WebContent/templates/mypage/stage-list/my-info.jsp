@@ -25,7 +25,7 @@
                     <span>닉네임</span>
                 </div>
                 <div class="form-input">
-                    <input type="text" value="${MemberDTOs.memberNickname}"/>
+                    <input type="text" value="${member.memberNickname}"/>
                 </div>
                 <p class="info-form-warning">
                     * 올바른 아이디 형식이 아닙니다.
@@ -47,7 +47,7 @@
                     <span>이메일</span>
                 </div>
                 <div class="form-input">
-                    <input type="text" placeholder="이메일 입력" />
+                    <input type="text" placeholder="이메일 입력" value="${member.userEmail}" />
                 </div>
                 <p class="info-form-warning">
                     * 올바른 이메일 형식이 아닙니다.
@@ -58,7 +58,7 @@
                     <span>휴대폰 번호</span>
                 </div>
                 <div class="form-input">
-                    <input type="text" placeholder="휴대폰 번호 입력" />
+                    <input type="text" placeholder="휴대폰 번호 입력" value="${member.userPhoneNumber}" />
                 </div>
                 <p class="info-form-warning">
                     * 올바른 휴대폰 번호 형식이 아닙니다.
