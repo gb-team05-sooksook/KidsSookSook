@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="detaile-price-button-wrapper">
-                            <button class="detaile-price-button" onclick="javascript:location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}'">
+                            <button class="detaile-price-button">
                                 <span>
                                     <span>구매</span>
                                 </span>
@@ -165,7 +165,7 @@
                                 </div>
                             </div>
                             <div class="right-third-inside-button-containel">
-                                <button class="right-third-inside-button" onclick="javascript:location.href='${pageContext.request.contextPath}/payAction.pay?fieldTripId=${fieldTripDTO.fieldTripId}'">
+                                <button class="right-third-inside-button">
                                     <span>구매하기</span>
                                 </button>
                             </div>
@@ -186,6 +186,7 @@
 <script>
 	let contextPath = "${pageContext.request.contextPath}";
 	let fieldTripId = "${fieldTripDTO.fieldTripId}";
+	let userIdSession = "${sessionScope.userId}";
 </script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/detailPage.js"></script>
 </html>

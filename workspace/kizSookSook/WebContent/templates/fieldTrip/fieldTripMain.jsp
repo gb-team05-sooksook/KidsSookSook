@@ -161,7 +161,10 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}", fieldTripTop10 = `${fieldTripTop10}`, bestCategoryList = `${bestCategoryList}`;</script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}", fieldTripTop10 = `${fieldTripTop10}`, bestCategoryList = `${bestCategoryList}`;
+	let userIdSession = "${sessionScope.userId}";
+</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/fieldTripMain.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/mainpage/dropdown.js"></script>
 </html>
