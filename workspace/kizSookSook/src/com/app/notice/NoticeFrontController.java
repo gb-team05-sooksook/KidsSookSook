@@ -36,14 +36,20 @@ public class NoticeFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/customerCenter/institutionFAQ.jsp");
 			
+		}else if(target.equals("/institution-notice")) {
+				result = new Result();
+				result.setPath("/templates/customerCenter/institution-notice.jsp");
+		
 		}else if(target.equals("/enquiryOkAction")) {
 			result = new enquiryOkActionController().execute(req, resp);
 			System.out.println("23. " + target);
 			
-		}else if(target.equals("/FAQlistOkAction")) {
-			System.out.println("2. " + target);
+		}else if(target.equals("/NoticelistOkAction")) {
+			System.out.println("211. " + target);
 			result = new FAQlistOkActionController().execute(req, resp);
-			
+		}else if(target.equals("/DetailOkAction")) {
+			System.out.println("2. " + target);
+			result = new DetailOkActionController().execute(req, resp);
 		}else {
 			System.out.println("3. " + target);
 			System.err.println("cant find path");

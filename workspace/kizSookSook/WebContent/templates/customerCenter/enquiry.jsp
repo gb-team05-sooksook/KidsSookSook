@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>문의 등록 - 키즈쑥쑥 고객센터</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/customerCenter/enquiry.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminPage/bannerManage.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/customerCenter/font.css">
 <link rel="icon" href="${pageContext.request.contextPath}/static/resources/img/logo/icon.png">
 </head>
@@ -26,7 +27,7 @@
 				</a>
 			</div>
 			<div class="nav-wrapper">
-				<a href="${pageContext.request.contextPath}/templates/customerCenter/enquiry.jsp" target="_parent">문의하기</a> 
+				<a target="_parent">문의하기</a> 
 				<a class="login" role="button" title="대화 상자를 엽니다." href="">로그인</a>
 			</div>
 		</header>
@@ -48,11 +49,7 @@
 						문의 등록
 					</li>
 				</ol>
-				<!-- <form action="" role="search" class="search" accept-charset="UTF-8">
-					<input name="utf8" type="hidden" value="✓" autocomplete="off">
-					<input type="search" name="query" id="query" placeholder="검색"
-						aria-label="검색">
-				</form> -->
+				
 			</nav>
 			<div>
 			<h1>
@@ -64,7 +61,7 @@
 				</div>
 			</h1>
 			<div class="form">
-				<form id="new_request" class="request-form" action="${pageContext.request.contextPath}/enquiryOkAction.notice" method="post" enctype="multipart/form-data">
+				<form class="request-form" action="${pageContext.request.contextPath}/enquiryOkAction.notice" name="enquiryForm" method="post" enctype="multipart/form-data">
 					<input name="utf8" type="hidden" value=""> 
 					<input type="hidden" value="">
 					<div class="form-field required request_anonymous_requester_email">
@@ -74,22 +71,7 @@
 							class="notification notification-error notification-inline">
 							요청자 이메일: 액센트 부호가 있는 문자를 이메일 주소에 포함할 수 없습니다.</div>
 					</div>
-					<!-- <div class="form-field required request_custom_fields">
-						<label id="request_custom_fields_label"
-							for="request_custom_fields">상담유형</label> <input type="hidden"
-							id="request_custom_fields" value="">
-						<div class="dropClick" tabindex="0" style="cursor: pointer;">
-							<p class="result_p" style="font-size: 14px;">-</p>
-							<div class="drop-content" style="display: none; font-size: 14px;"">
-								<p onclick=" selectType(this)"">이용문의</p>
-								<p onclick=" selectType(this)"">고객의 소리/제보</p>
-							</div>
-						</div>
-						<div id="request_custom_fields_error"
-							class="notification notification-error notification-inline">
-							상담유형: 반드시 입력해야 합니다.</div>
 
-					</div> -->
 					<div class="form-field required request_subject">
 						<label id="request_subject_label" for="request_subject">제목</label>
 						<input type="text" id="request_subject" maxlength="150" size="150" class="change" name="enquiryTitle">
@@ -108,39 +90,33 @@
 						<p id="request_description_hint">요청에 관한 세부 정보를 입력하세요. 저희 지원
 							스태프가 가능한 빨리 자세한 답변을 드리도록 하겠습니다.</p>
 					</div>
-
-					<div class="form-field">
+						
+						<!-- 파일 입출력 썸네일 -->
+						
+                  
+					 <div class="form-field">
 						<label for="request-attachments" class="attach"> 첨부 파일 </label>
-						<label for="request-attachments" class="attach">
-						 <img src="" class="thumbnail">
+						 <img src="${pageContext.request.contextPath}/upload/${files[0].fileSystemName}" class="thumbnail">
 						 </label>
-						<label for="request-attachments" class="attach"> 
-						 <img src="" class="thumbnail">
-						</label>
-						<label for="request-attachments" class="attach">
-						 <img src="" class="thumbnail">
-						</label>
+					
 						<div id="upload-dropzone" class="upload-dropzone">
 
 						
-							<input type="file" multiple="true" id="request-attachments">
-							<img >
 							<input type="file" multiple="multiple" id="request-attachments" class="upload">
 							<span> <a>파일 추가</a> 또는 파일을 여기로 드래그
+							<img src="${pageContext.request.contextPath}/upload/${files[0].fileSystemName}" class="thumbnail">
+							
 							</span>
-						</div>
+						</div> 
 
-						<div id="upload-error"
+						<!-- <div id="upload-error"
 							class="notification notification-error notification-inline"
 							style="display: none;">
 							<span data-upload-error-message=""></span>
 						</div>
 						<ul id="request-attachments-pool" class="upload-pool"
-							data-template="upload-template"></ul>
-					</div>
-					<footer>
+							data-template="upload-template"></ul> -->
 						<input type="submit" value="제출" class="submitButton">
-					</footer>
 				</form>
 			</div>
 		</div>
@@ -173,6 +149,7 @@
 	<!-- footer end -->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/customerCenter/enquiryUpload.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/enquiry.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/customerCenter/board.js"></script>
 

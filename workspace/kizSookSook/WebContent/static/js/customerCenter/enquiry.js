@@ -1,7 +1,7 @@
 const click = document.getElementById("query");
 // console.log(click);
 
-const temp = click.getAttribute('style');
+/*const temp = click.getAttribute('style');*/
 
 //focus 했을 때
 click.addEventListener('focus', (e) => {

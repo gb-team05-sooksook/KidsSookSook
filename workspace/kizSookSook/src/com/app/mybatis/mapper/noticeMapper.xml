@@ -36,6 +36,12 @@
 		limit #{startRow}, #{rowCount}
 	</select>
 	
+	<select id="select" parameterType="long" resultType="NoticeVO">
+		select notice_id, notice_title, notice_content
+		from tbl_customer_notice
+		where notice_id = #{noticeId}
+	</select>
+	
 	<select id="getTotal" resultType="long">
 		select count(notice_id) 
 		from tbl_customer_notice

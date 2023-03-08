@@ -17,7 +17,7 @@
     <div style="background-color:#FAE57C">
         <header class="header" style="background-color:#FAE57C">
             <div class="logo">
-                <a href="${pageContext.request.contextPath}/templates/main/main.main">
+                <a href="${pageContext.request.contextPath}/main.main">
                     <img src="${pageContext.request.contextPath}/static/resources/img/logo/logo.png" class="logo-kidsSookSook">
                 </a>
                 <a title="홈" href="${pageContext.request.contextPath}/templates/customerCenter/customer-main.jsp">
@@ -86,7 +86,7 @@
                 <article class="article">
                     <header class="article-header">
                         <h1 title="2월, 고객센터 운영 시간 안내" class="article-title">
-                            2월 TEST
+                            ${notice.noticeTitle}
                         </h1>
                     </header>
                     <section class="article-info">
@@ -97,21 +97,7 @@
                                     <div class="article-body">
                                         <p>2023년 2월, TEST.</p>
                                         <p>
-                                            회원님의 너그러운 양해를 부탁드리며, 서비스 이용에 참고해 주시기 바랍니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
-                                            키즈쑥쑥 TEST 입니다.<br>
+                                          ${notice.noticeContext}
                                         </p>
                                         
                                         <p>&nbsp;</p>
