@@ -23,6 +23,7 @@ public class CheckIdActionController implements Action {
 		
 		try {
 			json.put("check", memberDAO.checkId(req.getParameter("userIdentification")));
+			System.out.println("checkIdAction에서 나온 값 "+req.getParameter("userIdentification"));
 			out.print(json.toString());
 		} catch (JSONException e) {
 			e.printStackTrace();

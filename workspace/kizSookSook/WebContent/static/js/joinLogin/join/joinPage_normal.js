@@ -1,41 +1,39 @@
 /**
  * 
  */
-
-const $input = $('.join-item-input');
-const $error = $('.error-text');
+const $input = $('#inputId');
+const $error = $('#error-id');
 
 $input.on("blur", function() {
 	let i = $input.index($(this));
 	let value = $(this).val();
 
-	$(this).next().hide();
-	$(this).next().fadeIn(500);
-
 	if (i != 0) {
-		$error.eq(i).text("");
-	console.log($error);
+		$error.text("");
 	} else {
 		$.ajax({
 			url: contextPath + "/checkIdAction.member",
-			data: { userIdentification: value },
+			data: { userIdentification: value},
 			success: function(result) {
 			console.log(result);
 				let message;
+				console.log(result);
 				result = JSON.parse(result);
+				console.log(result);
 				if (result.check) {
 					message = "중복 아이디 입니다.";
-					$error.eq(i).css('color', 'red')
+					$error.css('color', 'red')
 				} else {
 					message = "사용가능한 아이디입니다.";
-					$error.eq(i).css('color', '#2bb673')
+					$error.css('color', '#2bb673')
 				}
-				$error.eq(i).text(message);
+				$error.text(message);
 
 			}
 		});
 	}
 });
+
 
 
 
