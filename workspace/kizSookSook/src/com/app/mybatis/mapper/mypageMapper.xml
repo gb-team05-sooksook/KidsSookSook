@@ -73,7 +73,7 @@
 	<!-- 내 정보 조회 -->
 	<select id="selectMemberInfo" parameterType="long" resultType="memberDTO">
 			select user_id, member_name, member_nickname, member_gender, user_identification, user_password,
-			user_email, user_phoneNumber, user_address, user_register_date, file_id, system_name, org_name
+			user_email, user_phoneNumber, user_address, user_address_detail, user_register_date, file_id, system_name, org_name
 			from kids.view_member_info
 	</select>
 </mapper>

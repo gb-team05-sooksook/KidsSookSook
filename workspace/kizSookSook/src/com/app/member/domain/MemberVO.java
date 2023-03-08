@@ -7,6 +7,7 @@ public class MemberVO {
 	private String userEmail;
 	private String userPhoneNumber;
 	private String userAddress;
+	private String userAddressDetail;
 	private String userRegisterDate;
 	
 	private String memberName;
@@ -73,6 +74,14 @@ public class MemberVO {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
+	
+	public String getUserAddressDetail() {
+		return userAddressDetail;
+	}
+
+	public void setUserAddressDetail(String userAddressDetail) {
+		this.userAddressDetail = userAddressDetail;
+	}
 
 	public String getUserRegisterDate() {
 		return userRegisterDate;
@@ -114,7 +123,16 @@ public class MemberVO {
 		this.institutionBusinessNumber = institutionBusinessNumber;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "MemberVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
+				+ userPassword + ", userEmail=" + userEmail + ", userPhoneNumber=" + userPhoneNumber + ", userAddress="
+				+ userAddress + ", userAddressDetail=" + userAddressDetail + ", userRegisterDate=" + userRegisterDate
+				+ ", memberName=" + memberName + ", memberNickname=" + memberNickname + ", memberGender=" + memberGender
+				+ ", institutionName=" + institutionName + ", institutionBusinessNumber=" + institutionBusinessNumber
+				+ "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -140,15 +158,4 @@ public class MemberVO {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "MemberVO [userId=" + userId + ", userIdentification=" + userIdentification + ", userPassword="
-				+ userPassword + ", userEmail=" + userEmail + ", userPhoneNumber=" + userPhoneNumber + ", userAddress="
-				+ userAddress + ", userRegisterDate=" + userRegisterDate + ", memberName=" + memberName
-				+ ", memberNickname=" + memberNickname + ", memberGender=" + memberGender + ", institutionName="
-				+ institutionName + ", institutionBusinessNumber=" + institutionBusinessNumber + "]";
-	}
-
-
-	
 }
