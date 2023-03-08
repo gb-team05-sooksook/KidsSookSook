@@ -174,6 +174,6 @@
     <%@ include file="/templates/main/footer.jsp"%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}", categoryAll = `${categoryAll}`, sort = `${sort}`;</script>
+<script>let contextPath = "${pageContext.request.contextPath}", categoryAll = `${categoryAll}`, sort = `${sort}`, userIdSession = "${sessionScope.userId}";</script>
 <script src="${pageContext.request.contextPath}/static/js/fieldTrip/fieldPage.js"></script>
 </html>

@@ -32,6 +32,8 @@ public class FieldTripFrontController extends HttpServlet {
 			result = new GetDetailPageActionController().execute(req, resp);
 		}else if(target.equals("/sortAction")) {
 			result = new SortActionController().execute(req, resp);
+		}else if(target.equals("/selectLike")){
+			result = new SelectLikeActionController().execute(req, resp);
 		}else {
 			System.out.println(target);
 		}
